@@ -17,3 +17,4 @@ dependencyResolutionManagement {
 }
 
 include(":web")
+include(":server")
