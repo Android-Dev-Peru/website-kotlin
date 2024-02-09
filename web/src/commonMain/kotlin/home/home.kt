@@ -1,4 +1,4 @@
-package screens.home
+package home
 
 import components.*
 import data.*
@@ -20,7 +20,7 @@ fun DIV.topHeader() {
     div {
         id = "top-header"
         img {
-            src = "logo.svg"
+            src = "images/logo.svg"
             alt = "Logo de Android Dev Peru"
         }
         h1 { +"Android Dev Peru" }
@@ -63,7 +63,7 @@ private fun DIV.playlistsSection() {
         div(classes = "grid-section-header") {
             h2 { +"Playlists" }
             p { +"No te pierdas el material exclusivo que la comunidad nos ha compartido a lo largo de lo años." }
-            primaryButton(text = "Síguenos en Youtube", href = Links.YouTube)
+            primaryButton(text = "Síguenos en Youtube", href = data.Links.YouTube)
         }
         div(classes = "grid-section-content") {
             playlists.forEach {
@@ -79,11 +79,11 @@ private fun DIV.blogSection() {
         div(classes = "grid-section-header") {
             h2 { +"Artículos recientes" }
             p { +"¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad" }
-            primaryButton(text = "Ver todos los artículos", href = Links.DevTo)
+            primaryButton(text = "Ver todos los artículos", href = data.Links.DevTo)
         }
 
         div(classes = "grid-section-content") {
-            recentBlogPosts.forEach {
+            home.recentBlogPosts.forEach {
                 borderlessCard(it)
             }
         }

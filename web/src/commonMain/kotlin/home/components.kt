@@ -1,4 +1,4 @@
-package screens.home
+package home
 
 import kotlinx.html.*
 import utils.asSlug

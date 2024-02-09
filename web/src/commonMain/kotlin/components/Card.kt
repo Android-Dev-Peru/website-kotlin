@@ -1,8 +1,6 @@
 package components
 
-import kotlinx.browser.window
 import kotlinx.html.*
-import kotlinx.html.js.onClickFunction
 import utils.asSlug
 
 data class CardContent(
@@ -16,6 +14,7 @@ data class CardContent(
 fun DIV.card(caption: String, content: CardContent, classes: String = "") {
     div(classes = "card $classes") {
         id = "card-${content.title.asSlug()}"
+        onClick = "window.location.href = '${content.url}'"
 
         div(classes = "left-container") {
             span { +caption }
@@ -29,10 +28,6 @@ fun DIV.card(caption: String, content: CardContent, classes: String = "") {
             img(src = "images/${content.image}", alt = content.title) {
                 id =  "highlight-image"
             }
-        }
-
-        onClickFunction = {
-            window.location.href = content.url
         }
     }
 }

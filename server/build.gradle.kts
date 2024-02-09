@@ -12,7 +12,9 @@ application {
 }
 
 dependencies {
+    implementation(projects.web)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
     implementation(libs.ktor.html.builder)
+    implementation(libs.logback)
 }

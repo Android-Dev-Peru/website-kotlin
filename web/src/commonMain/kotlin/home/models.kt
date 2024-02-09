@@ -1,4 +1,4 @@
-package screens.home
+package home
 
 data class Social(
     val icon: String,

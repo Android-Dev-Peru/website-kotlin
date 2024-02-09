@@ -1,7 +1,7 @@
 import kotlinx.browser.*
 import kotlinx.html.*
 import kotlinx.html.dom.*
-import screens.home.homeContent
+import home.homeContent
 
 fun main() {
     document.body!!.append.div {

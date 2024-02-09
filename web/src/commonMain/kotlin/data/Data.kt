@@ -1,10 +1,10 @@
 package data
 
 import components.QuickLink
-import screens.home.BlogEntry
-import screens.home.Organizer
-import screens.home.Playlist
-import screens.home.Social
+import home.BlogEntry
+import home.Organizer
+import home.Playlist
+import home.Social
 
 object Links {
     const val DevTo = "https://dev.to/androiddevperu"

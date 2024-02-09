@@ -3,6 +3,7 @@ junit = "4.13.2"
 kotlin = "1.9.21"
 kotlinx-html = "0.11.0"
 ktor = "2.3.8"
+logback = "1.4.14"
 
 [libraries]
 kotlin-stdlib-js = { module = "org.jetbrains.kotlin:kotlin-stdlib-js", version.ref = "kotlin" }
@@ -14,6 +15,7 @@ kotlinx-html-js =  { module = "org.jetbrains.kotlinx:kotlinx-html-js", version.r
 ktor-server-core = { module = "io.ktor:ktor-server-core-jvm", version.ref = "ktor" }
 ktor-server-netty = { module = "io.ktor:ktor-server-netty-jvm", version.ref = "ktor" }
 ktor-html-builder = { module = "io.ktor:ktor-server-html-builder", version.ref = "ktor" }
+logback = { module = "ch.qos.logback:logback-classic", version.ref = "logback" }
 
 [plugins]
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
