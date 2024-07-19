@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
+import org.jetbrains.compose.web.css.CSSMediaQuery
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
@@ -35,4 +36,6 @@ val HomeSectionStyle = CssStyle {
             .margin(leftRight = autoLength)
     }
 }
+
+val MobileBreakpoint = CSSMediaQuery.MediaFeature("max-width", 600.px)
 

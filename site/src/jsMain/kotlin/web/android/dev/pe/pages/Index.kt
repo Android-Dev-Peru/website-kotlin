@@ -8,9 +8,12 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.px
 import web.android.dev.pe.Res
 import web.android.dev.pe.pages.home.Home
+import web.android.dev.pe.pages.home.MobileBreakpoint
 
 @Page
 @Composable
@@ -28,21 +31,9 @@ fun initSiteStyles(ctx: InitSilkContext) {
             .margin(0.px)
     }
 
-    ctx.stylesheet.registerStyleBase("h1") {
-        Modifier
-            .fontSize(60.px)
-    }
-
-    ctx.stylesheet.registerStyleBase("h2") {
-        Modifier
-            .fontSize(32.px)
-            .fontWeight(600)
-    }
-
-    ctx.stylesheet.registerStyleBase("h3") {
-        Modifier
-            .fontSize(20.px)
-            .fontWeight(600)
+    ctx.stylesheet.registerStyle("h1") {
+        base { Modifier.fontSize(60.px) }
+        cssRule(MobileBreakpoint) { Modifier.fontSize(30.px) }
     }
 
     ctx.stylesheet.registerStyleBase("span") {

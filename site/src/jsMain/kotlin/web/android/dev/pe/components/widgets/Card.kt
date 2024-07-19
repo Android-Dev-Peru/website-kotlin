@@ -21,6 +21,7 @@ import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import web.android.dev.pe.data.CardContent
+import web.android.dev.pe.pages.home.MobileBreakpoint
 
 
 @Composable
@@ -39,7 +40,11 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
             }
         }
         Div(CardStyles.RightSection.toAttrs()) {
-            Image(src = "images/${content.image}", alt = content.title)
+            Image(
+                src = "images/${content.image}",
+                alt = content.title,
+                modifier = CardStyles.Icon.toModifier()
+            )
         }
     }
 }
@@ -83,27 +88,54 @@ object CardStyles {
                 .backgroundColor(Colors.Black)
                 .color(Colors.White)
         }
-        cssRule(" img") {
+
+        cssRule(MobileBreakpoint) {
+            Modifier
+                .flexDirection(FlexDirection.Column)
+                .height(autoLength)
+                .alignItems(AlignItems.End)
+        }
+    }
+
+    val Icon = CssStyle {
+        base {
             Modifier
                 .maxHeight(150.px)
                 .alignSelf(AlignSelf.Center)
         }
-    }
-    val LeftSection = CssStyle.base {
-        Modifier
-            .display(DisplayStyle.Flex)
-            .flexDirection(FlexDirection.Column)
-            .justifyContent(JustifyContent.Center)
-            .margin(8.px)
-            .height(autoLength)
+
+        cssRule(MobileBreakpoint) {
+            Modifier
+                .maxHeight(60.px)
+                .margin(topBottom = 20.px)
+        }
     }
 
-    val RightSection = CssStyle.base {
-        Modifier
-            .height(autoLength)
-            .display(DisplayStyle.Flex)
-            .justifyContent(JustifyContent.Center)
-            .alignItems(AlignItems.Center)
+    val LeftSection = CssStyle {
+        base {
+            Modifier
+                .display(DisplayStyle.Flex)
+                .flexDirection(FlexDirection.Column)
+                .justifyContent(JustifyContent.Center)
+                .margin(8.px)
+                .height(autoLength)
+        }
+        cssRule(MobileBreakpoint) {
+            Modifier.margin(0.px)
+        }
+    }
+
+    val RightSection = CssStyle {
+        base {
+            Modifier
+                .height(autoLength)
+                .display(DisplayStyle.Flex)
+                .justifyContent(JustifyContent.Center)
+                .alignItems(AlignItems.Center)
+        }
+        cssRule(MobileBreakpoint) {
+            Modifier.margin(0.px)
+        }
     }
 
     val Cta = CssStyle.base {

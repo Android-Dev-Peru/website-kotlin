@@ -15,21 +15,30 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.before
+import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import web.android.dev.pe.Res
 import web.android.dev.pe.data.Social
 import web.android.dev.pe.data.Socials
+import web.android.dev.pe.pages.home.MobileBreakpoint
 
 @Composable
 fun TopHeader() {
     val socials = Socials.entries
-    Div(TopHeaderStyle.toModifier().toAttrs()) {
-        Image(src = "logo.svg", alt = "Logo de Android Dev Peru")
-        H1 { Text("Android Dev Peru") }
-        H3 { Text("Comunidad de desarrolladores Android en Peru y LATAM") }
-        Div(SocialMediaRowStyle.toModifier().toAttrs()) {
+    Div(HomeHeaderStyles.Container.toAttrs()) {
+        Image(
+            src = "logo.svg",
+            modifier = HomeHeaderStyles.Image.toModifier()
+        )
+        H1(Modifier.margin(top = 0.px).toAttrs()) {
+            Text("Android Dev Peru")
+        }
+        P(HomeHeaderStyles.Hint.toAttrs()) {
+            Text("Comunidad de desarrolladores Android en Peru y LATAM")
+        }
+        Div(HomeHeaderStyles.SocialMediaRow.toModifier().toAttrs()) {
             socials.forEach {
                 SocialIcon(it.data)
             }
@@ -44,75 +53,97 @@ fun SocialIcon(social: Social) {
     }
 }
 
-val TopHeaderStyle = CssStyle {
-    base {
-        Modifier
-            .position(Position.Relative)
-            .background(
-                Background.of(
-                    image = BackgroundImage.of(url("../../images/android-header.jpeg")),
-                    repeat = BackgroundRepeat.NoRepeat,
-                    position = BackgroundPosition.of(CSSPosition.Center),
-                    size = BackgroundSize.Cover
+object HomeHeaderStyles {
+    val Container = CssStyle {
+        base {
+            Modifier
+                .position(Position.Relative)
+                .background(
+                    Background.of(
+                        image = BackgroundImage.of(url("../../images/android-header.jpeg")),
+                        repeat = BackgroundRepeat.NoRepeat,
+                        position = BackgroundPosition.of(CSSPosition.Center),
+                        size = BackgroundSize.Cover
+                    )
                 )
-            )
-            .color(Res.Theme.WHITE.color)
-            .textAlign(TextAlign.Center)
-            .padding(50.px)
+                .color(Res.Theme.WHITE.color)
+                .textAlign(TextAlign.Center)
+                .padding(50.px)
+        }
+        before {
+            Modifier
+                .content("")
+                .position(Position.Absolute)
+                .top(0.px)
+                .right(0.px)
+                .bottom(0.px)
+                .left(0.px)
+                .background(Background.Inherit)
+                .filter(blur(5.px))
+                .zIndex(-1)
+        }
     }
-    before {
-        Modifier
-            .content("")
-            .position(Position.Absolute)
-            .top(0.px)
-            .right(0.px)
-            .bottom(0.px)
-            .left(0.px)
-            .background(Background.Inherit)
-            .filter(blur(5.px))
-            .zIndex(-1)
+
+    val Image = CssStyle {
+        base {
+            Modifier
+                .size(150.px)
+                .margin(top = 40.px)
+        }
+        cssRule(MobileBreakpoint) {
+            Modifier
+                .size(100.px)
+                .margin(top = 10.px)
+        }
     }
-    cssRule(" img") {
-        Modifier
-            .size(150.px)
-            .margin(top = 40.px)
+
+    val Title = CssStyle {
+        base {
+            Modifier
+                .margin(top = 0.px)
+                .fontSize(60.px)
+        }
+        cssRule(MobileBreakpoint) { Modifier.fontSize(30.px) }
     }
-    cssRule(" h1") {
-        Modifier
-            .margin(top = 0.px)
+
+    val Hint = CssStyle {
+        base {
+            Modifier
+                .margin(20.px)
+                .fontSize(20.px)
+        }
+        cssRule(MobileBreakpoint) { Modifier.fontSize(14.px) }
     }
-    cssRule(" h3") {
-        Modifier
-            .margin(20.px)
+
+    val SocialMediaRow = CssStyle {
+        base {
+            Modifier
+                .display(DisplayStyle.Grid)
+                .gridAutoFlow(GridAutoFlow.Column)
+                .gap(0.px)
+                .justifyContent(JustifyContent.Center)
+                .zIndex(2)
+        }
+//
+//    Breakpoint.MD {
+//        Modifier
+//            .display(DisplayStyle.Flex)
+//            .flexDirection(FlexDirection.Row)
+//            .gap(20.px)
+//    }
+
+        cssRule(" a") {
+            Modifier
+                .display(DisplayStyle.Flex)
+                .justifyContent(JustifyContent.Center)
+                .alignItems(AlignItems.Center)
+                .size(44.px)
+        }
+        cssRule(" img") {
+            Modifier
+                .maxSize(60.percent)
+        }
+
     }
 }
 
-val SocialMediaRowStyle = CssStyle {
-    base {
-        Modifier
-            .display(DisplayStyle.Grid)
-            .gridAutoFlow(GridAutoFlow.Column)
-            .gap(0.px)
-            .justifyContent(JustifyContent.Center)
-            .zIndex(2)
-    }
-
-    Breakpoint.MD {
-        Modifier
-            .display(DisplayStyle.Flex)
-            .flexDirection(FlexDirection.Row)
-            .gap(20.px)
-    }
-
-    cssRule(" a") {
-        Modifier
-            .display(DisplayStyle.Flex)
-            .justifyContent(JustifyContent.Center)
-            .alignItems(AlignItems.Center)
-            .size(44.px)
-    }
-    cssRule(" img") {
-        Modifier
-            .maxSize(60.percent)
-    }
-}

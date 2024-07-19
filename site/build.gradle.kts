@@ -1,5 +1,6 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
+import kotlinx.html.meta
 import kotlinx.html.title
 
 plugins {
@@ -20,7 +21,7 @@ kobweb {
                 title("Android Dev Peru 🇵🇪")
                 link(rel = "icon", href = "logo.svg", type = "image/svg+xml")
                 link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Google+Sans&display=swap")
-//              TODO: meta(name = "viewport", content = "width=device-width, initial-scale=1")
+                meta(name = "viewport", content = "width=device-width, initial-scale=1")
             }
         }
     }
