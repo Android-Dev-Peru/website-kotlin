@@ -1,5 +1,6 @@
-import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import kotlinx.html.link
+import kotlinx.html.title
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
@@ -14,12 +15,15 @@ version = "1.0-SNAPSHOT"
 kobweb {
     app {
         index {
-            description.set("Powered by Kobweb")
+            description.set("Sitio de la comunidad Android Dev Perú. Aquí encontraras eventos, recursos y otras novedades sobre nuestra comunidad de desarrolladores Android.")
+            head.add {
+                title("Android Dev Peru 🇵🇪")
+                link(rel = "icon", href = "logo.svg", type = "image/svg+xml")
+                link(rel = "stylesheet", href = "styles.css")
+                link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Google+Sans&display=swap")
+//              TODO: meta(name = "viewport", content = "width=device-width, initial-scale=1")
+            }
         }
-
-        // Only legacy sites need this set. Sites built after 0.16.0 should default to DISALLOW.
-        // See https://github.com/varabyte/kobweb#legacy-routes for more information.
-        legacyRouteRedirectStrategy.set(LegacyRouteRedirectStrategy.DISALLOW)
     }
 }
 
