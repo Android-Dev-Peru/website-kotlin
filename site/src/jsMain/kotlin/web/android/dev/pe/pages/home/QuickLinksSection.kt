@@ -66,7 +66,7 @@ val QuickLinkItemStyle = CssStyle {
     base {
         Modifier
             .flex(1)
-            .border { color(Res.Theme.BORDER.color) }
+            .border(2.px, LineStyle.Solid, Res.Theme.BORDER.color)
             .borderRadius(96.px)
             .padding(24.px)
             .cursor(Cursor.Pointer)
