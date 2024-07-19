@@ -39,7 +39,11 @@ fun QuickLinksSection() {
 
 @Composable
 fun QuickLinkItem(quickLink: QuickLink) {
-    Div(QuickLinkItemStyle.toModifier().toAttrs()) {
+    Div(QuickLinkItemStyle
+        .toModifier()
+        .onClick { window.open(quickLink.url, "_blank") }
+        .toAttrs()
+    ) {
         Image(
             src = "images/${quickLink.leftIcon}",
             modifier = Modifier.classNames("left-icon"),
