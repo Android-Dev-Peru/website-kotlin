@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home
+package web.android.dev.pe.pages.home.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.AlignItems
@@ -21,6 +21,7 @@ import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
 import web.android.dev.pe.data.QuickLink
 import web.android.dev.pe.data.QuickLinks
+import web.android.dev.pe.pages.home.layouts.HomeSection
 
 @Composable
 fun QuickLinksSection() {

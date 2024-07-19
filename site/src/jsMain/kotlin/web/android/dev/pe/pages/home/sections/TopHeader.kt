@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home
+package web.android.dev.pe.pages.home.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.*
