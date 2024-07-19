@@ -19,7 +19,6 @@ kobweb {
             head.add {
                 title("Android Dev Peru 🇵🇪")
                 link(rel = "icon", href = "logo.svg", type = "image/svg+xml")
-//                link(rel = "stylesheet", href = "styles.css")
                 link(rel = "stylesheet", href = "https://fonts.googleapis.com/css2?family=Google+Sans&display=swap")
 //              TODO: meta(name = "viewport", content = "width=device-width, initial-scale=1")
             }

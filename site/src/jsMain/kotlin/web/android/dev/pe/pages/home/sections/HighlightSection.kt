@@ -38,5 +38,5 @@ val HighlightsSectionStyle = CssStyle.base {
             size(1.fr)
         }
         .gap(2.em)
-        .padding(2.em)
+        .padding(topBottom = 0.px, leftRight = 2.em)
 }

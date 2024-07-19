@@ -19,10 +19,7 @@ import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H3
-import org.jetbrains.compose.web.dom.P
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.*
 import web.android.dev.pe.data.CardContent
 
 
@@ -35,7 +32,7 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
     ) {
         Div(CardStyles.LeftSection.toAttrs()) {
             SpanText(caption)
-            H3 { Text(content.title)  }
+            H2 { Text(content.title)  }
             P { Text(content.description) }
             Div(CardStyles.Cta.toAttrs()) {
                 Link(path = content.url) { Text(content.cta) }
@@ -68,7 +65,7 @@ object CardStyles {
             Modifier
                 .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
         }
-        cssRule(" h3") {
+        cssRule(" h2") {
             Modifier
                 .margin(8.px, 0.px)
         }
@@ -94,17 +91,15 @@ object CardStyles {
     }
     val LeftSection = CssStyle.base {
         Modifier
-            .flex(1)
             .display(DisplayStyle.Flex)
             .flexDirection(FlexDirection.Column)
             .justifyContent(JustifyContent.Center)
             .margin(8.px)
-            .fillMaxHeight()
+            .height(autoLength)
     }
 
     val RightSection = CssStyle.base {
         Modifier
-            .flex(1)
             .height(autoLength)
             .display(DisplayStyle.Flex)
             .justifyContent(JustifyContent.Center)
@@ -114,7 +109,8 @@ object CardStyles {
     val Cta = CssStyle.base {
         Modifier
             .display(DisplayStyle.InlineBlock)
-            .margin(top = autoLength)
+            .margin(top = 10.px)
+            .height(44.px)
     }
 
 }

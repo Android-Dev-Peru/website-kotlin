@@ -17,9 +17,7 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.before
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H1
-import org.jetbrains.compose.web.dom.H2
+import org.jetbrains.compose.web.dom.*
 import web.android.dev.pe.Res
 import web.android.dev.pe.data.Social
 import web.android.dev.pe.data.Socials
@@ -29,8 +27,8 @@ fun TopHeader() {
     val socials = Socials.entries
     Div(TopHeaderStyle.toModifier().toAttrs()) {
         Image(src = "logo.svg", alt = "Logo de Android Dev Peru")
-        H1 { SpanText("Android Dev Peru") }
-        H2 { SpanText("Comunidad de desarrolladores Android en Peru y LATAM") }
+        H1 { Text("Android Dev Peru") }
+        H3 { Text("Comunidad de desarrolladores Android en Peru y LATAM") }
         Div(SocialMediaRowStyle.toModifier().toAttrs()) {
             socials.forEach {
                 SocialIcon(it.data)
@@ -83,10 +81,9 @@ val TopHeaderStyle = CssStyle {
         Modifier
             .margin(top = 0.px)
     }
-    cssRule(" h2") {
+    cssRule(" h3") {
         Modifier
             .margin(20.px)
-            .fontSize(20.px)
     }
 }
 

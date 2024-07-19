@@ -20,7 +20,7 @@ val Highlights = listOf(
             🏢 Local: NTT Data<br>
         """.trimIndent(),
         image = "reunion.png",
-        cta = "Regístrate",
+        cta = "Ver grabación",
         url = Res.Links.KotlinConf2024,
     ),
     CardContent(

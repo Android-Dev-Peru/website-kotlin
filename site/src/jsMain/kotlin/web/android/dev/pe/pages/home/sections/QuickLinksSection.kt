@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.data.QuickLink
 import web.android.dev.pe.data.QuickLinks
@@ -41,7 +42,7 @@ fun QuickLinkItem(quickLink: QuickLink) {
             alt = "", // no alt text for decorative images
         )
         Link(path = quickLink.url) {
-            SpanText(quickLink.title)
+            Text(quickLink.title)
         }
         quickLink.rightIcon?.let {
             Image(
