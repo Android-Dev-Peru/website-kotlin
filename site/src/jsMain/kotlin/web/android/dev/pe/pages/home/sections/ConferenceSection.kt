@@ -8,13 +8,16 @@ import com.varabyte.kobweb.compose.css.functions.url
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Color.Companion.rgb
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.navigation.RoutePrefix
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.toAttrs
-import com.varabyte.kobweb.silk.style.toModifier
+import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.H3
+import org.jetbrains.compose.web.dom.P
+import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.pages.home.MobileBreakpoint
 import web.android.dev.pe.pages.home.layouts.AlternateBackground
@@ -23,8 +26,10 @@ import web.android.dev.pe.pages.home.layouts.HomeSection
 @Composable
 fun ConferenceSection() {
     HomeSection(
-        modifier = Modifier.padding(4.em),
         sectionModifier = AlternateBackground,
+        modifier = Modifier
+            .padding(4.em)
+            .onClick { window.open(RoutePrefix.prepend( "/conf"), "_self") },
     ) {
         Div(ShinyCardStyles.Container.toAttrs()) {
             H3(ShinyCardStyles.Title.toAttrs()) { Text("ANDROID DEV CONF") }
@@ -57,6 +62,7 @@ object ShinyCardStyles {
                 .animation(
                     ShadowPulse.toAnimation(duration = 1.s, iterationCount = AnimationIterationCount.Infinite)
                 )
+                .cursor(Cursor.Pointer)
         }
         cssRule(" h3") {
             Modifier
