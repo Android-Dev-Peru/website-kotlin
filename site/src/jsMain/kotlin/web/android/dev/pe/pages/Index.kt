@@ -1,18 +1,31 @@
 package web.android.dev.pe.pages
 
-import androidx.compose.runtime.*
-import com.varabyte.kobweb.compose.foundation.layout.Box
-import com.varabyte.kobweb.compose.ui.Alignment
+import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.Div
+import web.android.dev.pe.pages.home.QuickLinksSection
+import web.android.dev.pe.pages.home.TopHeader
 
 @Page
 @Composable
 fun HomePage() {
-    // TODO: Replace the following with your own content
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-        Text("THIS PAGE INTENTIONALLY LEFT BLANK")
+    Div(Modifier.fillMaxWidth().toAttrs()) {
+        TopHeader()
+        QuickLinksSection()
+        SaveTheDate()
+        HighlightSection()
     }
+}
+
+@Composable
+fun HighlightSection() {
+
+}
+
+@Composable
+fun SaveTheDate() {
+
 }
