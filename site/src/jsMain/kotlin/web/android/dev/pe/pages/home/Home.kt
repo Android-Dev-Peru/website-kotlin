@@ -12,6 +12,7 @@ import com.varabyte.kobweb.silk.style.base
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
+import web.android.dev.pe.pages.home.sections.ConferenceSection
 import web.android.dev.pe.pages.home.sections.HighlightSection
 import web.android.dev.pe.pages.home.sections.QuickLinksSection
 import web.android.dev.pe.pages.home.sections.TopHeader
@@ -22,6 +23,7 @@ fun Home() {
         TopHeader()
         QuickLinksSection()
         HighlightSection()
+        ConferenceSection()
     }
 }
 
@@ -32,34 +34,5 @@ val HomeSectionStyle = CssStyle {
             .alignItems(AlignItems.Center)
             .margin(leftRight = autoLength)
     }
-
-    cssRule(" body") {
-        Modifier
-            .margin(0.px)
-            .fontFamily("Google Sans", "sans-serif")
-            .fontSize(16.px)
-            .fontWeight(400)
-    }
-    cssRule(" h1") {
-        Modifier
-            .fontSize(60.px)
-    }
-    cssRule(" h2") {
-        Modifier
-            .fontSize(40.px)
-            .fontWeight(600)
-    }
-    cssRule(" h3") {
-        Modifier
-            .fontSize(32.px)
-            .fontWeight(600)
-    }
-    cssRule(" span") {
-        Modifier
-            .fontSize(14.px)
-            .color(Res.Theme.TEXT.color)
-            .textTransform(TextTransform.Uppercase)
-    }
-
 }
 

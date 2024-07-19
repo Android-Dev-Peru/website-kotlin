@@ -37,6 +37,7 @@ object Res {
     enum class Theme(val color: CSSColorValue) {
         TEXT(color = rgb(95, 99, 104)),
         LIGHT_TEXT(color = rgb(23, 78, 166)),
+        ALTERNATE_BACKGROUND(color = rgb(248, 249, 250)),
         BORDER(color = rgb(218, 220, 224)),
         BUTTON_HOVER(color = rgb(230, 230, 230)),
         LINK(color = rgb(23, 78, 166)),
