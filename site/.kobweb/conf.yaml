@@ -1,0 +1,14 @@
+site:
+  title: "Android Dev Peru"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/dist/js/developmentExecutable/pe.js"
+      api: "build/libs/pe.jar"
+    prod:
+      script: "build/dist/js/productionExecutable/pe.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
