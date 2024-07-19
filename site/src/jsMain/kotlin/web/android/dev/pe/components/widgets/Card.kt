@@ -34,7 +34,12 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
         Div(CardStyles.LeftSection.toAttrs()) {
             SpanText(caption)
             H2 { Text(content.title)  }
-            P { Text(content.description) }
+            P {
+                content.description.forEach {
+                    Text(it)
+                    Br()
+                }
+            }
             Div(CardStyles.Cta.toAttrs()) {
                 Link(path = content.url) { Text(content.cta) }
             }
@@ -56,7 +61,6 @@ object CardStyles {
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Row)
                 .alignItems(AlignItems.Center)
-                .height(350.px)
                 .padding(32.px)
                 .borderRadius(24.px)
                 .border {
@@ -114,6 +118,7 @@ object CardStyles {
     val LeftSection = CssStyle {
         base {
             Modifier
+                .flex(1)
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Column)
                 .justifyContent(JustifyContent.Center)
