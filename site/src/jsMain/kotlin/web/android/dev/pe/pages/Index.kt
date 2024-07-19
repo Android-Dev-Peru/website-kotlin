@@ -6,6 +6,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
 import org.jetbrains.compose.web.dom.Div
+import web.android.dev.pe.pages.home.HighlightSection
 import web.android.dev.pe.pages.home.QuickLinksSection
 import web.android.dev.pe.pages.home.TopHeader
 
@@ -18,11 +19,6 @@ fun HomePage() {
         SaveTheDate()
         HighlightSection()
     }
-}
-
-@Composable
-fun HighlightSection() {
-
 }
 
 @Composable
