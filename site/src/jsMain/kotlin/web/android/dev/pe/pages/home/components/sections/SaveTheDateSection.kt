@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.sections
+package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.Cursor
@@ -10,8 +10,8 @@ import com.varabyte.kobweb.navigation.RoutePrefix
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.em
 import web.android.dev.pe.pages.conf.components.widgets.ConferenceCard
-import web.android.dev.pe.pages.home.layouts.AlternateBackground
-import web.android.dev.pe.pages.home.layouts.HomeSection
+import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
+import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
 @Composable
 fun SaveTheDateSection() {

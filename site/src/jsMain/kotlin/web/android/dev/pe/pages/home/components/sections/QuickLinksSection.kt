@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.sections
+package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.AlignItems
@@ -26,7 +26,7 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.data.QuickLink
 import web.android.dev.pe.data.QuickLinks
 import web.android.dev.pe.pages.home.MobileBreakpoint
-import web.android.dev.pe.pages.home.layouts.HomeSection
+import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
 @Composable
 fun QuickLinksSection() {
@@ -39,7 +39,8 @@ fun QuickLinksSection() {
 
 @Composable
 fun QuickLinkItem(quickLink: QuickLink) {
-    Div(QuickLinkItemStyle
+    Div(
+        QuickLinkItemStyle
         .toModifier()
         .onClick { window.open(quickLink.url, "_blank") }
         .toAttrs()

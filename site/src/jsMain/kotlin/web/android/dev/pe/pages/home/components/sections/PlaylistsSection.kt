@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.sections
+package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
 import org.jetbrains.compose.web.dom.H2
@@ -8,7 +8,7 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.data.Playlists
-import web.android.dev.pe.pages.home.layouts.HomeGridSection
+import web.android.dev.pe.pages.home.components.layouts.HomeGridSection
 
 @Composable
 fun PlaylistsSection() {

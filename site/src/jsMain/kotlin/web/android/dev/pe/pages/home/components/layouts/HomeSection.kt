@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.layouts
+package web.android.dev.pe.pages.home.components.layouts
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.AlignItems

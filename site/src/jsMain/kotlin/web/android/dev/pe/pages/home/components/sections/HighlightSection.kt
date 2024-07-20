@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.sections
+package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -11,7 +11,7 @@ import web.android.dev.pe.components.widgets.Card
 import web.android.dev.pe.data.CardContent
 import web.android.dev.pe.data.Highlights
 import web.android.dev.pe.pages.home.MobileBreakpoint
-import web.android.dev.pe.pages.home.layouts.HomeSection
+import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
 @Composable
 fun HighlightSection() {

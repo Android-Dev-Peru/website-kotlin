@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.layouts
+package web.android.dev.pe.pages.home.components.layouts
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -16,11 +16,11 @@ fun HomeGridSection(
     content: @Composable () -> Unit,
 ) {
     val styles = GridSectionStyles
-    HomeSection(styles.container.toModifier()) {
-        Div(styles.header.toAttrs()) {
+    HomeSection(GridSectionStyles.container.toModifier()) {
+        Div(GridSectionStyles.header.toAttrs()) {
             header()
         }
-        Div(styles.content.toAttrs()) {
+        Div(GridSectionStyles.content.toAttrs()) {
             content()
         }
     }
