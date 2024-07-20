@@ -7,12 +7,9 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
-import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.rgba
 import org.jetbrains.compose.web.dom.Div
-import web.android.dev.pe.Res
-import web.android.dev.pe.components.widgets.BlurredBackground
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceSection
 import web.android.dev.pe.pages.conf.components.sections.CallForPapersSection
 import web.android.dev.pe.pages.conf.components.sections.LocationSection
