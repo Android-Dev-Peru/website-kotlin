@@ -36,6 +36,14 @@ fun initSiteStyles(ctx: InitSilkContext) {
         cssRule(MobileBreakpoint) { Modifier.fontSize(30.px) }
     }
 
+    ctx.stylesheet.registerStyle("h2") {
+        base { Modifier.fontSize(40.px) }
+    }
+
+    ctx.stylesheet.registerStyle("h3") {
+        base { Modifier.fontSize(32.px) }
+    }
+
     ctx.stylesheet.registerStyleBase("span") {
         Modifier
             .fontSize(14.px)

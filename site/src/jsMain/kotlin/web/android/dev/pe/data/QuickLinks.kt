@@ -2,6 +2,13 @@ package web.android.dev.pe.data
 
 import web.android.dev.pe.Res
 
+data class QuickLink(
+    val title: String,
+    val url: String,
+    val leftIcon: String,
+    val rightIcon: String? = null,
+)
+
 enum class QuickLinks(val data: QuickLink) {
     JoinWhatsApp(
         QuickLink(

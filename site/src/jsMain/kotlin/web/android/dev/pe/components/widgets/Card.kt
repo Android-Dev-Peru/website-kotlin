@@ -33,7 +33,7 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
     ) {
         Div(CardStyles.LeftSection.toAttrs()) {
             SpanText(caption)
-            H2 { Text(content.title)  }
+            H3 { Text(content.title)  }
             P {
                 content.description.forEach {
                     Text(it)
@@ -74,7 +74,7 @@ object CardStyles {
             Modifier
                 .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
         }
-        cssRule(" h2") {
+        cssRule(" h3") {
             Modifier
                 .margin(8.px, 0.px)
         }

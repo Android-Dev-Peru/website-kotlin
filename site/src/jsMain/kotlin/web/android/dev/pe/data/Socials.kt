@@ -2,6 +2,12 @@ package web.android.dev.pe.data
 
 import web.android.dev.pe.Res
 
+data class Social(
+    val icon: String,
+    val url: String,
+    val name: String = "",
+)
+
 enum class Socials(val data: Social) {
     Whatsapp(Social(icon = Res.Icon.Whatsapp, url = Res.Links.WhatsApp, name = "WhatsApp")),
     YouTube(Social(icon = Res.Icon.YouTube, url = Res.Links.YouTube, name = "YouTube")),

@@ -19,15 +19,7 @@ fun Home() {
         QuickLinksSection()
         HighlightSection()
         SaveTheDateSection()
-    }
-}
-
-val HomeSectionStyle = CssStyle {
-    base {
-        Modifier
-            .maxWidth(1200.px)
-            .alignItems(AlignItems.Center)
-            .margin(leftRight = autoLength)
+        PlaylistsSection()
     }
 }
 

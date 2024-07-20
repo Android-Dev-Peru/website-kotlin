@@ -40,6 +40,10 @@ object Res {
         LIGHT_TEXT(color = rgb(23, 78, 166)),
         ALTERNATE_BACKGROUND(color = rgb(248, 249, 250)),
         BORDER(color = rgb(218, 220, 224)),
+
+        PRIMARY_BUTTON(color = Color.black),
+        ON_PRIMARY_BUTTON(color = Color.white),
+
         BUTTON_HOVER(color = rgb(230, 230, 230)),
         LINK(color = rgb(23, 78, 166)),
         SHADOW(color = rgb(60, 64, 67)),
