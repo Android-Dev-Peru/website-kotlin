@@ -16,22 +16,26 @@ fun HomeGridSection(
     content: @Composable () -> Unit,
 ) {
     val styles = GridSectionStyles
-    HomeSection(GridSectionStyles.container.toModifier()) {
-        Div(GridSectionStyles.header.toAttrs()) {
+    HomeSection(styles.container.toModifier()) {
+        Div(styles.header.toAttrs()) {
             header()
         }
-        Div(GridSectionStyles.content.toAttrs()) {
+        Div(styles.content.toAttrs()) {
             content()
         }
     }
 }
 
 object GridSectionStyles {
-    val container = CssStyle {
+    /**
+     * align-items passed as extraModifier because otherwise it would override
+     * the home-section value. The only way to enforce it is bypassing it as a
+     * style param at the tag level.
+     */
+    val container = CssStyle(extraModifier = Modifier.alignItems(AlignItems.FlexStart)) {
         base {
             Modifier
                 .display(DisplayStyle.Flex)
-                .alignItems(AlignItems.FlexStart)
                 .flexDirection(FlexDirection.Column)
                 .padding(2.em)
         }
