@@ -12,7 +12,7 @@ data class CardContent(
 
 val Highlights = listOf(
     CardContent(
-        title = "Kotlin Conf Lima",
+        title = "Kotlin Conf",
         description = listOf(
             "El pasado Junio nos reunimos presencialmente para el Kotlin Conf - Lima.",
             "",
