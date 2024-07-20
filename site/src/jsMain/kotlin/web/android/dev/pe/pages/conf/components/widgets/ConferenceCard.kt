@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.sections
+package web.android.dev.pe.pages.conf.components.widgets
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.*
@@ -6,13 +6,13 @@ import com.varabyte.kobweb.compose.css.AlignItems
 import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.css.functions.url
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Color.Companion.rgb
+import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.navigation.RoutePrefix
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
 import com.varabyte.kobweb.silk.style.toAttrs
-import kotlinx.browser.window
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H3
@@ -20,22 +20,13 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.pages.home.MobileBreakpoint
-import web.android.dev.pe.pages.home.layouts.AlternateBackground
-import web.android.dev.pe.pages.home.layouts.HomeSection
 
 @Composable
-fun ConferenceSection() {
-    HomeSection(
-        sectionModifier = AlternateBackground,
-        modifier = Modifier
-            .padding(4.em)
-            .onClick { window.open(RoutePrefix.prepend( "/conf"), "_self") },
-    ) {
-        Div(ShinyCardStyles.Container.toAttrs()) {
-            H3(ShinyCardStyles.Title.toAttrs()) { Text("ANDROID DEV CONF") }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text("Sábado 19 de Octubre") }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text("Lima, Peru 🇵🇪") }
-        }
+fun ConferenceCard(modifier: Modifier = Modifier) {
+    Div(modifier.then(ShinyCardStyles.Container.toModifier()).toAttrs()) {
+        H3(ShinyCardStyles.Title.toAttrs()) { Text("ANDROID DEV PERU CONF") }
+        P(ShinyCardStyles.Hint.toAttrs()) { Text("Sábado 19 de Octubre") }
+        P(ShinyCardStyles.Hint.toAttrs()) { Text("Lima, Peru 🇵🇪") }
     }
 }
 
@@ -51,7 +42,7 @@ object ShinyCardStyles {
                         size = BackgroundSize.of(200.px)
                     )
                 )
-                .boxShadow(0.px, 0.px, 10.px, 0.px, rgb(0xA5C742))
+                .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
                 .position(Position.Relative)
                 .borderRadius(10.px)
                 .padding(40.px)
@@ -62,7 +53,6 @@ object ShinyCardStyles {
                 .animation(
                     ShadowPulse.toAnimation(duration = 1.s, iterationCount = AnimationIterationCount.Infinite)
                 )
-                .cursor(Cursor.Pointer)
         }
         cssRule(" h3") {
             Modifier
@@ -93,7 +83,7 @@ object ShinyCardStyles {
                 .margin(8.px)
                 .fontWeight(800)
                 .fontSize(60.px)
-                .color(rgb(0x38761d))
+                .color(Color.rgb(0x38761d))
         }
         cssRule(MobileBreakpoint) {
             Modifier
@@ -101,7 +91,6 @@ object ShinyCardStyles {
                 .fontSize(30.px)
         }
     }
-
     val Hint = CssStyle {
         base {
             Modifier
@@ -118,15 +107,15 @@ object ShinyCardStyles {
     val ShadowPulse = Keyframes {
         0.percent {
             Modifier
-                .boxShadow(0.px, 0.px, 10.px, 0.px, rgb(0xA5C742))
+                .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
         }
         50.percent {
             Modifier
-                .boxShadow(0.px, 0.px, 20.px, 0.px, rgb(0xA5C742))
+                .boxShadow(0.px, 0.px, 20.px, 0.px, Color.rgb(0xA5C742))
         }
         100.percent {
             Modifier
-                .boxShadow(0.px, 0.px, 10.px, 0.px, rgb(0xA5C742))
+                .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
         }
     }
 
