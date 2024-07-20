@@ -58,16 +58,12 @@ object ShinyCardStyles {
             Modifier
                 .margin(8.px)
         }
-//        hover {
-//            Modifier
-//                .animation(CSSAnimation(playState = AnimationPlayState.Paused))
-//        }
 
         cssRule(MobileBreakpoint) {
             Modifier
                 .background(
                     Background.of(
-                        image = BackgroundImage.of(url("../../images/droid.svg")),
+                        image = BackgroundImage.of(url("images/droid.svg")),
                         repeat = BackgroundRepeat.NoRepeat,
                         position = BackgroundPosition.of(CSSPosition(Edge.CenterX, Edge.Bottom((-28).px))),
                         size = BackgroundSize.of(100.px)
@@ -83,7 +79,7 @@ object ShinyCardStyles {
                 .margin(8.px)
                 .fontWeight(800)
                 .fontSize(60.px)
-                .color(Color.rgb(0x38761d))
+                .color(Res.Theme.PRIMARY.color)
         }
         cssRule(MobileBreakpoint) {
             Modifier

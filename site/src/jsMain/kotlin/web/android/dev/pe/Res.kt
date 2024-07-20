@@ -35,6 +35,7 @@ object Res {
     }
 
     enum class Theme(val color: CSSColorValue) {
+        PRIMARY(color = rgb(56, 118, 29)),
         TEXT(color = rgb(95, 99, 104)),
         LIGHT_TEXT(color = rgb(23, 78, 166)),
         ALTERNATE_BACKGROUND(color = rgb(248, 249, 250)),
