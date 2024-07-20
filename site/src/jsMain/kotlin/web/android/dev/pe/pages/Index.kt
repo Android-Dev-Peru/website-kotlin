@@ -8,8 +8,6 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
-import com.varabyte.kobweb.silk.style.CssStyle
-import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.px
 import web.android.dev.pe.Res
 import web.android.dev.pe.pages.home.Home

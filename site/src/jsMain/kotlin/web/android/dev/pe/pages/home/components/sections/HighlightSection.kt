@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
-import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import web.android.dev.pe.components.widgets.Card

@@ -10,14 +10,9 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
-import com.varabyte.kobweb.silk.style.base
-import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
-import com.varabyte.kobweb.silk.theme.breakpoint.toWidth
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
