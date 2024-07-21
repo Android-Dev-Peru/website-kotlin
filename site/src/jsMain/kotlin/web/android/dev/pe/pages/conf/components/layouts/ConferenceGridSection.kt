@@ -13,11 +13,15 @@ import org.jetbrains.compose.web.dom.Div
 @Composable
 fun ConferenceGridSection(
     modifier: Modifier = Modifier,
+    sectionModifier: Modifier = Modifier,
     header: @Composable () -> Unit,
     content: @Composable () -> Unit,
 ) {
     val styles = ConferenceGridSectionStyles
-    ConferenceSection(modifier.then(styles.container.toModifier())) {
+    ConferenceSection(
+        sectionModifier = sectionModifier,
+        modifier = modifier.then(styles.container.toModifier())
+    ) {
         Div(styles.header.toAttrs()) {
             header()
         }
@@ -39,13 +43,10 @@ object ConferenceGridSectionStyles {
                 .display(DisplayStyle.Flex)
                 .fillMaxWidth()
                 .flexDirection(FlexDirection.Column)
-                .padding(2.em)
         }
 
         Breakpoint.MD {
-            Modifier
-                .flexDirection(FlexDirection.Row)
-                .padding(top = 4.em, bottom = 0.px, leftRight = 0.px)
+            Modifier.flexDirection(FlexDirection.Row)
         }
     }
 
@@ -61,7 +62,7 @@ object ConferenceGridSectionStyles {
     val content = CssStyle {
         base {
             Modifier
-                .flex(2)
+                .flex(1)
                 .flexDirection(FlexDirection.Column)
                 .padding(0.px)
                 .gap(2.em)

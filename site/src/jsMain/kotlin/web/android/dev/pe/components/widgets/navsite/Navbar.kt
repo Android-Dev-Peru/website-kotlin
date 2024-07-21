@@ -110,4 +110,5 @@ val SharedNavbarStyles = CssStyle.base {
         .padding(leftRight = 16.px)
         .backgroundColor(Res.Theme.WHITE.color)
         .borderBottom(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
+        .zIndex(1)
 }

@@ -8,20 +8,18 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
 @Composable
 fun LocationSection() {
-    val isSmallScreen = mutableIsSmallScreen()
     ConferenceGridSection(
         header = {
-            if(isSmallScreen) LocationDetails() else LocationMap()
+            LocationDetails()
         },
         content = {
-            if(isSmallScreen) LocationMap() else LocationDetails()
+            LocationMap()
         }
     )
 }
@@ -40,7 +38,7 @@ private fun LocationDetails() {
     )
     PrimaryButton(
         text = "Abrir en Maps",
-        href = Res.Links.NavigateUPC,
+        href = Res.Links.Conf.MapUPC,
         modifier = Modifier.margin(top = 16.px)
     )
 }
