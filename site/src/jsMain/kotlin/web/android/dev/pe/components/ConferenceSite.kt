@@ -16,28 +16,28 @@ import web.android.dev.pe.components.widgets.navsite.Navbar
 import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
 
-private val MainSiteNavbar = Navbar(
+private val ConferenceNavbar = Navbar(
     links = listOf(
         Navlink("Conferencia", "/conf"),
-        Navlink("Ubicación", "/conf/"),
-        Navlink("Call for papers", "/conf/sponsor"),
-        Navlink("Sponsors", "/conf/sponsor"),
+        Navlink("Ubicación", "/conf#ubicacion"),
+        Navlink("Call for papers", "/conf/call-for-papers"),
+        Navlink("Sponsors", "/conf/sponsors"),
         Navlink("Quienes somos", "/about-us"),
     ),
     logo = "logo.svg",
-    title = "Android Dev Peru"
+    title = "Android Dev Peru Conf"
 )
 
 @Composable
-fun MainSite(content: @Composable () -> Unit) {
-    Navsite(MainSiteNavbar) {
-        Div(MainSiteStyle.toAttrs()) {
+fun ConferenceSite(content: @Composable () -> Unit) {
+    Navsite(ConferenceNavbar) {
+        Div(ConferenceSiteStyle.toAttrs()) {
             content()
         }
     }
 }
 
-val MainSiteStyle = CssStyle {
+val ConferenceSiteStyle = CssStyle {
     base {
         Modifier.fillMaxWidth()
     }

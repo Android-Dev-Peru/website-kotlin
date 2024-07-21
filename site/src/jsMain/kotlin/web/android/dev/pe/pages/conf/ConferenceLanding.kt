@@ -4,12 +4,13 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
+import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
+import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.core.Page
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.rgba
-import org.jetbrains.compose.web.dom.Div
+import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceSection
 import web.android.dev.pe.pages.conf.components.sections.CallForPapersSection
 import web.android.dev.pe.pages.conf.components.sections.LocationSection
@@ -19,7 +20,7 @@ import web.android.dev.pe.pages.conf.components.widgets.ConferenceCard
 @Page("/conf")
 @Composable
 fun ConferenceLanding() {
-    Div(Modifier.fillMaxWidth().toAttrs()) {
+    ConferenceSite {
         ConferenceHeader()
         LocationSection()
         CallForPapersSection()
@@ -33,7 +34,6 @@ fun ConferenceHeader() {
         Box(Modifier
             .fillMaxSize()
         ) {
-//            BlurredBackground(Modifier.position(Position.Relative).fillMaxSize())
             ConferenceCard(Modifier
                 .backgroundColor(rgba(255,255,255,0.9))
                 .margin(2.em)
