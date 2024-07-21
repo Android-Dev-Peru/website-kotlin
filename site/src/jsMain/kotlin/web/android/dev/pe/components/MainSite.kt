@@ -20,7 +20,7 @@ private val MainSiteNavbar = Navbar(
     links = listOf(
         Navlink("Quienes somos", "/about-us"),
         Navlink("Recursos", "/resources"),
-        Navlink("Android Dev Peru Conf", "/conf"),
+        Navlink("📣 Conferencia 📣", "/conf"),
     ),
     logo = "logo.svg",
     title = "Android Dev Peru"

@@ -13,7 +13,6 @@ fun Home() {
         QuickLinksSection()
         HighlightSection()
         SaveTheDateSection()
-        PlaylistsSection()
     }
 }
 

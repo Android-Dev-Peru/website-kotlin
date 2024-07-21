@@ -12,11 +12,15 @@ import org.jetbrains.compose.web.dom.Div
 
 @Composable
 fun HomeGridSection(
+    sectionModifier: Modifier = Modifier,
     header: @Composable () -> Unit,
     content: @Composable () -> Unit,
 ) {
     val styles = GridSectionStyles
-    HomeSection(styles.container.toModifier()) {
+    HomeSection(
+        modifier = styles.container.toModifier(),
+        sectionModifier = sectionModifier,
+    ) {
         Div(styles.header.toAttrs()) {
             header()
         }
