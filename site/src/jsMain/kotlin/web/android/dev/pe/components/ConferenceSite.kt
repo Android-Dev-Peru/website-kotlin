@@ -20,7 +20,7 @@ private val ConferenceNavbar = Navbar(
     links = listOf(
         Navlink("Call for papers", Res.Links.Conf.C4P),
         Navlink("Sponsors", Res.Links.Conf.SponsorBrief),
-        Navlink("Quienes somos", "/"),
+        Navlink("Quienes somos", "/about-us"),
     ),
     logo = "logo.svg",
     title = "Android Dev Peru Conf"

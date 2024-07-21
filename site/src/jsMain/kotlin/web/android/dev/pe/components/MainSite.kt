@@ -18,6 +18,7 @@ import web.android.dev.pe.components.widgets.navsite.Navsite
 
 private val MainSiteNavbar = Navbar(
     links = listOf(
+        Navlink("Inicio", "/"),
         Navlink("Quienes somos", "/about-us"),
         Navlink("Recursos", "/resources"),
         Navlink("📣 Conferencia 📣", "/conf"),
