@@ -15,6 +15,7 @@ fun NavsiteMask(visible: Boolean, onClick: ()->Unit) {
         .fillMaxSize()
         .backgroundColor(rgba(0,0,0, 0.4))
         .position(Position.Fixed)
+        .zIndex(2)
         .display(if (visible) DisplayStyle.Block else DisplayStyle.None)
         .onClick { onClick() }
         .toAttrs()

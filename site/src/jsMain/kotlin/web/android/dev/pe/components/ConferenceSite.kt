@@ -18,11 +18,9 @@ import web.android.dev.pe.components.widgets.navsite.Navsite
 
 private val ConferenceNavbar = Navbar(
     links = listOf(
-        Navlink("Conferencia", "/conf"),
-        Navlink("Ubicación", "/conf#ubicacion"),
-        Navlink("Call for papers", "/conf/call-for-papers"),
-        Navlink("Sponsors", "/conf/sponsors"),
-        Navlink("Quienes somos", "/about-us"),
+        Navlink("Call for papers", Res.Links.Conf.C4P),
+        Navlink("Sponsors", Res.Links.Conf.SponsorBrief),
+        Navlink("Quienes somos", "/"),
     ),
     logo = "logo.svg",
     title = "Android Dev Peru Conf"

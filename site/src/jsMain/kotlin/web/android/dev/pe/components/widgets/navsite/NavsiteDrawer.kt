@@ -70,9 +70,10 @@ private fun DrawerNavlink(link: Navlink) {
 val DrawerStyle = CssStyle.base {
     Modifier
         .fillMaxHeight()
-        .width(270.px)
+        .width(350.px)
         .backgroundColor(Colors.White)
         .position(Position.Fixed)
+        .zIndex(3)
 }
 
 val DrawerClosedStyle = CssStyle.base {
