@@ -5,6 +5,7 @@ import com.varabyte.kobweb.compose.css.AlignSelf
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.css.autoLength
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -35,12 +36,9 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
             SpanText(caption)
             H3 { Text(content.title)  }
             P {
-//                content.description.forEach {
-//                    Text(it)
-//                    Br()
-//                }
                 MultiLineText(content.description)
             }
+            Spacer()
             Div(CardStyles.Cta.toAttrs()) {
                 Link(path = content.url) { Text(content.cta) }
             }
@@ -61,7 +59,7 @@ object CardStyles {
             Modifier
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Row)
-                .alignItems(AlignItems.Center)
+                .alignItems(AlignItems.Start)
                 .padding(32.px)
                 .borderRadius(24.px)
                 .border {
@@ -123,8 +121,8 @@ object CardStyles {
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Column)
                 .justifyContent(JustifyContent.Center)
+                .fillMaxHeight()
                 .margin(8.px)
-                .height(autoLength)
         }
         cssRule(MobileBreakpoint) {
             Modifier.margin(0.px)
@@ -138,9 +136,10 @@ object CardStyles {
                 .display(DisplayStyle.Flex)
                 .justifyContent(JustifyContent.Center)
                 .alignItems(AlignItems.Center)
+                .alignSelf(AlignSelf.Center)
         }
         cssRule(MobileBreakpoint) {
-            Modifier.margin(0.px)
+            Modifier.margin(0.px).alignSelf(AlignSelf.SelfEnd)
         }
     }
 

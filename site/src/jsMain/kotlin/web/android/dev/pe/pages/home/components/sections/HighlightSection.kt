@@ -26,7 +26,7 @@ fun HighlightCard(content: CardContent) {
     Card(
         caption = "Contenido destacado",
         content = content,
-        modifier = Modifier.flex(1)
+        modifier = Modifier.flex(1).fillMaxHeight()
     )
 }
 
