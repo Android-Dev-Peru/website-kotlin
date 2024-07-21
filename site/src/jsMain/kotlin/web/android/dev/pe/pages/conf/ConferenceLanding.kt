@@ -16,6 +16,7 @@ import web.android.dev.pe.pages.conf.components.sections.CallForPapersSection
 import web.android.dev.pe.pages.conf.components.sections.LocationSection
 import web.android.dev.pe.pages.conf.components.sections.SponsorSection
 import web.android.dev.pe.pages.conf.components.widgets.ConferenceCard
+import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
 @Page("/conf")
 @Composable
@@ -30,7 +31,7 @@ fun ConferenceLanding() {
 
 @Composable
 fun ConferenceHeader() {
-    ConferenceSection {
+    ConferenceSection(sectionModifier = AlternateBackground) {
         Box(Modifier
             .fillMaxSize()
         ) {

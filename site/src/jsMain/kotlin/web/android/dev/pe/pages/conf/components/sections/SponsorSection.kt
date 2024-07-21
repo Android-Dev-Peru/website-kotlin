@@ -7,7 +7,7 @@ import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
 @Composable
 fun SponsorSection() {
-    ConferenceSection((AlternateBackground)) {
+    ConferenceSection {
         Text("fasdfadfads")
     }
 }

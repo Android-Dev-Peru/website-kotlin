@@ -35,10 +35,11 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
             SpanText(caption)
             H3 { Text(content.title)  }
             P {
-                content.description.forEach {
-                    Text(it)
-                    Br()
-                }
+//                content.description.forEach {
+//                    Text(it)
+//                    Br()
+//                }
+                MultiLineText(content.description)
             }
             Div(CardStyles.Cta.toAttrs()) {
                 Link(path = content.url) { Text(content.cta) }

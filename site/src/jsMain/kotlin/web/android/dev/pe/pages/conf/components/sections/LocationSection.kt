@@ -1,13 +1,55 @@
 package web.android.dev.pe.pages.conf.components.sections
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.silk.components.graphics.Image
+import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.Text
-import web.android.dev.pe.pages.conf.components.layouts.ConferenceSection
-import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
+import web.android.dev.pe.Res
+import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.MultiLineText
+import web.android.dev.pe.components.widgets.PrimaryButton
+import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
 @Composable
 fun LocationSection() {
-    ConferenceSection(AlternateBackground) {
-        Text("Location")
-    }
+    val isSmallScreen = mutableIsSmallScreen()
+    ConferenceGridSection(
+        header = {
+            if(isSmallScreen) LocationDetails() else LocationMap()
+        },
+        content = {
+            if(isSmallScreen) LocationMap() else LocationDetails()
+        }
+    )
+}
+
+@Composable
+private fun LocationDetails() {
+    H2 { Text("Ubicación") }
+    MultiLineText(
+        """
+        🏢 Local: UPC Sede Monterrico<br>
+        🏟️ Auditorio Bancalari - Pabellón H, primer piso<br>
+        🧭 Dirección: Prolongación Primavera 2390, Santiago de Surco<br><br>
+        
+        ⏰ Hora de ingreso: 8am
+        """.trimIndent()
+    )
+    PrimaryButton(
+        text = "Abrir en Maps",
+        href = Res.Links.NavigateUPC,
+        modifier = Modifier.margin(top = 16.px)
+    )
+}
+
+@Composable
+private fun LocationMap() {
+    Image(
+        src = "images/upc_map.jpg",
+        alt = "Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H",
+        modifier = Modifier
+    )
 }

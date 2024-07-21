@@ -19,6 +19,7 @@ object Res {
         const val TalkProposal = "https://github.com/Android-Dev-Peru/propuestas-meetup/issues/new?assignees=&labels=&projects=&template=plantilla-de-propuesta.md&title=Charla%3A+T%C3%ADtulo+de+la+charla"
         const val KotlinConf2024 = "https://www.youtube.com/live/yB5UiuIBZsY?si=8Tltr1OWZCYATVBB"
         const val Salarios2023 = "https://android-dev-peru.notion.site/2023-Salarios-Mobile-Devs-40be984176ce4fd099cef15e1c8e17c7"
+        const val NavigateUPC = "https://maps.app.goo.gl/WyPeqxmWyJS8bbvJ6"
     }
 
     object Icon {
