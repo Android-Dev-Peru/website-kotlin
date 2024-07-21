@@ -43,7 +43,6 @@ object ShinyCardStyles {
                     )
                 )
                 .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
-                .position(Position.Relative)
                 .borderRadius(10.px)
                 .padding(40.px)
                 .display(DisplayStyle.Flex)

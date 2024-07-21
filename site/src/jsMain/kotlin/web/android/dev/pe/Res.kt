@@ -2,6 +2,7 @@ package web.android.dev.pe
 
 import org.jetbrains.compose.web.css.CSSColorValue
 import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgb
 
 object Res {
@@ -52,6 +53,6 @@ object Res {
     }
 
     object Dimens {
-
+        val NavbarHeight = 48.px
     }
 }

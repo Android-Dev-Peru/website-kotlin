@@ -56,7 +56,6 @@ object HomeHeaderStyles {
     val Container = CssStyle {
         base {
             Modifier
-                .position(Position.Relative)
                 .color(Res.Theme.WHITE.color)
                 .textAlign(TextAlign.Center)
                 .padding(50.px)
@@ -76,9 +75,7 @@ object HomeHeaderStyles {
                 .margin(top = 40.px)
         }
         cssRule(MobileBreakpoint) {
-            Modifier
-                .size(100.px)
-                .margin(top = 10.px)
+            Modifier.display(DisplayStyle.None)
         }
     }
 
@@ -107,7 +104,6 @@ object HomeHeaderStyles {
                 .gridAutoFlow(GridAutoFlow.Column)
                 .gap(0.px)
                 .justifyContent(JustifyContent.Center)
-                .zIndex(2)
         }
 //
 //    Breakpoint.MD {
