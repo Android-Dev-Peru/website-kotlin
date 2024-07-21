@@ -4,11 +4,10 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
-import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import org.jetbrains.compose.web.css.em
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceSection
@@ -31,15 +30,15 @@ fun ConferenceLanding() {
 
 @Composable
 fun ConferenceHeader() {
-    ConferenceSection(sectionModifier = AlternateBackground) {
-        Box(Modifier
+    Box(Modifier
+        .fillMaxWidth()
+        .padding(40.px)
+        .then(AlternateBackground)
+    ) {
+        ConferenceCard(Modifier
             .fillMaxSize()
-        ) {
-            ConferenceCard(Modifier
-                .backgroundColor(rgba(255,255,255,0.9))
-                .margin(2.em)
-                .align(Alignment.Center)
-            )
-        }
+            .margin(topBottom = 2.em)
+            .align(Alignment.Center)
+        )
     }
 }

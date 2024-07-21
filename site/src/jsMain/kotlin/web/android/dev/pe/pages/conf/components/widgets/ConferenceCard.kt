@@ -44,7 +44,7 @@ object ShinyCardStyles {
                 )
                 .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
                 .borderRadius(10.px)
-                .padding(40.px)
+                .padding(2.em)
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Column)
                 .gap(8.px)
