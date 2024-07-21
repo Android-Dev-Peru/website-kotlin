@@ -3,6 +3,7 @@ package web.android.dev.pe.pages.home.components.layouts
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
@@ -11,8 +12,9 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 
 @Composable
-fun HomeGridSection(
+fun TwoPaneSection(
     sectionModifier: Modifier = Modifier,
+    distribution: Pair<Int, Int> = Pair(1,2),
     header: @Composable () -> Unit,
     content: @Composable () -> Unit,
 ) {
@@ -21,10 +23,10 @@ fun HomeGridSection(
         modifier = styles.container.toModifier(),
         sectionModifier = sectionModifier,
     ) {
-        Div(styles.header.toAttrs()) {
+        Div(styles.header.toModifier().flex(distribution.first).toAttrs()) {
             header()
         }
-        Div(styles.content.toAttrs()) {
+        Div(styles.content.toModifier().flex(distribution.second).toAttrs()) {
             content()
         }
     }
@@ -53,7 +55,7 @@ object GridSectionStyles {
 
     val header = CssStyle {
         base {
-            Modifier.flex(1).margin(bottom = 2.em)
+            Modifier.margin(bottom = 2.em)
         }
         Breakpoint.MD {
             Modifier.margin(0.px)
@@ -63,20 +65,13 @@ object GridSectionStyles {
     val content = CssStyle {
         base {
             Modifier
-                .flex(2)
                 .flexDirection(FlexDirection.Column)
                 .padding(0.px)
-                .gap(2.em)
         }
         Breakpoint.MD {
             Modifier
                 .padding(leftRight = 2.em, bottom = 2.em)
                 .flexDirection(FlexDirection.Row)
-                .display(DisplayStyle.Grid)
-                .gridTemplateColumns {
-                    size(1.fr)
-                    size(1.fr)
-                }
         }
     }
 }
