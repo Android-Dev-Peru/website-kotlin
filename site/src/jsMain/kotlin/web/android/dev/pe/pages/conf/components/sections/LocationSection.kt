@@ -11,10 +11,12 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
+import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
 @Composable
 fun LocationSection() {
     ConferenceGridSection(
+        sectionModifier = AlternateBackground,
         header = {
             LocationDetails()
         },
