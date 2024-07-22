@@ -22,11 +22,9 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.pages.home.MobileBreakpoint
 
 @Composable
-fun ConferenceCard(modifier: Modifier = Modifier) {
-    Div(modifier.then(ShinyCardStyles.Container.toModifier()).toAttrs()) {
-        H3(ShinyCardStyles.Title.toAttrs()) { Text("ANDROID DEV PERU CONF") }
-        P(ShinyCardStyles.Hint.toAttrs()) { Text("Sábado 19 de Octubre") }
-        P(ShinyCardStyles.Hint.toAttrs()) { Text("Lima, Peru 🇵🇪") }
+fun ConferenceCard(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    Div(ShinyCardStyles.Container.toModifier().then(modifier).toAttrs()) {
+        content()
     }
 }
 

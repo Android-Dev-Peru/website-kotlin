@@ -1,15 +1,10 @@
 package web.android.dev.pe.components
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.TextTransform
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.textTransform
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toAttrs
-import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.navsite.Navbar
@@ -38,12 +33,5 @@ fun ConferenceSite(content: @Composable () -> Unit) {
 val ConferenceSiteStyle = CssStyle {
     base {
         Modifier.fillMaxWidth()
-    }
-
-    cssRule(" span") {
-        Modifier
-            .fontSize(14.px)
-            .color(Res.Theme.TEXT.color)
-            .textTransform(TextTransform.Uppercase)
     }
 }
