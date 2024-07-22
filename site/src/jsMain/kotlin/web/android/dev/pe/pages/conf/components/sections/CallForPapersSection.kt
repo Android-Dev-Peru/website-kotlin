@@ -13,17 +13,13 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
-import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
-import web.android.dev.pe.pages.conf.components.layouts.ConferenceSection
-import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
 @Composable
 fun CallForPapersSection() {
     val isSmallScreen = mutableIsSmallScreen()
     ConferenceGridSection(
-        sectionModifier = AlternateBackground,
         header = {
             if (isSmallScreen) Details() else SpeakersImage()
         },
