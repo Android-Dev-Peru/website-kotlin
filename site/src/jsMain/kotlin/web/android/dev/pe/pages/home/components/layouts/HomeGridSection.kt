@@ -6,13 +6,13 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 
 @Composable
 fun TwoPaneSection(
+    modifier: Modifier = Modifier,
     sectionModifier: Modifier = Modifier,
     distribution: Pair<Int, Int> = Pair(1,2),
     header: @Composable () -> Unit,
@@ -20,7 +20,7 @@ fun TwoPaneSection(
 ) {
     val styles = GridSectionStyles
     HomeSection(
-        modifier = styles.container.toModifier(),
+        modifier = styles.container.toModifier().then(modifier),
         sectionModifier = sectionModifier,
     ) {
         Div(styles.header.toModifier().flex(distribution.first).toAttrs()) {
@@ -65,6 +65,7 @@ object GridSectionStyles {
     val content = CssStyle {
         base {
             Modifier
+                .fillMaxWidth()
                 .flexDirection(FlexDirection.Column)
                 .padding(0.px)
         }
