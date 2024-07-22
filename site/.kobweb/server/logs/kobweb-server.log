@@ -1,11 +1,11 @@
-2024-07-22 00:18:15.296 [main] DEBUG ktor.application - Java Home: /Users/brunoaybar/.sdkman/candidates/java
-2024-07-22 00:18:15.298 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/brunoaybar/dev/adp-web/site/.kobweb/server/server.jar!/ch]
-2024-07-22 00:18:15.311 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/pe.jar"
-2024-07-22 00:18:15.352 [main] INFO  ktor.application - Application started in 0.093 seconds.
-2024-07-22 00:18:15.452 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-07-22 00:18:27.146 [eventLoopGroupProxy-4-1] DEBUG ktor.application - Served fallback index.html file in response to "/"
-2024-07-22 00:18:29.269 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Served fallback index.html file in response to "/conf"
-2024-07-22 00:18:30.516 [eventLoopGroupProxy-4-4] DEBUG ktor.application - Served fallback index.html file in response to "/about-us"
-2024-07-22 00:18:31.630 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Served fallback index.html file in response to "/resources"
-2024-07-22 00:18:33.405 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-07-22 00:18:34.487 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-07-22 01:52:30.916 [main] DEBUG ktor.application - Java Home: /Users/brunoaybar/.sdkman/candidates/java
+2024-07-22 01:52:30.918 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/brunoaybar/dev/adp-web/site/.kobweb/server/server.jar!/ch]
+2024-07-22 01:52:30.929 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/pe.jar"
+2024-07-22 01:52:30.962 [main] INFO  ktor.application - Application started in 0.079 seconds.
+2024-07-22 01:52:31.044 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-07-22 01:52:47.634 [eventLoopGroupProxy-4-1] DEBUG ktor.application - Served fallback index.html file in response to "/"
+2024-07-22 01:52:48.785 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Served fallback index.html file in response to "/conf"
+2024-07-22 01:52:49.656 [eventLoopGroupProxy-4-5] DEBUG ktor.application - Served fallback index.html file in response to "/about-us"
+2024-07-22 01:52:50.923 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Served fallback index.html file in response to "/resources"
+2024-07-22 01:52:53.190 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-07-22 01:52:54.253 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.

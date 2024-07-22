@@ -9,6 +9,6 @@ server:
       api: "build/libs/pe.jar"
     prod:
       script: "build/dist/js/productionExecutable/pe.js"
-      siteRoot: ".kobweb/site"
+      siteRoot: "public/"
 
   port: 8080

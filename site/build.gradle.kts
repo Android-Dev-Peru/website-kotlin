@@ -1,3 +1,4 @@
+import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.meta
@@ -39,6 +40,8 @@ kobweb {
                 meta(name = "twitter:image", content = "https://android.devperu.org/logo_thumbnail.png")
             }
         }
+
+        legacyRouteRedirectStrategy.set(LegacyRouteRedirectStrategy.DISALLOW)
     }
 }
 
