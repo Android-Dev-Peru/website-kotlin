@@ -1,0 +1,11 @@
+2024-07-21 23:43:11.072 [main] DEBUG ktor.application - Java Home: /Users/brunoaybar/.sdkman/candidates/java
+2024-07-21 23:43:11.074 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@7aec35a: [file:/Users/brunoaybar/dev/adp-web/site/.kobweb/server/server.jar!/ch]
+2024-07-21 23:43:11.086 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/pe.jar"
+2024-07-21 23:43:11.119 [main] INFO  ktor.application - Application started in 0.08 seconds.
+2024-07-21 23:43:11.196 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-07-21 23:43:25.772 [eventLoopGroupProxy-4-1] DEBUG ktor.application - Served fallback index.html file in response to "/"
+2024-07-21 23:43:26.902 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Served fallback index.html file in response to "/conf"
+2024-07-21 23:43:27.908 [eventLoopGroupProxy-4-5] DEBUG ktor.application - Served fallback index.html file in response to "/about-us"
+2024-07-21 23:43:28.896 [eventLoopGroupProxy-4-3] DEBUG ktor.application - Served fallback index.html file in response to "/resources"
+2024-07-21 23:43:30.931 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-07-21 23:43:31.981 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
