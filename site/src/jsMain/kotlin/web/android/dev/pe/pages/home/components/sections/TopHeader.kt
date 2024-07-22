@@ -60,7 +60,7 @@ object HomeHeaderStyles {
                 .textAlign(TextAlign.Center)
                 .padding(50.px)
                 .background(Background.of(
-                    image = BackgroundImage.of(url("images/android-header-blur.jpeg")),
+                    image = BackgroundImage.of(url("images/android-header-blur.webp")),
                     repeat = BackgroundRepeat.NoRepeat,
                     position = BackgroundPosition.of(CSSPosition.Center),
                     size = BackgroundSize.Cover

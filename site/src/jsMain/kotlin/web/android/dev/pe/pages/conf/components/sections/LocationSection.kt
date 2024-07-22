@@ -46,7 +46,7 @@ private fun LocationDetails() {
 @Composable
 private fun LocationMap() {
     Image(
-        src = "images/upc_map.jpg",
+        src = "images/upc_map.webp",
         alt = "Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H",
         modifier = Modifier
     )
