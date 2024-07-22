@@ -7,6 +7,7 @@ import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.attrsModifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -14,6 +15,7 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
 import org.jetbrains.compose.web.css.DisplayStyle
@@ -21,6 +23,8 @@ import org.jetbrains.compose.web.css.JustifyContent
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.Source
+import org.jetbrains.compose.web.dom.Video
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -60,10 +64,16 @@ private fun HeaderContent() {
 @Composable
 private fun HeaderImage() {
     Div(Modifier.fillMaxSize().display(DisplayStyle.Flex).justifyContent(JustifyContent.Center).toAttrs()) {
-        Image(
-            src = "gifs/raise-the-roof-droid.gif",
-            modifier = ConferenceHeaderStyles.image.toModifier()
-        )
+//        Image(
+//            src = "gifs/raise-the-roof-droid.webm",
+//            modifier = ConferenceHeaderStyles.image.toModifier()
+//        )
+        Video(ConferenceHeaderStyles.image.toAttrs()) {
+            Source(attrs = {
+                attr("src", "gifs/raise-the-roof-droid.webm")
+                attr("type", "video/webm")
+            })
+        }
     }
 }
 
@@ -98,7 +108,12 @@ object ConferenceHeaderStyles {
     val details = CssStyle.base {
         Modifier.fontSize(FontSize.Large)
     }
-    val image = CssStyle {
+    val image = CssStyle(extraModifier = Modifier.attrsModifier {
+        attr("autoplay", "")
+        attr("loop", "")
+        attr("muted", "")
+        attr("playsinline", "")
+    }) {
         base {
             Modifier.fillMaxWidth().maxWidth(150.px)
         }

@@ -31,17 +31,17 @@ object Res {
     }
 
     object Icon {
-        val Whatsapp = "social_wsp.svg"
-        val YouTube = "social_youtube.svg"
-        val Twitter = "social_twitter.svg"
-        val Instagram = "social_instagram.svg"
-        val LinkedIn = "social_linkedin.svg"
-        val GitHub = "social_github.svg"
-        val TikTok = "social_tiktok.svg"
-        val WhatsappFilled = "social_wsp_filled.svg"
-        val LinkedinFilled = "social_linkedin_filled.svg"
-        val Speaker = "icon_speaker.png"
-        val ExternalLink = "icon_external_link.svg"
+        val Whatsapp = "icons/social_wsp.svg"
+        val YouTube = "icons/social_youtube.svg"
+        val Twitter = "icons/social_twitter.svg"
+        val Instagram = "icons/social_instagram.svg"
+        val LinkedIn = "icons/social_linkedin.svg"
+        val GitHub = "icons/social_github.svg"
+        val TikTok = "icons/social_tiktok.svg"
+        val WhatsappFilled = "icons/social_wsp_filled.svg"
+        val LinkedinFilled = "icons/social_linkedin_filled.svg"
+        val Speaker = "icons/icon_speaker.png"
+        val ExternalLink = "icons/icon_external_link.svg"
     }
 
     enum class Theme(val color: CSSColorValue) {

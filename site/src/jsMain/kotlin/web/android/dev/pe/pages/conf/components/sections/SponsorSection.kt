@@ -45,7 +45,7 @@ private fun Details() {
     )
 }
 
-private val SponsorsLogos = listOf("upc_logo.png", "tu_logo_aqui.png")
+private val SponsorsLogos = listOf("upc_logo.png", "tu_logo_aqui.webp")
 
 @Composable
 private fun Sponsors() {
