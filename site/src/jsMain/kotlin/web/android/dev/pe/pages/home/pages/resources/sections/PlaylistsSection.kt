@@ -11,6 +11,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
+import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.data.Playlists
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
@@ -21,7 +22,7 @@ fun PlaylistsSection() {
         header = {
             H2 { Text("Playlists") }
             P { Text("No te pierdas el material exclusivo que la comunidad nos ha compartido a lo largo de lo años.") }
-            PrimaryButton(text = "Síguenos en Youtube", href = Res.Links.YouTube)
+            PrimaryButton(text = "Síguenos en Youtube", href = Res.Links.YouTube, variant = OutlinePrimaryButtonVariant)
         },
         content = {
             SimpleGrid(numColumns = numColumns(2), Modifier.gap(2.em)) {

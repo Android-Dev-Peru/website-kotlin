@@ -11,6 +11,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
+import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.data.RecentBlogs
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -23,7 +24,7 @@ fun BlogPostsSection() {
         header = {
             H2 { Text("Artículos recientes") }
             P { Text("¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad") }
-            PrimaryButton(text = "Ver todos los artículos", href = Res.Links.DevTo)
+            PrimaryButton(text = "Ver todos los artículos", href = Res.Links.DevTo, variant = OutlinePrimaryButtonVariant)
         },
         content = {
             SimpleGrid(numColumns = numColumns(2), Modifier.gap(2.em)) {

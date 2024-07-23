@@ -9,6 +9,7 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.MultiLineText
+import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
@@ -40,6 +41,7 @@ private fun LocationDetails() {
     PrimaryButton(
         text = "Abrir en Maps",
         href = Res.Links.Conf.MapUPC,
+        variant = OutlinePrimaryButtonVariant,
         modifier = Modifier.margin(top = 16.px)
     )
 }

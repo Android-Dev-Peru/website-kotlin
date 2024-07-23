@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -36,9 +37,10 @@ private fun Details() {
     H2 { Text("Sé un sponsor") }
     P { Text("Este evento no sería posible sin su ayuda. ¿Te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?") }
     PrimaryButton(
-        text = "Más información",
+        text = "Ser patrocinador",
         href = Res.Links.Conf.SponsorBrief,
-        modifier = Modifier.margin(topBottom = 16.px)
+        modifier = Modifier.margin(topBottom = 16.px),
+        variant = OutlinePrimaryButtonVariant,
     )
 }
 
