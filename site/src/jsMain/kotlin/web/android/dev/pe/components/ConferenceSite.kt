@@ -13,7 +13,7 @@ import web.android.dev.pe.components.widgets.navsite.Navsite
 
 private val ConferenceNavbar = Navbar(
     links = listOf(
-        Navlink("Call for papers", Res.Links.Conf.C4P),
+        Navlink("Call for Speakers", Res.Links.Conf.C4P),
         Navlink("Sponsors", Res.Links.Conf.SponsorBrief),
         Navlink("Quienes somos", "/about-us"),
     ),
