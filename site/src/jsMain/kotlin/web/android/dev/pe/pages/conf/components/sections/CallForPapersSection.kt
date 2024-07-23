@@ -33,8 +33,8 @@ fun CallForPapersSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun Details() {
-    H2 { Text("Call for Papers") }
-    P { Text("Participa en el evento como ponente 🎤") }
+    H2 { Text("Call for Speakers") }
+    P { Text("Buscamos charlas sobre desarrollo Android, Kotlin, multiplataforma, Gradle, CI/CD, IA/ML, Firebase y más. ¡No dudes en enviarnos tu propuesta!  🎤") }
     PrimaryButton(
         text = "Enviar charla",
         href = Res.Links.Conf.C4P,
