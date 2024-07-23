@@ -41,7 +41,7 @@ fun QuickLinkItem(quickLink: QuickLink) {
         .toAttrs()
     ) {
         Image(
-            src = "images/${quickLink.leftIcon}",
+            src = quickLink.leftIcon,
             modifier = Modifier.classNames("left-icon"),
             alt = "", // no alt text for decorative images
         )
@@ -50,7 +50,7 @@ fun QuickLinkItem(quickLink: QuickLink) {
         }
         quickLink.rightIcon?.let {
             Image(
-                src = "images/$it",
+                src = it,
                 modifier = Modifier
                     .classNames("right-icon")
                     .onClick { window.open(quickLink.url, "_blank") },

@@ -48,7 +48,7 @@ fun TopHeader() {
 @Composable
 fun SocialIcon(social: Social) {
     Link(path = social.url, modifier = Modifier.ariaLabel(social.name)) {
-        Image(src = "images/${social.icon}", alt = "")
+        Image(src = social.icon, alt = "")
     }
 }
 
