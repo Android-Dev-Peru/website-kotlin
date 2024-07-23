@@ -39,4 +39,7 @@ val ConferenceSectionStyle = CssStyle {
     Breakpoint.MD {
         Modifier.padding(top = 4.em, bottom = 0.px, leftRight = 0.px)
     }
+    cssRule(" p") {
+        Modifier.fontSize(20.px)
+    }
 }

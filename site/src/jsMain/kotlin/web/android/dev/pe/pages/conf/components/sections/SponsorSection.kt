@@ -17,9 +17,9 @@ import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
 @Composable
-fun SponsorSection() {
+fun SponsorSection(sectionModifier: Modifier = Modifier) {
     ConferenceGridSection(
-        sectionModifier = AlternateBackground,
+        sectionModifier = sectionModifier,
         modifier = Modifier,
         header = {
             Details()

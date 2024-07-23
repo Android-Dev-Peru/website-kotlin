@@ -27,9 +27,10 @@ import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 
 @Composable
-fun ConferenceHeader() {
+fun ConferenceHeader(sectionModifier: Modifier = Modifier) {
     val isSmallScreen = mutableIsSmallScreen()
     TwoPaneSection(
+        sectionModifier = sectionModifier,
         modifier = ConferenceHeaderStyles.container.toModifier(),
         distribution = if (isSmallScreen) 1 to 1 else 2 to 1,
         header = {
