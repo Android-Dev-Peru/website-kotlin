@@ -21,6 +21,7 @@ import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
+import web.android.dev.pe.components.CaptionStyle
 import web.android.dev.pe.data.CardContent
 import web.android.dev.pe.pages.home.MobileBreakpoint
 
@@ -33,7 +34,7 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
         .toAttrs()
     ) {
         Div(CardStyles.LeftSection.toAttrs()) {
-            SpanText(caption)
+            SpanText(caption, CaptionStyle)
             H3 { Text(content.title)  }
             P {
                 MultiLineText(content.description)
