@@ -40,11 +40,9 @@ val MainSiteStyle = CssStyle {
     base {
         Modifier.fillMaxWidth()
     }
-
-    cssRule(" span") {
-        Modifier
-            .fontSize(14.px)
-            .color(Res.Theme.TEXT.color)
-            .textTransform(TextTransform.Uppercase)
-    }
 }
+
+val CaptionStyle = Modifier
+    .fontSize(14.px)
+    .color(Res.Theme.TEXT.color)
+    .textTransform(TextTransform.Uppercase)

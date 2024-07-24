@@ -88,10 +88,7 @@ object ConferenceHeaderStyles {
     }
     val caption = CssStyle {
         base {
-            Modifier.fontSize(FontSize.XLarge).margin(top = 20.px, bottom = 2.em)
-        }
-        Breakpoint.MD {
-            Modifier.padding(bottom = 2.em)
+            Modifier.fontSize(FontSize.XLarge).margin(topBottom = 20.px)
         }
     }
     val details = CssStyle.base {
