@@ -11,6 +11,10 @@ We're Android developers, so of course we're Kotlin first! The official website 
 
 ## Run the project
 
+First, you have to install `kobweb` binary. Follow the test [installation steps in the official docs](https://github.com/varabyte/kobweb?tab=readme-ov-file#install-the-kobweb-binary).
+
+Once installed locally, execute the project with:
+
 ```bash
 cd site
 kobweb run
