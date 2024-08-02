@@ -5,7 +5,9 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.silk.components.graphics.Image
 
+
 @Composable
+@Suppress("UNUSED")
 fun BlobImage(src: String, blobSrc: String, modifier: Modifier = Modifier) {
     Image(
         src = src,

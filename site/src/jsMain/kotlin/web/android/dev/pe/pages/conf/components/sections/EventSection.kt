@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -16,7 +17,6 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.widgets.BlobImage
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
@@ -53,9 +53,8 @@ private fun Details() {
 
 @Composable
 private fun DetailImage() {
-    BlobImage(
-        src = "images/adp-stock-photo-1.webp",
-        blobSrc = "shapes/blob2.svg",
+    Image(
+        src = "images/adp-stock-cropped-photo-1.webp",
         modifier = Modifier.width(100.percent)
     )
 }
