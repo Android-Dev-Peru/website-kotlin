@@ -10,6 +10,7 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.navsite.Navbar
 import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
+import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val ConferenceNavbar = Navbar(
     links = listOf(
@@ -26,6 +27,7 @@ fun ConferenceSite(content: @Composable () -> Unit) {
     Navsite(ConferenceNavbar) {
         Div(ConferenceSiteStyle.toAttrs()) {
             content()
+            MainFooter()
         }
     }
 }

@@ -15,6 +15,7 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.navsite.Navbar
 import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
+import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val MainSiteNavbar = Navbar(
     links = listOf(
@@ -32,6 +33,7 @@ fun MainSite(content: @Composable () -> Unit) {
     Navsite(MainSiteNavbar) {
         Div(MainSiteStyle.toAttrs()) {
             content()
+            MainFooter()
         }
     }
 }

@@ -7,27 +7,22 @@ import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
-import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
-import web.android.dev.pe.data.Social
-import web.android.dev.pe.data.Socials
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
+import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
-import web.android.dev.pe.pages.home.components.sections.HomeHeaderStyles.SocialMediaRow
 
 @Composable
 fun TopHeader() {
@@ -54,22 +49,6 @@ private fun HeaderContent() {
             modifier = styles.caption.toModifier()
         )
         SocialIcons()
-    }
-}
-
-@Composable
-private fun SocialIcons() {
-    Div (SocialMediaRow.toAttrs()) {
-        Socials.entries.forEach {
-            SocialIcon(it.data)
-        }
-    }
-}
-
-@Composable
-fun SocialIcon(social: Social) {
-    Link(path = social.url, modifier = Modifier.ariaLabel(social.name)) {
-        Image(src = social.icon, modifier = HomeHeaderStyles.SocialMediaIcon.toModifier())
     }
 }
 
