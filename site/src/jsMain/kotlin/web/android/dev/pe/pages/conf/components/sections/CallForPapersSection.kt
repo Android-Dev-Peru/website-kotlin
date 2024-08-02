@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.width
-import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.silk.components.graphics.Image
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
@@ -13,7 +12,6 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
-import web.android.dev.pe.components.widgets.BlobImage
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
@@ -44,9 +42,8 @@ private fun Details() {
 
 @Composable
 private fun SpeakersImage() {
-    BlobImage(
-        src = "images/c4p.webp",
-        blobSrc = "shapes/blob2.svg",
+    Image(
+        src = "images/c4p-cropped.webp",
         modifier = Modifier.width(100.percent)
     )
 }
