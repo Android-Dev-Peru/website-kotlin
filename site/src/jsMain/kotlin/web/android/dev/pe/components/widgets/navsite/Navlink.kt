@@ -12,7 +12,6 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 
@@ -27,11 +26,9 @@ data class Navlink(
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
-    val isSmallScreen = mutableIsSmallScreen()
-    if (item.type == Navlink.Type.Highlighted && !isSmallScreen) {
-        HighlightedNavLink(item, modifier)
-    } else {
-        RegularNavLink(item, modifier)
+    when (item.type) {
+        Navlink.Type.Regular -> RegularNavLink(item, modifier)
+        Navlink.Type.Highlighted -> HighlightedNavLink(item, modifier)
     }
 }
 

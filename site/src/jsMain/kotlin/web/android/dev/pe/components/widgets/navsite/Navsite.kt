@@ -1,8 +1,6 @@
 package web.android.dev.pe.components.widgets.navsite
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Box
@@ -21,26 +19,26 @@ import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 
 @Composable
 fun Navsite(navbar: Navbar, content: @Composable () -> Unit) {
-    val isDrawerOpen = remember { mutableStateOf(false) }
+    var navbarState by remember { mutableStateOf(NavbarState.Collapsed) }
     val isSmallScreen = mutableIsSmallScreen()
 
     Box(Modifier.fillMaxSize()) {
         Column(Modifier.fillMaxSize()) {
-            Navbar(navbar, onDrawerToggle = { isDrawerOpen.value = !isDrawerOpen.value })
+            Navbar(
+                navbar = navbar,
+                state = navbarState,
+                onDrawerToggle = { navbarState = navbarState.toggle() }
+            )
             content()
         }
         NavsiteMask(
-            visible = isSmallScreen && isDrawerOpen.value,
-            onClick = { isDrawerOpen.value = false }
+            visible = isSmallScreen && navbarState == NavbarState.Expanded,
+            onClick = { navbarState = NavbarState.Collapsed }
         )
     }
 
     if(isSmallScreen) {
-        NavsiteDrawer(
-            navbar,
-            opened = isDrawerOpen.value,
-            onDrawerClose = { isDrawerOpen.value = false }
-        )
+        NavsiteDrawer(navbar, navbarState)
     }
 }
 
