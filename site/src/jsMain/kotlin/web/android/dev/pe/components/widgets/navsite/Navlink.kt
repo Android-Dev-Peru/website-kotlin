@@ -2,6 +2,7 @@ package web.android.dev.pe.components.widgets.navsite
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -10,6 +11,7 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.Color
+import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
@@ -22,17 +24,17 @@ data class Navlink(
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
-    Link(path = item.path, modifier.then(NavlinkStyle.toModifier())) {
+    Link(path = item.path, modifier.then(NavLinkStyle.toModifier())) {
         Text(item.name)
     }
 }
 
-val NavlinkStyle = CssStyle {
+val NavLinkStyle = CssStyle {
     base {
         Modifier
             .fontSize(14.px)
             .lineHeight(20.px)
-            .fontWeight(700)
+            .fontWeight(FontWeight.Bold)
             .color(Res.Theme.TEXT.color)
             .textDecorationLine(TextDecorationLine.None)
             .textAlign(TextAlign.Center)
@@ -40,7 +42,8 @@ val NavlinkStyle = CssStyle {
     cssRule(":hover") {
         Modifier
             .color(Color.black)
-            .backgroundColor(Res.Theme.BUTTON_HOVER.color)
+            .fontWeight(FontWeight.ExtraBold)
+            .borderBottom(2.px, LineStyle.Solid, Res.Theme.PRIMARY_LIGHT.color)
             .cursor(Cursor.Pointer)
     }
 }

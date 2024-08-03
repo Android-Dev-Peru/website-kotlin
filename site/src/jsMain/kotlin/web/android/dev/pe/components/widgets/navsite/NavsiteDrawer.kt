@@ -2,6 +2,7 @@ package web.android.dev.pe.components.widgets.navsite
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.Cursor
+import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.Transition
 import com.varabyte.kobweb.compose.css.TransitionTimingFunction
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -59,11 +60,11 @@ private fun Header(navbar: Navbar, onDrawerClose: ()->Unit) {
 private fun DrawerNavlink(link: Navlink) {
     NavLink(link, Modifier
         .height(52.px)
+        .fontSize(FontSize.Medium)
         .fillMaxWidth()
         .padding(left = 16.px)
         .display(DisplayStyle.Flex)
         .alignItems(AlignItems.Center)
-        .borderBottom(1.px, LineStyle.Solid, Res.Theme.BORDER.color),
     )
 }
 
