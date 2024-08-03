@@ -25,7 +25,7 @@ fun PlaylistsSection() {
             PrimaryButton(text = "Síguenos en Youtube", href = Res.Links.YouTube, variant = OutlinePrimaryButtonVariant)
         },
         content = {
-            SimpleGrid(numColumns = numColumns(2), Modifier.gap(2.em)) {
+            SimpleGrid(numColumns = numColumns(base = 1, md = 2), Modifier.gap(2.em)) {
                 playlists.forEach {
                     BorderlessCard(data = it)
                 }

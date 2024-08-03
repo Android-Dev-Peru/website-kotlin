@@ -27,7 +27,7 @@ fun BlogPostsSection() {
             PrimaryButton(text = "Ver todos los artículos", href = Res.Links.DevTo, variant = OutlinePrimaryButtonVariant)
         },
         content = {
-            SimpleGrid(numColumns = numColumns(2), Modifier.gap(2.em)) {
+            SimpleGrid(numColumns = numColumns(base = 1, md = 2), Modifier.gap(2.em)) {
                 blogPosts.forEach {
                     BorderlessCard(data = it)
                 }
