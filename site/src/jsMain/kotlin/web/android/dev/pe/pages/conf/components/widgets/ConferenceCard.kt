@@ -70,7 +70,7 @@ object ShinyCardStyles {
         base {
             Modifier
                 .margin(8.px)
-                .fontWeight(800)
+                .fontWeight(FontWeight.Bold)
                 .fontSize(60.px)
                 .color(Res.Theme.PRIMARY.color)
         }
