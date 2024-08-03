@@ -1,10 +1,7 @@
 package web.android.dev.pe.components.widgets.navsite
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.Cursor
-import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.TextAlign
-import com.varabyte.kobweb.compose.css.TextDecorationLine
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -15,18 +12,45 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.PrimaryButton
+import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 
 data class Navlink(
     val name: String,
-    val path: String
-)
+    val path: String,
+    val type: Type = Type.Regular,
+) {
+    enum class Type { Regular, Highlighted }
+}
 
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
+    val isSmallScreen = mutableIsSmallScreen()
+    if (item.type == Navlink.Type.Highlighted && !isSmallScreen) {
+        HighlightedNavLink(item, modifier)
+    } else {
+        RegularNavLink(item, modifier)
+    }
+}
+
+@Composable
+private fun RegularNavLink(item: Navlink, modifier: Modifier = Modifier) {
     Link(path = item.path, modifier.then(NavLinkStyle.toModifier())) {
         Text(item.name)
     }
+}
+
+
+@Composable
+private fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
+    PrimaryButton(
+        text = item.name,
+        href = item.path,
+        variant = RectangularPrimaryButtonVariant,
+        modifier = modifier.height(36.px).margin(leftRight = 4.px).alignSelf(AlignSelf.Center)
+    )
 }
 
 val NavLinkStyle = CssStyle {

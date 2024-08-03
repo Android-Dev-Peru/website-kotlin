@@ -74,3 +74,20 @@ val OutlinePrimaryButtonVariant = PrimaryButtonStyle.addVariant {
             .color(Colors.White)
     }
 }
+
+
+val RectangularPrimaryButtonVariant = PrimaryButtonStyle.addVariant {
+    base {
+        Modifier
+            .backgroundColor(Res.Theme.PRIMARY_BUTTON.color)
+            .color(Res.Theme.ON_PRIMARY_BUTTON.color)
+            .border { style(LineStyle.None) }
+            .fontSize(14.px)
+            .borderRadius(4.px)
+    }
+    hover {
+        Modifier
+            .backgroundColor(Res.Theme.PRIMARY.color)
+            .color(Colors.White)
+    }
+}
