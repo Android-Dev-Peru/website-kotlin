@@ -27,22 +27,32 @@ data class Navbar(
     val links: List<Navlink>
 )
 
+enum class NavbarState {
+    Collapsed, Expanded;
+
+    fun toggle() = when(this) {
+        Collapsed -> Expanded
+        Expanded -> Collapsed
+    }
+}
+
 @Composable
 fun Navbar(
     navbar: Navbar,
+    state: NavbarState,
     onDrawerToggle: ()->Unit
 ) {
     val isSmallScreen = mutableIsSmallScreen()
 
     if (isSmallScreen) {
-        NavbarMobile(navbar, onClick = { onDrawerToggle() })
+        NavbarMobile(navbar, state, onClick = { onDrawerToggle() })
     } else {
         NavbarLarge(navbar)
     }
 }
 
 @Composable
-private fun FakeNavbar() {
+fun FakeNavbar() {
     /**
      * This div will occupy the space of the fixed navigation bar,
      * so that the content below it remains scrollable and visible
@@ -51,16 +61,16 @@ private fun FakeNavbar() {
 }
 
 @Composable
-private fun NavbarMobile(navbar: Navbar, onClick: (SyntheticMouseEvent) -> Unit) {
+private fun NavbarMobile(navbar: Navbar, state: NavbarState, onClick: (SyntheticMouseEvent) -> Unit) {
     Row(
         modifier = SharedNavbarStyles.toModifier(),
         horizontalArrangement = Arrangement.spacedBy(16.px),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
-            src = "icons/hamburger.svg",
+            src = if (state == NavbarState.Collapsed) "icons/hamburger.svg" else "icons/close.svg",
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
-            alt = "Abrir menu"
+            alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
         LogoAndName(logo = navbar.logo, name = navbar.title)
     }
@@ -110,5 +120,5 @@ val SharedNavbarStyles = CssStyle.base {
         .padding(leftRight = 16.px)
         .backgroundColor(Res.Theme.WHITE.color)
         .borderBottom(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
-        .zIndex(1)
+        .zIndex(4)
 }
