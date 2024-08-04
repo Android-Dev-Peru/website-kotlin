@@ -15,6 +15,3 @@ fun Home() {
         SaveTheDateSection()
     }
 }
-
-val MobileBreakpoint = CSSMediaQuery.MediaFeature("max-width", 600.px)
-

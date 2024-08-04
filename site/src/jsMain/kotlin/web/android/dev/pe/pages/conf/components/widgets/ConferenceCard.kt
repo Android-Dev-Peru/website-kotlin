@@ -11,11 +11,11 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.animation.Keyframes
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
-import web.android.dev.pe.pages.home.MobileBreakpoint
 
 @Composable
 fun ConferenceCard(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
@@ -30,15 +30,16 @@ object ShinyCardStyles {
             Modifier
                 .background(
                     Background.of(
-                        image = BackgroundImage.of(url("/images/droid.svg")),
+                        image = BackgroundImage.of(url("images/droid.svg")),
                         repeat = BackgroundRepeat.NoRepeat,
-                        position = BackgroundPosition.of(CSSPosition(Edge.Right(57.px), Edge.Bottom((-53).px))),
-                        size = BackgroundSize.of(200.px)
+                        position = BackgroundPosition.of(CSSPosition(Edge.CenterX, Edge.Bottom((-28).px))),
+                        size = BackgroundSize.of(100.px)
                     )
                 )
+                .padding(top = 20.px, bottom = 100.px, leftRight = 20.px)
+                .alignItems(AlignItems.Center)
                 .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
                 .borderRadius(10.px)
-                .padding(2.em)
                 .display(DisplayStyle.Flex)
                 .flexDirection(FlexDirection.Column)
                 .gap(8.px)
@@ -52,18 +53,18 @@ object ShinyCardStyles {
                 .margin(8.px)
         }
 
-        cssRule(MobileBreakpoint) {
+        Breakpoint.MD {
             Modifier
                 .background(
                     Background.of(
-                        image = BackgroundImage.of(url("images/droid.svg")),
+                        image = BackgroundImage.of(url("/images/droid.svg")),
                         repeat = BackgroundRepeat.NoRepeat,
-                        position = BackgroundPosition.of(CSSPosition(Edge.CenterX, Edge.Bottom((-28).px))),
-                        size = BackgroundSize.of(100.px)
+                        position = BackgroundPosition.of(CSSPosition(Edge.Right(57.px), Edge.Bottom((-53).px))),
+                        size = BackgroundSize.of(200.px)
                     )
                 )
-                .padding(top = 20.px, bottom = 100.px, leftRight = 20.px)
-                .alignItems(AlignItems.Center)
+                .padding(2.em)
+                .alignItems(AlignItems.Start)
         }
     }
     val Title = CssStyle {
@@ -71,26 +72,26 @@ object ShinyCardStyles {
             Modifier
                 .margin(8.px)
                 .fontWeight(FontWeight.Bold)
-                .fontSize(60.px)
+                .fontSize(30.px)
+                .textAlign(TextAlign.Center)
                 .color(Res.Theme.PRIMARY.color)
         }
-        cssRule(MobileBreakpoint) {
+        Breakpoint.MD {
             Modifier
-                .textAlign(TextAlign.Center)
-                .fontSize(30.px)
+                .fontSize(60.px)
+                .textAlign(TextAlign.Start)
         }
     }
     val Hint = CssStyle {
         base {
             Modifier
                 .textTransform(TextTransform.Uppercase)
-                .fontSize(20.px)
+                .fontSize(14.px)
                 .margin(0.px)
                 .color(Res.Theme.TEXT.color)
         }
-        cssRule(MobileBreakpoint) {
-            Modifier
-                .fontSize(14.px)
+        Breakpoint.MD {
+            Modifier.fontSize(20.px)
         }
     }
     val ShadowPulse = Keyframes {
