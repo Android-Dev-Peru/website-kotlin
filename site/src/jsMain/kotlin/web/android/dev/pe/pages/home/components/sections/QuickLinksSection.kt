@@ -11,6 +11,7 @@ import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
@@ -20,7 +21,6 @@ import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
 import web.android.dev.pe.data.QuickLink
 import web.android.dev.pe.data.QuickLinks
-import web.android.dev.pe.pages.home.MobileBreakpoint
 import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
 @Composable
@@ -64,15 +64,15 @@ val QuickLinksSectionStyle = CssStyle {
     base {
         Modifier
             .display(DisplayStyle.Flex)
-            .flexDirection(FlexDirection.Row)
+            .flexDirection(FlexDirection.Column)
             .gap(2.em)
-            .padding(2.em)
+            .padding(topBottom = 2.em, leftRight = 1.em)
     }
 
-    cssRule(MobileBreakpoint) {
+    Breakpoint.MD {
         Modifier
-            .flexDirection(FlexDirection.Column)
-            .padding(topBottom = 2.em, leftRight = 1.em)
+            .flexDirection(FlexDirection.Row)
+            .padding(2.em)
     }
 }
 
@@ -80,6 +80,7 @@ val QuickLinkItemStyle = CssStyle {
     base {
         Modifier
             .flex(1)
+            .fillMaxWidth()
             .border(2.px, LineStyle.Solid, Res.Theme.BORDER.color)
             .borderRadius(96.px)
             .padding(24.px)
@@ -112,9 +113,5 @@ val QuickLinkItemStyle = CssStyle {
             .fontWeight(500)
             .textDecorationLine(TextDecorationLine.None)
             .alignSelf(AlignSelf.Center)
-    }
-
-    cssRule(MobileBreakpoint) {
-        Modifier.flex(1).fillMaxWidth()
     }
 }

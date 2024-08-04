@@ -15,15 +15,18 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
-import org.jetbrains.compose.web.dom.*
+import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.H3
+import org.jetbrains.compose.web.dom.P
+import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.components.CaptionStyle
 import web.android.dev.pe.data.CardContent
-import web.android.dev.pe.pages.home.MobileBreakpoint
 
 
 @Composable
@@ -59,8 +62,9 @@ object CardStyles {
         base {
             Modifier
                 .display(DisplayStyle.Flex)
-                .flexDirection(FlexDirection.Row)
-                .alignItems(AlignItems.Start)
+                .flexDirection(FlexDirection.Column)
+                .alignItems(AlignItems.End)
+                .height(autoLength)
                 .padding(32.px)
                 .borderRadius(24.px)
                 .border {
@@ -93,25 +97,25 @@ object CardStyles {
                 .color(Colors.White)
         }
 
-        cssRule(MobileBreakpoint) {
+        Breakpoint.MD {
             Modifier
-                .flexDirection(FlexDirection.Column)
-                .height(autoLength)
-                .alignItems(AlignItems.End)
+                .flexDirection(FlexDirection.Row)
+                .alignItems(AlignItems.Start)
         }
     }
 
     val Icon = CssStyle {
         base {
             Modifier
-                .maxHeight(150.px)
+                .maxHeight(60.px)
+                .margin(topBottom = 20.px)
                 .alignSelf(AlignSelf.Center)
         }
 
-        cssRule(MobileBreakpoint) {
+        Breakpoint.MD {
             Modifier
-                .maxHeight(60.px)
-                .margin(topBottom = 20.px)
+                .maxHeight(200.px)
+                .margin(0.px)
         }
     }
 
@@ -123,10 +127,10 @@ object CardStyles {
                 .flexDirection(FlexDirection.Column)
                 .justifyContent(JustifyContent.Center)
                 .fillMaxHeight()
-                .margin(8.px)
+                .margin(0.px)
         }
-        cssRule(MobileBreakpoint) {
-            Modifier.margin(0.px)
+        Breakpoint.MD {
+            Modifier.margin(8.px)
         }
     }
 
@@ -137,10 +141,10 @@ object CardStyles {
                 .display(DisplayStyle.Flex)
                 .justifyContent(JustifyContent.Center)
                 .alignItems(AlignItems.Center)
-                .alignSelf(AlignSelf.Center)
+                .alignSelf(AlignSelf.SelfEnd)
         }
-        cssRule(MobileBreakpoint) {
-            Modifier.margin(0.px).alignSelf(AlignSelf.SelfEnd)
+        Breakpoint.MD {
+            Modifier.alignSelf(AlignSelf.Center)
         }
     }
 
