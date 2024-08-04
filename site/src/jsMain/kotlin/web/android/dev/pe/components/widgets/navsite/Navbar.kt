@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.ConditionalLayout
 
 data class Navbar(
     val title: String,
@@ -42,13 +43,10 @@ fun Navbar(
     state: NavbarState,
     onDrawerToggle: ()->Unit
 ) {
-    val isSmallScreen = mutableIsSmallScreen()
-
-    if (isSmallScreen) {
-        NavbarMobile(navbar, state, onClick = { onDrawerToggle() })
-    } else {
-        NavbarLarge(navbar)
-    }
+    ConditionalLayout(
+        mobile = { NavbarMobile(navbar, state, onClick = { onDrawerToggle() }) },
+        large = { NavbarLarge(navbar) }
+    )
 }
 
 @Composable
@@ -61,9 +59,14 @@ fun FakeNavbar() {
 }
 
 @Composable
-private fun NavbarMobile(navbar: Navbar, state: NavbarState, onClick: (SyntheticMouseEvent) -> Unit) {
+private fun NavbarMobile(
+    navbar: Navbar,
+    state: NavbarState,
+    onClick: (SyntheticMouseEvent) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     Row(
-        modifier = SharedNavbarStyles.toModifier(),
+        modifier = SharedNavbarStyles.toModifier().then(modifier),
         horizontalArrangement = Arrangement.spacedBy(16.px),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -79,9 +82,9 @@ private fun NavbarMobile(navbar: Navbar, state: NavbarState, onClick: (Synthetic
 
 
 @Composable
-private fun NavbarLarge(navbar: Navbar) {
+private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
     Row(
-        modifier = SharedNavbarStyles.toModifier(),
+        modifier = SharedNavbarStyles.toModifier().then(modifier),
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Anchor(
