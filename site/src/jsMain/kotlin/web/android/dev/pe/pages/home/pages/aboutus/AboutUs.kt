@@ -16,10 +16,13 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.toAttrs
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.FlexDirection
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.components.MainSite
@@ -34,10 +37,12 @@ import web.android.dev.pe.pages.home.pages.aboutus.sections.OrganizersSection
 @Composable
 fun AboutUs() {
     MainSite {
-        Header()
-        Intro()
-        OrganizersSection()
-        LegacyOrganizersSection()
+        Div(AboutUsStyle.toAttrs()) {
+            Header()
+            Intro()
+            OrganizersSection()
+            LegacyOrganizersSection()
+        }
     }
 }
 
@@ -59,7 +64,7 @@ private fun Header() {
             SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
         }
         P(Modifier.textAlign(TextAlign.Center).fontSize(FontSize.Larger).fontWeight(FontWeight.ExtraBold).toAttrs()) {
-            Text("Promoviendo el desarrollo personal y profesional en Perú")
+            Text("Comunidad de desarolladores Android")
         }
     }
 }
@@ -84,20 +89,24 @@ private fun Intro() {
 
 @Composable
 private fun IntroImage() {
-    Image(src = "images/android_phone.png", Modifier.fillMaxWidth())
+    Image(src = "images/adp-stock-photo-2.webp", Modifier.fillMaxWidth())
 }
 
 @Composable
 private fun IntroText() {
    P {
        MultiLineText("""
-            Android Dev Perú: ¡10 años impulsando el desarrollo Android en el Perú!<br><br>
+            Somos la comunidad de Android y Kotlin más grande y activa del Perú. A lo largo de los años,
+            hemos organizado decenas de eventos presenciales y virtuales gratuitos.<br><br>
             
-            Durante más de una década, hemos sido el hogar de miles de desarrolladores 
-            talentosos que han dado forma al panorama tecnológico del país.<br><br>
-            
-            Juntos, hemos creado aplicaciones innovadoras, compartido conocimientos y 
-            construido una red de apoyo invaluable.
+            Te invitamos a participar como asistente o expositor en nuestros meetups, workshops, 
+            y conferencias. <br><br>
         """.trimIndent())
    }
+}
+
+val AboutUsStyle = CssStyle {
+    cssRule(" p") {
+        Modifier.fontSize(20.px)
+    }
 }
