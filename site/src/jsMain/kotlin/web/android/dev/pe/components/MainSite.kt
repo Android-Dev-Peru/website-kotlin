@@ -24,7 +24,7 @@ private val MainSiteNavbar = Navbar(
         Navlink("Recursos", "/resources"),
         Navlink("Conferencia", "/conf", Navlink.Type.Highlighted),
     ),
-    logo = "logo.svg",
+    logo = "/logo.svg",
     title = "Android Dev Peru"
 )
 

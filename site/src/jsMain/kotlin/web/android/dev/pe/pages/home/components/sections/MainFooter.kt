@@ -66,7 +66,7 @@ private fun FooterContact() {
                 Text("open source ♥")
             }
         }
-        Image("logo.svg", Modifier.size(40.px))
+        Image("/logo.svg", Modifier.size(40.px))
     }
 }
 

@@ -44,7 +44,7 @@ private fun Details() {
     )
 }
 
-private val SponsorsLogos = listOf("upc_logo.png", "tu_logo_aqui.webp")
+private val SponsorsLogos = listOf("sponsor_logo_upc.png", "sponsor_logo_template.webp")
 
 @Composable
 private fun Sponsors() {
@@ -54,7 +54,7 @@ private fun Sponsors() {
     ) {
         SponsorsLogos.forEach {
             Image(
-                src = "images/$it",
+                src = "/events/conf2024/$it",
                 alt = "",
                 modifier = Modifier.size(160.px)
             )

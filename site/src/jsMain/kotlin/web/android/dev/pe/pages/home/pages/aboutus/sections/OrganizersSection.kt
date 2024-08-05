@@ -68,7 +68,7 @@ private fun OrganizersWrapper(
 @Composable
 private fun Organizer(organizer: Organizer) {
     Column(Modifier.gap(10.px).margin(20.px), horizontalAlignment = Alignment.CenterHorizontally) {
-        Image(src = "images/${organizer.photo}", Modifier.size(90.px).borderRadius(50.percent).boxShadow(0.px, 0.px, 10.px, color = rgba(0, 0, 0, 0.5f)))
+        Image(src = "/images/${organizer.photo}", Modifier.size(90.px).borderRadius(50.percent).boxShadow(0.px, 0.px, 10.px, color = rgba(0, 0, 0, 0.5f)))
         SpanText("${organizer.name} ${organizer.lastName}", Modifier.textAlign(TextAlign.Center))
     }
 }

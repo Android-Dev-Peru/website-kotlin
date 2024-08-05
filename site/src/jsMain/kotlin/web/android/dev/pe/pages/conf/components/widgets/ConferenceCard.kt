@@ -30,7 +30,7 @@ object ShinyCardStyles {
             Modifier
                 .background(
                     Background.of(
-                        image = BackgroundImage.of(url("images/droid.svg")),
+                        image = BackgroundImage.of(url("/images/droid.svg")),
                         repeat = BackgroundRepeat.NoRepeat,
                         position = BackgroundPosition.of(CSSPosition(Edge.CenterX, Edge.Bottom((-28).px))),
                         size = BackgroundSize.of(100.px)
