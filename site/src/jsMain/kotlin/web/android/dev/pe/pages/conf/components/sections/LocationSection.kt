@@ -7,6 +7,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
@@ -28,18 +29,10 @@ fun LocationSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun LocationDetails() {
-    H2 { Text("Ubicación") }
-    MultiLineText(
-        """
-        🏢 Local: UPC Sede Monterrico<br>
-        🏟️ Auditorio Bancalari - Pabellón H, primer piso<br>
-        🧭 Dirección: Prolongación Primavera 2390, Santiago de Surco<br><br>
-        
-        ⏰ Hora de ingreso: 8am
-        """.trimIndent()
-    )
+    H2 { Text(ResStrings.conf_location_title) }
+    MultiLineText(ResStrings.conf_location_details)
     PrimaryButton(
-        text = "Abrir en Maps",
+        text = ResStrings.conf_location_cta,
         href = Res.Links.Conf.MapUPC,
         variant = OutlinePrimaryButtonVariant,
         modifier = Modifier.margin(top = 16.px)

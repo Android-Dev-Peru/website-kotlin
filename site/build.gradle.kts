@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kobwebx.markdown)
+    alias(libs.plugins.libres)
 }
 
 group = "web.android.dev.pe"
@@ -18,6 +19,7 @@ kobweb {
     app {
         index {
             description.set("Sitio de la comunidad Android Dev Perú. Aquí encontraras eventos, recursos y otras novedades sobre nuestra comunidad de desarrolladores Android.")
+            lang.set("es")
             head.add {
                 title("Android Dev Peru 🇵🇪")
                 link(rel = "icon", href = "logo.svg", type = "image/svg+xml")
@@ -59,7 +61,21 @@ kotlin {
             implementation(libs.kobweb.silk)
             implementation(libs.silk.icons.fa)
             implementation(libs.kobwebx.markdown)
-            
+            implementation(libs.libres)
         }
     }
+
+    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs += "-Xexpect-actual-classes"
+        }
+    }
+}
+
+// Multiplatform lib to handle localized texts
+libres {
+    // https://github.com/Skeptick/libres#setup
+    generatedClassName = "Res"
+    generateNamedArguments = true
+    baseLocaleLanguageCode = "es"
 }

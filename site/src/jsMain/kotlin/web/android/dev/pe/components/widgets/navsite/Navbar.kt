@@ -23,9 +23,9 @@ import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.ConditionalLayout
 
 data class Navbar(
-    val title: String,
     val logo: String,
-    val links: List<Navlink>
+    val links: List<Navlink>,
+    val title: () -> String,
 )
 
 enum class NavbarState {
@@ -75,7 +75,7 @@ private fun NavbarMobile(
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
             alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
-        LogoAndName(logo = navbar.logo, name = navbar.title)
+        LogoAndName(logo = navbar.logo, name = navbar.title())
     }
     FakeNavbar()
 }
@@ -96,7 +96,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
                 .textDecorationLine(TextDecorationLine.None)
                 .toAttrs()
         ) {
-            LogoAndName(logo = navbar.logo, name = navbar.title)
+            LogoAndName(logo = navbar.logo, name = navbar.title())
         }
         Row(Modifier.fillMaxHeight()) {
             navbar.links.forEach {

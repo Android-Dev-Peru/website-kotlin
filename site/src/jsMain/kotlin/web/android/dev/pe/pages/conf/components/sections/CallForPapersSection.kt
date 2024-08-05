@@ -10,6 +10,7 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.PrimaryButton
@@ -31,10 +32,10 @@ fun CallForPapersSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun Details() {
-    H2 { Text("Call for Speakers") }
-    P { Text("Buscamos charlas sobre desarrollo Android, Kotlin, multiplataforma, Gradle, CI/CD, IA/ML, Firebase y más. ¡No dudes en enviarnos tu propuesta!  🎤") }
+    H2 { Text(ResStrings.conf_c4p_title) }
+    P { Text(ResStrings.conf_c4p_caption) }
     PrimaryButton(
-        text = "Enviar charla",
+        text = ResStrings.conf_c4p_cta,
         href = Res.Links.Conf.C4P,
         modifier = Modifier.margin(top = 16.px)
     )

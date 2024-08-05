@@ -21,6 +21,7 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
@@ -61,9 +62,9 @@ private fun FooterContact() {
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.End
     ) {
         Div(Modifier.justifyContent(JustifyContent.Center).toAttrs()) {
-            Text("Esta web es ")
+            Text(ResStrings.main_footer_this_web_is)
             Link(path = Res.Links.GithubWeb) {
-                Text("open source ♥")
+                Text(ResStrings.main_footer_open_source)
             }
         }
         Image("/logo.svg", Modifier.size(40.px))

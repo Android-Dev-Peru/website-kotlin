@@ -9,11 +9,24 @@ import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 @Page("/conf")
 @Composable
 fun ConferenceLanding() {
-    ConferenceSite {
-        ConferenceHeader()
-        EventSection(AlternateBackground)
-        LocationSection()
-        CallForPapersSection(AlternateBackground)
-        SponsorSection()
+    ConferenceSite(lang = "es") {
+        Content()
     }
+}
+
+@Page("/conf/en")
+@Composable
+fun ConferenceLandingEnglish() {
+    ConferenceSite(lang = "en") {
+        Content()
+    }
+}
+
+@Composable
+private fun Content() {
+    ConferenceHeader()
+    EventSection(AlternateBackground)
+    LocationSection()
+    CallForPapersSection(AlternateBackground)
+    SponsorSection()
 }

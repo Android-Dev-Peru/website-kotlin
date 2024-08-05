@@ -3,12 +3,9 @@ package web.android.dev.pe.pages.conf.components.sections
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.width
-import com.varabyte.kobweb.compose.ui.styleModifier
-import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.css.percent
@@ -16,6 +13,7 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
@@ -36,16 +34,16 @@ fun EventSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun Details() {
-    H2 { Text("Sobre el evento") }
+    H2 { Text(ResStrings.conf_events_title) }
     P {
-        Text("Celebramos 10 años en comunidad compartiendo nuestro amor por Android.")
+        Text(ResStrings.conf_events_celebrate)
     }
     P {
-        Text("Disfruta de un día lleno de charlas con ponentes internacionales apasionados por esta plataforma. Y al igual que todos nuestros eventos - ")
-        SpanText("¡es gratis! 🎉", Modifier.fontWeight(FontWeight.ExtraBold))
+        Text(ResStrings.conf_events_enjoy)
+        SpanText(ResStrings.conf_events_free, Modifier.fontWeight(FontWeight.ExtraBold))
     }
     PrimaryButton(
-        text = "Regístrarme",
+        text = ResStrings.conf_events_register,
         href = Res.Links.Conf.Register,
         modifier = Modifier.margin(topBottom = 16.px)
     )

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="conf_title">Android Dev Peru Conf</string>
+
+    <string name="conf_navlink_c4p">Call for Speakers</string>
+    <string name="conf_navlink_sponsor">Sponsor</string>
+    <string name="conf_navlink_about_us">Quienes somos</string>
+    <string name="conf_navlink_register">Regístrate</string>
+
+    <string name="conf_header_time">19 de Octubre. 8am-2pm.</string>
+    <string name="conf_header_location">Lima, UPC Monterrico</string>
+    <string name="conf_header_caption">Celebremos juntos los 10 años de la comunidad, y la llegada de Android 16 🎉</string>
+
+    <string name="conf_events_title">Sobre el evento</string>
+    <string name="conf_events_celebrate">Celebramos 10 años en comunidad compartiendo nuestro amor por Android.</string>
+    <string name="conf_events_enjoy">Disfruta de un día lleno de charlas con ponentes internacionales apasionados por esta plataforma. Y al igual que todos nuestros eventos - </string>
+    <string name="conf_events_free">¡es gratis! 🎉</string>
+    <string name="conf_events_register">Regístrate</string>
+
+    <string name="conf_c4p_title">Call for Speakers</string>
+    <string name="conf_c4p_caption">Buscamos charlas sobre desarrollo Android, Kotlin, multiplataforma, Gradle, CI/CD, IA/ML, Firebase y más. ¡No dudes en enviarnos tu propuesta!  🎤Call for Speakers</string>
+    <string name="conf_c4p_cta">Enviar charla</string>
+
+    <string name="conf_location_title">Ubicación</string>
+    <string name="conf_location_details">🏢 Local: UPC Sede Monterrico&lt;br&gt;🏟️ Auditorio Bancalari - Pabellón H, primer piso&lt;br&gt;🧭 Dirección: Prolongación Primavera 2390, Santiago de Surco&lt;br&gt;&lt;br&gt;⏰ Hora de ingreso: 8am</string>
+    <string name="conf_location_cta">Ver en Maps</string>
+    <string name="conf_location_map_alt">Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H</string>
+
+    <string name="conf_sponsor_title">Sé un sponsor</string>
+    <string name="conf_sponsor_caption">Este evento no sería posible sin su ayuda. ¿Te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?</string>
+    <string name="conf_sponsor_cta">Ser patrocinador</string>
+
+</resources>
