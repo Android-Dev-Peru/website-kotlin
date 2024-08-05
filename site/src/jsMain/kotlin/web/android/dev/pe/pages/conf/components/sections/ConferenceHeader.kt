@@ -17,9 +17,9 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.JustifyContent
-import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.AnimatedImage
@@ -46,11 +46,11 @@ fun ConferenceHeader(sectionModifier: Modifier = Modifier) {
 private fun HeaderContent() {
     val styles = ConferenceHeaderStyles
     Column(Modifier.gap(16.px)) {
-        SpanText("Android Dev Peru Conf", styles.title.toModifier())
-        SpanText("19 de Octubre. 8am-2pm.", styles.details.toModifier())
-        SpanText("Lima, UPC Monterrico", styles.details.toModifier())
+        SpanText(ResStrings.conf_title, styles.title.toModifier())
+        SpanText(ResStrings.conf_header_time, styles.details.toModifier())
+        SpanText(ResStrings.conf_header_location, styles.details.toModifier())
         SpanText(
-            text = "Celebremos juntos los 10 años de la comunidad, y la llegada de Android 16 🎉",
+            text = ResStrings.conf_header_caption,
             modifier = styles.caption.toModifier()
         )
     }

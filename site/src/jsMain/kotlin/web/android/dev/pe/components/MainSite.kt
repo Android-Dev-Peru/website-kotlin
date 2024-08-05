@@ -19,13 +19,13 @@ import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val MainSiteNavbar = Navbar(
     links = listOf(
-        Navlink("Inicio", "/"),
-        Navlink("Quienes somos", "/about-us"),
-        Navlink("Recursos", "/resources"),
-        Navlink("Conferencia", "/conf", Navlink.Type.Highlighted),
+        Navlink(path ="/") { "Inicio" },
+        Navlink(path ="/about-us") { "Quienes somos" },
+        Navlink(path ="/resources") { "Recursos" },
+        Navlink(path ="/conf", Navlink.Type.Highlighted) { "Conferencia" },
     ),
     logo = "/logo.svg",
-    title = "Android Dev Peru"
+    title = { "Android Dev Peru" }
 )
 
 @Composable

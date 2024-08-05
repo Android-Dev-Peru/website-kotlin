@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="locale">en</string>
+
+    <string name="main_footer_this_web_is">This web is </string>
+    <string name="main_footer_open_source">open source ♥</string>
+</resources>

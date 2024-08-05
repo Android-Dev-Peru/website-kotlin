@@ -15,10 +15,15 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 
+/**
+ * Model that represents a navigation option
+ * @param path navigation URL
+ * @param name option title. It's a function type to lazy load the proper localized text
+ */
 data class Navlink(
-    val name: String,
     val path: String,
     val type: Type = Type.Regular,
+    val name: () -> String,
 ) {
     enum class Type { Regular, Highlighted }
 }
@@ -35,7 +40,7 @@ fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
 @Composable
 private fun RegularNavLink(item: Navlink, modifier: Modifier = Modifier) {
     Link(path = item.path, modifier.then(NavLinkStyle.toModifier())) {
-        Text(item.name)
+        Text(item.name())
     }
 }
 
@@ -43,7 +48,7 @@ private fun RegularNavLink(item: Navlink, modifier: Modifier = Modifier) {
 @Composable
 private fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
     PrimaryButton(
-        text = item.name,
+        text = item.name(),
         href = item.path,
         variant = RectangularPrimaryButtonVariant,
         modifier = modifier.height(36.px).margin(leftRight = 4.px).alignSelf(AlignSelf.Center)
