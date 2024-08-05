@@ -60,7 +60,7 @@ private fun Header() {
             horizontalArrangement = Arrangement.spacedBy(16.px)
         ) {
             SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
-            Image(src = "images/droid.svg", Modifier.size(100.px))
+            Image(src = "/images/droid.svg", Modifier.size(100.px))
             SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
         }
         P(Modifier.textAlign(TextAlign.Center).fontSize(FontSize.Larger).fontWeight(FontWeight.ExtraBold).toAttrs()) {
@@ -89,7 +89,7 @@ private fun Intro() {
 
 @Composable
 private fun IntroImage() {
-    Image(src = "images/adp-stock-photo-2.webp", Modifier.fillMaxWidth())
+    Image(src = "/events/conf2024/adp-stock-photo-2.webp", Modifier.fillMaxWidth())
 }
 
 @Composable

@@ -43,7 +43,7 @@ private fun Details() {
 @Composable
 private fun SpeakersImage() {
     Image(
-        src = "images/c4p-cropped.webp",
+        src = "/events/conf2024/c4p-cropped.webp",
         modifier = Modifier.width(100.percent)
     )
 }

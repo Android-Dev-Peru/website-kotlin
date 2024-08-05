@@ -54,7 +54,7 @@ private fun Details() {
 @Composable
 private fun DetailImage() {
     Image(
-        src = "images/adp-stock-cropped-photo-1.webp",
+        src = "/events/conf2024/adp-stock-photo-1.webp",
         modifier = Modifier.width(100.percent)
     )
 }

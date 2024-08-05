@@ -49,7 +49,7 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
         }
         Div(CardStyles.RightSection.toAttrs()) {
             Image(
-                src = "images/${content.image}",
+                src = "/images/${content.image}",
                 alt = content.title,
                 modifier = CardStyles.Icon.toModifier()
             )

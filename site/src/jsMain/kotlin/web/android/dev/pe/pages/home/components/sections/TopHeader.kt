@@ -56,7 +56,7 @@ private fun HeaderContent() {
 private fun HeaderImage() {
     Div(Modifier.fillMaxSize().display(DisplayStyle.Flex).justifyContent(org.jetbrains.compose.web.css.JustifyContent.Center).toAttrs()) {
         Image(
-            src = "logo.svg",
+            src = "/logo.svg",
             modifier = HomeHeaderStyles.image.toModifier()
         )
     }
