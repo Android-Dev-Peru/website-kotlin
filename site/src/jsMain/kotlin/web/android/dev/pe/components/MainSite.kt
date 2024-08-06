@@ -12,18 +12,20 @@ import com.varabyte.kobweb.silk.style.toAttrs
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 import web.android.dev.pe.components.widgets.navsite.Navbar
 import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val MainSiteNavbar = Navbar(
-    links = listOf(
+    primaryLink = Navlink(path ="/conf") { "Conferencia" },
+    secondaryLinks = listOf(
         Navlink(path ="/") { "Inicio" },
         Navlink(path ="/about-us") { "Quienes somos" },
         Navlink(path ="/resources") { "Recursos" },
-        Navlink(path ="/conf", Navlink.Type.Highlighted) { "Conferencia" },
     ),
+    languageSelector = LanguageSelectorOptions.None, // page not localized yet
     logo = "/logo.svg",
     title = { "Android Dev Peru" }
 )

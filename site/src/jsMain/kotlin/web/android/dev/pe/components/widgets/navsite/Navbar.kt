@@ -3,6 +3,7 @@ package web.android.dev.pe.components.widgets.navsite
 import androidx.compose.runtime.Composable
 import androidx.compose.web.events.SyntheticMouseEvent
 import com.varabyte.kobweb.compose.css.AlignItems
+import com.varabyte.kobweb.compose.css.AlignSelf
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -19,12 +20,15 @@ import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.ConditionalLayout
+import web.android.dev.pe.components.widgets.LanguageSelector
+import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 
 data class Navbar(
     val logo: String,
-    val links: List<Navlink>,
+    val primaryLink: Navlink?,
+    val secondaryLinks: List<Navlink>,
+    val languageSelector: LanguageSelectorOptions,
     val title: () -> String,
 )
 
@@ -99,16 +103,13 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
             LogoAndName(logo = navbar.logo, name = navbar.title())
         }
         Row(Modifier.fillMaxHeight()) {
-            navbar.links.forEach {
-                NavLink(it, Modifier
-                    .width(150.px)
-                    .fillMaxHeight()
-                    .display(DisplayStyle.Flex)
-                    .alignItems(AlignItems.Center)
-                    .justifyContent(JustifyContent.Center)
-                    .padding(leftRight = 16.px)
-                )
+            navbar.secondaryLinks.forEach {
+                NavLink(it, NavbarLargeItemStyle.toModifier())
             }
+            navbar.primaryLink?.let {
+                HighlightedNavLink(it, NavbarLargeItemStyle.toModifier())
+            }
+            LanguageSelector(navbar.languageSelector, NavbarLanguageSelectorStyle.toModifier())
         }
 
     }
@@ -124,4 +125,20 @@ val SharedNavbarStyles = CssStyle.base {
         .backgroundColor(Res.Theme.WHITE.color)
         .borderBottom(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
         .zIndex(4)
+}
+
+val NavbarLargeItemStyle = CssStyle.base {
+    Modifier
+        .width(150.px)
+        .fillMaxHeight()
+        .display(DisplayStyle.Flex)
+        .alignItems(AlignItems.Center)
+        .justifyContent(JustifyContent.Center)
+        .padding(leftRight = 16.px)
+}
+
+val NavbarLanguageSelectorStyle = CssStyle.base {
+    Modifier
+        .alignSelf(AlignSelf.Center)
+        .height(36.px).margin(left = 4.px)
 }

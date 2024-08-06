@@ -22,31 +22,18 @@ import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
  */
 data class Navlink(
     val path: String,
-    val type: Type = Type.Regular,
     val name: () -> String,
-) {
-    enum class Type { Regular, Highlighted }
-}
-
+)
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
-    when (item.type) {
-        Navlink.Type.Regular -> RegularNavLink(item, modifier)
-        Navlink.Type.Highlighted -> HighlightedNavLink(item, modifier)
-    }
-}
-
-@Composable
-private fun RegularNavLink(item: Navlink, modifier: Modifier = Modifier) {
     Link(path = item.path, modifier.then(NavLinkStyle.toModifier())) {
         Text(item.name())
     }
 }
 
-
 @Composable
-private fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
+fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
     PrimaryButton(
         text = item.name(),
         href = item.path,
