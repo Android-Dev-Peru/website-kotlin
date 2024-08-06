@@ -8,19 +8,18 @@ import com.varabyte.kobweb.silk.style.toAttrs
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.widgets.navsite.LocalizedSite
-import web.android.dev.pe.components.widgets.navsite.Navbar
-import web.android.dev.pe.components.widgets.navsite.Navlink
-import web.android.dev.pe.components.widgets.navsite.Navsite
+import web.android.dev.pe.components.widgets.LanguageSelectorOptions
+import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val ConferenceNavbar = Navbar(
-    links = listOf(
+    primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
+    secondaryLinks = listOf(
         Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
         Navlink(path = Res.Links.Conf.SponsorBrief) { ResStrings.conf_navlink_sponsor },
         Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
-        Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
     ),
+    languageSelector = LanguageSelectorOptions.All,
     logo = "/logo.svg",
     title = { ResStrings.conf_title }
 )

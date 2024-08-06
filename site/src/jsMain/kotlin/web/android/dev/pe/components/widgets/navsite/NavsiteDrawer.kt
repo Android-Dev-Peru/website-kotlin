@@ -14,6 +14,7 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
+import web.android.dev.pe.components.widgets.LanguageSelector
 
 @Composable
 fun NavsiteDrawer(
@@ -30,22 +31,24 @@ fun NavsiteDrawer(
          */
         FakeNavbar()
 
-        navbar.links.forEach {
+        navbar.secondaryLinks.forEach {
             DrawerNavlink(it)
         }
+        navbar.primaryLink?.let {
+            DrawerHighlightedNavlink(it)
+        }
+        LanguageSelector(navbar.languageSelector, DrawerElementStyle.toModifier())
     }
 }
 
 @Composable
 private fun DrawerNavlink(link: Navlink) {
-    NavLink(link, Modifier
-        .height(52.px)
-        .fontSize(FontSize.Medium)
-        .padding(16.px)
-        .display(DisplayStyle.Flex)
-        .alignItems(AlignItems.Center)
-        .justifyContent(JustifyContent.Center)
-    )
+    NavLink(link, DrawerElementStyle.toModifier())
+}
+
+@Composable
+private fun DrawerHighlightedNavlink(link: Navlink) {
+    HighlightedNavLink(link, DrawerElementStyle.toModifier())
 }
 
 val DrawerStyle = CssStyle.base {
@@ -67,4 +70,14 @@ val DrawerOpenStyle = CssStyle.base {
     Modifier
         .transform { translateY(0.px) }
         .transition(Transition.of("transform", 0.2.s, TransitionTimingFunction.EaseInOut))
+}
+
+val DrawerElementStyle = CssStyle.base {
+    Modifier
+        .height(52.px)
+        .fontSize(FontSize.Medium)
+        .padding(16.px)
+        .display(DisplayStyle.Flex)
+        .alignItems(AlignItems.Center)
+        .justifyContent(JustifyContent.Center)
 }
