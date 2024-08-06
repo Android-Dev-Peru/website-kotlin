@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.pages.aboutus
+package web.android.dev.pe.pages.aboutus
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.AlignItems
@@ -30,8 +30,8 @@ import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 import web.android.dev.pe.pages.home.components.layouts.HomeSection
-import web.android.dev.pe.pages.home.pages.aboutus.sections.LegacyOrganizersSection
-import web.android.dev.pe.pages.home.pages.aboutus.sections.OrganizersSection
+import web.android.dev.pe.pages.aboutus.sections.LegacyOrganizersSection
+import web.android.dev.pe.pages.aboutus.sections.OrganizersSection
 
 @Page("/about-us")
 @Composable

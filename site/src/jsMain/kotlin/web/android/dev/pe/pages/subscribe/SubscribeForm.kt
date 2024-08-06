@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.pages.subscribe
+package web.android.dev.pe.pages.subscribe
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
