@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.pages.aboutus.sections
+package web.android.dev.pe.pages.aboutus.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextAlign

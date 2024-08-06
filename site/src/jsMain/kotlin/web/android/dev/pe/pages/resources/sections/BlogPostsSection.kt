@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.home.pages.resources.sections
+package web.android.dev.pe.pages.resources.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -13,20 +13,22 @@ import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
-import web.android.dev.pe.data.Playlists
+import web.android.dev.pe.data.RecentBlogs
+import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 @Composable
-fun PlaylistsSection() {
+fun BlogPostsSection() {
     TwoPaneSection(
+        sectionModifier = AlternateBackground,
         header = {
-            H2 { Text("Playlists") }
-            P { Text("No te pierdas el material exclusivo que la comunidad nos ha compartido a lo largo de lo años.") }
-            PrimaryButton(text = "Síguenos en Youtube", href = Res.Links.YouTube, variant = OutlinePrimaryButtonVariant)
+            H2 { Text("Artículos recientes") }
+            P { Text("¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad") }
+            PrimaryButton(text = "Ver todos los artículos", href = Res.Links.DevTo, variant = OutlinePrimaryButtonVariant)
         },
         content = {
             SimpleGrid(numColumns = numColumns(base = 1, md = 2), Modifier.gap(2.em)) {
-                playlists.forEach {
+                blogPosts.forEach {
                     BorderlessCard(data = it)
                 }
             }
@@ -35,12 +37,12 @@ fun PlaylistsSection() {
 }
 
 
-private val playlists = Playlists.entries.map {
+private val blogPosts = RecentBlogs.entries.map {
     BorderlessCard(
         title = it.data.title,
         url = it.data.url,
         thumbnail = it.data.thumbnail,
         description = it.data.description,
-        caption = "Playlist",
+        caption = "Artículo",
     )
 }
