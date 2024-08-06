@@ -75,7 +75,7 @@ private fun NavbarMobile(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
-            src = if (state == NavbarState.Collapsed) "icons/hamburger.svg" else "icons/close.svg",
+            src = if (state == NavbarState.Collapsed) "/icons/hamburger.svg" else "/icons/close.svg",
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
             alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
