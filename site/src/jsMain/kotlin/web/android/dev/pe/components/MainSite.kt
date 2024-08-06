@@ -18,8 +18,8 @@ import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
-private val MainSiteNavbar = Navbar(
-    primaryLink = Navlink(path ="/conf") { "Conferencia" },
+val MainSiteNavbar = Navbar(
+    primaryLink = Navlink(path ="/subscribe") { "Suscríbete" },
     secondaryLinks = listOf(
         Navlink(path ="/") { "Inicio" },
         Navlink(path ="/about-us") { "Quienes somos" },
@@ -31,8 +31,8 @@ private val MainSiteNavbar = Navbar(
 )
 
 @Composable
-fun MainSite(content: @Composable () -> Unit) {
-    Navsite(MainSiteNavbar) {
+fun MainSite(navbar: Navbar = MainSiteNavbar, content: @Composable () -> Unit) {
+    Navsite(navbar) {
         Div(MainSiteStyle.toAttrs()) {
             content()
             MainFooter()
