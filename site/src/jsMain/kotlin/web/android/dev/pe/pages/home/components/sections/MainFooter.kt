@@ -24,6 +24,7 @@ import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
 @Composable
@@ -47,9 +48,7 @@ private fun FooterSocials() {
         modifier = Modifier.gap(12.px),
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.Start
     ) {
-        Link(path = "mailto:android@devperu.org") {
-            Text("android@devperu.org")
-        }
+        CommunityEmailLink()
         SocialIcons()
     }
 }

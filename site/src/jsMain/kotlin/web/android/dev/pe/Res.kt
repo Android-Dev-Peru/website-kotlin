@@ -8,6 +8,7 @@ import org.jetbrains.compose.web.css.rgb
 object Res {
 
     object Links {
+        const val Email = "android@devperu.org"
         const val DevTo = "https://dev.to/androiddevperu"
         const val Twitter = "https://twitter.com/androiddevperu"
         const val GitHub = "https://github.com/Android-Dev-Peru"

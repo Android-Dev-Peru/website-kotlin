@@ -6,6 +6,7 @@
     <string name="conf_navlink_sponsor">Sponsor</string>
     <string name="conf_navlink_about_us">Quienes somos</string>
     <string name="conf_navlink_register">Regístrate</string>
+    <string name="conf_navlink_code_of_conduct">Código de conducta</string>
 
     <string name="conf_header_time">19 de Octubre. 8am-2pm.</string>
     <string name="conf_header_location">Lima, UPC Monterrico</string>
@@ -29,5 +30,44 @@
     <string name="conf_sponsor_title">Sé un sponsor</string>
     <string name="conf_sponsor_caption">Este evento no sería posible sin su ayuda. ¿Te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?</string>
     <string name="conf_sponsor_cta">Ser patrocinador</string>
+
+    <!--Conference Code of Conduct-->
+    <string name="conf_coc_intro_title">Código de Conducta</string>
+    <string name="conf_coc_intro_p1">Android Dev Perú busca proporcionar una experiencia de conferencia libre de acoso para todos.</string>
+    <string name="conf_coc_intro_p2">Cualquier persona que asista (incluidos ponentes, patrocinadores y voluntarios) debe respetar nuestro Código de Conducta. El equipo organizador no tolerará ninguna forma de acoso o discriminación; quien cometa estas acciones será sancionado. Los organizadores harán cumplir este código durante todo el evento. Esperamos la cooperación de todos los participantes para ayudar a asegurar un ambiente seguro para todos. ¡Ayúdanos a hacer de Android Dev Perú Conf 24 una experiencia agradable para todos!</string>
+
+    <string name="conf_coc_purpose_title">Propósito de este documento</string>
+    <string name="conf_coc_purpose_p1">En esta conferencia, queremos dar una experiencia libre de acoso para todos aquellos quienes asistan, independientemente de su sexo, orientación sexual, discapacidad, apariencia física, tipo de cuerpo, raza o religión. No toleraremos el acoso de las y los participantes de la conferencia de ninguna forma. El lenguaje y las imágenes sexuales no son apropiadas durante ningún momento de la conferencia; incluyendo charlas, talleres, fiestas, Facebook, X (aka Twitter) y cualquier otra red social.</string>
+    <string name="conf_coc_purpose_p2">Los participantes de la conferencia que violen estas reglas podrán ser expulsados del evento a criterio de las y los organizadores del evento.</string>
+    <string name="conf_coc_purpose_p3">Los patrocinadores también se encuentran sujetos a nuestra política anti acoso. Estos en particular, no podrán utilizar imágenes, actividades o material sexualizado. El personal de los stands, incluyendo a las y los voluntarios, no podrán utilizar ropa/uniformes/disfraces o cualquier otra cosa que cree un ambiente sexualizado.</string>
+
+    <string name="conf_coc_report_title">Reportes</string>
+    <string name="conf_coc_report_p1">Si alguien te hace sentir a ti o a alguien más inseguro o inapropiado, por favor repórtalo tan pronto como te sea posible. Si ves u oyes a alguien hacer algo que viole este código de conducta, por favor háznoslo saber. Puedes hacer tu reporte por alguno de los siguientes medios:</string>
+    <string name="conf_coc_report_card_1">Contacta a algún miembro del personal, podrás identificarnos por nuestras playeras con la palabra “organizador”.</string>
+    <string name="conf_coc_report_card_2">Mensajes directos por Twitter: nuestros mensajes directos en Twitter se encuentran siempre abiertos.</string>
+    <string name="conf_coc_report_card_3">Correo electrónico: Puedes enviarnos un correo electrónico, tardaremos aproximadamente una hora en responderte.</string>
+
+    <string name="conf_coc_compliance_title">Cumplimiento</string>
+    <string name="conf_coc_compliance_p1">Se espera que a las y los participantes que se les solicite detener cualquier comportamiento de acoso, lo hagan de inmediato.</string>
+    <string name="conf_coc_compliance_p2">Cualquiera que se involucre en conductas de acoso las y los organizadores del evento se reservan el derecho a tomar cualquier medida necesaria para mantener el evento con un ambiente acogedor para todas y todos los participantes. Esto incluye advertencias o la expulsión de la conferencia.</string>
+    <string name="conf_coc_compliance_p3">Esperamos que todas y todos los participantes sigan estas reglas durante su permanencia en la conferencia, talleres y cualquier evento social relacionado con la conferencia.</string>
+
+    <string name="conf_coc_harassment_title">Acoso</string>
+    <string name="conf_coc_harassment_p1">Comentarios verbales o escritos que refuercen estructuras sociales de dominación relacionadas al género, identidad y expresión de género, orientación sexual, discapacidad, apariencia física, tipo de cuerpo, raza, edad o religión.</string>
+    <string name="conf_coc_harassment_p2">Imágenes sexuales en espacios públicos.</string>
+    <string name="conf_coc_harassment_p3">Intimidación deliberada, acoso o seguimiento.</string>
+    <string name="conf_coc_harassment_p4">Acoso con fotografías o videos.</string>
+    <string name="conf_coc_harassment_p5">Interrupciones constantes durante las conversaciones u otros eventos.</string>
+    <string name="conf_coc_harassment_p6">Contacto físico inapropiado.</string>
+    <string name="conf_coc_harassment_p7">Atención sexual no deseada.</string>
+    <string name="conf_coc_harassment_p8">Abogar por, o alentar a alguna de las conductas anteriormente mencionadas.</string>
+
+    <string name="conf_coc_discrimination_title">Discriminación de la discapacidad</string>
+    <string name="conf_coc_discrimination_p1">Palabras como “demente”, “loco”, “mongol” o “retrasado mental”, son ejemplos de lenguaje capacitista devaluando las personas que tienen alguna discapacidad física o mental. A menudo no se deriva de ningún deseo intencional de ofender, sino de la normalización que le hemos dado a lo que significa ser “normal”. Estas palabras se pueden evitar mediante el uso de descripciones más adecuadas y claras de lo que se quiera comunicar. Para obtener más información acerca de discriminación de la discapacidad y términos de reemplazo, por favor lee esta guía.</string>
+
+    <string name="conf_coc_need_help_title">¿Necesitas ayuda?</string>
+    <string name="conf_coc_need_help_p1">El staff estará encantado de ayudar a los participantes a sentirse seguros durante la conferencia. ¡Contáctanos! ↓</string>
+    <string name="conf_coc_need_help_p2">X (Twitter): </string>
+    <string name="conf_coc_need_help_p3">Correo: </string>
 
 </resources>

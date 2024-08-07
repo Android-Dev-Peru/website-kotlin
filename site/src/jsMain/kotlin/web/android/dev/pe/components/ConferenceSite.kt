@@ -18,6 +18,7 @@ private val ConferenceNavbar = Navbar(
         Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
         Navlink(path = Res.Links.Conf.SponsorBrief) { ResStrings.conf_navlink_sponsor },
         Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
+        Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = "/logo.svg",

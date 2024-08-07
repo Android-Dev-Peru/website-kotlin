@@ -24,6 +24,7 @@ val MainSiteNavbar = Navbar(
         Navlink(path ="/") { "Inicio" },
         Navlink(path ="/about-us") { "Quienes somos" },
         Navlink(path ="/resources") { "Recursos" },
+        Navlink(path = "/conf") { "Conferencia" },
     ),
     languageSelector = LanguageSelectorOptions.None, // page not localized yet
     logo = "/logo.svg",
