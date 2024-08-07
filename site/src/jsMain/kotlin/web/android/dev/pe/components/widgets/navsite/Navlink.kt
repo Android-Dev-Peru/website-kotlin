@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 
@@ -27,7 +28,7 @@ data class Navlink(
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
-    Link(path = item.path, modifier.then(NavLinkStyle.toModifier())) {
+    Link(path = item.path.appendCurrentLanguage(), modifier.then(NavLinkStyle.toModifier())) {
         Text(item.name())
     }
 }
@@ -36,7 +37,7 @@ fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
 fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
     PrimaryButton(
         text = item.name(),
-        href = item.path,
+        href = item.path.appendCurrentLanguage(),
         variant = RectangularPrimaryButtonVariant,
         modifier = modifier.height(36.px).margin(leftRight = 4.px).alignSelf(AlignSelf.Center)
     )
