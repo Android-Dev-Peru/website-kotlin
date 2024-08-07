@@ -16,7 +16,7 @@ private val ConferenceNavbar = Navbar(
     primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
         Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
-        Navlink(path = Res.Links.Conf.SponsorBrief) { ResStrings.conf_navlink_sponsor },
+        Navlink(path = "/conf/sponsorship") { ResStrings.conf_navlink_sponsor },
         Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
         Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
     ),

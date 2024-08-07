@@ -18,10 +18,10 @@ import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
 @Composable
-fun SponsorSection(sectionModifier: Modifier = Modifier) {
+fun SponsorSection(sectionModifier: Modifier = Modifier, modifier: Modifier = Modifier) {
     ConferenceGridSection(
         sectionModifier = sectionModifier,
-        modifier = Modifier,
+        modifier = modifier,
         header = {
             Details()
         },
