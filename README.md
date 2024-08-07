@@ -8,6 +8,12 @@ We're Android developers, so of course we're Kotlin first! The official website 
 - `site/` - The main project folder. This is where you'll be spending most of your time.
   - `public` - The public files which are deployed to the server.
   - `src` - The source code of the project.
+    - `jsMain`
+      - `pages`: the pages of the website
+      - `components` shared components (layouts, widgets, etc.)
+      - `data`: static data sources and models
+    - `commonMain`
+      - `libres`: localized resources (strings, images)
 
 ## Run the project
 
