@@ -25,11 +25,16 @@ import web.android.dev.pe.components.widgets.LanguageSelector
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 
 data class Navbar(
-    val logo: String,
+    val logo: NavbarLogo,
     val primaryLink: Navlink?,
     val secondaryLinks: List<Navlink>,
     val languageSelector: LanguageSelectorOptions,
+)
+
+data class NavbarLogo(
+    val src: String,
     val title: () -> String,
+    val path: String,
 )
 
 enum class NavbarState {
@@ -79,7 +84,7 @@ private fun NavbarMobile(
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
             alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
-        LogoAndName(logo = navbar.logo, name = navbar.title())
+        LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
     }
     FakeNavbar()
 }
@@ -92,7 +97,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Anchor(
-            href = "/",
+            href = navbar.logo.path,
             attrs = Modifier
                 .fillMaxHeight()
                 .display(DisplayStyle.Flex)
@@ -100,7 +105,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
                 .textDecorationLine(TextDecorationLine.None)
                 .toAttrs()
         ) {
-            LogoAndName(logo = navbar.logo, name = navbar.title())
+            LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
         }
         Row(Modifier.fillMaxHeight()) {
             navbar.secondaryLinks.forEach {

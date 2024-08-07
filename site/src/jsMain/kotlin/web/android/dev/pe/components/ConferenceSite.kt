@@ -21,8 +21,12 @@ private val ConferenceNavbar = Navbar(
         Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
     ),
     languageSelector = LanguageSelectorOptions.All,
-    logo = "/logo.svg",
-    title = { ResStrings.conf_title }
+    logo = NavbarLogo(
+        src = "/logo.svg",
+        title = { ResStrings.conf_title },
+        path = "/conf",
+    ),
+
 )
 
 @Composable
