@@ -3,7 +3,7 @@
     <string name="conf_title">Android Dev Peru Conf</string>
 
     <string name="conf_navlink_c4p">Call for Speakers</string>
-    <string name="conf_navlink_sponsor">Sponsor</string>
+    <string name="conf_navlink_sponsor">Become a sponsor</string>
     <string name="conf_navlink_about_us">About us</string>
     <string name="conf_navlink_register">Register</string>
     <string name="conf_navlink_code_of_conduct">Code of Conduct</string>
@@ -30,6 +30,27 @@
     <string name="conf_sponsor_title">Become a sponsor</string>
     <string name="conf_sponsor_caption">This event would not be possible without your help. Would you like to support the community and introduce your company to our entire audience?</string>
     <string name="conf_sponsor_cta">I'm interested</string>
+
+    <!-- Conference Sponsorship -->
+    <string name="conf_sponsorship_title">Interested in Sponsoring?</string>
+    <string name="conf_sponsorship_p1">At this Android Dev Peru Conf, we will celebrate the contributions of our community and highlight the companies, individuals, and organizations that drive Android development in Peru.</string>
+    <string name="conf_sponsorship_p2">We want to make this event a great success, building on our 10 years of experience working with the community, during which we have:</string>
+    <string name="conf_sponsorship_p2_li1">Organized dozens of events:</string>
+    <string name="conf_sponsorship_p2_li1_1">+40 in-person meetups (average attendance: 30 people)</string>
+    <string name="conf_sponsorship_p2_li1_2">+20 virtual meetups (average attendance: 50 people)</string>
+    <string name="conf_sponsorship_p2_li1_3">3 in-person and virtual workshops (average attendance: 20 people)</string>
+    <string name="conf_sponsorship_p2_li1_4">Kotlin Everywhere 2019 (attendance: 80 people)</string>
+    <string name="conf_sponsorship_p2_li2">Expanded our online presence:</string>
+    <string name="conf_sponsorship_p2_li2_1">WhatsApp: +400 active members</string>
+    <string name="conf_sponsorship_p2_li2_2">Linkedin: +850 followers</string>
+    <string name="conf_sponsorship_p2_li2_3">Youtube: +850 subscribers</string>
+    <string name="conf_sponsorship_p3">And for this Android Dev Peru Conf, we expect:</string>
+    <string name="conf_sponsorship_p3_li1">100-140 in-person attendees</string>
+    <string name="conf_sponsorship_p3_li2">50-100 virtual attendees (from all over LATAM)</string>
+    <string name="conf_sponsorship_p3_li3">4 talks by expert speakers, both national and international</string>
+    <string name="conf_sponsorship_p3_li4">Hundreds of interactions across all our social media</string>
+    <string name="conf_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
+    <string name="conf_sponsorship_plan_image">sponsorship_packages</string>
 
     <!--Conference Code of Conduct-->
     <string name="conf_coc_intro_title">Code of Conduct</string>
