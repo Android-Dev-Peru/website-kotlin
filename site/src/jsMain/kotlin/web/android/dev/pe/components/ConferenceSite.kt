@@ -17,8 +17,6 @@ private val ConferenceNavbar = Navbar(
     secondaryLinks = listOf(
         Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
         Navlink(path = "/conf/sponsorship") { ResStrings.conf_navlink_sponsor },
-        Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
-        Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(
@@ -34,7 +32,10 @@ fun ConferenceSite(lang: String, content: @Composable () -> Unit) {
     LocalizedSite(ConferenceNavbar, lang) {
         Div(ConferenceSiteStyle.toAttrs()) {
             content()
-            MainFooter()
+            MainFooter(extraLinks = listOf(
+                Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
+                Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
+            ))
         }
     }
 }
