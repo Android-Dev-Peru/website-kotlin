@@ -129,7 +129,6 @@ val SharedNavbarStyles = CssStyle.base {
 
 val NavbarLargeItemStyle = CssStyle.base {
     Modifier
-        .width(150.px)
         .fillMaxHeight()
         .display(DisplayStyle.Flex)
         .alignItems(AlignItems.Center)

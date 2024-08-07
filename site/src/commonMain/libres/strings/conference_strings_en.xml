@@ -6,6 +6,7 @@
     <string name="conf_navlink_sponsor">Sponsor</string>
     <string name="conf_navlink_about_us">About us</string>
     <string name="conf_navlink_register">Register</string>
+    <string name="conf_navlink_code_of_conduct">Code of Conduct</string>
 
     <string name="conf_header_time">October 19th. 8am-2pm.</string>
     <string name="conf_header_location">Lima, UPC Monterrico.</string>
@@ -29,4 +30,43 @@
     <string name="conf_sponsor_title">Become a sponsor</string>
     <string name="conf_sponsor_caption">This event would not be possible without your help. Would you like to support the community and introduce your company to our entire audience?</string>
     <string name="conf_sponsor_cta">I'm interested</string>
+
+    <!--Conference Code of Conduct-->
+    <string name="conf_coc_intro_title">Code of Conduct</string>
+    <string name="conf_coc_intro_p1">Android Dev Peru seeks to provide a harassment-free conference experience for everyone.</string>
+    <string name="conf_coc_intro_p2">Anyone who attends (including speakers, sponsors, and volunteers) must respect our Code of Conduct. The organizing team will not tolerate any form of harassment or discrimination; anyone who commits these actions will be sanctioned. The organizers will enforce this code throughout the event. We expect the cooperation of all participants to help ensure a safe environment for everyone. Help us make Android Dev Peru Conf 24 a pleasant experience for everyone!</string>
+
+    <string name="conf_coc_purpose_title">Purpose of this document</string>
+    <string name="conf_coc_purpose_p1">In this conference, we want to provide a harassment-free experience for all those who attend, regardless of their gender, sexual orientation, disability, physical appearance, body type, race, or religion. We will not tolerate harassment of conference participants in any form. Sexual language and images are not appropriate at any time during the conference; including talks, workshops, parties, Facebook, X (aka Twitter) and any other social network.</string>
+    <string name="conf_coc_purpose_p2">Conference participants who violate these rules may be expelled from the event at the discretion of the event organizers.</string>
+    <string name="conf_coc_purpose_p3">Sponsors are also subject to our anti-harassment policy. These in particular, may not use sexualized images, activities, or material. Booth staff, including volunteers, may not use clothing/uniforms/costumes or anything else that creates a sexualized environment.</string>
+
+    <string name="conf_coc_report_title">Reports</string>
+    <string name="conf_coc_report_p1">If someone makes you or someone else feel unsafe or inappropriate, please report it as soon as possible. If you see or hear someone doing something that violates this code of conduct, please let us know. You can make your report by any of the following means:</string>
+    <string name="conf_coc_report_card_1">Contact a staff member, you can identify us by our shirts with the word "organizer".</string>
+    <string name="conf_coc_report_card_2">Direct messages on Twitter: our direct messages on Twitter are always open.</string>
+    <string name="conf_coc_report_card_3">Email: You can send us an email, we will take approximately one hour to respond.</string>
+
+    <string name="conf_coc_compliance_title">Compliance</string>
+    <string name="conf_coc_compliance_p1">Participants who are asked to stop any harassing behavior are expected to do so immediately.</string>
+    <string name="conf_coc_compliance_p2">Anyone who engages in harassing behavior the event organizers reserve the right to take any necessary measures to maintain the event with a welcoming environment for all participants. This includes warnings or expulsion from the conference.</string>
+    <string name="conf_coc_compliance_p3">We expect all participants to follow these rules during their stay at the conference, workshops, and any social event related to the conference.</string>
+
+    <string name="conf_coc_harassment_title">Harassment</string>
+    <string name="conf_coc_harassment_p1">Verbal or written comments that reinforce social structures of domination related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body type, race, age, or religion.</string>
+    <string name="conf_coc_harassment_p2">Sexual images in public spaces.</string>
+    <string name="conf_coc_harassment_p3">Deliberate intimidation, stalking, or harassment.</string>
+    <string name="conf_coc_harassment_p4">Harassment involving photographs or videos.</string>
+    <string name="conf_coc_harassment_p5">Constant interruptions during conversations or other events.</string>
+    <string name="conf_coc_harassment_p6">Inappropriate physical contact.</string>
+    <string name="conf_coc_harassment_p7">Unwanted sexual attention.</string>
+    <string name="conf_coc_harassment_p8">Advocating for or encouraging any of the aforementioned behaviors.</string>
+
+    <string name="conf_coc_discrimination_title">Disability Discrimination</string>
+    <string name="conf_coc_discrimination_p1">Words like "crazy," "insane," "mongoloid," or "mentally retarded" are examples of ableist language that devalues people with physical or mental disabilities. Often, this does not stem from an intentional desire to offend, but from the normalization of what it means to be "normal." These words can be avoided by using more appropriate and clear descriptions of what you want to communicate. For more information about disability discrimination and replacement terms, please read this guide.</string>
+
+    <string name="conf_coc_need_help_title">Need Help?</string>
+    <string name="conf_coc_need_help_p1">Our staff is happy to help participants feel safe during the conference. Contact us! ↓</string>
+    <string name="conf_coc_need_help_p2">Twitter: </string>
+    <string name="conf_coc_need_help_p3">Email: </string>
 </resources>
