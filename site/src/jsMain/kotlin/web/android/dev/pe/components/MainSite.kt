@@ -14,6 +14,7 @@ import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 import web.android.dev.pe.components.widgets.navsite.Navbar
+import web.android.dev.pe.components.widgets.navsite.NavbarLogo
 import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.components.widgets.navsite.Navsite
 import web.android.dev.pe.pages.home.components.sections.MainFooter
@@ -27,8 +28,11 @@ val MainSiteNavbar = Navbar(
         Navlink(path = "/conf") { "Conferencia" },
     ),
     languageSelector = LanguageSelectorOptions.None, // page not localized yet
-    logo = "/logo.svg",
-    title = { "Android Dev Peru" }
+    logo = NavbarLogo(
+        src = "/logo.svg",
+        title = { "Android Dev Peru" },
+        path = "/",
+    ),
 )
 
 @Composable
