@@ -16,15 +16,16 @@ import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
-import org.jetbrains.compose.web.css.JustifyContent
-import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.CommunityEmailLink
+import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
+import web.android.dev.pe.components.widgets.PrimaryButton
+import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
 @Composable
@@ -57,7 +58,7 @@ private fun FooterSocials() {
 private fun FooterContact() {
     val isSmallScreen = mutableIsSmallScreen()
     Column(
-        modifier = Modifier.gap(12.px).alignSelf(AlignSelf.Center),
+        modifier = Modifier.gap(4.px).alignSelf(AlignSelf.Center),
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.End
     ) {
         Div(Modifier.justifyContent(JustifyContent.Center).toAttrs()) {
@@ -66,7 +67,16 @@ private fun FooterContact() {
                 Text(ResStrings.main_footer_open_source)
             }
         }
-        Image("/logo.svg", Modifier.size(40.px))
+        PrimaryButton(
+            text = "Suscríbete",
+            href = "/subscribe",
+            variant = RectangularPrimaryButtonVariant,
+            modifier = Modifier
+                .height(36.px)
+                .color(Colors.White)
+                .display(DisplayStyle.Flex)
+                .alignItems(AlignItems.Center)
+        )
     }
 }
 
