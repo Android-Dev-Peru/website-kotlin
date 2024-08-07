@@ -1,7 +1,6 @@
 package web.android.dev.pe.components.widgets
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.AlignSelf
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.JustifyContent
@@ -12,7 +11,6 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
-import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.px
@@ -21,6 +19,7 @@ import org.jetbrains.compose.web.dom.Option
 import org.jetbrains.compose.web.dom.Select
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.utils.getCurrentLanguageFromPath
 
 enum class Language(val code: String) {
     Spanish("es"),
@@ -29,6 +28,10 @@ enum class Language(val code: String) {
     val title get() = when(this) {
         Spanish -> ResStrings.language_option_es
         English -> ResStrings.language_option_en
+    }
+
+    companion object {
+        val DefaultLanguage = Spanish
     }
 }
 
@@ -62,13 +65,6 @@ private val sortedLanguages get(): List<Language> {
     return listOf(currentLanguage) + sortedLanguagesExcludingCurrent
 }
 
-private fun getCurrentLanguageFromPath(): Language {
-    return when(window.location.pathname.substringAfterLast("/")) {
-        Language.English.code -> Language.English
-        else -> Language.Spanish
-    }
-}
-
 private fun navigateToLanguage(languageCode: String?) {
     if (languageCode == null) {
         return // no language selected
@@ -81,7 +77,7 @@ private fun navigateToLanguage(languageCode: String?) {
 
     val pathWithoutLanguage = window.location.pathname.removeSuffix("/$currentLanguage")
     val targetPath = when (languageCode) {
-        Language.Spanish.code -> pathWithoutLanguage // Spanish is the default language
+        Language.DefaultLanguage.code -> pathWithoutLanguage // Spanish is the default language
         else -> "$pathWithoutLanguage/${languageCode}"
     }
 

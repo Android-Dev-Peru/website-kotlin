@@ -20,6 +20,7 @@ import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.ConditionalLayout
 import web.android.dev.pe.components.widgets.LanguageSelector
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
@@ -97,7 +98,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
         Anchor(
-            href = navbar.logo.path,
+            href = navbar.logo.path.appendCurrentLanguage(),
             attrs = Modifier
                 .fillMaxHeight()
                 .display(DisplayStyle.Flex)
