@@ -16,6 +16,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
+import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.pages.conf.components.sections.SponsorSection
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
@@ -85,7 +86,11 @@ private fun Information() {
     P { Text(ResStrings.conf_sponsorship_p4) }
     SponsorshipPlans()
 
-    SponsorSection(Modifier.padding(0.em).margin(top = 2.em))
+    SponsorSection(
+        ctaTitle = ResStrings.conf_sponsor_i_want_to_sponsor,
+        ctaPath = Res.Links.Conf.SponsorBrief,
+        modifier = Modifier.padding(0.em).margin(top = 2.em)
+    )
 }
 
 @Composable
