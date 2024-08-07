@@ -15,6 +15,7 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
@@ -26,17 +27,26 @@ import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
+import web.android.dev.pe.components.widgets.navsite.NavLink
+import web.android.dev.pe.components.widgets.navsite.Navlink
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
+
+
 @Composable
-fun MainFooter() {
+fun MainFooter(extraLinks: List<Navlink> = emptyList()) {
     val isSmallScreen = mutableIsSmallScreen()
-    SimpleGrid(numColumns(base = 1, md = 2), MainFooterStyle.toModifier()) {
+    SimpleGrid(
+        numColumns = numColumns(base = 1, md = if (extraLinks.isEmpty()) 2 else 3),
+        modifier = MainFooterStyle.toModifier()
+    ) {
         if (isSmallScreen) {
+            FooterExtraLinks(extraLinks)
             FooterContact()
             FooterSocials()
         } else {
             FooterSocials()
+            FooterExtraLinks(extraLinks)
             FooterContact()
         }
     }
@@ -55,18 +65,22 @@ private fun FooterSocials() {
 }
 
 @Composable
+private fun FooterExtraLinks(extraLinks: List<Navlink>) {
+    if(extraLinks.isEmpty()) return
+    Div(MainFooterExtraLinksStyle.toAttrs()) {
+        extraLinks.forEach {
+            NavLink(it)
+        }
+    }
+}
+
+@Composable
 private fun FooterContact() {
     val isSmallScreen = mutableIsSmallScreen()
     Column(
         modifier = Modifier.gap(4.px).alignSelf(AlignSelf.Center),
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.End
     ) {
-        Div(Modifier.justifyContent(JustifyContent.Center).toAttrs()) {
-            Text(ResStrings.main_footer_this_web_is)
-            Link(path = Res.Links.GithubWeb) {
-                Text(ResStrings.main_footer_open_source)
-            }
-        }
         PrimaryButton(
             text = "Suscríbete",
             href = "/subscribe",
@@ -77,6 +91,12 @@ private fun FooterContact() {
                 .display(DisplayStyle.Flex)
                 .alignItems(AlignItems.Center)
         )
+        Div(Modifier.justifyContent(JustifyContent.Center).toAttrs()) {
+            Text(ResStrings.main_footer_this_web_is)
+            Link(path = Res.Links.GithubWeb) {
+                Text(ResStrings.main_footer_open_source)
+            }
+        }
     }
 }
 
@@ -95,5 +115,20 @@ val MainFooterStyle = CssStyle {
 
     cssRule(" a") {
         Modifier.color(Colors.DimGray).fontWeight(FontWeight.ExtraBold)
+    }
+}
+
+val MainFooterExtraLinksStyle = CssStyle {
+    base {
+        Modifier
+            .display(DisplayStyle.Flex)
+            .flexDirection(FlexDirection.Column)
+            .gap(12.px)
+            .alignItems(AlignItems.Center)
+    }
+    Breakpoint.MD {
+        Modifier
+            .flexDirection(FlexDirection.Row)
+            .justifyContent(JustifyContent.Center)
     }
 }
