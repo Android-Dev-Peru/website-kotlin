@@ -144,9 +144,6 @@ object ConfCodeOfConductStyles {
         Breakpoint.MD {
             Modifier.padding(leftRight = 8.em, topBottom = 2.em).fontSize(20.px)
         }
-        cssRule(" a") {
-            Modifier.color(Colors.DimGray).fontWeight(FontWeight.ExtraBold)
-        }
         cssRule(" h2") {
             Modifier.margin(top = 2.em)
         }

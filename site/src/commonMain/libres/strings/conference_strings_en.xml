@@ -30,7 +30,6 @@
     <string name="conf_sponsor_title">Become a sponsor</string>
     <string name="conf_sponsor_caption">This event would not be possible without your help. Would you like to support the community and introduce your company to our entire audience?</string>
     <string name="conf_sponsor_im_interested">I'm interested</string>
-    <string name="conf_sponsor_i_want_to_sponsor">I want to be an sponsor</string>
 
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">Interested in Sponsoring?</string>
@@ -45,6 +44,9 @@
     <string name="conf_sponsorship_p2_li2_1">WhatsApp: +400 active members</string>
     <string name="conf_sponsorship_p2_li2_2">Linkedin: +850 followers</string>
     <string name="conf_sponsorship_p2_li2_3">Youtube: +850 subscribers</string>
+    <string name="conf_sponsorship_p2_more_about_us_p1">You can read more about the community and the organizers </string>
+    <string name="conf_sponsorship_p2_more_about_us_p2">by visiting this link.</string>
+
     <string name="conf_sponsorship_what_we_offer">What do we offer?</string>
     <string name="conf_sponsorship_p3">In this Android Dev Peru Conf 2024 edition, we expect:</string>
     <string name="conf_sponsorship_p3_li1">100-140 in-person attendees</string>
@@ -66,6 +68,13 @@
     <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Space for a standard Banner (1x3m) in the main auditorium of the event.</string>
     <string name="conf_sponsorship_plan_benefit_company_speaker">20-min speaker slot for your chosen speaker (only if the talk is deeply Android-related)</string>
     <string name="conf_sponsorship_plan_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
+
+    <string name="conf_sponsor_i_want_to_sponsor">I want to be an sponsor</string>
+    <string name="conf_sponsorship_plan_contact_us_pt1">Email us at </string>
+    <string name="conf_sponsorship_plan_contact_us_pt2"> indicating your company and the plan you're interested in.</string>
+    <string name="conf_sponsorship_plan_fill_form_pt1">Or if you prefer, </string>
+    <string name="conf_sponsorship_plan_fill_form_pt2">fill this form</string>
+    <string name="conf_sponsorship_plan_fill_form_pt3"> and we'll get in touch with you as soon as possible.</string>
 
     <!--Conference Code of Conduct-->
     <string name="conf_coc_intro_title">Code of Conduct</string>
