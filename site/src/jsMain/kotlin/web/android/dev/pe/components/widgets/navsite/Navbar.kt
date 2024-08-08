@@ -16,6 +16,7 @@ import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
+import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
@@ -85,7 +86,12 @@ private fun NavbarMobile(
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
             alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
-        LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
+        Anchor(
+            href = navbar.logo.path.appendCurrentLanguage(),
+            attrs = NavbarLogoLinkStyle.toAttrs()
+        ) {
+            LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
+        }
     }
     FakeNavbar()
 }
@@ -102,8 +108,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
             attrs = Modifier
                 .fillMaxHeight()
                 .display(DisplayStyle.Flex)
-                .cursor(Cursor.Pointer)
-                .textDecorationLine(TextDecorationLine.None)
+                .then(NavbarLogoLinkStyle.toModifier())
                 .toAttrs()
         ) {
             LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
@@ -146,4 +151,10 @@ val NavbarLanguageSelectorStyle = CssStyle.base {
     Modifier
         .alignSelf(AlignSelf.Center)
         .height(36.px).margin(left = 4.px)
+}
+
+val NavbarLogoLinkStyle = CssStyle.base {
+    Modifier
+        .cursor(Cursor.Pointer)
+        .textDecorationLine(TextDecorationLine.None)
 }
