@@ -46,9 +46,12 @@ private fun Details() {
         Text(ResStrings.conf_events_enjoy)
         SpanText(ResStrings.conf_events_free, Modifier.fontWeight(FontWeight.ExtraBold))
     }
+    P {
+        Text(ResStrings.conf_events_registration_soon)
+    }
     PrimaryButton(
         text = ResStrings.conf_events_register,
-        href = Res.Links.Conf.Register,
+        href = "/subscribe",
         modifier = Modifier.margin(topBottom = 16.px)
     )
 }

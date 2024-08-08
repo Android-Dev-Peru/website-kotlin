@@ -13,7 +13,8 @@ import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val ConferenceNavbar = Navbar(
-    primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
+//    primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
+    primaryLink = null,
     secondaryLinks = listOf(
         Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
         Navlink(path = "/conf/sponsorship") { ResStrings.conf_navlink_sponsor },
