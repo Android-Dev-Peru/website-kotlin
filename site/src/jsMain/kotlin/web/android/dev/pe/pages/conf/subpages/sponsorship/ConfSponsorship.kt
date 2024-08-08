@@ -12,13 +12,14 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.em
+import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
-import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
+import web.android.dev.pe.components.widgets.ConvertKitForm
 import web.android.dev.pe.components.widgets.HeadingDecorator
-import web.android.dev.pe.pages.conf.components.sections.SponsorSection
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 @Page("/conf/sponsorship")
@@ -93,10 +94,13 @@ private fun Information() {
     P { Text(ResStrings.conf_sponsorship_p4) }
     SponsorshipPlans()
 
-    SponsorSection(
-        ctaTitle = ResStrings.conf_sponsor_i_want_to_sponsor,
-        ctaPath = Res.Links.Conf.SponsorBrief,
-        modifier = Modifier.padding(0.em).margin(top = 2.em)
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_sponsor_i_want_to_sponsor)
+    }
+    ConvertKitForm(
+        uid = ResStrings.conf_sponsor_form_uid,
+        modifier = Modifier.margin(topBottom = 1.em)
     )
 }
 

@@ -31,6 +31,7 @@
     <string name="conf_sponsor_caption">Este evento no sería posible sin su ayuda. ¿Te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?</string>
     <string name="conf_sponsor_im_interested">Estoy interesado</string>
     <string name="conf_sponsor_i_want_to_sponsor">Quiero ser sponsor</string>
+    <string name="conf_sponsor_form_uid">e70a984a90</string>
 
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">¿Interesado en ser patrocinador?</string>

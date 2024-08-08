@@ -1,19 +1,18 @@
 package web.android.dev.pe.pages.conf.subpages.sponsorship
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.*
+import com.varabyte.kobweb.compose.css.BorderCollapse
+import com.varabyte.kobweb.compose.css.FontStyle
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
-import org.jetbrains.compose.web.css.AlignContent
-import org.jetbrains.compose.web.css.DisplayStyle
-import org.jetbrains.compose.web.css.LineStyle
-import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
-import org.jetbrains.compose.web.dom.Br
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
 import web.android.dev.pe.Res
@@ -89,11 +88,12 @@ fun SponsorshipPlans() {
             planC = ""
         )
     }
-    Br()
+    Div(Modifier.height(1.em).toAttrs())
     SpanText(
         text = ResStrings.conf_sponsorship_plan_disclaimer,
         modifier = Modifier.fontStyle(FontStyle.Italic)
     )
+    Div(Modifier.height(2.em).toAttrs())
 }
 
 @Composable

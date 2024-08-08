@@ -2,9 +2,7 @@ package web.android.dev.pe.pages.conf
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
-import strings.ResStrings
 import web.android.dev.pe.components.ConferenceSite
-import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.pages.conf.components.sections.*
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 
@@ -30,8 +28,5 @@ private fun Content() {
     EventSection(AlternateBackground)
     LocationSection()
     CallForPapersSection(AlternateBackground)
-    SponsorSection(
-        ctaTitle = ResStrings.conf_sponsor_im_interested,
-        ctaPath = "/conf/sponsorship".appendCurrentLanguage(),
-    )
+    SponsorSection()
 }

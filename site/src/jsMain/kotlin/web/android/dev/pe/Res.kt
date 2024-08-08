@@ -26,7 +26,6 @@ object Res {
         object Conf {
             const val MapUPC = "https://maps.app.goo.gl/WyPeqxmWyJS8bbvJ6"
             const val C4P = "https://www.papercall.io/adpday"
-            const val SponsorBrief = "https://docs.google.com/forms/d/e/1FAIpQLSfTA2fmZJyfLi6ssmoGtER-JwWor751g9BDhkrYQ_KjvJaWQw/viewform"
             const val Register = ""
         }
 
