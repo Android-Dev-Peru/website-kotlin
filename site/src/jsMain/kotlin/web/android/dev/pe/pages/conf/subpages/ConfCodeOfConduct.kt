@@ -8,15 +8,18 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.navigation.Link
+import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
+import web.android.dev.pe.components.utils.CurvyUnderline
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 
 @Page("/conf/coc")
@@ -52,7 +55,7 @@ private fun Content() {
 
 @Composable
 private fun Intro() {
-    H1 { Text(ResStrings.conf_coc_intro_title) }
+    H1 { SpanText(ResStrings.conf_coc_intro_title, CurvyUnderline.toModifier()) }
     P { Text(ResStrings.conf_coc_intro_p1) }
     P { Text(ResStrings.conf_coc_intro_p2) }
 }
@@ -116,7 +119,7 @@ private fun DiscriminationSection() {
 
 @Composable
 private fun NeedHelpSection() {
-    H2 { Text(ResStrings.conf_coc_need_help_title) }
+    H2 { SpanText(ResStrings.conf_coc_need_help_title, CurvyUnderline.toModifier()) }
     P { Text(ResStrings.conf_coc_need_help_p1) }
     Ul {
         Li {
