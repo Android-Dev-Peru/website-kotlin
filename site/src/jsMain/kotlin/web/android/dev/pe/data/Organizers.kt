@@ -73,11 +73,39 @@ enum class Organizers(val data: Organizer) {
 }
 
 enum class LegacyOrganizers(val data: Organizer) {
-    Jonathan(
+    JonathanNolasco(
         Organizer(
             name = "Jonathan",
             lastName = "Nolasco",
             photo = "organizer_nolasco.jpeg",
+        )
+    ),
+    JonathanChoy(
+        Organizer(
+            name = "Jonathan",
+            lastName = "Choy",
+            photo = "organizer_jonathan_choy.jpeg",
+        )
+    ),
+    PabloJohnson(
+        Organizer(
+            name = "Pablo",
+            lastName = "Johnson",
+            photo = "organizer_pablo_johnson.jpeg",
+        )
+    ),
+    PedroCarrillo(
+        Organizer(
+            name = "Pedro",
+            lastName = "Carrillo",
+            photo = "organizer_pedro_carrillo.jpeg",
+        )
+    ),
+    Hansy(
+        Organizer(
+            name = "Hansy",
+            lastName = "Schmitt",
+            photo = "organizer_hansy.jpeg",
         )
     ),
 }
