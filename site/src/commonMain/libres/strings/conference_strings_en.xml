@@ -51,7 +51,20 @@
     <string name="conf_sponsorship_p3_li3">4 talks by expert speakers, both national and international</string>
     <string name="conf_sponsorship_p3_li4">Hundreds of interactions across all our social media</string>
     <string name="conf_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
-    <string name="conf_sponsorship_plan_image">sponsorship_packages</string>
+
+    <string name="conf_sponsorship_plan_benefit_header">Benefit</string>
+    <string name="conf_sponsorship_plan_benefit_rate">Rate (Dollars $)</string>
+    <string name="conf_sponsorship_plan_benefit_rate_talk_to_us">Let's talk</string>
+    <string name="conf_sponsorship_plan_benefit_company_logos">Company logos across all channels (web, socials, event).</string>
+    <string name="conf_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt) provided by the company.</string>
+    <string name="conf_sponsorship_plan_benefit_delivery_brochures">Delivery of company / community brochures.</string>
+    <string name="conf_sponsorship_plan_benefit_mentions">Mention of the company at the opening and closing.</string>
+    <string name="conf_sponsorship_plan_benefit_logo_size">Logo size on our networks.</string>
+    <string name="conf_sponsorship_plan_benefit_company_time_slot">Time slot for a brief company presentation</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_entrance">Space for a standard size Banner (1x3m) at the entrance of the auditorium.</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Space for a standard Banner (1x3m) in the main auditorium of the event.</string>
+    <string name="conf_sponsorship_plan_benefit_company_speaker">20-min speaker slot for your chosen speaker (only if the talk is deeply Android-related)</string>
+    <string name="conf_sponsorship_plan_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
 
     <!--Conference Code of Conduct-->
     <string name="conf_coc_intro_title">Code of Conduct</string>

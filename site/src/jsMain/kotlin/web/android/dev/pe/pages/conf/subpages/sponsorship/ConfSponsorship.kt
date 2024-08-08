@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.conf.subpages
+package web.android.dev.pe.pages.conf.subpages.sponsorship
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.autoLength
@@ -91,12 +91,6 @@ private fun Information() {
         ctaPath = Res.Links.Conf.SponsorBrief,
         modifier = Modifier.padding(0.em).margin(top = 2.em)
     )
-}
-
-@Composable
-private fun SponsorshipPlans() {
-    val imageSrc = "/events/conf2024/${ResStrings.conf_sponsorship_plan_image}.webp"
-    Image(imageSrc, Modifier.width(100.percent).height(autoLength))
 }
 
 @Composable
