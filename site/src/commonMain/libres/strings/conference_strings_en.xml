@@ -70,11 +70,16 @@
     <string name="conf_sponsorship_plan_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
 
     <string name="conf_sponsor_i_want_to_sponsor">I want to be an sponsor</string>
-    <string name="conf_sponsorship_plan_contact_us_pt1">Email us at </string>
-    <string name="conf_sponsorship_plan_contact_us_pt2"> indicating your company and the plan you're interested in.</string>
-    <string name="conf_sponsorship_plan_fill_form_pt1">Or if you prefer, </string>
-    <string name="conf_sponsorship_plan_fill_form_pt2">fill this form</string>
-    <string name="conf_sponsorship_plan_fill_form_pt3"> and we'll get in touch with you as soon as possible.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_instructions">Let's continue the conversation in the format that suits you the most: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_1">Option 1: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_2">Option 2: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_3">Option 3: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_email_us_pt1">Email us at </string>
+    <string name="conf_sponsor_i_want_to_sponsor_email_us_pt2"> indicating your company and the plan you are interested in.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_fill_form_pt1">Complete this form</string>
+    <string name="conf_sponsor_i_want_to_sponsor_fill_form_pt2"> and we will get in touch with you.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_schedule_meeting_pt1">Schedule a meeting with us </string>
+    <string name="conf_sponsor_i_want_to_sponsor_schedule_meeting_pt2"> and we will clarify any doubts you may have.</string>
 
     <!--Conference Code of Conduct-->
     <string name="conf_coc_intro_title">Code of Conduct</string>

@@ -1,21 +1,21 @@
 package web.android.dev.pe.pages.conf.subpages.sponsorship
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.autoLength
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.icons.fa.*
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
-import org.jetbrains.compose.web.css.em
-import org.jetbrains.compose.web.css.percent
-import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.components.ConferenceSite
@@ -119,17 +119,42 @@ private fun ContactUsSection() {
         HeadingDecorator()
         Text(ResStrings.conf_sponsor_i_want_to_sponsor)
     }
-    P {
-        Text(ResStrings.conf_sponsorship_plan_contact_us_pt1)
-        CommunityEmailLink(Modifier.color(Res.Theme.PRIMARY.color))
-        Text(ResStrings.conf_sponsorship_plan_contact_us_pt2)
-    }
-    P {
-        Text(ResStrings.conf_sponsorship_plan_fill_form_pt1)
-        Link(Res.Links.Conf.SponsorBrief) {
-            Text(ResStrings.conf_sponsorship_plan_fill_form_pt2)
+    P { Text(ResStrings.conf_sponsor_caption) }
+    P { Text(ResStrings.conf_sponsor_i_want_to_sponsor_instructions) }
+
+    Div(ConfSponsorshipStyles.ContactOptionsContainer.toAttrs()) {
+        ContactUsOption(icon = "envelope") {
+            Text(ResStrings.conf_sponsor_i_want_to_sponsor_email_us_pt1)
+            CommunityEmailLink(Modifier.color(Res.Theme.PRIMARY.color))
+            Text(ResStrings.conf_sponsor_i_want_to_sponsor_email_us_pt2)
+
         }
-        Text(ResStrings.conf_sponsorship_plan_fill_form_pt3)
+        ContactUsOption(icon = "wpforms", iconCategory = IconCategory.BRAND) {
+            Link(Res.Links.Conf.SponsorBrief) {
+                Text(ResStrings.conf_sponsor_i_want_to_sponsor_fill_form_pt1)
+            }
+            Text(ResStrings.conf_sponsor_i_want_to_sponsor_fill_form_pt2)
+        }
+        ContactUsOption(icon = "calendar") {
+            Link(Res.Links.Conf.ScheduleMeeting) {
+                Text(ResStrings.conf_sponsor_i_want_to_sponsor_schedule_meeting_pt1)
+            }
+            Text(ResStrings.conf_sponsor_i_want_to_sponsor_schedule_meeting_pt2)
+        }
+    }
+}
+
+@Composable
+private fun ContactUsOption(
+    icon: String,
+    iconCategory: IconCategory = IconCategory.REGULAR,
+    content: @Composable () -> Unit
+) {
+    P(ConfSponsorshipStyles.ContactOption.toAttrs()) {
+        FaIcon(icon, modifier = Modifier, style = iconCategory, size = IconSize.LG)
+        Br()
+        Br()
+        content()
     }
 }
 
@@ -159,9 +184,6 @@ object ConfSponsorshipStyles {
         base {
             Modifier.padding(1.em).fontSize(18.px).lineHeight(1.5)
         }
-        Breakpoint.MD {
-            Modifier.padding(leftRight = 2.em)
-        }
         cssRule(" h2") {
             Modifier.margin(0.px)
         }
@@ -176,5 +198,27 @@ object ConfSponsorshipStyles {
         Breakpoint.MD {
             Modifier.padding(left = 1.em)
         }
+    }
+    val ContactOptionsContainer = CssStyle {
+        base {
+            Modifier
+                .display(DisplayStyle.Flex)
+                .flexDirection(FlexDirection.Column)
+                .gap(1.em)
+                .margin(bottom = 1.em)
+        }
+        Breakpoint.MD {
+            Modifier
+                .flexDirection(FlexDirection.Row)
+                .gap(2.em)
+                .margin(bottom = 2.em)
+        }
+    }
+    val ContactOption = CssStyle.base {
+        Modifier
+            .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
+            .textAlign(TextAlign.Center)
+            .padding(1.em)
+            .flex(1)
     }
 }

@@ -70,11 +70,16 @@
     <string name="conf_sponsorship_plan_disclaimer">* Sujeto a disponibilidad de agenda. Se dará prioridad a los sponsors que confirmen primero.</string>
 
     <string name="conf_sponsor_i_want_to_sponsor">Quiero ser sponsor</string>
-    <string name="conf_sponsorship_plan_contact_us_pt1">Escríbenos directamente a </string>
-    <string name="conf_sponsorship_plan_contact_us_pt2"> indicando tu empresa y el plan que te interesa.</string>
-    <string name="conf_sponsorship_plan_fill_form_pt1">O si prefieres, </string>
-    <string name="conf_sponsorship_plan_fill_form_pt2">completa este formulario</string>
-    <string name="conf_sponsorship_plan_fill_form_pt3"> y nos pondremos en contacto contigo.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_instructions">Puedes ponerte en contacto con nosotros por cualquiera de estos medios: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_1">Opción 1: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_2">Opción 2: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_option_3">Opción 3: </string>
+    <string name="conf_sponsor_i_want_to_sponsor_email_us_pt1">Escríbenos a </string>
+    <string name="conf_sponsor_i_want_to_sponsor_email_us_pt2"> indicando tu empresa y el plan que te interesa.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_fill_form_pt1">Completa este formulario</string>
+    <string name="conf_sponsor_i_want_to_sponsor_fill_form_pt2"> y nos pondremos en contacto contigo.</string>
+    <string name="conf_sponsor_i_want_to_sponsor_schedule_meeting_pt1">Agenda una reunión con nosotros </string>
+    <string name="conf_sponsor_i_want_to_sponsor_schedule_meeting_pt2"> y te aclararemos todas las dudas que tengas.</string>
 
     <!--Conference Code of Conduct-->
     <string name="conf_coc_intro_title">Código de Conducta</string>
