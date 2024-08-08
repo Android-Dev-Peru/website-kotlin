@@ -9,6 +9,7 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
@@ -29,7 +30,10 @@ fun LocationSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun LocationDetails() {
-    H2 { Text(ResStrings.conf_location_title) }
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_location_title)
+    }
     MultiLineText(ResStrings.conf_location_details)
     PrimaryButton(
         text = ResStrings.conf_location_cta,

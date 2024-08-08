@@ -12,8 +12,7 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
-import web.android.dev.pe.Res
-import web.android.dev.pe.components.utils.appendCurrentLanguage
+import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
@@ -40,7 +39,10 @@ fun SponsorSection(
 
 @Composable
 private fun Details(ctaTitle: String, ctaPath: String) {
-    H2 { Text(ResStrings.conf_sponsor_title) }
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_sponsor_title)
+    }
     P { Text(ResStrings.conf_sponsor_caption) }
     PrimaryButton(
         text = ctaTitle,
