@@ -45,7 +45,8 @@
     <string name="conf_sponsorship_p2_li2_1">WhatsApp: +400 active members</string>
     <string name="conf_sponsorship_p2_li2_2">Linkedin: +850 followers</string>
     <string name="conf_sponsorship_p2_li2_3">Youtube: +850 subscribers</string>
-    <string name="conf_sponsorship_p3">And for this Android Dev Peru Conf, we expect:</string>
+    <string name="conf_sponsorship_what_we_offer">What do we offer?</string>
+    <string name="conf_sponsorship_p3">In this Android Dev Peru Conf 2024 edition, we expect:</string>
     <string name="conf_sponsorship_p3_li1">100-140 in-person attendees</string>
     <string name="conf_sponsorship_p3_li2">50-100 virtual attendees (from all over LATAM)</string>
     <string name="conf_sponsorship_p3_li3">4 talks by expert speakers, both national and international</string>

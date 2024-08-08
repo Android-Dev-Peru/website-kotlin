@@ -45,7 +45,8 @@
     <string name="conf_sponsorship_p2_li2_1">WhatsApp: +400 miembros activos</string>
     <string name="conf_sponsorship_p2_li2_2">Linkedin: +850 seguidores</string>
     <string name="conf_sponsorship_p2_li2_3">Youtube: +850 seguidores</string>
-    <string name="conf_sponsorship_p3">Y para este Android Dev Peru Conf, esperamos contar con:</string>
+    <string name="conf_sponsorship_what_we_offer">¿Qué te ofrecemos?</string>
+    <string name="conf_sponsorship_p3">En este Android Dev Peru Conf 2024, esperamos contar con:</string>
     <string name="conf_sponsorship_p3_li1">100-140 asistentes presenciales</string>
     <string name="conf_sponsorship_p3_li2">50-100 asistentes virtuales (de todo LATAM)</string>
     <string name="conf_sponsorship_p3_li3">4 charlas de ponentes expertos, nacionales e internacionales</string>

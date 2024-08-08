@@ -26,7 +26,7 @@ fun SponsorshipPlans() {
             planA = "Plan A",
             planB = "Plan B",
             planC = "Plan C",
-            modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(233,246,238))
+            modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(240,240,240))
         )
         SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_rate,
