@@ -17,7 +17,7 @@ import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
-import web.android.dev.pe.components.utils.CurvyUnderline
+import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.pages.conf.components.sections.SponsorSection
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
@@ -51,7 +51,10 @@ private fun Content() {
 
 @Composable
 private fun Information() {
-    H2 { SpanText(ResStrings.conf_sponsorship_title, CurvyUnderline.toModifier()) }
+    H2 {
+        HeadingDecorator()
+        SpanText(ResStrings.conf_sponsorship_title)
+    }
     P { Text(ResStrings.conf_sponsorship_p1) }
 
     P { Text(ResStrings.conf_sponsorship_p2) }
@@ -75,7 +78,10 @@ private fun Information() {
         }
     }
 
-    H2 { SpanText(ResStrings.conf_sponsorship_what_we_offer, CurvyUnderline.toModifier()) }
+    H2 {
+        HeadingDecorator()
+        SpanText(ResStrings.conf_sponsorship_what_we_offer)
+    }
     P { Text(ResStrings.conf_sponsorship_p3) }
     Ul {
         Li { Text(ResStrings.conf_sponsorship_p3_li1) }

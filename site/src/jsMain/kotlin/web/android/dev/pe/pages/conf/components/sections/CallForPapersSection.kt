@@ -13,6 +13,7 @@ import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
@@ -32,7 +33,10 @@ fun CallForPapersSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun Details() {
-    H2 { Text(ResStrings.conf_c4p_title) }
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_c4p_title)
+    }
     P { Text(ResStrings.conf_c4p_caption) }
     PrimaryButton(
         text = ResStrings.conf_c4p_cta,

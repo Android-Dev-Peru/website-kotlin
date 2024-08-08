@@ -15,6 +15,7 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 
@@ -34,7 +35,10 @@ fun EventSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun Details() {
-    H2 { Text(ResStrings.conf_events_title) }
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_events_title)
+    }
     P {
         Text(ResStrings.conf_events_celebrate)
     }
