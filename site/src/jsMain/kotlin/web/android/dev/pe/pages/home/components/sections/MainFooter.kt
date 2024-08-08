@@ -112,10 +112,6 @@ val MainFooterStyle = CssStyle {
     Breakpoint.MD {
         Modifier.padding(40.px)
     }
-
-    cssRule(" a") {
-        Modifier.color(Colors.DimGray).fontWeight(FontWeight.ExtraBold)
-    }
 }
 
 val MainFooterExtraLinksStyle = CssStyle {

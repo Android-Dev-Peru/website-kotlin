@@ -7,19 +7,22 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.graphics.Image
+import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.em
+import org.jetbrains.compose.web.css.percent
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
-import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
+import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.HeadingDecorator
-import web.android.dev.pe.pages.conf.components.sections.SponsorSection
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
+import web.android.dev.pe.Res
 
 @Page("/conf/sponsorship")
 @Composable
@@ -51,6 +54,13 @@ private fun Content() {
 
 @Composable
 private fun Information() {
+    InterestedInParticipatingSection()
+    WhatWeOfferSection()
+    ContactUsSection()
+}
+
+@Composable
+private fun InterestedInParticipatingSection() {
     H2 {
         HeadingDecorator()
         SpanText(ResStrings.conf_sponsorship_title)
@@ -77,7 +87,16 @@ private fun Information() {
             }
         }
     }
+    P {
+        Text(ResStrings.conf_sponsorship_p2_more_about_us_p1)
+        Link(path = "/about-us") {
+            Text(ResStrings.conf_sponsorship_p2_more_about_us_p2)
+        }
+    }
+}
 
+@Composable
+private fun WhatWeOfferSection() {
     H2 {
         HeadingDecorator()
         SpanText(ResStrings.conf_sponsorship_what_we_offer)
@@ -92,12 +111,26 @@ private fun Information() {
 
     P { Text(ResStrings.conf_sponsorship_p4) }
     SponsorshipPlans()
+}
 
-    SponsorSection(
-        ctaTitle = ResStrings.conf_sponsor_i_want_to_sponsor,
-        ctaPath = Res.Links.Conf.SponsorBrief,
-        modifier = Modifier.padding(0.em).margin(top = 2.em)
-    )
+@Composable
+private fun ContactUsSection() {
+    H2 {
+        HeadingDecorator()
+        Text(ResStrings.conf_sponsor_i_want_to_sponsor)
+    }
+    P {
+        Text(ResStrings.conf_sponsorship_plan_contact_us_pt1)
+        CommunityEmailLink(Modifier.color(Res.Theme.PRIMARY.color))
+        Text(ResStrings.conf_sponsorship_plan_contact_us_pt2)
+    }
+    P {
+        Text(ResStrings.conf_sponsorship_plan_fill_form_pt1)
+        Link(Res.Links.Conf.SponsorBrief) {
+            Text(ResStrings.conf_sponsorship_plan_fill_form_pt2)
+        }
+        Text(ResStrings.conf_sponsorship_plan_fill_form_pt3)
+    }
 }
 
 @Composable
@@ -131,6 +164,9 @@ object ConfSponsorshipStyles {
         }
         cssRule(" h2") {
             Modifier.margin(0.px)
+        }
+        cssRule(" a") {
+            Modifier.color(Res.Theme.PRIMARY.color)
         }
     }
     val photosContainer = CssStyle {
