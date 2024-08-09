@@ -28,7 +28,7 @@ fun SponsorshipPlans() {
             modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(240,240,240))
         )
         SponsorshipPlanRow(
-            benefit = ResStrings.conf_sponsorship_plan_benefit_company_logos,
+            benefit = ResStrings.conf_sponsorship_plan_benefit_mentions,
             planA = "✅",
             planB = "✅",
             planC = "✅"
@@ -40,13 +40,7 @@ fun SponsorshipPlans() {
             planC = "✅"
         )
         SponsorshipPlanRow(
-            benefit = ResStrings.conf_sponsorship_plan_benefit_delivery_brochures,
-            planA = "✅",
-            planB = "✅",
-            planC = "✅"
-        )
-        SponsorshipPlanRow(
-            benefit = ResStrings.conf_sponsorship_plan_benefit_mentions,
+            benefit = ResStrings.conf_sponsorship_plan_benefit_company_logos,
             planA = "✅",
             planB = "✅",
             planC = "✅"
@@ -64,6 +58,12 @@ fun SponsorshipPlans() {
             planC = ""
         )
         SponsorshipPlanRow(
+            benefit = ResStrings.conf_sponsorship_plan_benefit_logo_physical_merch,
+            planA = "✅",
+            planB = "✅",
+            planC = ""
+        )
+        SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_banner_at_entrance,
             planA = "✅",
             planB = "✅",
@@ -71,6 +71,12 @@ fun SponsorshipPlans() {
         )
         SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_banner_at_auditorium,
+            planA = "✅",
+            planB = "",
+            planC = ""
+        )
+        SponsorshipPlanRow(
+            benefit = ResStrings.conf_sponsorship_plan_benefit_attendance_list,
             planA = "✅",
             planB = "",
             planC = ""
@@ -84,7 +90,7 @@ fun SponsorshipPlans() {
     }
     Div(Modifier.height(1.em).toAttrs())
     SpanText(
-        text = ResStrings.conf_sponsorship_plan_disclaimer,
+        text = ResStrings.conf_sponsorship_plan_benefit_company_speaker_disclaimer,
         modifier = Modifier.fontStyle(FontStyle.Italic)
     )
     Div(Modifier.height(2.em).toAttrs())

@@ -57,16 +57,17 @@
     <string name="conf_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
 
     <string name="conf_sponsorship_plan_benefit_header">Benefit</string>
-    <string name="conf_sponsorship_plan_benefit_company_logos">Company logos across all channels (web, socials, event).</string>
-    <string name="conf_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt) provided by the company.</string>
-    <string name="conf_sponsorship_plan_benefit_delivery_brochures">Delivery of company / community brochures.</string>
-    <string name="conf_sponsorship_plan_benefit_mentions">Mention of the company at the opening and closing.</string>
+    <string name="conf_sponsorship_plan_benefit_company_logos">Company logos across all digital channels.</string>
+    <string name="conf_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt, brochures) provided by the company.</string>
+    <string name="conf_sponsorship_plan_benefit_mentions">Mention of the company at the opening and closing ceremonies.</string>
     <string name="conf_sponsorship_plan_benefit_logo_size">Logo size on our networks.</string>
     <string name="conf_sponsorship_plan_benefit_company_time_slot">Time slot for a brief company presentation</string>
-    <string name="conf_sponsorship_plan_benefit_banner_at_entrance">Space for a standard size Banner (1x3m) at the entrance of the auditorium.</string>
-    <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Space for a standard Banner (1x3m) in the main auditorium of the event.</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_entrance">Space for a banner (1x2m) at the entrance of the auditorium.</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Space for banner (1x2m) in the main auditorium of the event.</string>
     <string name="conf_sponsorship_plan_benefit_company_speaker">20-min speaker slot for your chosen speaker (only if the talk is deeply Android-related)</string>
-    <string name="conf_sponsorship_plan_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
+    <string name="conf_sponsorship_plan_benefit_company_speaker_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
+    <string name="conf_sponsorship_plan_benefit_logo_physical_merch">Uso del logo de la empresa en polos (speakers, organizadores y premios).</string>
+    <string name="conf_sponsorship_plan_benefit_attendance_list">Excel con información de las personas registrados al evento, previo consentimiento. (para publicidad y ofertas laborales).</string>
 
     <string name="conf_sponsor_i_want_to_sponsor">I want to be an sponsor</string>
     <string name="conf_sponsor_i_want_to_sponsor_instructions">Let's continue the conversation in the format that suits you the most: </string>
