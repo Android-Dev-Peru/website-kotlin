@@ -28,12 +28,6 @@ fun SponsorshipPlans() {
             modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(240,240,240))
         )
         SponsorshipPlanRow(
-            benefit = ResStrings.conf_sponsorship_plan_benefit_rate,
-            planA = "$700",
-            planB = "$400",
-            planC = ResStrings.conf_sponsorship_plan_benefit_rate_talk_to_us
-        )
-        SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_company_logos,
             planA = "✅",
             planB = "✅",

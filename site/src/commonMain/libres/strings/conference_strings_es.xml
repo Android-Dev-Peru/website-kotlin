@@ -57,8 +57,6 @@
     <string name="conf_sponsorship_p4">Como patrocinador, te ofreceremos distintos espacios en los cuales dar a conocer tu empresa con todo nuestro público. Ofrecemos distintos planes de apoyo, de acuerdo a lo que mejor se acomode a tu empresa.</string>
 
     <string name="conf_sponsorship_plan_benefit_header">Beneficio</string>
-    <string name="conf_sponsorship_plan_benefit_rate">Tarifa (Dólares $)</string>
-    <string name="conf_sponsorship_plan_benefit_rate_talk_to_us">Escríbenos</string>
     <string name="conf_sponsorship_plan_benefit_company_logos">Logos de la empresa en todos nuestros canales (web, redes sociales y durante el evento).</string>
     <string name="conf_sponsorship_plan_benefit_delivery_merch">Entrega de merchandising (lapiceros, stickers, camiseta) proporcionado por la empresa.</string>
     <string name="conf_sponsorship_plan_benefit_delivery_brochures">Entrega folletos de la empresa / comunidad.</string>

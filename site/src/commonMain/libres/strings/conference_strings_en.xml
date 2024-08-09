@@ -57,8 +57,6 @@
     <string name="conf_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
 
     <string name="conf_sponsorship_plan_benefit_header">Benefit</string>
-    <string name="conf_sponsorship_plan_benefit_rate">Rate (Dollars $)</string>
-    <string name="conf_sponsorship_plan_benefit_rate_talk_to_us">Let's talk</string>
     <string name="conf_sponsorship_plan_benefit_company_logos">Company logos across all channels (web, socials, event).</string>
     <string name="conf_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt) provided by the company.</string>
     <string name="conf_sponsorship_plan_benefit_delivery_brochures">Delivery of company / community brochures.</string>
