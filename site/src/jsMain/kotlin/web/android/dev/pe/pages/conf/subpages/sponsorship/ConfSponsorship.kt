@@ -1,15 +1,17 @@
 package web.android.dev.pe.pages.conf.subpages.sponsorship
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.*
+import com.varabyte.kobweb.compose.css.TextAlign
+import com.varabyte.kobweb.compose.css.autoLength
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.icons.fa.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
+import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
@@ -18,11 +20,11 @@ import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
+import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
-import web.android.dev.pe.Res
 
 @Page("/conf/sponsorship")
 @Composable
@@ -61,10 +63,7 @@ private fun Information() {
 
 @Composable
 private fun InterestedInParticipatingSection() {
-    H2 {
-        HeadingDecorator()
-        SpanText(ResStrings.conf_sponsorship_title)
-    }
+    DecoratedHeading(ResStrings.conf_sponsorship_title, href = "")
     P { Text(ResStrings.conf_sponsorship_p1) }
 
     P { Text(ResStrings.conf_sponsorship_p2) }
@@ -97,10 +96,7 @@ private fun InterestedInParticipatingSection() {
 
 @Composable
 private fun WhatWeOfferSection() {
-    H2 {
-        HeadingDecorator()
-        SpanText(ResStrings.conf_sponsorship_what_we_offer)
-    }
+    DecoratedHeading(ResStrings.conf_sponsorship_what_we_offer, href = "benefits")
     P { Text(ResStrings.conf_sponsorship_p3) }
     Ul {
         Li { Text(ResStrings.conf_sponsorship_p3_li1) }
@@ -115,10 +111,7 @@ private fun WhatWeOfferSection() {
 
 @Composable
 private fun ContactUsSection() {
-    H2 {
-        HeadingDecorator()
-        Text(ResStrings.conf_sponsor_i_want_to_sponsor)
-    }
+    DecoratedHeading(ResStrings.conf_sponsor_i_want_to_sponsor, href = "contact-us")
     P { Text(ResStrings.conf_sponsor_caption) }
     P { Text(ResStrings.conf_sponsor_i_want_to_sponsor_instructions) }
 
@@ -155,6 +148,14 @@ private fun ContactUsOption(
         Br()
         Br()
         content()
+    }
+}
+
+@Composable
+private fun DecoratedHeading(title: String, href: String) {
+    H2(attrs = { id(href) }) {
+        HeadingDecorator()
+        Text(title)
     }
 }
 
