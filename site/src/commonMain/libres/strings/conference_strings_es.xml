@@ -56,7 +56,10 @@
     <string name="conf_sponsorship_p3_li4">Cientos de interacciones en todas nuestras redes</string>
     <string name="conf_sponsorship_p4">Como patrocinador, te ofreceremos distintos espacios en los cuales dar a conocer tu empresa con todo nuestro público. Ofrecemos distintos planes de apoyo, de acuerdo a lo que mejor se acomode a tu empresa.</string>
 
-    <string name="conf_sponsorship_plan_benefit_header">Beneficio</string>
+    <string name="conf_sponsorship_plan_A">🥇Oro</string>
+    <string name="conf_sponsorship_plan_B">🥈Plata</string>
+    <string name="conf_sponsorship_plan_C">🥉Bronce</string>
+    <string name="conf_sponsorship_plan_benefit_header">Beneficios de cada plan</string>
     <string name="conf_sponsorship_plan_benefit_company_logos">Logos de la empresa en todos nuestros canales digitales.</string>
     <string name="conf_sponsorship_plan_benefit_delivery_merch">Entrega de merchandising (lapiceros, stickers, camiseta, folletos) proporcionado por la empresa.</string>
     <string name="conf_sponsorship_plan_benefit_mentions">Mención de la empresa en la apertura y cierre del evento.</string>

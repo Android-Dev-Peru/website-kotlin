@@ -56,7 +56,10 @@
     <string name="conf_sponsorship_p3_li4">Hundreds of interactions across all our social media</string>
     <string name="conf_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
 
-    <string name="conf_sponsorship_plan_benefit_header">Benefit</string>
+    <string name="conf_sponsorship_plan_A">🥇 Gold</string>
+    <string name="conf_sponsorship_plan_B">🥈 Silver</string>
+    <string name="conf_sponsorship_plan_C">🥉 Bronze</string>
+    <string name="conf_sponsorship_plan_benefit_header">Benefits per sponsorship plan</string>
     <string name="conf_sponsorship_plan_benefit_company_logos">Company logos across all digital channels.</string>
     <string name="conf_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt, brochures) provided by the company.</string>
     <string name="conf_sponsorship_plan_benefit_mentions">Mention of the company at the opening and closing ceremonies.</string>
