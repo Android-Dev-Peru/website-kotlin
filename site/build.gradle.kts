@@ -1,4 +1,3 @@
-import com.varabyte.kobweb.gradle.application.extensions.AppBlock.LegacyRouteRedirectStrategy
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
 import kotlinx.html.link
 import kotlinx.html.meta
@@ -6,7 +5,7 @@ import kotlinx.html.title
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kobweb.application)
     alias(libs.plugins.kobwebx.markdown)
     alias(libs.plugins.libres)
@@ -43,7 +42,7 @@ kobweb {
             }
         }
 
-        legacyRouteRedirectStrategy.set(LegacyRouteRedirectStrategy.DISALLOW)
+
     }
 }
 
@@ -52,11 +51,11 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(compose.runtime)
+            implementation(libs.compose.runtime)
         }
 
         jsMain.dependencies {
-            implementation(compose.html.core)
+            implementation(libs.compose.html.core)
             implementation(libs.kobweb.core)
             implementation(libs.kobweb.silk)
             implementation(libs.silk.icons.fa)
@@ -66,10 +65,26 @@ kotlin {
     }
 
     tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        // Although deprecated in K2, the new suggested approach is not working and still
+        // shows the warning. Seems like a common problem. See:
+        // https://youtrack.jetbrains.com/issue/KT-61573/Emit-the-compilation-warning-on-expect-actual-classes.-The-warning-must-mention-that-expect-actual-classes-are-in-Beta#focus=Comments-27-9822729.0-0
+        @Suppress("DEPRECATION")
         kotlinOptions {
             freeCompilerArgs += "-Xexpect-actual-classes"
         }
+
     }
+
+    /**
+     * TODO:
+     * Enable ES2015 support, available since Kotlin 2.0 and Kobweb 0.19.23 in the future.
+     * Add the moment, the build is failing at compile time with the following error:
+     * https://gist.github.com/Bruno125/1d34d5021c23fa6fc4fd6549c0df35d2
+     */
+    // js {
+    //     @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    //     compilerOptions.target = "es2015"
+    // }
 }
 
 // Multiplatform lib to handle localized texts
