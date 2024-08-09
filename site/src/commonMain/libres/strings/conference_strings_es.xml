@@ -57,16 +57,17 @@
     <string name="conf_sponsorship_p4">Como patrocinador, te ofreceremos distintos espacios en los cuales dar a conocer tu empresa con todo nuestro público. Ofrecemos distintos planes de apoyo, de acuerdo a lo que mejor se acomode a tu empresa.</string>
 
     <string name="conf_sponsorship_plan_benefit_header">Beneficio</string>
-    <string name="conf_sponsorship_plan_benefit_company_logos">Logos de la empresa en todos nuestros canales (web, redes sociales y durante el evento).</string>
-    <string name="conf_sponsorship_plan_benefit_delivery_merch">Entrega de merchandising (lapiceros, stickers, camiseta) proporcionado por la empresa.</string>
-    <string name="conf_sponsorship_plan_benefit_delivery_brochures">Entrega folletos de la empresa / comunidad.</string>
-    <string name="conf_sponsorship_plan_benefit_mentions">Mención de la empresa en la apertura y cierre.</string>
+    <string name="conf_sponsorship_plan_benefit_company_logos">Logos de la empresa en todos nuestros canales digitales.</string>
+    <string name="conf_sponsorship_plan_benefit_delivery_merch">Entrega de merchandising (lapiceros, stickers, camiseta, folletos) proporcionado por la empresa.</string>
+    <string name="conf_sponsorship_plan_benefit_mentions">Mención de la empresa en la apertura y cierre del evento.</string>
     <string name="conf_sponsorship_plan_benefit_logo_size">Tamaño de Logo en nuestras redes.</string>
-    <string name="conf_sponsorship_plan_benefit_company_time_slot">Presentación de la empresa en la apertura del evento.</string>
-    <string name="conf_sponsorship_plan_benefit_banner_at_entrance">Espacio para un Banner tamaño estándar (1x3)  en la entrada del auditorio.</string>
-    <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Espacio para un Banner estándar (1x3) en el auditorio principal del evento.</string>
+    <string name="conf_sponsorship_plan_benefit_company_time_slot">Presentación de la empresa durante el evento.</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_entrance">Espacio para un Banner (1x2m) en la entrada del auditorio.</string>
+    <string name="conf_sponsorship_plan_benefit_banner_at_auditorium">Espacio para un Banner (1x2m) en el auditorio principal del evento.</string>
     <string name="conf_sponsorship_plan_benefit_company_speaker">Posibilidad de presentar una sesión de 20 min en el evento. (Temática alineada al evento)</string>
-    <string name="conf_sponsorship_plan_disclaimer">* Sujeto a disponibilidad de agenda. Se dará prioridad a los sponsors que confirmen primero.</string>
+    <string name="conf_sponsorship_plan_benefit_company_speaker_disclaimer">* Sujeto a disponibilidad de agenda. Se dará prioridad a los sponsors que confirmen primero.</string>
+    <string name="conf_sponsorship_plan_benefit_logo_physical_merch">Uso del logo de la empresa en polos ( speakers, organizadores y premios).</string>
+    <string name="conf_sponsorship_plan_benefit_attendance_list">Excel con información de las personas registrados al evento, previo consentimiento. (para publicidad y ofertas laborales).</string>
 
     <string name="conf_sponsor_i_want_to_sponsor">Quiero ser sponsor</string>
     <string name="conf_sponsor_i_want_to_sponsor_instructions">Puedes ponerte en contacto con nosotros por cualquiera de estos medios: </string>
