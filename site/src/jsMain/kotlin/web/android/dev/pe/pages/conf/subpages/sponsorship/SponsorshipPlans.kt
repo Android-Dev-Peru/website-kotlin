@@ -22,9 +22,9 @@ fun SponsorshipPlans() {
     Div(SponsorshipPlansStyle.toAttrs()) {
         SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_header,
-            planA = "Plan A",
-            planB = "Plan B",
-            planC = "Plan C",
+            planA = ResStrings.conf_sponsorship_plan_A,
+            planB = ResStrings.conf_sponsorship_plan_B,
+            planC = ResStrings.conf_sponsorship_plan_C,
             modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(240,240,240))
         )
         SponsorshipPlanRow(
