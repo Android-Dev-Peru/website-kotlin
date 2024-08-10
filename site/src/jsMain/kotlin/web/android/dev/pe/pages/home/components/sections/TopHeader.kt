@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -43,9 +44,9 @@ fun TopHeader() {
 private fun HeaderContent() {
     val styles = HomeHeaderStyles
     Column(Modifier.gap(16.px)) {
-        SpanText("Android Dev Peru", styles.title.toModifier())
+        SpanText(ResStrings.home_header_title, styles.title.toModifier())
         SpanText(
-            text = "Comunidad de desarrolladores Android en Peru y LATAM",
+            text = ResStrings.home_header_caption,
             modifier = styles.caption.toModifier()
         )
         SocialIcons()

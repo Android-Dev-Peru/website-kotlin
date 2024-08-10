@@ -9,6 +9,7 @@ import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
@@ -22,13 +23,13 @@ fun BlogPostsSection() {
     TwoPaneSection(
         sectionModifier = AlternateBackground,
         header = {
-            H2 { Text("Artículos recientes") }
-            P { Text("¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad") }
-            PrimaryButton(text = "Ver todos los artículos", href = Res.Links.DevTo, variant = OutlinePrimaryButtonVariant)
+            H2 { Text(ResStrings.resources_blog_posts_title) }
+            P { Text(ResStrings.resources_blog_posts_description) }
+            PrimaryButton(text = ResStrings.resources_blog_posts_cta, href = Res.Links.DevTo, variant = OutlinePrimaryButtonVariant)
         },
         content = {
             SimpleGrid(numColumns = numColumns(base = 1, md = 2), Modifier.gap(2.em)) {
-                blogPosts.forEach {
+                blogPosts().forEach {
                     BorderlessCard(data = it)
                 }
             }
@@ -37,12 +38,12 @@ fun BlogPostsSection() {
 }
 
 
-private val blogPosts = RecentBlogs.entries.map {
+private fun blogPosts() = RecentBlogs.entries.map {
     BorderlessCard(
-        title = it.data.title,
+        title = it.data.title(),
         url = it.data.url,
         thumbnail = it.data.thumbnail,
-        description = it.data.description,
-        caption = "Artículo",
+        description = it.data.description(),
+        caption = ResStrings.resources_blog_posts_caption,
     )
 }

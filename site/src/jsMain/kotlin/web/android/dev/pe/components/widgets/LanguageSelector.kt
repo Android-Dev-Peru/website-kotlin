@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.dom.Select
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.utils.getCurrentLanguageFromPath
+import web.android.dev.pe.components.utils.isRoot
 
 enum class Language(val code: String) {
     Spanish("es"),
@@ -75,9 +76,14 @@ private fun navigateToLanguage(languageCode: String?) {
         return // no language change
     }
 
-    val pathWithoutLanguage = window.location.pathname.removeSuffix("/$currentLanguage")
+    if (isRoot()) {
+        window.location.href = languageCode
+        return
+    }
+
+    val pathWithoutLanguage = window.location.href.removeSuffix("/$currentLanguage")
     val targetPath = when (languageCode) {
-        Language.DefaultLanguage.code -> pathWithoutLanguage // Spanish is the default language
+        Language.DefaultLanguage.code -> pathWithoutLanguage
         else -> "$pathWithoutLanguage/${languageCode}"
     }
 

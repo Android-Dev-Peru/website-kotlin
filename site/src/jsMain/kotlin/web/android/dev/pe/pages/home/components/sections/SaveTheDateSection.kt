@@ -13,6 +13,7 @@ import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.pages.conf.components.widgets.ConferenceCard
 import web.android.dev.pe.pages.conf.components.widgets.ShinyCardStyles
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -29,9 +30,9 @@ fun SaveTheDateSection() {
                 .onClick { window.open(RoutePrefix.prepend( "/conf"), "_self") }
                 .cursor(Cursor.Pointer)
         ) {
-            H3(ShinyCardStyles.Title.toAttrs()) { Text("ANDROID DEV PERU CONF") }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text("Sábado 19 de Octubre") }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text("Lima, Peru 🇵🇪") }
+            H3(ShinyCardStyles.Title.toAttrs()) { Text(ResStrings.conf_title.uppercase()) }
+            P(ShinyCardStyles.Hint.toAttrs()) { Text(ResStrings.home_save_the_date) }
+            P(ShinyCardStyles.Hint.toAttrs()) { Text(ResStrings.home_save_the_date_location) }
         }
     }
 }

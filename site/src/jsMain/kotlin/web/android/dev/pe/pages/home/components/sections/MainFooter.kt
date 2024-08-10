@@ -82,7 +82,7 @@ private fun FooterContact() {
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.End
     ) {
         PrimaryButton(
-            text = "Suscríbete",
+            text = ResStrings.main_footer_subscribe,
             href = "/subscribe",
             variant = RectangularPrimaryButtonVariant,
             modifier = Modifier

@@ -9,6 +9,7 @@ import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.BorderlessCard
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
@@ -20,9 +21,9 @@ import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 fun PlaylistsSection() {
     TwoPaneSection(
         header = {
-            H2 { Text("Playlists") }
-            P { Text("No te pierdas el material exclusivo que la comunidad nos ha compartido a lo largo de lo años.") }
-            PrimaryButton(text = "Síguenos en Youtube", href = Res.Links.YouTube, variant = OutlinePrimaryButtonVariant)
+            H2 { Text(ResStrings.resources_playlists_title) }
+            P { Text(ResStrings.resources_playlists_description) }
+            PrimaryButton(text = ResStrings.resources_playlists_cta, href = Res.Links.YouTube, variant = OutlinePrimaryButtonVariant)
         },
         content = {
             SimpleGrid(numColumns = numColumns(base = 1, md = 2), Modifier.gap(2.em)) {
@@ -37,10 +38,10 @@ fun PlaylistsSection() {
 
 private val playlists = Playlists.entries.map {
     BorderlessCard(
-        title = it.data.title,
+        title = it.data.title(),
         url = it.data.url,
         thumbnail = it.data.thumbnail,
-        description = it.data.description,
-        caption = "Playlist",
+        description = it.data.description(),
+        caption = ResStrings.resources_playlists_caption,
     )
 }
