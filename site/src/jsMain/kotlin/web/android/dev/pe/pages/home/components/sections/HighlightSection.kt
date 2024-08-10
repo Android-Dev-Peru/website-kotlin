@@ -7,6 +7,7 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
+import strings.ResStrings
 import web.android.dev.pe.components.widgets.Card
 import web.android.dev.pe.data.CardContent
 import web.android.dev.pe.data.Highlights
@@ -24,7 +25,7 @@ fun HighlightSection() {
 @Composable
 fun HighlightCard(content: CardContent) {
     Card(
-        caption = "Contenido destacado",
+        caption = ResStrings.home_highlights_card_title,
         content = content,
         modifier = Modifier.flex(1).fillMaxHeight()
     )

@@ -34,7 +34,7 @@ fun ConfCodeOfConduct() {
 
 @Page("/conf/coc/en")
 @Composable
-fun ConferenceCodeOfConductEnglish() {
+fun ConferenceCodeOfConduct_EN() {
     ConferenceSite(lang = "en") {
         Div(ConfCodeOfConductStyles.MainContainer.toAttrs()) {
             Content()

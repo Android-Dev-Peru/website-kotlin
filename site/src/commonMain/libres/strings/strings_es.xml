@@ -4,6 +4,64 @@
     <string name="language_option_es">🇵🇪 Español</string>
     <string name="language_option_en">🇺🇸 English</string>
 
+    <string name="site_navlink_about_us">Quienes somos</string>
+    <string name="site_navlink_resources">Recursos</string>
+    <string name="site_navlink_conference">Conferencia</string>
+    <string name="site_navlink_subscribe">Suscríbete</string>
+
+    <!-- HOME -->
+    <string name="home_header_title">Android Dev Peru</string>
+    <string name="home_header_caption">Comunidad de Android &amp; Kotlin en Perú y LATAM</string>
+
+    <string name="home_quick_links_wsp">Únete en WhatsApp</string>
+    <string name="home_quick_links_talk">Da una charla</string>
+    <string name="home_quick_links_linkedin">Síguenos en LinkedIn</string>
+
+    <string name="home_highlights_card_title">Contenido destacado</string>
+    <string name="home_highlights_card_kotlin_conf_title">Kotlin Conf</string>
+    <string name="home_highlights_card_kotlin_conf_description">El pasado Junio nos reunimos presencialmente para el Kotlin Conf - Lima.&lt;br&gt;&lt;br&gt;🗓 Fecha: miércoles 26 de junio&lt;br&gt;⏰ Hora: 7PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Local: NTT Data&lt;br&gt;</string>
+    <string name="home_highlights_card_kotlin_conf_cta">Ver grabación</string>
+    <string name="home_highlights_card_salary_2023_title">Encuesta salarial 2023</string>
+    <string name="home_highlights_card_salary_2023_description">La transparencia puede ayudar a reducir brechas salariales. El 2023, realizamos encuestas anónimas y recibimos +100 respuestas de mobile devs en LATAM.</string>
+    <string name="home_highlights_card_salary_2023_cta">Mira los resultados</string>
+
+    <string name="home_save_the_date">Sábado 19 de Octubre</string>
+    <string name="home_save_the_date_location">Lima, Peru 🇵🇪</string>
+
+    <!-- ABOUT US -->
+    <string name="about_us_title">Comunidad de desarolladores Android</string>
+    <string name="about_us_description">Somos la comunidad de Android y Kotlin más grande y activa del Perú. A lo largo de los años, hemos organizado decenas de eventos presenciales y virtuales gratuitos.&lt;br&gt;&lt;br&gt;Te invitamos a participar como asistente o expositor en nuestros meetups, workshops, y conferencias. &lt;br&gt;&lt;br&gt;</string>
+    <string name="about_organizers_title">Equipo organizador</string>
+    <string name="about_organizers_caption">Ellos son quienes se encargan de mantener la comunidad activa mes a mes.</string>
+    <string name="about_ex_organizers_title">Equipo legacy</string>
+    <string name="about_ex_organizers_caption">Si bien ya no nos acompañan en el equipo, agradecemos mucho el apoyo de nuestros organizadores retirados ❤️</string>
+
+    <!-- RESOURCES -->
+    <string name="resources_blog_posts_title">Artículos recientes</string>
+    <string name="resources_blog_posts_description">¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad"</string>
+    <string name="resources_blog_posts_cta">Ver todos los artículos</string>
+    <string name="resources_blog_posts_caption">Artículos</string>
+    <string name="resources_blog_posts_meetup_57">Meetup #57: Kotlin Multiplatform is Stable!</string>
+    <string name="resources_blog_posts_meetup_57_desc">"El jueves 26 de noviembre de 2023 nos visitó el GDE Yury Camacho desde Bolivia para hablarnos sobre Kotlin Multiplatform.</string>
+    <string name="resources_blog_posts_devfest_2023">DevFest 2023 - GDG Open</string>
+    <string name="resources_blog_posts_devfest_2023_desc">El 12 de noviembre de 2023, participamos en el DevFest 2023 del GDG Open, en donde elaboramos un taller sobre Jetpack Compose.</string>
+    <string name="resources_blog_posts_bcp">Feria de comunidades en BCP</string>
+    <string name="resources_blog_posts_bcp_desc">El 22 de noviembre tuvimos la oportunidad de participar en la feria de comunidades que organizó el BCP, donde participaron más de 400 personas</string>
+    <string name="resources_blog_posts_meetup_56">Meetup #56: Bluetooth desde 0</string>
+    <string name="resources_blog_posts_meetup_56_desc">El 30 de octubre, tuvimos una charla virtual!, en nuestro meetup #56 en el cual Hansy Schmitt nos compartió sus conocimientos de Bluetooth.</string>
+
+    <string name="resources_playlists_title">Playlists</string>
+    <string name="resources_playlists_description">No te pierdas el material exclusivo que la comunidad nos ha compartido a lo largo de lo años.</string>
+    <string name="resources_playlists_cta">Síguenos en Youtube</string>
+    <string name="resources_playlists_caption">Playlist</string>
+    <string name="resources_playlists_card_meetups">[LIVE] Meetups</string>
+    <string name="resources_playlists_card_meetups_desc">Revisa las grabaciones de nuestros meetups pasados.</string>
+    <string name="resources_playlists_card_android_workshop">Android desde cero</string>
+    <string name="resources_playlists_card_android_workshop_desc">Workshop gratuito para aprender Android desde cero, hecho por la comunidad.</string>
+
+
+    <!-- FOOTER -->
+    <string name="main_footer_subscribe">Suscríbete</string>
     <string name="main_footer_this_web_is">Esta web es </string>
     <string name="main_footer_open_source">open source ♥</string>
 

@@ -16,7 +16,7 @@ fun ConferenceLanding() {
 
 @Page("/conf/en")
 @Composable
-fun ConferenceLandingEnglish() {
+fun ConferenceLanding_EN() {
     ConferenceSite(lang = "en") {
         Content()
     }

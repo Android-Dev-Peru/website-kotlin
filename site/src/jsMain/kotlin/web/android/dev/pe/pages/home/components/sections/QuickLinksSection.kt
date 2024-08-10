@@ -46,7 +46,7 @@ fun QuickLinkItem(quickLink: QuickLink) {
             alt = "", // no alt text for decorative images
         )
         Link(path = quickLink.url) {
-            Text(quickLink.title)
+            Text(quickLink.title())
         }
         quickLink.rightIcon?.let {
             Image(

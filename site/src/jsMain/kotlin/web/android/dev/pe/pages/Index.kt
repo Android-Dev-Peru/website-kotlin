@@ -12,12 +12,19 @@ import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.px
+import web.android.dev.pe.components.MainSite
 import web.android.dev.pe.pages.home.Home
 
 @Page
 @Composable
 fun HomePage() {
-    Home()
+    MainSite(lang = "es") { Home() }
+}
+
+@Page("/en")
+@Composable
+fun HomePage_EN() {
+    MainSite(lang = "en") { Home() }
 }
 
 @InitSilk

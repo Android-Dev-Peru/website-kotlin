@@ -20,9 +20,22 @@ private val CustomNavbar = MainSiteNavbar.copy(primaryLink = null)
 @Page("/subscribe")
 @Composable
 fun SubscribeForm() {
-    MainSite(CustomNavbar) {
-        Div(Modifier.padding(2.em).toAttrs()) {
-            ConvertKitForm(uid = "f4a99c32b5")
-        }
+    MainSite("es", CustomNavbar) {
+        Content(formUid = "f4a99c32b5")
+    }
+}
+
+@Page("/subscribe/en")
+@Composable
+fun SubscribeForm_EN() {
+    MainSite("en", CustomNavbar) {
+        Content(formUid = "005a4b6e03")
+    }
+}
+
+@Composable
+private fun Content(formUid: String) {
+    Div(Modifier.padding(2.em).toAttrs()) {
+        ConvertKitForm(formUid)
     }
 }

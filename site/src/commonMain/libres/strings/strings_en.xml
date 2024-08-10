@@ -4,6 +4,64 @@
     <string name="language_option_es">🇵🇪 Spanish</string>
     <string name="language_option_en">🇺🇸 English</string>
 
+    <string name="site_navlink_about_us">About Us</string>
+    <string name="site_navlink_resources">Resources</string>
+    <string name="site_navlink_conference">Conference</string>
+    <string name="site_navlink_subscribe">Subscribe</string>
+
+    <!-- HOME -->
+    <string name="home_header_title">Android Dev Peru</string>
+    <string name="home_header_caption">Android &amp; Kotlin Community in Peru and LATAM</string>
+
+    <string name="home_quick_links_wsp">Join on WhatsApp</string>
+    <string name="home_quick_links_talk">Submit a Talk</string>
+    <string name="home_quick_links_linkedin">Follow us on LinkedIn</string>
+
+    <string name="home_highlights_card_title">Featured Content</string>
+    <string name="home_highlights_card_kotlin_conf_title">Kotlin Conf</string>
+    <string name="home_highlights_card_kotlin_conf_description">Last June we gathered in person for the Kotlin Conf - Lima.&lt;br&gt;&lt;br&gt;🗓 Date: Wednesday, June 26th&lt;br&gt;⏰ Time: 7PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Location: NTT Data&lt;br&gt;</string>
+    <string name="home_highlights_card_kotlin_conf_cta">Watch Recording</string>
+    <string name="home_highlights_card_salary_2023_title">Salary Survey 2023</string>
+    <string name="home_highlights_card_salary_2023_description">Transparency can help reduce salary gaps. Last year, we conducted anonymous surveys and received +100 responses from mobile devs in LATAM.</string>
+    <string name="home_highlights_card_salary_2023_cta">See Results</string>
+
+    <string name="home_save_the_date">Saturday, October 19th</string>
+    <string name="home_save_the_date_location">Lima, Peru 🇵🇪</string>
+
+    <!-- ABOUT US -->
+    <string name="about_us_title">Android Developer Community</string>
+    <string name="about_us_description">We are Peru's largest and most active Android and Kotlin community. Over the years, we have organized dozens of free in-person and virtual events.&lt;br&gt;&lt;br&gt;We invite you to participate as an attendee or speaker at our meetups, workshops, and conferences.&lt;br&gt;&lt;br&gt;</string>
+    <string name="about_organizers_title">Organizing Team</string>
+    <string name="about_organizers_caption">They are the ones responsible for keeping the community active month after month.</string>
+    <string name="about_ex_organizers_title">Legacy Team</string>
+    <string name="about_ex_organizers_caption">Although they are no longer with us on the team, we greatly appreciate the support of our retired organizers ❤️</string>
+
+    <!-- RESOURCES -->
+    <string name="resources_blog_posts_title">Recent Articles</string>
+    <string name="resources_blog_posts_description">Did you miss an event? No problem - catch up on the latest news from our community"</string>
+    <string name="resources_blog_posts_cta">View all articles</string>
+    <string name="resources_blog_posts_caption">Articles</string>
+    <string name="resources_blog_posts_meetup_57">Meetup #57: Kotlin Multiplatform is Stable!</string>
+    <string name="resources_blog_posts_meetup_57_desc">"On November 26th, 2023, GDE Yury Camacho from Bolivia visited us to talk about Kotlin Multiplatform."</string>
+    <string name="resources_blog_posts_devfest_2023">DevFest 2023 - GDG Open</string>
+    <string name="resources_blog_posts_devfest_2023_desc">On November 12, 2023, we participated in the GDG Open DevFest 2023, where we conducted a workshop on Jetpack Compose.</string>
+    <string name="resources_blog_posts_bcp">BCP Community Fair</string>
+    <string name="resources_blog_posts_bcp_desc">On November 22, we had the opportunity to join the community fair organized by BCP, where more than 400 people participated.</string>
+    <string name="resources_blog_posts_meetup_56">Meetup #56: Bluetooth from Scratch</string>
+    <string name="resources_blog_posts_meetup_56_desc">On October 30, we had a virtual talk! Hansy Schmitt shared his knowledge of Bluetooth.</string>
+
+    <string name="resources_playlists_title">Playlists</string>
+    <string name="resources_playlists_description">Don't miss the exclusive material that the community has shared with us over the years.</string>
+    <string name="resources_playlists_cta">Follow us on YouTube</string>
+    <string name="resources_playlists_caption">Playlist</string>
+    <string name="resources_playlists_card_meetups">[LIVE] Meetups</string>
+    <string name="resources_playlists_card_meetups_desc">Missed a meetup? No worries. Here's the recordings. (in Spanish)</string>
+    <string name="resources_playlists_card_android_workshop">From Zero to Android</string>
+    <string name="resources_playlists_card_android_workshop_desc">Free Workshop to learn about Android from scratch. (in Spanish)</string>
+
+
+    <!-- FOOTER -->
+    <string name="main_footer_subscribe">Subscribe</string>
     <string name="main_footer_this_web_is">This web is </string>
     <string name="main_footer_open_source">open source ♥</string>
 </resources>

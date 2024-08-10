@@ -3,6 +3,7 @@ package web.android.dev.pe.components.utils
 import kotlinx.browser.window
 import web.android.dev.pe.components.widgets.Language
 
+fun isRoot() = window.location.pathname.equals("/")
 
 fun getCurrentLanguageFromPath(): Language {
     return when(window.location.pathname.substringAfterLast("/")) {
@@ -16,6 +17,6 @@ fun String.appendCurrentLanguage(): String {
     return if (currentLanguage == Language.DefaultLanguage.code) {
         this
     } else {
-        "$this/$currentLanguage"
+        if (this == "/") "/$currentLanguage" else "$this/$currentLanguage"
     }
 }

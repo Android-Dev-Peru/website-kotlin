@@ -1,9 +1,10 @@
 package web.android.dev.pe.data
 
+import strings.ResStrings
 import web.android.dev.pe.Res
 
 data class QuickLink(
-    val title: String,
+    val title: () -> String,
     val url: String,
     val leftIcon: String,
     val rightIcon: String? = null,
@@ -12,7 +13,7 @@ data class QuickLink(
 enum class QuickLinks(val data: QuickLink) {
     JoinWhatsApp(
         QuickLink(
-            title = "Únete en WhatsApp",
+            title = { ResStrings.home_quick_links_wsp },
             url = Res.Links.WhatsApp,
             leftIcon = Res.Icon.WhatsappFilled,
             rightIcon = Res.Icon.ExternalLink,
@@ -20,7 +21,7 @@ enum class QuickLinks(val data: QuickLink) {
     ),
     GiveATalk(
         QuickLink(
-            title = "Da una charla",
+            title = { ResStrings.home_quick_links_talk },
             url = Res.Links.TalkProposal,
             leftIcon = Res.Icon.Speaker,
             rightIcon = Res.Icon.ExternalLink,
@@ -28,7 +29,7 @@ enum class QuickLinks(val data: QuickLink) {
     ),
     FollowLinkedIn(
         QuickLink(
-            title = "Síguenos en LinkedIn",
+            title = { ResStrings.home_quick_links_linkedin },
             url = Res.Links.LinkedIn,
             leftIcon = Res.Icon.LinkedinFilled,
             rightIcon = Res.Icon.ExternalLink,

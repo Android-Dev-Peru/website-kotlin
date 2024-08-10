@@ -16,6 +16,7 @@ import org.jetbrains.compose.web.css.rgba
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.data.Organizer
 import web.android.dev.pe.data.Organizers
 import web.android.dev.pe.data.LegacyOrganizers
@@ -27,8 +28,8 @@ fun OrganizersSection() {
     OrganizersWrapper(
         sectionModifier = AlternateBackground,
         data = Organizers.entries.map { it.data },
-        title = "Equipo organizador",
-        caption = "Ellos son quienes se encargan de mantener la comunidad activa mes a mes.",
+        title = ResStrings.about_organizers_title,
+        caption = ResStrings.about_organizers_caption,
     )
 }
 
@@ -36,8 +37,8 @@ fun OrganizersSection() {
 fun LegacyOrganizersSection() {
     OrganizersWrapper(
         data = LegacyOrganizers.entries.map { it.data },
-        title = "Equipo legacy",
-        caption = "Si bien ya no nos acompañan en el equipo, agradecemos mucho el apoyo de nuestros organizadores retirados ❤️"
+        title = ResStrings.about_ex_organizers_title,
+        caption = ResStrings.about_ex_organizers_caption,
     )
 }
 

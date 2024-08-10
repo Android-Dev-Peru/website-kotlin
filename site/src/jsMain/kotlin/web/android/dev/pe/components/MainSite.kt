@@ -11,23 +11,20 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toAttrs
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
+import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
-import web.android.dev.pe.components.widgets.navsite.Navbar
-import web.android.dev.pe.components.widgets.navsite.NavbarLogo
-import web.android.dev.pe.components.widgets.navsite.Navlink
-import web.android.dev.pe.components.widgets.navsite.Navsite
+import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 val MainSiteNavbar = Navbar(
-    primaryLink = Navlink(path ="/subscribe") { "Suscríbete" },
+    primaryLink = Navlink(path ="/subscribe") { ResStrings.site_navlink_subscribe },
     secondaryLinks = listOf(
-        Navlink(path ="/") { "Inicio" },
-        Navlink(path ="/about-us") { "Quienes somos" },
-        Navlink(path ="/resources") { "Recursos" },
-        Navlink(path = "/conf") { "Conferencia" },
+        Navlink(path ="/about-us") { ResStrings.site_navlink_about_us },
+        Navlink(path ="/resources") { ResStrings.site_navlink_resources },
+        Navlink(path = "/conf") { ResStrings.site_navlink_conference },
     ),
-    languageSelector = LanguageSelectorOptions.None, // page not localized yet
+    languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(
         src = "/logo.svg",
         title = { "Android Dev Peru" },
@@ -36,8 +33,8 @@ val MainSiteNavbar = Navbar(
 )
 
 @Composable
-fun MainSite(navbar: Navbar = MainSiteNavbar, content: @Composable () -> Unit) {
-    Navsite(navbar) {
+fun MainSite(lang: String, navbar: Navbar = MainSiteNavbar, content: @Composable () -> Unit) {
+    LocalizedSite(navbar, lang) {
         Div(MainSiteStyle.toAttrs()) {
             content()
             MainFooter()

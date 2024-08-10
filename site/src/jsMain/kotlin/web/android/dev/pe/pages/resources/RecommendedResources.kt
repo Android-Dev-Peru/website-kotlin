@@ -9,8 +9,17 @@ import web.android.dev.pe.pages.resources.sections.PlaylistsSection
 @Page("/resources")
 @Composable
 fun RecommendedResources() {
-    MainSite {
-        PlaylistsSection()
-        BlogPostsSection()
-    }
+    MainSite(lang = "es") { Content() }
+}
+
+@Page("/resources/en")
+@Composable
+fun RecommendedResources_EN() {
+    MainSite(lang = "en") { Content() }
+}
+
+@Composable
+private fun Content() {
+    PlaylistsSection()
+    BlogPostsSection()
 }

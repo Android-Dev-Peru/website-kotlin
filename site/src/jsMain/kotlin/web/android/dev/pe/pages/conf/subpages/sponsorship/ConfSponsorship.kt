@@ -22,6 +22,7 @@ import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.components.ConferenceSite
+import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
@@ -36,7 +37,7 @@ fun ConfSponsorship() {
 
 @Page("/conf/sponsorship/en")
 @Composable
-fun ConfSponsorshipEnglish() {
+fun ConfSponsorship_EN() {
     ConferenceSite("en") {
         Content()
     }
@@ -88,7 +89,7 @@ private fun InterestedInParticipatingSection() {
     }
     P {
         Text(ResStrings.conf_sponsorship_p2_more_about_us_p1)
-        Link(path = "/about-us") {
+        Link(path = "/about-us".appendCurrentLanguage()) {
             Text(ResStrings.conf_sponsorship_p2_more_about_us_p2)
         }
     }

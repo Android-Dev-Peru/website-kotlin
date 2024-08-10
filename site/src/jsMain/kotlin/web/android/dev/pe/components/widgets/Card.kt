@@ -38,19 +38,18 @@ fun Card(caption: String, content: CardContent, modifier: Modifier = Modifier) {
     ) {
         Div(CardStyles.LeftSection.toAttrs()) {
             SpanText(caption, CaptionStyle)
-            H3 { Text(content.title)  }
+            H3 { Text(content.title())  }
             P {
-                MultiLineText(content.description)
+                MultiLineText(content.description())
             }
             Spacer()
             Div(CardStyles.Cta.toAttrs()) {
-                Link(path = content.url) { Text(content.cta) }
+                Link(path = content.url) { Text(content.cta()) }
             }
         }
         Div(CardStyles.RightSection.toAttrs()) {
             Image(
-                src = "/images/${content.image}",
-                alt = content.title,
+                src = content.image,
                 modifier = CardStyles.Icon.toModifier()
             )
         }

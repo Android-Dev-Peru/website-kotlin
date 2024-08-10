@@ -25,6 +25,7 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import strings.ResStrings
 import web.android.dev.pe.components.MainSite
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.MultiLineText
@@ -36,13 +37,22 @@ import web.android.dev.pe.pages.aboutus.sections.OrganizersSection
 @Page("/about-us")
 @Composable
 fun AboutUs() {
-    MainSite {
-        Div(AboutUsStyle.toAttrs()) {
-            Header()
-            Intro()
-            OrganizersSection()
-            LegacyOrganizersSection()
-        }
+    MainSite(lang = "es") { Content() }
+}
+
+@Page("/about-us/en")
+@Composable
+fun AboutUs_EN() {
+    MainSite(lang = "en") { Content() }
+}
+
+@Composable
+private fun Content() {
+    Div(AboutUsStyle.toAttrs()) {
+        Header()
+        Intro()
+        OrganizersSection()
+        LegacyOrganizersSection()
     }
 }
 
@@ -64,7 +74,7 @@ private fun Header() {
             SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
         }
         P(Modifier.textAlign(TextAlign.Center).fontSize(FontSize.Larger).fontWeight(FontWeight.ExtraBold).toAttrs()) {
-            Text("Comunidad de desarolladores Android")
+            Text(ResStrings.about_us_title)
         }
     }
 }
@@ -95,13 +105,7 @@ private fun IntroImage() {
 @Composable
 private fun IntroText() {
    P {
-       MultiLineText("""
-            Somos la comunidad de Android y Kotlin más grande y activa del Perú. A lo largo de los años,
-            hemos organizado decenas de eventos presenciales y virtuales gratuitos.<br><br>
-            
-            Te invitamos a participar como asistente o expositor en nuestros meetups, workshops, 
-            y conferencias. <br><br>
-        """.trimIndent())
+       MultiLineText(ResStrings.about_us_description)
    }
 }
 
