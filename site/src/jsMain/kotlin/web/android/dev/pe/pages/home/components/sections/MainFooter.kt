@@ -22,9 +22,9 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.Routes
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.CommunityEmailLink
-import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 import web.android.dev.pe.components.widgets.navsite.NavLink
@@ -83,7 +83,7 @@ private fun FooterContact() {
     ) {
         PrimaryButton(
             text = ResStrings.main_footer_subscribe,
-            href = "/subscribe",
+            href = Routes.Subscribe,
             variant = RectangularPrimaryButtonVariant,
             modifier = Modifier
                 .height(36.px)

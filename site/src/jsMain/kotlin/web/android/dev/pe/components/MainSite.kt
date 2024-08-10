@@ -13,22 +13,23 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.Routes
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 val MainSiteNavbar = Navbar(
-    primaryLink = Navlink(path ="/subscribe") { ResStrings.site_navlink_subscribe },
+    primaryLink = Navlink(path = Routes.Subscribe) { ResStrings.site_navlink_subscribe },
     secondaryLinks = listOf(
-        Navlink(path ="/about-us") { ResStrings.site_navlink_about_us },
-        Navlink(path ="/resources") { ResStrings.site_navlink_resources },
-        Navlink(path = "/conf") { ResStrings.site_navlink_conference },
+        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
+        Navlink(path = Routes.Resources) { ResStrings.site_navlink_resources },
+        Navlink(path = Routes.Conf.Index) { ResStrings.site_navlink_conference },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(
         src = "/logo.svg",
         title = { "Android Dev Peru" },
-        path = "/",
+        path = Routes.Home,
     ),
 )
 

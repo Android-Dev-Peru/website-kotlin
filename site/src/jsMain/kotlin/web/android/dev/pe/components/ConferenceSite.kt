@@ -8,6 +8,7 @@ import com.varabyte.kobweb.silk.style.toAttrs
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.Routes
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
@@ -16,14 +17,14 @@ private val ConferenceNavbar = Navbar(
 //    primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
     primaryLink = null,
     secondaryLinks = listOf(
-        Navlink(path = Res.Links.Conf.C4P) { ResStrings.conf_navlink_c4p },
-        Navlink(path = "/conf/sponsorship") { ResStrings.conf_navlink_sponsor },
+        Navlink(path = Res.Links.Conf.C4P, localizablePath = false) { ResStrings.conf_navlink_c4p },
+        Navlink(path = Routes.Conf.Sponsorship) { ResStrings.conf_navlink_sponsor },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(
         src = "/logo.svg",
         title = { ResStrings.conf_title },
-        path = "/conf",
+        path = Routes.Conf.Index,
     ),
 
 )
@@ -34,8 +35,8 @@ fun ConferenceSite(lang: String, content: @Composable () -> Unit) {
         Div(ConferenceSiteStyle.toAttrs()) {
             content()
             MainFooter(extraLinks = listOf(
-                Navlink(path = "/about-us") { ResStrings.conf_navlink_about_us },
-                Navlink(path = "/conf/coc") { ResStrings.conf_navlink_code_of_conduct },
+                Navlink(path = Routes.AboutUs) { ResStrings.conf_navlink_about_us },
+                Navlink(path = Routes.Conf.CodeOfConduct) { ResStrings.conf_navlink_code_of_conduct },
             ))
         }
     }

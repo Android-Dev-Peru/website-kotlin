@@ -23,12 +23,15 @@ import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
  */
 data class Navlink(
     val path: String,
+    val localizablePath: Boolean = true,
     val name: () -> String,
-)
+) {
+    val localizedPath get() = if (localizablePath) path.appendCurrentLanguage() else path
+}
 
 @Composable
 fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
-    Link(path = item.path.appendCurrentLanguage(), modifier.then(NavLinkStyle.toModifier())) {
+    Link(path = item.localizedPath, modifier.then(NavLinkStyle.toModifier())) {
         Text(item.name())
     }
 }
@@ -37,7 +40,7 @@ fun NavLink(item: Navlink, modifier: Modifier = Modifier) {
 fun HighlightedNavLink(item: Navlink, modifier: Modifier = Modifier) {
     PrimaryButton(
         text = item.name(),
-        href = item.path.appendCurrentLanguage(),
+        href = item.localizedPath,
         variant = RectangularPrimaryButtonVariant,
         modifier = modifier.height(36.px).margin(leftRight = 4.px).alignSelf(AlignSelf.Center)
     )
