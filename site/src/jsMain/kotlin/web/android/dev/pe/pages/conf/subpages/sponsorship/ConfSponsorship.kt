@@ -12,19 +12,18 @@ import com.varabyte.kobweb.silk.components.icons.fa.FaIcon
 import com.varabyte.kobweb.silk.components.icons.fa.IconCategory
 import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.components.navigation.Link
-import com.varabyte.kobweb.silk.style.CssStyle
-import com.varabyte.kobweb.silk.style.base
+import com.varabyte.kobweb.silk.style.*
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
-import com.varabyte.kobweb.silk.style.toAttrs
-import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.HeadingDecorator
+import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 @Page("/conf/sponsorship")
@@ -119,7 +118,7 @@ private fun ContactUsSection() {
     Div(ConfSponsorshipStyles.ContactOptionsContainer.toAttrs()) {
         ContactUsOption(icon = "envelope") {
             Text(ResStrings.conf_sponsor_i_want_to_sponsor_email_us_pt1)
-            CommunityEmailLink(Modifier.color(Res.Theme.PRIMARY.color))
+            CommunityEmailLink()
             Text(ResStrings.conf_sponsor_i_want_to_sponsor_email_us_pt2)
 
         }
@@ -189,9 +188,6 @@ object ConfSponsorshipStyles {
         cssRule(" h2") {
             Modifier.margin(0.px)
         }
-        cssRule(" a") {
-            Modifier.color(Res.Theme.PRIMARY.color)
-        }
     }
     val photosContainer = CssStyle {
         base {
@@ -218,7 +214,8 @@ object ConfSponsorshipStyles {
     }
     val ContactOption = CssStyle.base {
         Modifier
-            .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
+            .boxShadow(0.px, 4.px, 16.px, color = colorMode.get(Theme.shadow))
+            .backgroundColor(colorMode.get(Theme.surface))
             .textAlign(TextAlign.Center)
             .padding(1.em)
             .flex(1)

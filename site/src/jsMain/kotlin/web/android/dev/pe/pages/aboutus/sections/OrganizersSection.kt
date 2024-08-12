@@ -10,6 +10,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.rgba
@@ -26,7 +27,7 @@ import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 @Composable
 fun OrganizersSection() {
     OrganizersWrapper(
-        sectionModifier = AlternateBackground,
+        sectionModifier = AlternateBackground.toModifier(),
         data = Organizers.entries.map { it.data },
         title = ResStrings.about_organizers_title,
         caption = ResStrings.about_organizers_caption,

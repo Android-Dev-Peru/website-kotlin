@@ -2,14 +2,12 @@ package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.AlignSelf
-import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
-import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -22,13 +20,14 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
-import web.android.dev.pe.Routes
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 import web.android.dev.pe.components.widgets.navsite.NavLink
 import web.android.dev.pe.components.widgets.navsite.Navlink
+import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
 
@@ -83,7 +82,7 @@ private fun FooterContact() {
     ) {
         PrimaryButton(
             text = ResStrings.main_footer_subscribe,
-            href = Routes.Subscribe,
+            href = "/subscribe",
             variant = RectangularPrimaryButtonVariant,
             modifier = Modifier
                 .height(36.px)
@@ -105,8 +104,7 @@ val MainFooterStyle = CssStyle {
         Modifier
             .padding(20.px)
             .gap(12.px)
-            .borderTop(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
-            .color(Colors.SlateGray)
+            .borderTop(1.px, LineStyle.Solid, colorMode.get(Theme.navbarBorder))
     }
 
     Breakpoint.MD {

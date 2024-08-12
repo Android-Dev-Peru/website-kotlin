@@ -18,6 +18,7 @@ import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toAttrs
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.FlexDirection
 import org.jetbrains.compose.web.css.em
@@ -60,7 +61,7 @@ private fun Content() {
 @Composable
 private fun Header() {
     HomeSection(
-        sectionModifier = AlternateBackground,
+        sectionModifier = AlternateBackground.toModifier(),
         modifier = Modifier
             .display(DisplayStyle.Flex)
             .flexDirection(FlexDirection.Column)

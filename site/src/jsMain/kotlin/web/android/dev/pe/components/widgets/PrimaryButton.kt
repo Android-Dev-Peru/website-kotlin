@@ -5,15 +5,17 @@ import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.style.*
 import com.varabyte.kobweb.silk.style.selectors.hover
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.DisplayStyle
+import org.jetbrains.compose.web.css.LineStyle
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.get
 
 @Composable
 fun PrimaryButton(
@@ -40,38 +42,33 @@ val PrimaryButtonStyle = CssStyle<PrimaryButtonKind> {
             .cursor(Cursor.Pointer)
             .borderRadius(40.px)
     }
-    hover {
-        Modifier
-            .backgroundColor(Res.Theme.BUTTON_HOVER.color)
-            .color(Colors.Black)
-    }
 }
 
 val FilledPrimaryButtonVariant = PrimaryButtonStyle.addVariant {
     base {
         Modifier
-            .backgroundColor(Res.Theme.PRIMARY_BUTTON.color)
-            .color(Res.Theme.ON_PRIMARY_BUTTON.color)
+            .backgroundColor(colorMode.get(Theme.primary))
+            .color(colorMode.get(Theme.onPrimary))
             .border { style(LineStyle.None) }
     }
     hover {
         Modifier
-            .backgroundColor(Res.Theme.BUTTON_HOVER.color)
-            .color(Colors.Black)
+            .backgroundColor(colorMode.get(Theme.secondary))
+            .color(colorMode.get(Theme.onSecondary))
     }
 }
 
 val OutlinePrimaryButtonVariant = PrimaryButtonStyle.addVariant {
     base {
         Modifier
-            .border(2.px, LineStyle.Solid, Colors.Black)
+            .border(2.px, LineStyle.Solid, colorMode.get(Theme.onBackground))
             .borderRadius(96.px)
-            .color(Colors.Black)
+            .color(colorMode.get(Theme.onBackground))
     }
     hover {
         Modifier
-            .backgroundColor(Colors.Black)
-            .color(Colors.White)
+            .backgroundColor(colorMode.get(Theme.onSurface))
+            .color(colorMode.get(Theme.surface))
     }
 }
 
@@ -79,15 +76,15 @@ val OutlinePrimaryButtonVariant = PrimaryButtonStyle.addVariant {
 val RectangularPrimaryButtonVariant = PrimaryButtonStyle.addVariant {
     base {
         Modifier
-            .backgroundColor(Res.Theme.PRIMARY_BUTTON.color)
-            .color(Res.Theme.ON_PRIMARY_BUTTON.color)
+            .backgroundColor(colorMode.get(Theme.primary))
+            .color(colorMode.get(Theme.onPrimary))
             .border { style(LineStyle.None) }
             .fontSize(14.px)
             .borderRadius(4.px)
     }
     hover {
         Modifier
-            .backgroundColor(Res.Theme.PRIMARY.color)
-            .color(Colors.White)
+            .backgroundColor(colorMode.get(Theme.secondary))
+            .color(colorMode.get(Theme.onSecondary))
     }
 }

@@ -29,7 +29,7 @@ import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 fun TopHeader() {
     val isSmallScreen = mutableIsSmallScreen()
     TwoPaneSection(
-        sectionModifier = AlternateBackground,
+        sectionModifier = AlternateBackground.toModifier(),
         modifier = HomeHeaderStyles.Container.toModifier(),
         distribution = if (isSmallScreen) 1 to 1 else 2 to 1,
         header = {
@@ -81,7 +81,6 @@ object HomeHeaderStyles {
             Modifier
                 .fontSize(30.px)
                 .fontWeight(FontWeight.ExtraBlack)
-                .color(Res.Theme.BLACK.color)
         }
 
         Breakpoint.MD {

@@ -15,7 +15,8 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.get
 
 @Composable
 fun ConferenceCard(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
@@ -36,6 +37,7 @@ object ShinyCardStyles {
                         size = BackgroundSize.of(100.px)
                     )
                 )
+                .backgroundColor(colorMode.get(Theme.background))
                 .padding(top = 20.px, bottom = 100.px, leftRight = 20.px)
                 .alignItems(AlignItems.Center)
                 .boxShadow(0.px, 0.px, 10.px, 0.px, Color.rgb(0xA5C742))
@@ -63,6 +65,7 @@ object ShinyCardStyles {
                         size = BackgroundSize.of(200.px)
                     )
                 )
+                .backgroundColor(colorMode.get(Theme.background))
                 .padding(2.em)
                 .alignItems(AlignItems.Start)
         }
@@ -74,7 +77,7 @@ object ShinyCardStyles {
                 .fontWeight(FontWeight.Bold)
                 .fontSize(30.px)
                 .textAlign(TextAlign.Center)
-                .color(Res.Theme.PRIMARY.color)
+                .color(Theme.DARK_GREEN)
         }
         Breakpoint.MD {
             Modifier
@@ -88,7 +91,6 @@ object ShinyCardStyles {
                 .textTransform(TextTransform.Uppercase)
                 .fontSize(14.px)
                 .margin(0.px)
-                .color(Res.Theme.TEXT.color)
         }
         Breakpoint.MD {
             Modifier.fontSize(20.px)

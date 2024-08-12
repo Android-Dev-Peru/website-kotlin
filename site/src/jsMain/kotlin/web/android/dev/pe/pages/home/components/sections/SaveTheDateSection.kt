@@ -8,6 +8,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.navigation.RoutePrefix
 import com.varabyte.kobweb.silk.style.toAttrs
+import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.H3
@@ -22,7 +23,7 @@ import web.android.dev.pe.pages.home.components.layouts.HomeSection
 @Composable
 fun SaveTheDateSection() {
     HomeSection(
-        sectionModifier = AlternateBackground,
+        sectionModifier = AlternateBackground.toModifier(),
         modifier = Modifier.padding(4.em)
     ) {
         ConferenceCard(
