@@ -10,11 +10,13 @@ import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Section
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.get
 
 @Composable
 fun HomeSection(modifier: Modifier = Modifier, sectionModifier: Modifier = Modifier, content: @Composable () -> Unit) {
@@ -34,4 +36,6 @@ val HomeSectionStyle = CssStyle {
     }
 }
 
-val AlternateBackground = Modifier.backgroundColor(Res.Theme.ALTERNATE_BACKGROUND.color)
+val AlternateBackground = CssStyle.base {
+    Modifier.backgroundColor(colorMode.get(Theme.surface))
+}

@@ -8,13 +8,14 @@ import com.varabyte.kobweb.compose.css.TransitionTimingFunction
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.widgets.LanguageSelector
+import web.android.dev.pe.get
 
 @Composable
 fun NavsiteDrawer(
@@ -55,7 +56,7 @@ val DrawerStyle = CssStyle.base {
     Modifier
         .fillMaxWidth()
         .padding(bottom = 16.px)
-        .backgroundColor(Colors.White)
+        .backgroundColor(colorMode.get(Theme.surface))
         .position(Position.Fixed)
         .zIndex(3)
 }

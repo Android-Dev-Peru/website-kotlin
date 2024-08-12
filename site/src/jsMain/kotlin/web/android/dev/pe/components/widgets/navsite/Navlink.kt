@@ -7,14 +7,14 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toModifier
-import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Text
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
+import web.android.dev.pe.get
 
 /**
  * Model that represents a navigation option
@@ -52,15 +52,14 @@ val NavLinkStyle = CssStyle {
             .fontSize(14.px)
             .lineHeight(20.px)
             .fontWeight(FontWeight.Bold)
-            .color(Res.Theme.TEXT.color)
+            .color(colorMode.get(Theme.onSurface))
             .textDecorationLine(TextDecorationLine.None)
             .textAlign(TextAlign.Center)
     }
     cssRule(":hover") {
         Modifier
-            .color(Color.black)
             .fontWeight(FontWeight.ExtraBold)
-            .borderBottom(2.px, LineStyle.Solid, Res.Theme.PRIMARY_LIGHT.color)
+            .borderBottom(2.px, LineStyle.Solid, Theme.LIGHT_GREEN)
             .cursor(Cursor.Pointer)
     }
 }

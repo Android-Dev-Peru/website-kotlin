@@ -18,9 +18,10 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Option
 import org.jetbrains.compose.web.dom.Select
 import strings.ResStrings
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.utils.getCurrentLanguageFromPath
 import web.android.dev.pe.components.utils.isRoot
+import web.android.dev.pe.get
 
 enum class Language(val code: String) {
     Spanish("es"),
@@ -102,10 +103,11 @@ val LanguageSelectorStyle = CssStyle {
             .fillMaxHeight()
             .fillMaxWidth()
             .fontFamily("Google Sans", "sans-serif")
+            .backgroundColor(colorMode.get(Theme.navbar))
             .border(0.px)
             .cursor(Cursor.Pointer)
             .padding(leftRight = 8.px)
-            .fontSize(FontSize.Inherit)
-            .color(Res.Theme.TEXT.color)
+            .fontSize(14.px)
+            .color(colorMode.get(Theme.onSurface))
     }
 }

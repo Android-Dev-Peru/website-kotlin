@@ -18,9 +18,11 @@ import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.utils.CurvyUnderline
 import web.android.dev.pe.components.widgets.CommunityEmailLink
+import web.android.dev.pe.get
 
 @Page("/conf/coc")
 @Composable
@@ -158,7 +160,8 @@ object ConfCodeOfConductStyles {
     }
     val ReportCard = CssStyle.base {
         Modifier
-            .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
+            .boxShadow(0.px, 4.px, 16.px, color = colorMode.get(Theme.shadow))
+            .backgroundColor(colorMode.get(Theme.surface))
             .textAlign(TextAlign.Center)
             .padding(2.em)
     }

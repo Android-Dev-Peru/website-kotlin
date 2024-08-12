@@ -11,10 +11,14 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
-import org.jetbrains.compose.web.css.Color
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.base
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.px
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.get
 
 
 @Composable
@@ -54,11 +58,15 @@ fun LogoAndName(logo: String, name: String, modifier: Modifier = Modifier) {
         )
         SpanText(
             name,
-            modifier = Modifier
-                .fontSize(14.px)
-                .color(Color.black)
-                .fontWeight(FontWeight.ExtraBold)
-                .textDecorationLine(TextDecorationLine.None)
+            modifier = LogoAndNameStyle.toModifier()
         )
     }
+}
+
+val LogoAndNameStyle = CssStyle.base {
+    Modifier
+        .fontSize(14.px)
+        .color(colorMode.get(Theme.onSurface))
+        .fontWeight(FontWeight.ExtraBold)
+        .textDecorationLine(TextDecorationLine.None)
 }

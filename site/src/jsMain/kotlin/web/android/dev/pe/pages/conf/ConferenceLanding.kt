@@ -2,6 +2,7 @@ package web.android.dev.pe.pages.conf
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.core.Page
+import com.varabyte.kobweb.silk.style.toModifier
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.pages.conf.components.sections.*
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
@@ -25,8 +26,8 @@ fun ConferenceLanding_EN() {
 @Composable
 private fun Content() {
     ConferenceHeader()
-    EventSection(AlternateBackground)
+    EventSection(AlternateBackground.toModifier())
     LocationSection()
-    CallForPapersSection(AlternateBackground)
+    CallForPapersSection(AlternateBackground.toModifier())
     SponsorSection()
 }

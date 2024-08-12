@@ -15,7 +15,6 @@ fun CommunityEmailLink(modifier: Modifier = Modifier) {
     Link(
         path = "mailto:${Res.Links.Email}",
         modifier = Modifier
-            .color(Colors.DimGray)
             .fontWeight(FontWeight.ExtraBold)
             .then(modifier)
     ) {

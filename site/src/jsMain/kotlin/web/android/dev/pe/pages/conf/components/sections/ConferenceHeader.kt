@@ -83,7 +83,6 @@ object ConferenceHeaderStyles {
             Modifier
                 .fontSize(60.px)
                 .fontWeight(FontWeight.ExtraBlack)
-                .color(Res.Theme.BLACK.color)
         }
     }
     val caption = CssStyle {

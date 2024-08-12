@@ -14,13 +14,16 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import kotlinx.browser.window
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.colorAwareSVG
 import web.android.dev.pe.data.QuickLink
 import web.android.dev.pe.data.QuickLinks
+import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
 @Composable
@@ -50,7 +53,7 @@ fun QuickLinkItem(quickLink: QuickLink) {
         }
         quickLink.rightIcon?.let {
             Image(
-                src = it,
+                src = it.colorAwareSVG(),
                 modifier = Modifier
                     .classNames("right-icon")
                     .onClick { window.open(quickLink.url, "_blank") },
@@ -81,7 +84,7 @@ val QuickLinkItemStyle = CssStyle {
         Modifier
             .flex(1)
             .fillMaxWidth()
-            .border(2.px, LineStyle.Solid, Res.Theme.BORDER.color)
+            .border(2.px, LineStyle.Solid, colorMode.get(Theme.border))
             .borderRadius(96.px)
             .padding(24.px)
             .cursor(Cursor.Pointer)
@@ -90,9 +93,7 @@ val QuickLinkItemStyle = CssStyle {
             .boxShadow(0.px, 2.px, 8.px, color = rgba(0, 0, 0, 0.1f))
     }
     hover {
-        Modifier
-            .backgroundColor(Res.Theme.BUTTON_HOVER.color)
-            .color(Res.Theme.WHITE.color)
+        Modifier.backgroundColor(colorMode.get(Theme.shadow))
     }
     cssRule(" .left-icon") {
         Modifier
@@ -108,7 +109,7 @@ val QuickLinkItemStyle = CssStyle {
     }
     cssRule(" a") {
         Modifier
-            .color(Res.Theme.BLACK.color)
+            .color(colorMode.get(Theme.onSurface))
             .fontSize(18.px)
             .fontWeight(500)
             .textDecorationLine(TextDecorationLine.None)

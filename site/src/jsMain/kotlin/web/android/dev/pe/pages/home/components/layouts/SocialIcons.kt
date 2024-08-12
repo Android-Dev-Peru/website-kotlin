@@ -8,6 +8,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.dom.Div
+import web.android.dev.pe.colorAwareSVG
 import web.android.dev.pe.data.Social
 import web.android.dev.pe.data.Socials
 import web.android.dev.pe.pages.home.components.sections.HomeHeaderStyles
@@ -24,6 +25,6 @@ fun SocialIcons(modifier: Modifier = Modifier) {
 @Composable
 fun SocialIcon(social: Social) {
     Link(path = social.url, modifier = Modifier.ariaLabel(social.name)) {
-        Image(src = social.icon, modifier = HomeHeaderStyles.SocialMediaIcon.toModifier())
+        Image(src = social.icon.colorAwareSVG(), modifier = HomeHeaderStyles.SocialMediaIcon.toModifier())
     }
 }

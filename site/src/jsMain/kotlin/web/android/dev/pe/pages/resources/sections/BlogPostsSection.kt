@@ -5,6 +5,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.gap
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
+import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
@@ -21,7 +22,7 @@ import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 @Composable
 fun BlogPostsSection() {
     TwoPaneSection(
-        sectionModifier = AlternateBackground,
+        sectionModifier = AlternateBackground.toModifier(),
         header = {
             H2 { Text(ResStrings.resources_blog_posts_title) }
             P { Text(ResStrings.resources_blog_posts_description) }

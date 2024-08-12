@@ -1,9 +1,6 @@
 package web.android.dev.pe
 
-import org.jetbrains.compose.web.css.CSSColorValue
-import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
 
 object Res {
 
@@ -45,24 +42,6 @@ object Res {
         val LinkedinFilled = "/icons/social_linkedin_filled.svg"
         val Speaker = "/icons/icon_speaker.png"
         val ExternalLink = "/icons/icon_external_link.svg"
-    }
-
-    enum class Theme(val color: CSSColorValue) {
-        PRIMARY(color = rgb(56, 118, 29)),
-        PRIMARY_LIGHT(color = rgb(166, 199, 66)),
-        TEXT(color = rgb(95, 99, 104)),
-        LIGHT_TEXT(color = rgb(23, 78, 166)),
-        ALTERNATE_BACKGROUND(color = rgb(248, 249, 250)),
-        BORDER(color = rgb(218, 220, 224)),
-
-        PRIMARY_BUTTON(color = Color.black),
-        ON_PRIMARY_BUTTON(color = Color.white),
-
-        BUTTON_HOVER(color = rgb(230, 230, 230)),
-        LINK(color = rgb(23, 78, 166)),
-        SHADOW(color = rgb(60, 64, 67)),
-        BLACK(color = Color.black),
-        WHITE(color = Color.white),
     }
 
     object Dimens {

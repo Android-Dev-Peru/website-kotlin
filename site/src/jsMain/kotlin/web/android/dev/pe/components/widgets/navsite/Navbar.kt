@@ -2,12 +2,12 @@ package web.android.dev.pe.components.widgets.navsite
 
 import androidx.compose.runtime.Composable
 import androidx.compose.web.events.SyntheticMouseEvent
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.AlignItems
 import com.varabyte.kobweb.compose.css.AlignSelf
-import com.varabyte.kobweb.compose.css.Cursor
-import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -19,12 +19,17 @@ import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.JustifyContent
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.colorAwareSVG
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.ConditionalLayout
 import web.android.dev.pe.components.widgets.LanguageSelector
 import web.android.dev.pe.components.widgets.LanguageSelectorOptions
+import web.android.dev.pe.components.widgets.ThemeSwitcher
+import web.android.dev.pe.get
 
 data class Navbar(
     val logo: NavbarLogo,
@@ -82,7 +87,10 @@ private fun NavbarMobile(
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Image(
-            src = if (state == NavbarState.Collapsed) "/icons/hamburger.svg" else "/icons/close.svg",
+            src = when(state) {
+                NavbarState.Collapsed -> "/icons/hamburger.svg"
+                NavbarState.Expanded -> "/icons/close.svg"
+            }.colorAwareSVG(),
             modifier = Modifier.onClick(onClick).cursor(Cursor.Pointer),
             alt = if (state == NavbarState.Collapsed) "Abrir menu" else "Cerrar menu"
         )
@@ -92,6 +100,8 @@ private fun NavbarMobile(
         ) {
             LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
         }
+        Spacer()
+        ThemeSwitcher()
     }
     FakeNavbar()
 }
@@ -114,6 +124,7 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
             LogoAndName(logo = navbar.logo.src, name = navbar.logo.title())
         }
         Row(Modifier.fillMaxHeight()) {
+            ThemeSwitcher()
             navbar.secondaryLinks.forEach {
                 NavLink(it, NavbarLargeItemStyle.toModifier())
             }
@@ -122,7 +133,6 @@ private fun NavbarLarge(navbar: Navbar, modifier: Modifier = Modifier) {
             }
             LanguageSelector(navbar.languageSelector, NavbarLanguageSelectorStyle.toModifier())
         }
-
     }
     FakeNavbar()
 }
@@ -133,8 +143,8 @@ val SharedNavbarStyles = CssStyle.base {
         .fillMaxWidth()
         .position(Position.Fixed)
         .padding(leftRight = 16.px)
-        .backgroundColor(Res.Theme.WHITE.color)
-        .borderBottom(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
+        .backgroundColor(colorMode.get(Theme.navbar))
+        .borderBottom(1.px, LineStyle.Solid, colorMode.get(Theme.navbarBorder))
         .zIndex(4)
 }
 

@@ -1,6 +1,7 @@
 package web.android.dev.pe.pages.conf.subpages.sponsorship
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import com.varabyte.kobweb.compose.css.BorderCollapse
 import com.varabyte.kobweb.compose.css.FontStyle
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -12,20 +13,23 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
-import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
+import web.android.dev.pe.get
 
 @Composable
 fun SponsorshipPlans() {
+    val colorMode by ColorMode.currentState
     Div(SponsorshipPlansStyle.toAttrs()) {
         SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_header,
             planA = ResStrings.conf_sponsorship_plan_A,
             planB = ResStrings.conf_sponsorship_plan_B,
             planC = ResStrings.conf_sponsorship_plan_C,
-            modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(rgb(240,240,240))
+            modifier = Modifier.fontWeight(FontWeight.ExtraBold).backgroundColor(colorMode.get(Theme.tableHeader))
         )
         SponsorshipPlanRow(
             benefit = ResStrings.conf_sponsorship_plan_benefit_mentions,
@@ -122,7 +126,7 @@ val SponsorshipPlansStyle = CssStyle {
                 size(75.px)
             }
             .borderCollapse(BorderCollapse.Collapse)
-            .border(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
+            .border(1.px, LineStyle.Solid, colorMode.get(Theme.border))
             .fontSize(12.px)
     }
     Breakpoint.MD {
@@ -138,7 +142,7 @@ val SponsorshipPlansStyle = CssStyle {
 
     cssRule("span") {
         Modifier
-            .border(1.px, LineStyle.Solid, Res.Theme.BORDER.color)
+            .border(1.px, LineStyle.Solid, colorMode.get(Theme.border))
             .textAlign(TextAlign.Center)
             .padding(4.px)
     }

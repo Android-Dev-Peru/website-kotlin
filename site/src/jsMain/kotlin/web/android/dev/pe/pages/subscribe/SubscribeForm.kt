@@ -1,10 +1,12 @@
 package web.android.dev.pe.pages.subscribe
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.core.Page
+import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.components.MainSite
@@ -20,16 +22,24 @@ private val CustomNavbar = MainSiteNavbar.copy(primaryLink = null)
 @Page("/subscribe")
 @Composable
 fun SubscribeForm() {
+    val colorMode by ColorMode.currentState
     MainSite("es", CustomNavbar) {
-        Content(formUid = "f4a99c32b5")
+        Content(formUid = when(colorMode){
+            ColorMode.LIGHT -> "f4a99c32b5"
+            ColorMode.DARK -> "cd2b30f4a1"
+        })
     }
 }
 
 @Page("/subscribe/en")
 @Composable
 fun SubscribeForm_EN() {
+    val colorMode by ColorMode.currentState
     MainSite("en", CustomNavbar) {
-        Content(formUid = "005a4b6e03")
+        Content(formUid = when(colorMode){
+            ColorMode.LIGHT -> "005a4b6e03"
+            ColorMode.DARK -> "9557449eeb"
+        })
     }
 }
 

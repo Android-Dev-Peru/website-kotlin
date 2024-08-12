@@ -4,7 +4,6 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.attrsModifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.navigation.Anchor
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -15,11 +14,12 @@ import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.rgb
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import web.android.dev.pe.Theme
+import web.android.dev.pe.get
 
 data class BorderlessCard(
     val title: String,
@@ -89,36 +89,17 @@ object BorderlessCardStyles {
         }
         cssRule(" a") {
             Modifier
-                .color(Colors.Black)
+                .color(colorMode.get(Theme.onSurface))
                 .textDecorationLine(TextDecorationLine.None)
         }
         cssRule(" a:hover") {
             Modifier
                 .cursor(Cursor.Pointer)
-                .color(rgb(23, 78, 166))
+                .color(colorMode.get(Theme.link))
         }
         cssRule(" p") {
             Modifier
-                .color(rgb(60, 64, 67))
+                .color(colorMode.get(Theme.onBackground))
         }
     }
 }
-
-
-
-//fun DIV.borderlessCard(content: BorderlessCard, classes: String = "") {
-//    div(classes = "borderless-card $classes") {
-//        div(classes = "img-container") {
-//            a(href = content.url) {
-//                img(src = content.thumbnail, alt = content.title, classes = "thumbnail")
-//            }
-//        }
-//        div(classes = "content") {
-//            span { +content.caption }
-//            a(href = content.url) {
-//                h3 { +content.title }
-//            }
-//            p { +content.description }
-//        }
-//    }
-//}

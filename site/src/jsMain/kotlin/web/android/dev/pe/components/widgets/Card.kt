@@ -25,8 +25,10 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.CaptionStyle
 import web.android.dev.pe.data.CardContent
+import web.android.dev.pe.get
 
 
 @Composable
@@ -69,13 +71,13 @@ object CardStyles {
                 .border {
                     width(1.px)
                     style(LineStyle.Solid)
-                    color(rgb(218, 220, 224))
+                    color(colorMode.get(Theme.border))
                 }
                 .cursor(Cursor.Pointer)
         }
         hover {
             Modifier
-                .boxShadow(0.px, 4.px, 16.px, color = rgba(0, 0, 0, 0.2f))
+                .boxShadow(0.px, 8.px, 16.px, color = colorMode.get(Theme.shadow))
         }
         cssRule(" h3") {
             Modifier
@@ -83,17 +85,18 @@ object CardStyles {
         }
         cssRule(" a") {
             Modifier
-                .border(2.px, LineStyle.Solid, Colors.Black)
+                .border(2.px, LineStyle.Solid, colorMode.get(Theme.onSurface))
                 .borderRadius(96.px)
-                .color(Colors.Black)
+                .color(colorMode.get(Theme.onSurface))
                 .textDecorationLine(TextDecorationLine.None)
                 .padding(10.px, 15.px)
                 .display(DisplayStyle.Inline)
         }
         cssRule(":hover a") {
             Modifier
-                .backgroundColor(Colors.Black)
-                .color(Colors.White)
+                .backgroundColor(colorMode.get(Theme.onSurface))
+                .border(2.px, LineStyle.Solid, colorMode.get(Theme.surface))
+                .color(colorMode.get(Theme.surface))
         }
 
         Breakpoint.MD {
