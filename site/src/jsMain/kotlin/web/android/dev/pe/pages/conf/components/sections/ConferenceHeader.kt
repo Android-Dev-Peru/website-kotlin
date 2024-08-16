@@ -60,7 +60,8 @@ private fun HeaderContent() {
 private fun HeaderImage() {
     Div(Modifier.fillMaxSize().display(DisplayStyle.Flex).justifyContent(JustifyContent.Center).toAttrs()) {
         AnimatedImage(
-            src = "/events/conf2024/raise-the-roof-droid.webm",
+            src = "/events/conf2024/raise-the-roof-droid.gif",
+            thumbnail = "/events/conf2024/raise-the-roof-droid-frame.png",
             modifier = ConferenceHeaderStyles.image.toModifier()
         )
     }
