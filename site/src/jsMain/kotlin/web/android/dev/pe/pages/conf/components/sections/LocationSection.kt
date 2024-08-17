@@ -46,7 +46,7 @@ private fun LocationDetails() {
 @Composable
 private fun LocationMap() {
     Image(
-        src = "/events/conf2024/upc_map_transparent.webp",
+        src = "/events/conf2024/upc_monterrico.webp",
         alt = "Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H",
         modifier = Modifier
     )
