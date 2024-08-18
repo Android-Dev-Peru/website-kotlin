@@ -62,6 +62,7 @@ private fun Content() {
 private fun Intro() {
     H1 { SpanText(ResStrings.privacy_policy, CurvyUnderline.toModifier()) }
     P { Text(ResStrings.privacy_policy_p1) }
+    P { Text(ResStrings.privacy_policy_p2) }
     Ul {
         Li { Link("#${SectionIds.website}") { Text(ResStrings.privacy_policy_website) } }
         Li { Link("#${SectionIds.atteendes}") { Text(ResStrings.privacy_policy_attendees) } }

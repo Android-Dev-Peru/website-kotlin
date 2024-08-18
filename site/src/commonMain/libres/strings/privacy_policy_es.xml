@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="privacy_policy">Política de privacidad</string>
-    <string name="privacy_policy_p1">Este aviso de privacidad le informa qué esperar cuando recopilamos información personal. Se aplica a la información que recopilamos sobre:</string>
+    <string name="privacy_policy_p1">Android Dev Peru es una comunidad sin fines de lucro. Los dato que recolectemos no serán utilizado con fines lucrativos.</string>
+    <string name="privacy_policy_p2">Este aviso de privacidad le informa qué esperar cuando recopilamos información personal. Se aplica a la información que recopilamos sobre:</string>
 
     <string name="privacy_policy_website">Visitantes a nuestros sitios web</string>
     <string name="privacy_policy_website_p1">Cuando alguien visita uno de nuestros sitios web, almacenamos información del registro del servidor web, que incluye información como la dirección IP desde la que se conectó, el agente de usuario de su navegador y la página que solicitó. Utilizamos esta información para monitorear la seguridad, el rendimiento y la salud de nuestros sistemas. Todos nuestros sitios web están protegidos por TLS. Esto significa que su conexión a nuestros sitios web está encriptada.</string>
