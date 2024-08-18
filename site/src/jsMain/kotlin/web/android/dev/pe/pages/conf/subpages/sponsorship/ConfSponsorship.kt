@@ -22,7 +22,7 @@ import web.android.dev.pe.Theme
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.CommunityEmailLink
-import web.android.dev.pe.components.widgets.HeadingDecorator
+import web.android.dev.pe.components.widgets.DecoratedHeading
 import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
@@ -148,14 +148,6 @@ private fun ContactUsOption(
         Br()
         Br()
         content()
-    }
-}
-
-@Composable
-private fun DecoratedHeading(title: String, href: String) {
-    H2(attrs = { id(href) }) {
-        HeadingDecorator()
-        Text(title)
     }
 }
 

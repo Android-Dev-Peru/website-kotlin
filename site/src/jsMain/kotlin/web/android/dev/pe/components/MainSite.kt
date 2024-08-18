@@ -39,7 +39,10 @@ fun MainSite(lang: String, navbar: Navbar = MainSiteNavbar, content: @Composable
     LocalizedSite(navbar, lang) {
         Div(MainSiteStyle.toAttrs()) {
             content()
-            MainFooter()
+            MainFooter(extraLinks = listOf(
+                Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
+                Navlink(path = Routes.PrivacyPolicy) { ResStrings.privacy_policy },
+            ))
         }
     }
 }
