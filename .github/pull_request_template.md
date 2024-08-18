@@ -15,4 +15,6 @@
 ## Checklist (required)
 
 - [ ] I agree with the [Code of Conduct](/CODE_OF_CONDUCT.md)
+- [ ] I have translated the content in Spanish and English (if applicable).
+- [ ] I have tested the changes both in light and dark mode (if applicable).
 - [ ] I have executed the `kobweb export --layout static` command and committed the changes (commit message: `chore: publish static files`)
