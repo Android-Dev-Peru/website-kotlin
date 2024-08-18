@@ -6,6 +6,7 @@ object Routes {
     const val AboutUs = "/about-us"
     const val Resources = "/resources"
     const val Subscribe = "/subscribe"
+    const val PrivacyPolicy = "/privacy-policy"
 
     object Conf {
         const val Index = "/conf"
