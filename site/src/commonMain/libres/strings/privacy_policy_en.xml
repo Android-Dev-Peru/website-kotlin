@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="privacy_policy">Privacy Policy</string>
-    <string name="privacy_policy_p1">This privacy notice tells you what to expect when we collect personal information. It applies to information we collect about:</string>
+    <string name="privacy_policy_p1">Android Dev Peru is non-for-profit community. The data we collect won't be used for commercial or lucrative purposes.</string>
+    <string name="privacy_policy_p2">This privacy notice tells you what to expect when we collect personal information. It applies to information we collect about:</string>
 
     <string name="privacy_policy_website">Visitors to our websites</string>
     <string name="privacy_policy_website_p1">When someone visits one of our websites, we store web server log information, which includes information such as the IP address you connected from, the user agent of your browser and which page you requested. We use this information to monitor the security, performance and health of our systems. All of our websites are protected by TLS. This means your connection to our websites is encrypted.</string>
