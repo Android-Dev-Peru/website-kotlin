@@ -20,6 +20,8 @@ import strings.ResStrings
 import web.android.dev.pe.Theme
 import web.android.dev.pe.get
 
+enum class SponsorshipPlan { Gold, Silver, Bronze }
+
 @Composable
 fun SponsorshipPlans() {
     val colorMode by ColorMode.currentState
