@@ -14,7 +14,7 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
-import web.android.dev.pe.Res
+import web.android.dev.pe.Routes
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
@@ -46,12 +46,9 @@ private fun Details() {
         Text(ResStrings.conf_events_enjoy)
         SpanText(ResStrings.conf_events_free, Modifier.fontWeight(FontWeight.ExtraBold))
     }
-    P {
-        Text(ResStrings.conf_events_registration_soon)
-    }
     PrimaryButton(
         text = ResStrings.conf_events_register,
-        href = "/subscribe",
+        href = Routes.Conf.Register,
         modifier = Modifier.margin(topBottom = 16.px)
     )
 }

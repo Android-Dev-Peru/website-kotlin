@@ -16,8 +16,7 @@
     <string name="conf_events_celebrate">Celebramos 10 años en comunidad compartiendo nuestro amor por Android.</string>
     <string name="conf_events_enjoy">Disfruta de un día lleno de charlas con ponentes internacionales apasionados por esta plataforma. Y al igual que todos nuestros eventos - </string>
     <string name="conf_events_free">¡es gratis! 🎉</string>
-    <string name="conf_events_registration_soon">Aún no habilitamos el registro de asistentes. Pero si deseas que te avisemos cuando este empiece... </string>
-    <string name="conf_events_register">Suscríbete al newsletter</string>
+    <string name="conf_events_register">Regístrate</string>
 
     <string name="conf_c4p_title">Call for Speakers</string>
     <string name="conf_c4p_caption">Buscamos charlas sobre desarrollo Android, Kotlin, multiplataforma, Gradle, CI/CD, IA/ML, Firebase y más. ¡No dudes en enviarnos tu propuesta!  🎤Call for Speakers</string>
@@ -123,4 +122,9 @@
     <string name="conf_coc_need_help_p2">X (Twitter): </string>
     <string name="conf_coc_need_help_p3">Correo: </string>
 
+    <string name="conf_register_instructions_pt1">Para asistir presencialmente, llena el formulario, revisa tu correo, y confirma tu participación.</string>
+    <string name="conf_register_accept_code_of_conduct_pt1">Al registrarte, estás aceptando nuestro </string>
+    <string name="conf_register_accept_code_of_conduct_pt2">código de conducta</string>
+    <string name="conf_register_accept_code_of_conduct_pt3"> y nuestra </string>
+    <string name="conf_register_accept_code_of_conduct_pt4">política de privacidad.</string>
 </resources>

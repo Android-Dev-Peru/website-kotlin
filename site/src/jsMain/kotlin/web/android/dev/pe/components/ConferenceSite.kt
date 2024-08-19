@@ -13,9 +13,8 @@ import web.android.dev.pe.components.widgets.LanguageSelectorOptions
 import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
-private val ConferenceNavbar = Navbar(
-//    primaryLink = Navlink(path = Res.Links.Conf.Register) { ResStrings.conf_navlink_register },
-    primaryLink = null,
+val ConferenceNavbar = Navbar(
+    primaryLink = Navlink(path = Routes.Conf.Register) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
         Navlink(path = Res.Links.Conf.C4P, localizablePath = false) { ResStrings.conf_navlink_c4p },
         Navlink(path = Routes.Conf.Sponsorship) { ResStrings.conf_navlink_sponsor },
@@ -30,7 +29,7 @@ private val ConferenceNavbar = Navbar(
 )
 
 @Composable
-fun ConferenceSite(lang: String, content: @Composable () -> Unit) {
+fun ConferenceSite(lang: String, navbar: Navbar = MainSiteNavbar, content: @Composable () -> Unit) {
     LocalizedSite(ConferenceNavbar, lang) {
         Div(ConferenceSiteStyle.toAttrs()) {
             content()

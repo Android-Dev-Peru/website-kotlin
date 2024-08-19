@@ -16,8 +16,7 @@
     <string name="conf_events_celebrate">We're celebrating 10 years sharing our love for Android with the community.</string>
     <string name="conf_events_enjoy">Enjoy a day full of talks with international speakers passionate about this technology. And, as all of our events - </string>
     <string name="conf_events_free">¡it's free! 🎉</string>
-    <string name="conf_events_registration_soon">Registration is not open yet, but if you want us to keep you updated... </string>
-    <string name="conf_events_register">Subscribe to our newsletter</string>
+    <string name="conf_events_register">Regístrate</string>
 
     <string name="conf_c4p_title">Call for Speakers</string>
     <string name="conf_c4p_caption">We are looking for talks about Android development, Kotlin, multiplatform, Gradle, CI/CD, AI/ML, Firebase and more. Don't hesitate to send us your proposal! 🎤Call for Speakers</string>
