@@ -22,12 +22,13 @@ import web.android.dev.pe.Theme
 import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.utils.CurvyUnderline
 import web.android.dev.pe.components.widgets.CommunityEmailLink
+import web.android.dev.pe.components.widgets.Language
 import web.android.dev.pe.get
 
 @Page("/conf/coc")
 @Composable
 fun ConfCodeOfConduct() {
-    ConferenceSite(lang = "es") {
+    ConferenceSite(lang = Language.Spanish) {
         Div(ConfCodeOfConductStyles.MainContainer.toAttrs()) {
             Content()
         }
@@ -37,7 +38,7 @@ fun ConfCodeOfConduct() {
 @Page("/conf/coc/en")
 @Composable
 fun ConferenceCodeOfConduct_EN() {
-    ConferenceSite(lang = "en") {
+    ConferenceSite(lang = Language.English) {
         Div(ConfCodeOfConductStyles.MainContainer.toAttrs()) {
             Content()
         }

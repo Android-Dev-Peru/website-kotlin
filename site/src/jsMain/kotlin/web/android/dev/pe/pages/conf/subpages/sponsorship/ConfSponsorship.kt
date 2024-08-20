@@ -23,13 +23,14 @@ import web.android.dev.pe.components.ConferenceSite
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.DecoratedHeading
+import web.android.dev.pe.components.widgets.Language
 import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 @Page("/conf/sponsorship")
 @Composable
 fun ConfSponsorship() {
-    ConferenceSite("es") {
+    ConferenceSite(Language.Spanish) {
         Content()
     }
 }
@@ -37,7 +38,7 @@ fun ConfSponsorship() {
 @Page("/conf/sponsorship/en")
 @Composable
 fun ConfSponsorship_EN() {
-    ConferenceSite("en") {
+    ConferenceSite(Language.English) {
         Content()
     }
 }

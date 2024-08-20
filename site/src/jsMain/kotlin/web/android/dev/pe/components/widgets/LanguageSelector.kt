@@ -2,7 +2,6 @@ package web.android.dev.pe.components.widgets
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.Cursor
-import com.varabyte.kobweb.compose.css.FontSize
 import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -23,9 +22,9 @@ import web.android.dev.pe.components.utils.getCurrentLanguageFromPath
 import web.android.dev.pe.components.utils.isRoot
 import web.android.dev.pe.get
 
-enum class Language(val code: String) {
-    Spanish("es"),
-    English("en");
+enum class Language(val code: String, val locale: String) {
+    Spanish("es", "es_PE"),
+    English("en", "en_US");
 
     val title get() = when(this) {
         Spanish -> ResStrings.language_option_es
