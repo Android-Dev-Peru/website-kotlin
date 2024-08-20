@@ -67,7 +67,7 @@ fun setupTags(lang: Language) {
     modifyMetaTag(MetaTag.OG_URL, url)
     modifyMetaTag(MetaTag.TWITTER_URL, url)
 
-    val thumbnail = "${url}/thumbnail_${lang.code}.webp"
+    val thumbnail = "${Res.Links.Index}/events/conf2024/thumbnail_${lang.code}.webp"
     modifyMetaTag(MetaTag.OG_IMAGE, thumbnail)
     modifyMetaTag(MetaTag.TWITTER_IMAGE, thumbnail)
 }
