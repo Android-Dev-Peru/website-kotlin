@@ -27,9 +27,9 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
-import web.android.dev.pe.Routes
 import web.android.dev.pe.components.MainSite
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.components.widgets.Language
 import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 import web.android.dev.pe.pages.home.components.layouts.HomeSection
@@ -39,13 +39,13 @@ import web.android.dev.pe.pages.aboutus.sections.OrganizersSection
 @Page("/about-us")
 @Composable
 fun AboutUs() {
-    MainSite(lang = "es") { Content() }
+    MainSite(lang = Language.Spanish) { Content() }
 }
 
 @Page("/about-us/en")
 @Composable
 fun AboutUs_EN() {
-    MainSite(lang = "en") { Content() }
+    MainSite(lang = Language.English) { Content() }
 }
 
 @Composable

@@ -22,6 +22,7 @@ import web.android.dev.pe.components.MainSite
 import web.android.dev.pe.components.utils.CurvyUnderline
 import web.android.dev.pe.components.widgets.CommunityEmailLink
 import web.android.dev.pe.components.widgets.DecoratedHeading
+import web.android.dev.pe.components.widgets.Language
 
 private object SectionIds {
     const val website = "website"
@@ -35,13 +36,13 @@ private object SectionIds {
 @Page("/privacy-policy")
 @Composable
 fun PrivacyPolicy() {
-    MainSite(lang = "es") { Content() }
+    MainSite(lang = Language.Spanish) { Content() }
 }
 
 @Page("/privacy-policy/en")
 @Composable
 fun PrivacyPolicy_EN() {
-    MainSite(lang = "en") { Content() }
+    MainSite(lang = Language.English) { Content() }
 }
 
 @Composable
