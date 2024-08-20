@@ -20,6 +20,7 @@ import kotlinx.browser.localStorage
 import org.jetbrains.compose.web.css.px
 import web.android.dev.pe.Theme
 import web.android.dev.pe.components.MainSite
+import web.android.dev.pe.components.widgets.Language
 import web.android.dev.pe.pages.home.Home
 
 
@@ -28,13 +29,13 @@ const val COLOR_MODE_KEY = "app:colorMode"
 @Page
 @Composable
 fun HomePage() {
-    MainSite(lang = "es") { Home() }
+    MainSite(lang = Language.Spanish) { Home() }
 }
 
 @Page("/en")
 @Composable
 fun HomePage_EN() {
-    MainSite(lang = "en") { Home() }
+    MainSite(lang = Language.English) { Home() }
 }
 
 @InitSilk

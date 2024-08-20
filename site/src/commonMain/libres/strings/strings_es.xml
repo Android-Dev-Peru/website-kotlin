@@ -4,6 +4,9 @@
     <string name="language_option_es">🇵🇪 Español</string>
     <string name="language_option_en">🇺🇸 English</string>
 
+    <string name="site_metatag_title">Android Dev Peru</string>
+    <string name="site_metatag_description">Sitio de la comunidad Android Dev Perú. Aquí encontraras eventos, recursos y otras novedades sobre nuestra comunidad de desarrolladores Android.</string>
+
     <string name="site_navlink_about_us">Quienes somos</string>
     <string name="site_navlink_resources">Recursos</string>
     <string name="site_navlink_conference">Conferencia</string>

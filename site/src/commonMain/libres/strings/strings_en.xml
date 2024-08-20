@@ -4,6 +4,9 @@
     <string name="language_option_es">🇵🇪 Spanish</string>
     <string name="language_option_en">🇺🇸 English</string>
 
+    <string name="site_metatag_title">Android Dev Peru</string>
+    <string name="site_metatag_description">Site of the Android Dev Peru community. Here you will find events, resources, and other news about our Android developer community.</string>
+
     <string name="site_navlink_about_us">About Us</string>
     <string name="site_navlink_resources">Resources</string>
     <string name="site_navlink_conference">Conference</string>

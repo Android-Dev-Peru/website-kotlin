@@ -12,6 +12,7 @@ import org.jetbrains.compose.web.dom.Div
 import web.android.dev.pe.components.MainSite
 import web.android.dev.pe.components.MainSiteNavbar
 import web.android.dev.pe.components.widgets.ConvertKitForm
+import web.android.dev.pe.components.widgets.Language
 
 /**
  * Hiding the primary action because in this page, the "Subscribe" button
@@ -23,7 +24,7 @@ private val CustomNavbar = MainSiteNavbar.copy(primaryLink = null)
 @Composable
 fun SubscribeForm() {
     val colorMode by ColorMode.currentState
-    MainSite("es", CustomNavbar) {
+    MainSite(Language.Spanish, CustomNavbar) {
         Content(formUid = when(colorMode){
             ColorMode.LIGHT -> "f4a99c32b5"
             ColorMode.DARK -> "cd2b30f4a1"
@@ -35,7 +36,7 @@ fun SubscribeForm() {
 @Composable
 fun SubscribeForm_EN() {
     val colorMode by ColorMode.currentState
-    MainSite("en", CustomNavbar) {
+    MainSite(Language.English, CustomNavbar) {
         Content(formUid = when(colorMode){
             ColorMode.LIGHT -> "005a4b6e03"
             ColorMode.DARK -> "9557449eeb"

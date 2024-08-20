@@ -51,7 +51,7 @@ fun ConferenceSite(lang: Language, content: @Composable () -> Unit) {
     }
 }
 
-fun setupTags(lang: Language) {
+private fun setupTags(lang: Language) {
     document.title = ResStrings.conf_meta_title
     modifyMetaTag(MetaTag.TITLE, ResStrings.conf_meta_title)
     modifyMetaTag(MetaTag.OG_TITLE, ResStrings.conf_meta_title)
