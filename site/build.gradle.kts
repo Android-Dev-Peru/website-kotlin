@@ -26,7 +26,7 @@ kobweb {
                 meta(name = "viewport", content = "width=device-width, initial-scale=1")
 
                 // Facebook Meta Tags
-                meta(name = "og:url", content = "https://android.devperu.org/conf")
+                meta(name = "og:url", content = "https://android.devperu.org")
                 meta(name = "og:type", content = "website")
                 meta(name = "og:title", content = "Android Dev Peru")
                 meta(name = "og:description", content = "Sitio de la comunidad Android Dev Perú. Aquí encontraras eventos, recursos y otras novedades sobre nuestra comunidad de desarrolladores Android.")
@@ -34,11 +34,11 @@ kobweb {
 
                 // Twitter Meta Tags
                 meta(name = "twitter:card", content = "summary_large_image")
-                meta(name = "twitter:domain", content = "android.devperu.org")
-                meta(name = "twitter:url", content = "https://android.devperu.org/conf")
+                meta(name = "twitter:domain", content = "androidperu.dev")
+                meta(name = "twitter:url", content = "https://androidperu.dev")
                 meta(name = "twitter:title", content = "Android Dev Peru")
                 meta(name = "twitter:description", content = "Sitio de la comunidad Android Dev Perú. Aquí encontraras eventos, recursos y otras novedades sobre nuestra comunidad de desarrolladores Android.")
-                meta(name = "twitter:image", content = "https://android.devperu.org/logo_thumbnail.png")
+                meta(name = "twitter:image", content = "https://androidperu.dev/logo_thumbnail.png")
             }
         }
 
