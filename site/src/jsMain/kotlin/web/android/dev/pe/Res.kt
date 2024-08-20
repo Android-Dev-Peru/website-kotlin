@@ -5,6 +5,7 @@ import org.jetbrains.compose.web.css.px
 object Res {
 
     object Links {
+        const val Index = "https://androidperu.dev/"
         const val Email = "android@devperu.org"
         const val DevTo = "https://dev.to/androiddevperu"
         const val Twitter = "https://twitter.com/androiddevperu"
