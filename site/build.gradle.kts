@@ -64,15 +64,12 @@ kotlin {
         }
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        // Although deprecated in K2, the new suggested approach is not working and still
-        // shows the warning. Seems like a common problem. See:
-        // https://youtrack.jetbrains.com/issue/KT-61573/Emit-the-compilation-warning-on-expect-actual-classes.-The-warning-must-mention-that-expect-actual-classes-are-in-Beta#focus=Comments-27-9822729.0-0
-        @Suppress("DEPRECATION")
-        kotlinOptions {
-            freeCompilerArgs += "-Xexpect-actual-classes"
+    targets.configureEach {
+        compilations.configureEach {
+            compileTaskProvider.get().compilerOptions {
+                freeCompilerArgs.add("-Xexpect-actual-classes")
+            }
         }
-
     }
 
     /**
