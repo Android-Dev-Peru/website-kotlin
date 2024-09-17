@@ -25,9 +25,12 @@
     <string name="conf_c4p_caption">We are looking for talks about Android development, Kotlin, multiplatform, Gradle, CI/CD, AI/ML, Firebase and more. Don't hesitate to send us your proposal! 🎤Call for Speakers</string>
     <string name="conf_c4p_cta">Submit talk</string>
 
-    <string name="conf_location_title">Location</string>
-    <string name="conf_location_details">🏢 Venue: UPC Monterrico Campus&lt;br&gt;🏟️ Bancalari Auditorium - Pavilion H, first floor&lt;br&gt;🧭 Address: Prolongación Primavera 2390, Santiago de Surco&lt;br&gt;&lt;br&gt;⏰ Entry time: 8am</string>
-    <string name="conf_location_cta">Open in Maps</string>
+    <string name="conf_location_address">Address</string>
+    <string name="conf_location_address_details">Prolongación Primavera 2390, Santiago de Surco</string>
+    <string name="conf_location_place">Building</string>
+    <string name="conf_location_place_details">Bancalari Auditorium - Building H, first floor</string>
+    <string name="conf_location_time">Entry time</string>
+    <string name="conf_location_time_details">Starting 8am. Limited capacity, arrive early.</string>
     <string name="conf_location_map_alt">Entering to the left, go down the stair and you'll be in the Pavilion H entrance</string>
 
     <string name="conf_sponsor_title">Become a sponsor</string>
