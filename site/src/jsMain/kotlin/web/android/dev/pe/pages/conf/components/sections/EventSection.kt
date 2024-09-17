@@ -3,11 +3,16 @@ package web.android.dev.pe.pages.conf.components.sections
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.flexDirection
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.width
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
+import com.varabyte.kobweb.silk.style.CssStyle
+import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toModifier
+import org.jetbrains.compose.web.css.FlexDirection
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
@@ -22,11 +27,12 @@ import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 fun EventSection(sectionModifier: Modifier = Modifier) {
     ConferenceGridSection(
         sectionModifier = sectionModifier,
+        modifier = EventSectionStyle.toModifier(),
         header = {
-            Details()
+            DetailImage()
         },
         content = {
-            DetailImage()
+            Details()
         }
     )
 }
@@ -57,7 +63,16 @@ private fun Details() {
 @Composable
 private fun DetailImage() {
     Image(
-        src = "/events/conf2024/adp-stock-photo-1.webp",
+        src = "/events/conf2024/android_celebrate.webp",
         modifier = Modifier.width(100.percent)
     )
+}
+
+val EventSectionStyle = CssStyle {
+    base {
+        Modifier.flexDirection(FlexDirection.ColumnReverse)
+    }
+    Breakpoint.MD {
+        Modifier.flexDirection(FlexDirection.Row)
+    }
 }
