@@ -20,7 +20,7 @@ fun ConferenceGridSection(
     val styles = ConferenceGridSectionStyles
     ConferenceSection(
         sectionModifier = sectionModifier,
-        modifier = modifier.then(styles.container.toModifier())
+        modifier = styles.container.toModifier().then(modifier)
     ) {
         Div(styles.header.toAttrs()) {
             header()

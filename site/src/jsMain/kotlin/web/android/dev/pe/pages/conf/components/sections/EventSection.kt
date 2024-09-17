@@ -1,7 +1,7 @@
 package web.android.dev.pe.pages.conf.components.sections
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.margin
@@ -14,7 +14,6 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
-import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
@@ -23,7 +22,6 @@ import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 fun EventSection(sectionModifier: Modifier = Modifier) {
     ConferenceGridSection(
         sectionModifier = sectionModifier,
-        modifier = Modifier,
         header = {
             Details()
         },
