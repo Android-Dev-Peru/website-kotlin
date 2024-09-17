@@ -37,7 +37,7 @@ import web.android.dev.pe.get
 fun LocationSection(sectionModifier: Modifier = Modifier) {
     Box(LocationSectionStyles.container.toModifier()) {
         Image(
-            src = "/events/conf2024/upc_map_large_dark.webp",
+            src = "/events/conf2024/upc_map_large".prefixedWithColor(),
             modifier = LocationSectionStyles.map.toModifier()
         )
         Div(LocationSectionStyles.card.toAttrs()) {

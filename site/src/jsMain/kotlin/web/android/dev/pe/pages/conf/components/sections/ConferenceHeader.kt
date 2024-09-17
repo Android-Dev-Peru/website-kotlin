@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
+import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
@@ -59,9 +60,8 @@ private fun HeaderContent() {
 @Composable
 private fun HeaderImage() {
     Div(Modifier.fillMaxSize().display(DisplayStyle.Flex).justifyContent(JustifyContent.Center).toAttrs()) {
-        AnimatedImage(
-            src = "/events/conf2024/raise-the-roof-droid.gif",
-            thumbnail = "/events/conf2024/raise-the-roof-droid-frame.png",
+        Image(
+            src = "/events/conf2024/android_peruvian_red.webp",
             modifier = ConferenceHeaderStyles.image.toModifier()
         )
     }

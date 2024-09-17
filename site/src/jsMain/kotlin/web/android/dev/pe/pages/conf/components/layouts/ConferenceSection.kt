@@ -23,7 +23,7 @@ fun ConferenceSection(
         .then(sectionModifier)
         .toAttrs()
     ) {
-        Div (Modifier.maxWidth(1000.px).then(modifier).toAttrs()) {
+        Div (Modifier.maxWidth(1200.px).then(modifier).toAttrs()) {
             content()
         }
     }
