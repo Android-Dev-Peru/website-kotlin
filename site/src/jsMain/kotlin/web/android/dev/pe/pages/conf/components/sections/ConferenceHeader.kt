@@ -1,46 +1,30 @@
 package web.android.dev.pe.pages.conf.components.sections
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.AlignItems
-import com.varabyte.kobweb.compose.css.FontSize
-import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
+import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
-import org.jetbrains.compose.web.css.DisplayStyle
+import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.css.JustifyContent
-import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
-import web.android.dev.pe.Res
-import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
-import web.android.dev.pe.components.widgets.AnimatedImage
-import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 
 @Composable
 fun ConferenceHeader(sectionModifier: Modifier = Modifier) {
-    val isSmallScreen = mutableIsSmallScreen()
-    TwoPaneSection(
-        sectionModifier = sectionModifier,
-        modifier = ConferenceHeaderStyles.container.toModifier(),
-        distribution = if (isSmallScreen) 1 to 1 else 2 to 1,
-        header = {
-            HeaderContent()
-        },
-        content = {
-            HeaderImage()
-        }
-    )
+    Div(ConferenceHeaderStyles.container.toAttrs()) {
+        HeaderImage()
+        HeaderContent()
+    }
 }
 
 @Composable
@@ -59,24 +43,29 @@ private fun HeaderContent() {
 
 @Composable
 private fun HeaderImage() {
-    Div(Modifier.fillMaxSize().display(DisplayStyle.Flex).justifyContent(JustifyContent.Center).toAttrs()) {
-        Image(
-            src = "/events/conf2024/android_peruvian_red.webp",
-            modifier = ConferenceHeaderStyles.image.toModifier()
-        )
-    }
+    Image(
+        src = "/events/conf2024/android_peruvian_red.webp",
+        modifier = ConferenceHeaderStyles.image.toModifier()
+    )
 }
 
 object ConferenceHeaderStyles {
     val container = CssStyle {
         base {
-            Modifier.alignItems(AlignItems.Center)
+            Modifier
+                .display(DisplayStyle.Flex)
+                .flexDirection(FlexDirection.ColumnReverse)
+                .justifyContent(JustifyContent.Center)
+                .alignItems(AlignItems.Center)
+                .padding(2.em)
+        }
+        Breakpoint.MD {
+            Modifier
+                .height(90.vh)
+                .flexDirection(FlexDirection.Column)
         }
         cssRule(" span") {
             Modifier.fillMaxWidth().textAlign(TextAlign.Center)
-        }
-        cssRule(mediaQuery = Breakpoint.MD.toMinWidthQuery(), suffix = " span") {
-            Modifier.textAlign(TextAlign.Start)
         }
     }
     val title = CssStyle {
