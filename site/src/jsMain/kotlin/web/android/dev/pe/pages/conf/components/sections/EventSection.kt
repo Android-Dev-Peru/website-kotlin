@@ -13,6 +13,7 @@ import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toModifier
 import org.jetbrains.compose.web.css.FlexDirection
+import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
@@ -56,7 +57,7 @@ private fun Details() {
     PrimaryButton(
         text = ResStrings.conf_events_register,
         href = "/subscribe",
-        modifier = Modifier.margin(topBottom = 16.px)
+        modifier = Modifier.margin(top = 16.px, bottom = 2.em)
     )
 }
 
