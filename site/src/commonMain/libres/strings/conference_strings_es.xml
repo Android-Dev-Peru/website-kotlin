@@ -33,9 +33,13 @@
     <string name="conf_location_time_details">Desde las 8am. Tenemos aforo limitado, procura llegar temprano.</string>
     <string name="conf_location_map_alt">Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H</string>
 
-    <string name="conf_sponsor_title">Sé un sponsor</string>
-    <string name="conf_sponsor_caption">Este evento no sería posible sin su ayuda. ¿Te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?</string>
-    <string name="conf_sponsor_im_interested">Estoy interesado</string>
+    <string name="conf_sponsor_title">Sponsors</string>
+    <string name="conf_sponsor_caption">Un evento de esta magnitud no sería posible sin la ayuda de nuestros sponsors. ¡Muchas gracias!</string>
+    <string name="conf_sponsor_join">¿A ti también te gustaría apoyar a la comunidad y dar a conocer tu empresa a toda nuestra audiencia?</string>
+    <string name="conf_sponsor_im_interested">Sé un sponsor</string>
+    <string name="conf_sponsor_plan_gold">Oro</string>
+    <string name="conf_sponsor_plan_silver">Plata</string>
+    <string name="conf_sponsor_plan_bronze">Bronce</string>
 
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">¿Interesado en ser patrocinador?</string>
