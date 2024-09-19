@@ -30,7 +30,11 @@
     <string name="conf_location_place_details">Auditorio Bancalari - Pabellón H, primer piso</string>
     <string name="conf_location_time">Hora de ingreso</string>
     <string name="conf_location_time_details">Desde las 8am. Tenemos aforo limitado, procura llegar temprano.</string>
-    <string name="conf_location_map_alt">Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H</string>
+    <string name="conf_location_how_to_get_there">¿Cómo llegar?</string>
+    <string name="conf_location_how_to_get_there_details">1. Ingresa por la entrada de la Av. Primavera</string>
+    <string name="conf_location_how_to_get_there_details_2">2. Dirígete al pabelón H, ubicado a la izquierda</string>
+    <string name="conf_location_how_to_get_there_details_3">3. Baja las escaleras e ingresa al pabellón</string>
+    <string name="conf_location_how_to_get_there_details_4">4. Encontrarás el auditorio en el primer piso</string>
 
     <string name="conf_speakers_title">Ponentes</string>
     <string name="conf_speakers_caption">Conoce a los ponentes que nos acompañaran en este evento.</string>
