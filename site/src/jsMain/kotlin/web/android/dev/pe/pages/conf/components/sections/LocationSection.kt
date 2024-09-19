@@ -116,16 +116,16 @@ private fun LocationDirectionsModal(showModal: MutableState<Boolean>) {
             DefaultDialogHeading(onClick = { showModal.value = false })
             H3 {
                 HeadingDecorator()
-                Text("¿Cómo llegar?")
+                Text(ResStrings.conf_location_how_to_get_there)
             }
             P {
-                SpanText("1. Ingresa por la entrada de la Av. Primevera")
+                SpanText(ResStrings.conf_location_how_to_get_there_details)
                 Br()
-                SpanText("2. Dirígete al pabelón H, ubicado a la izquierda")
+                SpanText(ResStrings.conf_location_how_to_get_there_details_2)
                 Br()
-                SpanText("3. Baja las escaleras e ingresa al pabellón")
+                SpanText(ResStrings.conf_location_how_to_get_there_details_3)
                 Br()
-                SpanText("4. Encontrarás el auditorio en el primer piso")
+                SpanText(ResStrings.conf_location_how_to_get_there_details_4)
             }
             Image(
                 src = "events/conf2024/upc_internal_map.webp",
