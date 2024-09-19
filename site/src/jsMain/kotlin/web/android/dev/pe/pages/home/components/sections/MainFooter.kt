@@ -27,10 +27,9 @@ import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.components.widgets.RectangularPrimaryButtonVariant
 import web.android.dev.pe.components.widgets.navsite.NavLink
 import web.android.dev.pe.components.widgets.navsite.Navlink
+import web.android.dev.pe.data.Socials
 import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
-
-
 
 @Composable
 fun MainFooter(extraLinks: List<Navlink> = emptyList()) {
@@ -59,7 +58,7 @@ private fun FooterSocials() {
         horizontalAlignment = if (isSmallScreen) Alignment.CenterHorizontally else Alignment.Start
     ) {
         CommunityEmailLink()
-        SocialIcons()
+        SocialIcons(Socials)
     }
 }
 

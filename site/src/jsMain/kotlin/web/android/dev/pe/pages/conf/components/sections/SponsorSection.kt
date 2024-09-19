@@ -82,6 +82,7 @@ private fun Details() {
         Text(ResStrings.conf_sponsor_title)
     }
     P { Text(ResStrings.conf_sponsor_caption) }
+    P { Text(ResStrings.conf_sponsor_join) }
     PrimaryButton(
         text = ResStrings.conf_sponsor_im_interested,
         href = "/conf/sponsorship".appendCurrentLanguage(),

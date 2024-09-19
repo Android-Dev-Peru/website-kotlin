@@ -1,9 +1,10 @@
 package web.android.dev.pe.pages.home.components.sections
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.css.AlignItems
-import com.varabyte.kobweb.compose.css.JustifyContent
+import com.varabyte.kobweb.compose.css.FontSize
+import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
@@ -16,11 +17,13 @@ import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
 import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
-import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.css.DisplayStyle
+import org.jetbrains.compose.web.css.em
+import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import strings.ResStrings
-import web.android.dev.pe.Res
 import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
+import web.android.dev.pe.data.Socials
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
@@ -49,7 +52,7 @@ private fun HeaderContent() {
             text = ResStrings.home_header_caption,
             modifier = styles.caption.toModifier()
         )
-        SocialIcons()
+        SocialIcons(Socials)
     }
 }
 
@@ -104,21 +107,6 @@ object HomeHeaderStyles {
         }
         Breakpoint.MD {
             Modifier.display(DisplayStyle.Block).fillMaxWidth().maxWidth(250.px)
-        }
-    }
-
-    val SocialMediaRow = CssStyle {
-        base {
-            Modifier
-                .fillMaxWidth()
-                .display(DisplayStyle.Flex)
-                .flexDirection(FlexDirection.Row)
-                .flexWrap(FlexWrap.Wrap)
-                .gap(4.px)
-                .justifyContent(JustifyContent.Center)
-        }
-        Breakpoint.MD {
-            Modifier.justifyContent(JustifyContent.Start).gap(8.px)
         }
     }
 
