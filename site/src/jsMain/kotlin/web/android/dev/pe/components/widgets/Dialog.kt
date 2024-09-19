@@ -2,12 +2,15 @@ package web.android.dev.pe.components.widgets
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.css.TouchAction
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.silk.components.icons.fa.FaXmark
+import com.varabyte.kobweb.silk.components.icons.fa.IconSize
 import com.varabyte.kobweb.silk.defer.Deferred
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.toModifier
@@ -54,6 +57,19 @@ fun Dialog(
         } else {
             enableScroll()
         }
+    }
+}
+
+@Composable
+fun DefaultDialogHeading(onClick: () -> Unit = {}) {
+    Box(Modifier.fillMaxWidth().height(32.px), contentAlignment = Alignment.TopEnd) {
+        FaXmark(
+            size = IconSize.XXL,
+            modifier = Modifier
+                .cursor(Cursor.Pointer)
+                .onClick { onClick() }
+                .margin(topBottom = 8.px)
+        )
     }
 }
 

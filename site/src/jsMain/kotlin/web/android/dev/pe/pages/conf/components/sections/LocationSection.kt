@@ -1,7 +1,6 @@
 package web.android.dev.pe.pages.conf.components.sections
 
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import com.varabyte.kobweb.compose.css.*
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -23,13 +22,14 @@ import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.Div
-import org.jetbrains.compose.web.dom.H2
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Res
 import web.android.dev.pe.Theme
 import web.android.dev.pe.components.CaptionStyle
+import web.android.dev.pe.components.widgets.DecoratedHeading
+import web.android.dev.pe.components.widgets.DefaultDialogHeading
+import web.android.dev.pe.components.widgets.Dialog
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.get
 
@@ -48,6 +48,7 @@ fun LocationSection(sectionModifier: Modifier = Modifier) {
 
 @Composable
 private fun LocationDetails() {
+    val showModal = remember { mutableStateOf(false) }
     VenuePicture()
     H2 {
         HeadingDecorator()
@@ -57,18 +58,31 @@ private fun LocationDetails() {
     val valueModifier = Modifier.padding(topBottom = 16.px)
     LocationDetailsRow("map") {
         SpanText(ResStrings.conf_location_address, titleModifier)
-        Link(path = Res.Links.Conf.MapUPC, openInternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB, modifier = valueModifier) {
+        Link(
+            path = Res.Links.Conf.MapUPC,
+            openInternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
+            modifier = Modifier.padding(topBottom = 16.px)
+        ) {
             SpanText(ResStrings.conf_location_address_details)
         }
     }
     LocationDetailsRow("building") {
         SpanText(ResStrings.conf_location_place, titleModifier)
-        SpanText(ResStrings.conf_location_place_details, valueModifier)
+        Link(
+            path = "",
+            modifier = Modifier
+                .onClick { showModal.value = true }
+                .cursor(Cursor.Pointer)
+                .padding(topBottom = 16.px)
+        ) {
+            SpanText(ResStrings.conf_location_place_details, valueModifier)
+        }
     }
     LocationDetailsRow("clock") {
         SpanText(ResStrings.conf_location_time, titleModifier)
         SpanText(ResStrings.conf_location_time_details, valueModifier)
     }
+    LocationDirectionsModal(showModal)
 }
 
 @Composable
@@ -89,6 +103,36 @@ private fun VenuePicture() {
         alt = "Del ingreso, a la izquierda, y bajar las escaleras para ingresar al Pabellon H",
         modifier = LocationSectionStyles.picture.toModifier()
     )
+}
+
+@Composable
+private fun LocationDirectionsModal(showModal: MutableState<Boolean>) {
+    Dialog(
+        showModal = showModal.value,
+        onClose = { showModal.value = false },
+        modifier = Modifier.padding(2.em).margin(1.em),
+    ) {
+        Column(Modifier.fillMaxSize()) {
+            DefaultDialogHeading(onClick = { showModal.value = false })
+            H3 {
+                HeadingDecorator()
+                Text("¿Cómo llegar?")
+            }
+            P {
+                SpanText("1. Ingresa por la entrada de la Av. Primevera")
+                Br()
+                SpanText("2. Dirígete al pabelón H, ubicado a la izquierda")
+                Br()
+                SpanText("3. Baja las escaleras e ingresa al pabellón")
+                Br()
+                SpanText("4. Encontrarás el auditorio en el primer piso")
+            }
+            Image(
+                src = "events/conf2024/upc_internal_map.webp",
+                modifier = LocationSectionStyles.internalMap.toModifier()
+            )
+        }
+    }
 }
 
 object LocationSectionStyles {
@@ -133,6 +177,14 @@ object LocationSectionStyles {
         }
         Breakpoint.LG {
             Modifier.height(100.px).width(Width.Unset)
+        }
+    }
+    val internalMap = CssStyle {
+        base {
+            Modifier.width(100.percent)
+        }
+        Breakpoint.LG {
+            Modifier.width(400.px)
         }
     }
 }

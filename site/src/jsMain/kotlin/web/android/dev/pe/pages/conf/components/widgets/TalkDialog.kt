@@ -39,23 +39,10 @@ fun TalkDialog(presentation: MutableState<Presentation?>) {
     ) {
         presentation.value?.let {
             Column {
-                Heading(onClick = { presentation.value = null })
+                DefaultDialogHeading(onClick = { presentation.value = null })
                 Content(it)
             }
         }
-    }
-}
-
-@Composable
-private fun Heading(onClick: () -> Unit = {}) {
-    Box(Modifier.fillMaxWidth().height(32.px), contentAlignment = Alignment.TopEnd) {
-        FaXmark(
-            size = IconSize.XXL,
-            modifier = Modifier
-                .cursor(Cursor.Pointer)
-                .onClick { onClick() }
-                .margin(topBottom = 8.px)
-        )
     }
 }
 
