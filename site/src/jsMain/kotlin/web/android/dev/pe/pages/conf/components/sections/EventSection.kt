@@ -23,6 +23,7 @@ import strings.ResStrings
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
+import web.android.dev.pe.Res
 
 @Composable
 fun EventSection(sectionModifier: Modifier = Modifier) {
@@ -51,12 +52,9 @@ private fun Details() {
         Text(ResStrings.conf_events_enjoy)
         SpanText(ResStrings.conf_events_free, Modifier.fontWeight(FontWeight.ExtraBold))
     }
-    P {
-        Text(ResStrings.conf_events_registration_soon)
-    }
     PrimaryButton(
         text = ResStrings.conf_events_register,
-        href = "/subscribe",
+        href = "${Res.Links.Conf.Register}/?aff=webaboutus",
         modifier = Modifier.margin(top = 16.px, bottom = 2.em)
     )
 }
