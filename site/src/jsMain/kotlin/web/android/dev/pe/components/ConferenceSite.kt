@@ -19,9 +19,9 @@ import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val ConferenceNavbar = Navbar(
-    primaryLink = Navlink(path = "${Res.Links.Conf.Register}/?aff=webnavbar") { ResStrings.conf_navlink_register },
+    primaryLink = Navlink(path = Res.Links.Conf.Register("webnavbar")) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
-        Navlink(path = Res.Links.Conf.C4P, localizablePath = false) { ResStrings.conf_navlink_c4p },
+        Navlink(path = Routes.Conf.Speakers) { ResStrings.conf_speakers_title },
         Navlink(path = Routes.Conf.Sponsorship) { ResStrings.conf_navlink_sponsor },
     ),
     languageSelector = LanguageSelectorOptions.All,

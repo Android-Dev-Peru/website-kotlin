@@ -54,7 +54,7 @@ private fun Details() {
     }
     PrimaryButton(
         text = ResStrings.conf_events_register,
-        href = "${Res.Links.Conf.Register}/?aff=webaboutus",
+        href = Res.Links.Conf.Register("webaboutus"),
         modifier = Modifier.margin(top = 16.px, bottom = 2.em)
     )
 }

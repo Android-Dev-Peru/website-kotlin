@@ -12,5 +12,6 @@ object Routes {
         const val Index = "/conf"
         const val Sponsorship = "/conf/sponsorship"
         const val CodeOfConduct = "/conf/coc"
+        const val Speakers = "/conf/speakers"
     }
 }

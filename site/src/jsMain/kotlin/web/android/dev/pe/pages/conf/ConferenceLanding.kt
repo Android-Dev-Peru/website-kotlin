@@ -29,6 +29,6 @@ private fun Content() {
     ConferenceHeader()
     EventSection(AlternateBackground.toModifier())
     LocationSection()
-    CallForPapersSection(AlternateBackground.toModifier())
-    SponsorSection()
+    SpeakersSection()
+    SponsorSection(AlternateBackground.toModifier())
 }

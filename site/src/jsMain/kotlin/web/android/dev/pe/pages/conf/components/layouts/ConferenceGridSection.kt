@@ -3,6 +3,7 @@ package web.android.dev.pe.pages.conf.components.layouts
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.style.CssStyle
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.toAttrs
@@ -14,6 +15,7 @@ import org.jetbrains.compose.web.dom.Div
 fun ConferenceGridSection(
     modifier: Modifier = Modifier,
     sectionModifier: Modifier = Modifier,
+    contentModifier: Modifier = Modifier,
     header: @Composable () -> Unit,
     content: @Composable () -> Unit,
 ) {
@@ -25,7 +27,7 @@ fun ConferenceGridSection(
         Div(styles.header.toAttrs()) {
             header()
         }
-        Div(styles.content.toAttrs()) {
+        Div(styles.content.toModifier().then(contentModifier).toAttrs()) {
             content()
         }
     }
