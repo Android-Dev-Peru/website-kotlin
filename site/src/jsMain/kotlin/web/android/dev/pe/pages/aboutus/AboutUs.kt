@@ -67,14 +67,7 @@ private fun Header() {
             .flexDirection(FlexDirection.Column)
             .padding(2.em)
     ) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(16.px)
-        ) {
-            SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
-            Image(src = "/images/droid.svg", Modifier.size(100.px))
-            SpanText("🇵🇪", Modifier.fontSize(FontSize.XLarge))
-        }
+        Image(src = "/images/android_peruvian_head_white.webp", Modifier.size(250.px))
         P(Modifier.textAlign(TextAlign.Center).fontSize(FontSize.Larger).fontWeight(FontWeight.ExtraBold).toAttrs()) {
             Text(ResStrings.about_us_title)
         }

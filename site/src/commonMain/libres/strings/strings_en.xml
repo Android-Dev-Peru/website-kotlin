@@ -32,7 +32,7 @@
     <string name="home_save_the_date_location">Lima, Peru 🇵🇪</string>
 
     <!-- ABOUT US -->
-    <string name="about_us_title">Android Developer Community</string>
+    <string name="about_us_title">"Android Dev Peru" Community</string>
     <string name="about_us_description">We are Peru's largest and most active Android and Kotlin community. Over the years, we have organized dozens of free in-person and virtual events.&lt;br&gt;&lt;br&gt;We invite you to participate as an attendee or speaker at our meetups, workshops, and conferences.&lt;br&gt;&lt;br&gt;</string>
     <string name="about_organizers_title">Organizing Team</string>
     <string name="about_organizers_caption">They are the ones responsible for keeping the community active month after month.</string>

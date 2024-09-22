@@ -39,7 +39,7 @@ private fun HeaderContent() {
         PrimaryButton(
             text = ResStrings.conf_events_register.uppercase(),
             href = Res.Links.Conf.Register("webhero"),
-            modifier = Modifier.margin(topBottom = 16.px),
+            modifier = Modifier.margin(topBottom = 16.px).fontWeight(FontWeight.ExtraBold),
             variant = RectangularPrimaryButtonVariant,
         )
         SpanText(ResStrings.conf_header_time, styles.details.toModifier())
@@ -54,7 +54,7 @@ private fun HeaderContent() {
 @Composable
 private fun HeaderImage() {
     Image(
-        src = "/events/conf2024/android_peruvian_red.webp",
+        src = "/events/conf2024/android_microfono.webp",
         modifier = ConferenceHeaderStyles.image.toModifier()
     )
 }
@@ -102,7 +102,7 @@ object ConferenceHeaderStyles {
             Modifier.fillMaxWidth().maxWidth(150.px)
         }
         Breakpoint.MD {
-            Modifier.maxWidth(300.px)
+            Modifier.maxWidth(250.px)
         }
     }
 }

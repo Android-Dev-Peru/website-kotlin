@@ -10,8 +10,8 @@
     <string name="conf_navlink_register">Register</string>
     <string name="conf_navlink_code_of_conduct">Code of Conduct</string>
 
-    <string name="conf_header_time">October 19th. 8am-2pm.</string>
-    <string name="conf_header_location">Lima, UPC Monterrico.</string>
+    <string name="conf_header_time">October 19th. 9am-2pm.</string>
+    <string name="conf_header_location">UPC Monterrico (Lima 🇵🇪)</string>
     <string name="conf_header_caption">Let's celebrate 10 years of community, and the arrival of Android 15 🎉</string>
 
     <string name="conf_events_title">About the event</string>
