@@ -22,11 +22,11 @@ private val ConferenceNavbar = Navbar(
     primaryLink = Navlink(path = Res.Links.Conf.Register("webnavbar")) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
         Navlink(path = Routes.Conf.Speakers) { ResStrings.conf_speakers_title },
-        Navlink(path = Routes.Conf.Sponsorship) { ResStrings.conf_navlink_sponsor },
+        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(
-        src = "/logo.svg",
+        src = "/logo_roboto_peruvian.png",
         title = { ResStrings.conf_title },
         path = Routes.Conf.Index,
     ),
