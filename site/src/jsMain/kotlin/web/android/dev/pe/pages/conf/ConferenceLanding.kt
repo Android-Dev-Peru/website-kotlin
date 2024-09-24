@@ -31,4 +31,5 @@ private fun Content() {
     LocationSection()
     SpeakersSection()
     SponsorSection(AlternateBackground.toModifier())
+    VolunteerSection()
 }

@@ -49,6 +49,10 @@
     <string name="conf_sponsor_plan_silver">Plata</string>
     <string name="conf_sponsor_plan_bronze">Bronce</string>
 
+    <string name="conf_volunteers_title">Voluntarios</string>
+    <string name="conf_volunteers_caption">¡Gracias a nuestros voluntarios por hacer posible esta conferencia! </string>
+    <string name="conf_volunteers_join">Para sumarte al equipo, mándanos un correo a </string>
+
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">¿Interesado en ser patrocinador?</string>
     <string name="conf_sponsorship_p1">En esta ocasión, celebraremos las contribuciones de nuestra comunidad y destacaremos las empresas, las personas y las organizaciones que impulsan el desarrollo de Android en Perú.</string>

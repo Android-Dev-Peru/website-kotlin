@@ -1,50 +1,54 @@
 package web.android.dev.pe.data
 
+import web.android.dev.pe.Res
+
 data class Organizer(
     val name: String,
     val lastName: String,
     val photo: String,
     val alias: String? = null,
+    val socials: List<Social> = emptyList(),
 ) {
     val fullName: String
         get() = "$name $lastName"
 }
 
+private val baseImagePath = "images/"
 
 enum class Organizers(val data: Organizer) {
     Eduardo(
         Organizer(
             name = "Eduardo",
             lastName = "Medina",
-            photo = "organizer_edu.png",
+            photo = "${baseImagePath}organizer_edu.png",
         )
     ),
     Bruno(
         Organizer(
             name = "Bruno",
             lastName = "Aybar",
-            photo = "organizer_bruno.jpeg",
+            photo = "${baseImagePath}organizer_bruno.jpeg",
         )
     ),
     Flavio(
         Organizer(
             name = "Jose Flavio",
             lastName = "Quispe",
-            photo = "organizer_flavio.jpeg",
+            photo = "${baseImagePath}organizer_flavio.jpeg",
         )
     ),
     Daniel(
         Organizer(
             name = "Daniel",
             lastName = "Anaya",
-            photo = "organizer_daniel.jpeg",
+            photo = "${baseImagePath}organizer_daniel.jpeg",
         )
     ),
     Freddy(
         Organizer(
             name = "Freddy",
             lastName = "Lazo",
-            photo = "organizer_freddy.jpeg",
+            photo = "${baseImagePath}organizer_freddy.jpeg",
         )
     ),
     Krum(
@@ -52,14 +56,14 @@ enum class Organizers(val data: Organizer) {
             name = "Pedro",
             lastName = "Rau",
             alias = "Krum",
-            photo = "organizer_krum.jpeg",
+            photo = "${baseImagePath}organizer_krum.jpeg",
         )
     ),
     Josue(
         Organizer(
             name = "Josue",
             lastName = "Durand",
-            photo = "organizer_josue.jpeg",
+            photo = "${baseImagePath}organizer_josue.jpeg",
         )
     ),
     Tohure(
@@ -67,7 +71,7 @@ enum class Organizers(val data: Organizer) {
             name = "Carlo",
             lastName = "Huaman",
             alias = "Tohure",
-            photo = "organizer_tohure.jpeg",
+            photo = "${baseImagePath}organizer_tohure.jpeg",
         )
     ),
 }
@@ -77,35 +81,55 @@ enum class LegacyOrganizers(val data: Organizer) {
         Organizer(
             name = "Jonathan",
             lastName = "Nolasco",
-            photo = "organizer_nolasco.jpeg",
+            photo = "${baseImagePath}organizer_nolasco.jpeg",
         )
     ),
     JonathanChoy(
         Organizer(
             name = "Jonathan",
             lastName = "Choy",
-            photo = "organizer_jonathan_choy.jpeg",
+            photo = "${baseImagePath}organizer_jonathan_choy.jpeg",
         )
     ),
     PabloJohnson(
         Organizer(
             name = "Pablo",
             lastName = "Johnson",
-            photo = "organizer_pablo_johnson.jpeg",
+            photo = "${baseImagePath}organizer_pablo_johnson.jpeg",
         )
     ),
     PedroCarrillo(
         Organizer(
             name = "Pedro",
             lastName = "Carrillo",
-            photo = "organizer_pedro_carrillo.jpeg",
+            photo = "${baseImagePath}organizer_pedro_carrillo.jpeg",
         )
     ),
     Hansy(
         Organizer(
             name = "Hansy",
             lastName = "Schmitt",
-            photo = "organizer_hansy.jpeg",
+            photo = "${baseImagePath}organizer_hansy.jpeg",
         )
     ),
 }
+
+val Volunteers_AndroidConf2024 = listOf(
+    Organizer(
+        name = "Alyssa",
+        lastName = "Villarán",
+        photo = "/events/conf2024/volunteers/aly.webp",
+        socials = listOf(
+            Social(Res.Icon.Instagram, "https://www.instagram.com/alevu94/"),
+        ),
+    ),
+    Organizer(
+        name = "Carlos",
+        lastName = "Ugaz",
+        photo = "/events/conf2024/volunteers/carlos-ugaz.webp",
+        socials = listOf(
+            Social(icon = Res.Icon.Twitter, url = "https://x.com/carlosgub", name = "X"),
+            Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/carlosgub/", name = "LinkedIn"),
+        ),
+    ),
+)

@@ -1,6 +1,7 @@
 package web.android.dev.pe.pages.aboutus.sections
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.css.JustifyContent
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -22,6 +23,8 @@ import web.android.dev.pe.data.Organizer
 import web.android.dev.pe.data.Organizers
 import web.android.dev.pe.data.LegacyOrganizers
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
+import web.android.dev.pe.pages.home.components.layouts.SocialIcon
+import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 import web.android.dev.pe.pages.home.components.layouts.TwoPaneSection
 
 @Composable
@@ -68,9 +71,10 @@ private fun OrganizersWrapper(
 }
 
 @Composable
-private fun Organizer(organizer: Organizer) {
+fun Organizer(organizer: Organizer) {
     Column(Modifier.gap(10.px).margin(20.px), horizontalAlignment = Alignment.CenterHorizontally) {
-        Image(src = "/images/${organizer.photo}", Modifier.size(90.px).borderRadius(50.percent).boxShadow(0.px, 0.px, 10.px, color = rgba(0, 0, 0, 0.5f)))
+        Image(src = organizer.photo, Modifier.size(90.px).borderRadius(50.percent).boxShadow(0.px, 0.px, 10.px, color = rgba(0, 0, 0, 0.5f)))
         SpanText("${organizer.name} ${organizer.lastName}", Modifier.textAlign(TextAlign.Center))
+        SocialIcons(organizer.socials, Modifier.justifyContent(JustifyContent.Center))
     }
 }

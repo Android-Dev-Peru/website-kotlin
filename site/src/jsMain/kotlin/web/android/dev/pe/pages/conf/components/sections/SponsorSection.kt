@@ -20,6 +20,7 @@ import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
+import web.android.dev.pe.Routes
 import web.android.dev.pe.Theme
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.HeadingDecorator
@@ -85,7 +86,7 @@ private fun Details() {
     P { Text(ResStrings.conf_sponsor_join) }
     PrimaryButton(
         text = ResStrings.conf_sponsor_im_interested,
-        href = "/conf/sponsorship".appendCurrentLanguage(),
+        href = Routes.Conf.Sponsorship.appendCurrentLanguage(),
         modifier = Modifier.margin(topBottom = 16.px),
         variant = OutlinePrimaryButtonVariant,
     )
