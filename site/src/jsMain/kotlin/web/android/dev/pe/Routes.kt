@@ -13,5 +13,6 @@ object Routes {
         const val Sponsorship = "/conf/sponsorship"
         const val CodeOfConduct = "/conf/coc"
         const val Speakers = "/conf/speakers"
+        const val Volunteers = "/conf/volunteers"
     }
 }

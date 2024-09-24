@@ -23,6 +23,7 @@ private val ConferenceNavbar = Navbar(
     secondaryLinks = listOf(
         Navlink(path = Routes.Conf.Speakers) { ResStrings.conf_speakers_title },
         Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
+        Navlink(path = Routes.Conf.Volunteers) { ResStrings.conf_volunteers_title },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(

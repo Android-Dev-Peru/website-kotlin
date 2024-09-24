@@ -49,6 +49,10 @@
     <string name="conf_sponsor_plan_silver">Silver</string>
     <string name="conf_sponsor_plan_bronze">Bronze</string>
 
+    <string name="conf_volunteers_title">Volunteers</string>
+    <string name="conf_volunteers_caption">Big thanks to all our volunteers. Without you, this event would not be possible!</string>
+    <string name="conf_volunteers_join">To join the team, email us at </string>
+
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">Interested in Sponsoring?</string>
     <string name="conf_sponsorship_p1">At this Android Dev Peru Conf, we will celebrate the contributions of our community and highlight the companies, individuals, and organizations that drive Android development in Peru.</string>
