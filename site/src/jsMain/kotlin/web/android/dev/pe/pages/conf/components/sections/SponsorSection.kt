@@ -3,6 +3,7 @@ package web.android.dev.pe.pages.conf.components.sections
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import com.varabyte.kobweb.compose.css.JustifySelf
+import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -31,7 +32,7 @@ import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 import web.android.dev.pe.pages.conf.subpages.sponsorship.SponsorshipPlan
 
 
-private class Sponsor(
+class Sponsor(
     val name: String,
     val url: String,
     val plan: SponsorshipPlan,
@@ -39,40 +40,12 @@ private class Sponsor(
     val darkLogo: String = logo,
 )
 
-private val Sponsors = listOf(
-    Sponsor(
-        name = "UPC",
-        url = "https://www.upc.edu.pe/",
-        plan = SponsorshipPlan.Gold,
-        logo = "sponsor_logo_upc.png"
-    ),
-    Sponsor(
-        name = "HaystackNews",
-        url = "https://www.haystack.tv/",
-        plan = SponsorshipPlan.Gold,
-        logo = "sponsor_logo_haystack_light.svg",
-        darkLogo = "sponsor_logo_haystack_dark.svg"
-    ),
-    Sponsor(
-        name = "NTT Data",
-        plan = SponsorshipPlan.Gold,
-        url = "https://pe.nttdata.com/",
-        logo = "sponsor_logo_ntt.svg",
-    ),
-    Sponsor(
-        name = "APESOFT PERU",
-        plan = SponsorshipPlan.Bronze,
-        url = "https://www.linkedin.com/company/apesoft-peru",
-        logo = "sponsor_logo_apesoft.jpeg",
-    ),
-)
-
 @Composable
-fun SponsorSection(sectionModifier: Modifier = Modifier, modifier: Modifier = Modifier) {
+fun SponsorSection(sponsors: List<Sponsor>, sectionModifier: Modifier = Modifier, modifier: Modifier = Modifier) {
     ConferenceGridSection(
         sectionModifier = sectionModifier,
         header = { Details() },
-        content = { Sponsors() }
+        content = { Sponsors(sponsors) }
     )
 }
 
@@ -93,8 +66,8 @@ private fun Details() {
 }
 
 @Composable
-private fun Sponsors() {
-    val sponsorsByPlan = Sponsors.groupBy { it.plan }
+private fun Sponsors(sponsors: List<Sponsor>) {
+    val sponsorsByPlan = sponsors.groupBy { it.plan }
     sponsorsByPlan.forEach {
         GroupedSponsors(plan = it.key, sponsors = it.value)
     }
@@ -111,7 +84,7 @@ private fun GroupedSponsors(plan: SponsorshipPlan, sponsors: List<Sponsor>) {
                     Image(
                         src = it.themedLogo(),
                         alt = it.name,
-                        modifier = Modifier.size(plan.iconSize.px)
+                        modifier = Modifier.size(plan.iconSize.px).objectFit(ObjectFit.Contain)
                     )
                 }
             }
@@ -144,7 +117,7 @@ private val SponsorshipPlan.iconSize: Int
 @Composable
 private fun Sponsor.themedLogo(): String {
     val colorMode by ColorMode.currentState
-    return "/events/conf2024/${if(colorMode.isLight) logo else darkLogo}"
+    return if(colorMode.isLight) logo else darkLogo
 }
 
 object SponsorSectionStyle {
