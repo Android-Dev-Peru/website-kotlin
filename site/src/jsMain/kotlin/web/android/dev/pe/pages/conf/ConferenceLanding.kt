@@ -26,10 +26,12 @@ fun ConferenceLanding_EN() {
 
 @Composable
 private fun Content() {
-    ConferenceHeader()
-    EventSection(AlternateBackground.toModifier())
-    LocationSection()
-    SpeakersSection()
-    SponsorSection(AlternateBackground.toModifier())
-    VolunteerSection()
+    with(ADPConf2024) {
+        ConferenceHeader()
+        EventSection(AlternateBackground.toModifier())
+        LocationSection()
+        SpeakersSection(talks)
+        SponsorSection(sponsors, AlternateBackground.toModifier())
+        VolunteerSection()
+    }
 }

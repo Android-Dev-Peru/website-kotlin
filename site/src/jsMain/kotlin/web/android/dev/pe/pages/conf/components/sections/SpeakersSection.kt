@@ -28,13 +28,12 @@ import web.android.dev.pe.Theme
 import web.android.dev.pe.components.widgets.DecoratedHeading
 import web.android.dev.pe.data.Presentation
 import web.android.dev.pe.get
-import web.android.dev.pe.pages.conf.ConferenceEvent
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 import web.android.dev.pe.pages.conf.components.widgets.TalkDialog
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
 @Composable
-fun SpeakersSection() {
+fun SpeakersSection(talks: List<Presentation>) {
     val selectedPresentation = remember { mutableStateOf<Presentation?>(null) }
     ConferenceGridSection(
         header = {
@@ -43,7 +42,7 @@ fun SpeakersSection() {
         },
         content = {
             SimpleGrid(numColumns(1, md = 2, lg = 3), Modifier.margin(2.em)) {
-                ConferenceEvent.forEach { presentation ->
+                talks.forEach { presentation ->
                     Speaker(presentation, onSelected = {
                         selectedPresentation.value = it
                     })
