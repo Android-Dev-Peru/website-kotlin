@@ -122,14 +122,17 @@ object ADPConf2024 {
             )
         ),
         Presentation(
-            title = "Más speakers sorpresa por anunciar 👀...",
-            description = "",
-            speakerName = "Invitados sorpresa",
-            speakerRole = "",
-            speakerCompany = "",
-            speakerCountry = "",
-            speakerPhoto = "${photoBase}/anonymous",
-            socials = listOf()
+            title = "Gemini in Android. Let's build smart apps",
+            description = "La IA esta de moda, escuchamos por todo lado IA, y con la llegada de Gemini las integraciones de IA a nuestras apps son mas fáciles dandole capacidades que antes no podíamos tener en nuestros dispositivos móviles, en esta charla haremos que nuestras apps móviles sean inteligentes integrándolas con Gemini.",
+            speakerName = "Yury Camacho",
+            speakerRole = "Staff Software Engineer @ Rappi.<br>Google Developer Expert Android 🇧🇴🇦🇷",
+            speakerCompany = "Rappi",
+            speakerCountry = "Bolivia",
+            speakerPhoto = "${photoBase}/yury",
+            socials = listOf(
+                Social(icon = Res.Icon.Twitter, url = "https://x.com/camachoyury", name = "X"),
+                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/camachoyury", name = "LinkedIn"),
+            )
         ),
     )
 }

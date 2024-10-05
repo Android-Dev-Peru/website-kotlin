@@ -1,13 +1,14 @@
 package web.android.dev.pe.components.widgets
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.dom.Br
-import org.jetbrains.compose.web.dom.Text
 
 @Composable
-fun MultiLineText(text: String) {
+fun MultiLineText(text: String, modifier: Modifier = Modifier) {
     text.split("<br>").forEach {
-        Text(it)
+        SpanText(it, modifier)
         Br()
     }
 }

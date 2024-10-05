@@ -60,7 +60,7 @@ private fun Content(presentation: Presentation) {
                     .fontSize(FontSize.XLarge)
                     .fontWeight(FontWeight.Bold))
                 Br()
-                SpanText(presentation.speakerRole, Modifier.fontSize(FontSize.Small))
+                MultiLineText(presentation.speakerRole, Modifier.fontSize(FontSize.Small))
             }
             SocialIcons(presentation.socials, Modifier.justifyContent(JustifyContent.Center))
         }
