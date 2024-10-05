@@ -26,6 +26,7 @@ import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Theme
 import web.android.dev.pe.components.widgets.DecoratedHeading
+import web.android.dev.pe.components.widgets.MultiLineText
 import web.android.dev.pe.data.Presentation
 import web.android.dev.pe.get
 import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
@@ -67,7 +68,7 @@ private fun Speaker(
                 Text(presentation.speakerName)
             }
             P(Modifier.margin(0.px).fontSize(FontSize.XSmall).fillMaxWidth().toAttrs()) {
-                Text(presentation.speakerRole)
+                MultiLineText(presentation.speakerRole)
             }
             P(Modifier.fontSize(FontSize.Medium).fillMaxWidth().toAttrs()) {
                 Text(presentation.title)

@@ -26,7 +26,7 @@ import web.android.dev.pe.pages.conf.components.layouts.ConferenceGridSection
 fun VolunteerSection() {
     ConferenceGridSection(
         header = {
-            DecoratedHeading(ResStrings.conf_volunteers_title, "speakers")
+            DecoratedHeading(ResStrings.conf_volunteers_title, "volunteers")
             P { Text(ResStrings.conf_volunteers_caption) }
             P(VolunteerSectionStyles.description.toAttrs()) {
                 Text(ResStrings.conf_volunteers_join)
