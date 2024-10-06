@@ -46,6 +46,9 @@ kobweb {
 
 
     }
+    markdown {
+        defaultRoot.set(".components.layout.MarkdownLayout")
+    }
 }
 
 kotlin {
