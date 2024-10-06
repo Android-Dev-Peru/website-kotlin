@@ -29,6 +29,7 @@ routeOverride: talk-recommendations
 - Identifica a tu audiencia: ¿Quiénes son? ¿Qué nivel de conocimiento tienen?
 - Crea un borrador de tu charla: ¿Qué temas vas a tratar? ¿En qué orden?
 - Use bullet points como resumen.
+- Puedes ayudarte del _story-telling_ y la voz activa. Tu audiencia enterá mejor si narras "Estuvimos diseñando la arquitectura..." en vez de "Se diseñó la arquitectura...".
 - Para una charla técnica:
   - Usa tamaño de fuente grande. Muy grande.
   - Fuentes con _serif_ son para papers, no para presentaciones.
