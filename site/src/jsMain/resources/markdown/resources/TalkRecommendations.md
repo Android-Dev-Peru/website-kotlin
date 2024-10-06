@@ -1,6 +1,7 @@
 ---
 title: Recomendaciones para tu presentación
 author: Android Dev Perú
+description: Recomendaciones para preparar y dar una charla técnica.
 language: es
 routeOverride: talk-recommendations
 ---

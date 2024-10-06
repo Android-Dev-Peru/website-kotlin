@@ -1,6 +1,7 @@
 ---
 title: Tips for your presentation
 author: Android Dev Peru
+description: Recommendations for preparing and giving a technical talk.
 language: en
 routeOverride: talk-recommendations/en
 ---
