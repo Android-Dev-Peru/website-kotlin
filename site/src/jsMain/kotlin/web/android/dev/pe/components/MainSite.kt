@@ -30,6 +30,7 @@ val MainSiteNavbar = Navbar(
     secondaryLinks = listOf(
         Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
         Navlink(path = Routes.Resources) { ResStrings.site_navlink_resources },
+        Navlink(path = Routes.Articles) { ResStrings.site_navlink_articles },
         Navlink(path = Routes.Conf.Index) { ResStrings.site_navlink_conference },
     ),
     languageSelector = LanguageSelectorOptions.All,

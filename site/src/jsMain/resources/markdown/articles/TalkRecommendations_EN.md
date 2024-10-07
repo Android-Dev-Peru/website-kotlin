@@ -48,4 +48,4 @@ routeOverride: talk-recommendations/en
 
 If you want to delve into this topic, we recommend [**"A talk on how to give a technical talk"**](https://speakerdeck.com/jflavio11/una-charla-sobre-como-dar-una-charla-tecnica) by one of our organizers, [**Jose Flavio Quispe**](https://twitter.com/jflavio11).
 
-{{{ web.android.dev.pe.pages.resources.components.TalkRecommendationsSlides }}}
+{{{ web.android.dev.pe.pages.articles.components.TalkRecommendationsSlides }}}

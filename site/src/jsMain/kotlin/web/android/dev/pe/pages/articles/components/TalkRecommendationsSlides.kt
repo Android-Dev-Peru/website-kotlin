@@ -1,4 +1,4 @@
-package web.android.dev.pe.pages.resources.components
+package web.android.dev.pe.pages.articles.components
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.aspectRatio

@@ -5,6 +5,7 @@ object Routes {
     const val Home = "/"
     const val AboutUs = "/about-us"
     const val Resources = "/resources"
+    const val Articles = "/articles"
     const val Subscribe = "/subscribe"
     const val PrivacyPolicy = "/privacy-policy"
 
