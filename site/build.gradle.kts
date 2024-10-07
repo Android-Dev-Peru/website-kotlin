@@ -1,4 +1,6 @@
 import com.varabyte.kobweb.gradle.application.util.configAsKobwebApplication
+import com.varabyte.kobwebx.gradle.markdown.MarkdownBlock
+import com.varabyte.kobwebx.gradle.markdown.MarkdownEntry
 import kotlinx.html.link
 import kotlinx.html.meta
 import kotlinx.html.title
@@ -48,6 +50,53 @@ kobweb {
     }
     markdown {
         defaultRoot.set(".components.layout.MarkdownLayout")
+
+        fun MarkdownBlock.ProcessScope.generateIndex(
+            path: String,
+            title: String,
+            description: String,
+            lang: String,
+            entries: List<MarkdownEntry>
+        ) {
+            generateMarkdown("$path/index.md", buildString {
+                appendLine(
+                    """
+                    ---
+                    title: $title
+                    author: Android Dev Perú
+                    description: $description
+                    language: $lang
+                    ---
+                    """.trimIndent()
+                )
+                appendLine(description)
+                entries
+                    .filter { it.filePath.startsWith("articles/") }
+                    .filter { it.frontMatter["language"]?.first() == lang }
+                    .forEach { entry ->
+                        val articleTitle = entry.frontMatter["title"]?.firstOrNull() ?: "Untitled"
+                        val articleAuthor = entry.frontMatter["author"]?.firstOrNull()?.let { "by $it" } ?: ""
+                        appendLine("* \"[$articleTitle](${entry.route})\" $articleAuthor")
+                    }
+            })
+        }
+
+        process.set { markdownEntries ->
+            generateIndex(
+                path = "articles",
+                title = "Artículos",
+                description = "Artículos escritos por y para la comunidad.",
+                lang = "es",
+                entries = markdownEntries
+            )
+            generateIndex(
+                path = "articles/en",
+                title = "Articles",
+                description = "Articles written by and for the community.",
+                lang = "en",
+                entries = markdownEntries
+            )
+        }
     }
 }
 
