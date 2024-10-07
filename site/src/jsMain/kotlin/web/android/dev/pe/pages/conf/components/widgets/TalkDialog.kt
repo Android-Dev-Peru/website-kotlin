@@ -106,6 +106,7 @@ object TalkDialogStyles {
         Breakpoint.MD {
             Modifier
                 .flexDirection(FlexDirection.Row)
+                .overflow(Overflow.Unset)
                 .height(Height.Unset)
         }
     }
