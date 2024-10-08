@@ -30,6 +30,7 @@ private fun Content() {
         ConferenceHeader()
         EventSection(AlternateBackground.toModifier())
         LocationSection()
+        AgendaSection(agenda, AlternateBackground.toModifier())
         SpeakersSection(talks)
         SponsorSection(sponsors, AlternateBackground.toModifier())
         VolunteerSection()

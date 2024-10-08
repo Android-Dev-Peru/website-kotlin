@@ -53,6 +53,8 @@
     <string name="conf_volunteers_caption">¡Gracias a nuestros voluntarios por hacer posible esta conferencia! </string>
     <string name="conf_volunteers_join">Para sumarte al equipo, mándanos un correo a </string>
 
+    <string name="conf_agenda_title">Agenda</string>
+
     <!-- Conference Sponsorship -->
     <string name="conf_sponsorship_title">¿Interesado en ser patrocinador?</string>
     <string name="conf_sponsorship_p1">En esta ocasión, celebraremos las contribuciones de nuestra comunidad y destacaremos las empresas, las personas y las organizaciones que impulsan el desarrollo de Android en Perú.</string>

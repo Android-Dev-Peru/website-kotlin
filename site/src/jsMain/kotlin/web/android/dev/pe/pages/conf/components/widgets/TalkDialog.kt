@@ -25,8 +25,10 @@ import org.jetbrains.compose.web.dom.Br
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.P
 import web.android.dev.pe.Res
+import web.android.dev.pe.Theme
 import web.android.dev.pe.components.widgets.*
 import web.android.dev.pe.data.Presentation
+import web.android.dev.pe.get
 import web.android.dev.pe.pages.home.components.layouts.SocialIcons
 
 
@@ -90,6 +92,7 @@ object TalkDialogStyles {
     val dialog = CssStyle {
         base {
             Modifier.maxWidth(800.px).padding(1.em).overflow(Overflow.Hidden).margin(2.em)
+                .background(colorMode.get(Theme.surface))
         }
         Breakpoint.MD {
             Modifier.padding(2.em)
