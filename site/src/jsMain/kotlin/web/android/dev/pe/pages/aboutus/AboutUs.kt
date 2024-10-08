@@ -67,9 +67,13 @@ private fun Header() {
             .flexDirection(FlexDirection.Column)
             .padding(2.em)
     ) {
-        Image(src = "/images/android_peruvian_head_white.webp", Modifier.size(250.px))
-        P(Modifier.textAlign(TextAlign.Center).fontSize(FontSize.Larger).fontWeight(FontWeight.ExtraBold).toAttrs()) {
-            Text(ResStrings.about_us_title)
+        Row {
+            Image(src = "/logo.svg", Modifier.size(150.px))
+            Image(src = "/kug.png", Modifier.size(150.px))
+        }
+        Row {
+            SpanText("Android Dev Peru", Modifier.width(150.px).textAlign(TextAlign.Center))
+            SpanText("Peru KUG", Modifier.width(150.px).textAlign(TextAlign.Center))
         }
     }
 }
