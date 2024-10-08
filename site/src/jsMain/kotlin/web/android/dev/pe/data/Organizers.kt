@@ -132,4 +132,13 @@ val Volunteers_AndroidConf2024 = listOf(
             Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/carlosgub/", name = "LinkedIn"),
         ),
     ),
+    Organizer(
+        name = "Gianmarco",
+        lastName = "Guerrero",
+        photo = "/events/conf2024/volunteers/gianmarco.webp",
+        socials = listOf(
+            Social(icon = Res.Icon.Instagram, url = "https://www.instagram.com/giansecurai/", name = "Instagram"),
+            Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/gianmarco-guerrero-menacho/", name = "LinkedIn"),
+        ),
+    ),
 )
