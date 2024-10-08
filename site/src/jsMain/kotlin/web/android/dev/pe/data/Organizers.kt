@@ -13,7 +13,7 @@ data class Organizer(
         get() = "$name $lastName"
 }
 
-private val baseImagePath = "images/"
+private val baseImagePath = "/images/organizers/"
 
 enum class Organizers(val data: Organizer) {
     Eduardo(
