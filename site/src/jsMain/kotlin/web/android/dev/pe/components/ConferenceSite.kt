@@ -21,9 +21,9 @@ import web.android.dev.pe.pages.home.components.sections.MainFooter
 private val ConferenceNavbar = Navbar(
     primaryLink = Navlink(path = Res.Links.Conf.Register("webnavbar")) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
-        Navlink(path = Routes.Conf.Speakers) { ResStrings.conf_speakers_title },
-        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
+        Navlink(path = Routes.Conf.Agenda) { ResStrings.conf_agenda_title },
         Navlink(path = Routes.Conf.Volunteers) { ResStrings.conf_volunteers_title },
+        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(

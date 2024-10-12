@@ -3,6 +3,7 @@ package web.android.dev.pe.pages.conf
 import web.android.dev.pe.data.Presentation
 import web.android.dev.pe.data.Social
 import web.android.dev.pe.Res
+import web.android.dev.pe.pages.conf.components.sections.AgendaEntry
 import web.android.dev.pe.pages.conf.components.sections.Sponsor
 import web.android.dev.pe.pages.conf.subpages.sponsorship.SponsorshipPlan
 
@@ -133,6 +134,55 @@ object ADPConf2024 {
                 Social(icon = Res.Icon.Twitter, url = "https://x.com/camachoyury", name = "X"),
                 Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/camachoyury", name = "LinkedIn"),
             )
+        ),
+    )
+
+    val talkCarlos = talks[0]
+    val talkKeneth = talks[1]
+    val talkAndres = talks[2]
+    val talkMilton = talks[3]
+    val talkHaystack = talks[4]
+    val talkYury = talks[5]
+
+    val agenda = listOf(
+        AgendaEntry.Other(
+            title = "Registro",
+            time = "8:00 - 9:00 AM",
+            description = "Regístrate y recoge tu kit de bienvenida.",
+        ),
+        AgendaEntry.Other(
+            title = "Apertura del evento",
+            time = "9:00 - 9:10 AM",
+            description = "Bienvenida a cargo de los organizadores.",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkKeneth,
+            time = "9:10 - 9:50 AM",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkMilton,
+            time = "9:50 - 10:30 AM",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkAndres,
+            time = "10:40 - 11:20 AM",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkHaystack,
+            time = "11:20 - 12:00 PM",
+        ),
+        AgendaEntry.Other(
+            title = "Networking",
+            time = "12:10 - 12:30 PM",
+            description = "Disfruta de un break para conocer a otros asistentes.",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkCarlos,
+            time = "12:30 - 1:10 PM",
+        ),
+        AgendaEntry.Talk(
+            presentation = talkYury,
+            time = "1:10 - 1:50 PM",
         ),
     )
 }

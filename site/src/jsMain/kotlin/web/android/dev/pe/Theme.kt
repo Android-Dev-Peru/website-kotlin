@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import com.varabyte.kobweb.compose.ui.graphics.Color
 import com.varabyte.kobweb.compose.ui.graphics.Colors
+import com.varabyte.kobweb.compose.ui.graphics.lightened
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 
 object Theme {
@@ -48,6 +49,10 @@ object Theme {
     val onSurface = ThemeColor(
         light = Colors.Black,
         dark = Colors.White,
+    )
+    val onBackgroundSoft = ThemeColor(
+        light = onBackground.light.lightened(0.2f),
+        dark = onBackground.dark.darkened(0.2f),
     )
     val border = ThemeColor(
         light = Color.rgb(218, 220, 224),
