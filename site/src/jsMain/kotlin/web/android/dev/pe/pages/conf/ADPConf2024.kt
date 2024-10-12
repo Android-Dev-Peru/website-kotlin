@@ -157,19 +157,19 @@ object ADPConf2024 {
         ),
         AgendaEntry.Talk(
             presentation = talkKeneth,
-            time = "9:10 - 9:50 AM",
+            time = "9:15 - 9:55 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkMilton,
-            time = "9:50 - 10:30 AM",
+            time = "10:00 - 10:30 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkAndres,
-            time = "10:40 - 11:20 AM",
+            time = "10:45 - 11:25 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkHaystack,
-            time = "11:20 - 12:00 PM",
+            time = "11:30 - 12:00 PM",
         ),
         AgendaEntry.Other(
             title = "Networking",
@@ -183,6 +183,11 @@ object ADPConf2024 {
         AgendaEntry.Talk(
             presentation = talkYury,
             time = "1:10 - 1:50 PM",
+        ),
+        AgendaEntry.Other(
+            title = "Cierre del evento",
+            time = "1:50 - 2:00 PM",
+            description = "Hora de despedirse. ¡No te vayas antes de la foto final!",
         ),
     )
 }
