@@ -45,6 +45,12 @@
     <string name="resources_blog_posts_description">¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad</string>
     <string name="resources_blog_posts_cta">Ver todos los artículos</string>
     <string name="resources_blog_posts_caption">Artículos</string>
+    <string name="resources_blog_posts_adpconf_24">Android Dev Peru Conf 2024</string>
+    <string name="resources_blog_posts_adpconf_24_desc">El 19 de Octubre, con motivo del 10mo aniversario de nuestra comunidad, organizamos el 1er evento mobile en Peru.</string>
+    <string name="resources_blog_posts_meetup_60">Meetup #60: GraphQL y Seniority en la industria tech.</string>
+    <string name="resources_blog_posts_meetup_60_desc">El 25 de Marzo, nuestro meetup fue virtual, y tuvimos 2 charlas interesantes, casos de uso de graphql por Pedro Rau y una mirada local y global del seniority en la industria tech por Bruno Aybar.</string>
+    <string name="resources_blog_posts_meetup_58">Meetup #58: Precompose vs Decompose vs Voyager en KMP</string>
+    <string name="resources_blog_posts_meetup_58_desc">El 25 de Enero, se realizó el primer meetup (online) del 2024 de las comunidades Android Dev Perú y Perú KUG (Kotlin User Group).</string>
     <string name="resources_blog_posts_meetup_57">Meetup #57: Kotlin Multiplatform is Stable!</string>
     <string name="resources_blog_posts_meetup_57_desc">El jueves 26 de noviembre de 2023 nos visitó el GDE Yury Camacho desde Bolivia para hablarnos sobre Kotlin Multiplatform.</string>
     <string name="resources_blog_posts_devfest_2023">DevFest 2023 - GDG Open</string>
