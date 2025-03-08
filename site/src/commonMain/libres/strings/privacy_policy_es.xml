@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
     <string name="privacy_policy">Política de privacidad</string>
-    <string name="privacy_policy_p1">Android Dev Peru es una comunidad sin fines de lucro. Los dato que recolectemos no serán utilizado con fines lucrativos.</string>
+    <string name="privacy_policy_p1">Android Dev Peru es una comunidad sin fines de lucro. Los datos que recolectemos no serán utilizados con fines lucrativos.</string>
     <string name="privacy_policy_p2">Este aviso de privacidad le informa qué esperar cuando recopilamos información personal. Se aplica a la información que recopilamos sobre:</string>
 
     <string name="privacy_policy_website">Visitantes a nuestros sitios web</string>
