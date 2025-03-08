@@ -37,13 +37,6 @@ enum class Organizers(val data: Organizer) {
             photo = "${baseImagePath}organizer_flavio.jpeg",
         )
     ),
-    Daniel(
-        Organizer(
-            name = "Daniel",
-            lastName = "Anaya",
-            photo = "${baseImagePath}organizer_daniel.jpeg",
-        )
-    ),
     Freddy(
         Organizer(
             name = "Freddy",
@@ -110,6 +103,13 @@ enum class LegacyOrganizers(val data: Organizer) {
             name = "Hansy",
             lastName = "Schmitt",
             photo = "${baseImagePath}organizer_hansy.jpeg",
+        )
+    ),
+    Daniel(
+        Organizer(
+            name = "Daniel",
+            lastName = "Anaya",
+            photo = "${baseImagePath}organizer_daniel.jpeg",
         )
     ),
 }

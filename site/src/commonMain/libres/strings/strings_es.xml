@@ -42,11 +42,11 @@
 
     <!-- RESOURCES -->
     <string name="resources_blog_posts_title">Artículos recientes</string>
-    <string name="resources_blog_posts_description">¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad"</string>
+    <string name="resources_blog_posts_description">¿Te perdiste algún evento? No hay problema - ponte al día con las últimas novedades de nuestra comunidad</string>
     <string name="resources_blog_posts_cta">Ver todos los artículos</string>
     <string name="resources_blog_posts_caption">Artículos</string>
     <string name="resources_blog_posts_meetup_57">Meetup #57: Kotlin Multiplatform is Stable!</string>
-    <string name="resources_blog_posts_meetup_57_desc">"El jueves 26 de noviembre de 2023 nos visitó el GDE Yury Camacho desde Bolivia para hablarnos sobre Kotlin Multiplatform.</string>
+    <string name="resources_blog_posts_meetup_57_desc">El jueves 26 de noviembre de 2023 nos visitó el GDE Yury Camacho desde Bolivia para hablarnos sobre Kotlin Multiplatform.</string>
     <string name="resources_blog_posts_devfest_2023">DevFest 2023 - GDG Open</string>
     <string name="resources_blog_posts_devfest_2023_desc">El 12 de noviembre de 2023, participamos en el DevFest 2023 del GDG Open, en donde elaboramos un taller sobre Jetpack Compose.</string>
     <string name="resources_blog_posts_bcp">Feria de comunidades en BCP</string>
