@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string name="conf_2025_title">Android Dev Peru Conf</string>
+    <string name="conf_2025_meta_title">Android Dev Peru Conf 2025</string>
+    <string name="conf_2025_meta_description">Enjoy a day full of talks with international speakers passionate about this Android. And, as all of our events - it's free! 🎉</string>
+
+    <string name="conf_2025_navlink_c4p">Call for Speakers</string>
+    <string name="conf_2025_navlink_sponsor">Become a sponsor</string>
+    <string name="conf_2025_navlink_volunteer">Become a volunteer</string>
+    <string name="conf_2025_navlink_about_us">About us</string>
+    <string name="conf_2025_navlink_register">Register</string>
+    <string name="conf_2025_navlink_code_of_conduct">Code of Conduct</string>
+
+    <string name="conf_2025_header_time">October 2025</string>
+    <string name="conf_2025_header_location">Lima, Peru 🇵🇪</string>
+    <string name="conf_2025_header_caption">Join us at the biggest Android conference in the country.</string>
+
+    <string name="conf_2025_events_title">About the event</string>
+    <string name="conf_2025_events_celebrate">We're celebrating 10 years sharing our love for Android with the community.</string>
+    <string name="conf_2025_events_enjoy">Enjoy a day full of talks with international speakers passionate about this technology. And, as all of our events - </string>
+    <string name="conf_2025_events_free">¡it's free! 🎉</string>
+    <string name="conf_2025_events_registration_soon">Registration is not open yet, but if you want us to keep you updated... </string>
+    <string name="conf_2025_events_register">Subscribe to our newsletter</string>
+
+    <string name="conf_2025_c4p_title">Call for Speakers</string>
+    <string name="conf_2025_c4p_caption">We are looking for talks about Android development, Kotlin, multiplatform, Gradle, CI/CD, AI, Firebase and more. Don't hesitate to send us your proposal!</string>
+    <string name="conf_2025_c4p_cta">Submit talk</string>
+
+    <string name="conf_2025_location_address">Address</string>
+    <string name="conf_2025_location_address_details">Prolongación Primavera 2390, Santiago de Surco</string>
+    <string name="conf_2025_location_place">Building</string>
+    <string name="conf_2025_location_place_details">Bancalari Auditorium - Building H, first floor</string>
+    <string name="conf_2025_location_time">Entry time</string>
+    <string name="conf_2025_location_time_details">Starting 8am. Limited capacity, arrive early.</string>
+    <string name="conf_2025_location_map_alt">Entering to the left, go down the stair and you'll be in the Pavilion H entrance</string>
+
+    <string name="conf_2025_speakers_title">Speakers</string>
+    <string name="conf_2025_speakers_caption">Meet the speakers that will share their knowledge with us.</string>
+    <string name="conf_2025_speaker_details">View details</string>
+    <string name="conf_2025_speaker_interested_register">Attend this talk</string>
+    <string name="conf_2025_location_how_to_get_there_details">1. Enter through the entrance of Av. Primavera</string>
+    <string name="conf_2025_location_how_to_get_there_details_2">2. Head to Pavilion H, located on the left</string>
+    <string name="conf_2025_location_how_to_get_there_details_3">3. Go down the stairs and enter the pavilion</string>
+    <string name="conf_2025_location_how_to_get_there_details_4">4. You will find the auditorium on the first floor</string>
+
+    <string name="conf_2025_sponsor_title">Become a sponsor</string>
+    <string name="conf_2025_sponsor_caption">This event would not be possible without the help of our sponsors. Thank you all!</string>
+    <string name="conf_2025_sponsor_join">Would you like also to support the community and introduce your company to our entire audience?</string>
+    <string name="conf_2025_sponsor_im_interested">I'm interested</string>
+    <string name="conf_2025_sponsor_plan_gold">Gold</string>
+    <string name="conf_2025_sponsor_plan_silver">Silver</string>
+    <string name="conf_2025_sponsor_plan_bronze">Bronze</string>
+
+    <string name="conf_2025_volunteers_title">Volunteers</string>
+    <string name="conf_2025_volunteers_caption">Big thanks to all our volunteers. Without you, this event would not be possible!</string>
+    <string name="conf_2025_volunteers_join">To join the team, email us at </string>
+
+    <string name="conf_2025_agenda_title">Agenda</string>
+
+    <!-- Conference Sponsorship -->
+    <string name="conf_2025_sponsorship_title">Interested in Sponsoring?</string>
+    <string name="conf_2025_sponsorship_p1">At this Android Dev Peru Conf, we will celebrate the contributions of our community and highlight the companies, individuals, and organizations that drive Android development in Peru.</string>
+    <string name="conf_2025_sponsorship_p2">We want to make this event a great success, building on our 10 years of experience working with the community, during which we have:</string>
+    <string name="conf_2025_sponsorship_p2_li1">Organized dozens of events:</string>
+    <string name="conf_2025_sponsorship_p2_li1_1">Android Dev Peru Conf 2024 (attendance: +120 people)</string>
+    <string name="conf_2025_sponsorship_p2_li1_2">Kotlin Everywhere 2019 (attendance: 80 people)</string>
+    <string name="conf_2025_sponsorship_p2_li1_3">+40 in-person meetups (average attendance: 30 people)</string>
+    <string name="conf_2025_sponsorship_p2_li1_4">+20 virtual meetups (average attendance: 50 people)</string>
+    <string name="conf_2025_sponsorship_p2_li1_5">3 in-person and virtual workshops (average attendance: 20 people)</string>
+
+    <string name="conf_2025_sponsorship_p2_li2">Expanded our online presence:</string>
+    <string name="conf_2025_sponsorship_p2_li2_1">WhatsApp: +470 active members</string>
+    <string name="conf_2025_sponsorship_p2_li2_2">Linkedin: +1220 followers</string>
+    <string name="conf_2025_sponsorship_p2_li2_3">Youtube: +900 subscribers</string>
+    <string name="conf_2025_sponsorship_p2_more_about_us_p1">You can read more about the community and the organizers </string>
+    <string name="conf_2025_sponsorship_p2_more_about_us_p2">by visiting this link.</string>
+
+    <string name="conf_2025_sponsorship_what_we_offer">What do we offer?</string>
+    <string name="conf_2025_sponsorship_p3">In this Android Dev Peru Conf 2024 edition, we expect:</string>
+    <string name="conf_2025_sponsorship_p3_li1">100-140 in-person attendees</string>
+    <string name="conf_2025_sponsorship_p3_li2">50-100 virtual attendees (from all over LATAM)</string>
+    <string name="conf_2025_sponsorship_p3_li3">4 talks by expert speakers, both national and international</string>
+    <string name="conf_2025_sponsorship_p3_li4">Hundreds of interactions across all our social media</string>
+    <string name="conf_2025_sponsorship_p4">As a sponsor, we will offer you different spaces to showcase your company to our entire audience. We offer various support plans to best suit your company's needs.</string>
+
+    <string name="conf_2025_sponsorship_plan_A">🥇 Gold</string>
+    <string name="conf_2025_sponsorship_plan_B">🥈 Silver</string>
+    <string name="conf_2025_sponsorship_plan_C">🥉 Bronze</string>
+    <string name="conf_2025_sponsorship_plan_benefit_header">Benefits per sponsorship plan</string>
+    <string name="conf_2025_sponsorship_plan_benefit_company_logos">Company logos across all digital channels.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_delivery_merch">Delivery of merchandising (pens, stickers, shirt, brochures) provided by the company.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_mentions">Mention of the company at the opening and closing ceremonies.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_logo_size">Logo size on our networks.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_company_time_slot">Time slot for a brief company presentation</string>
+    <string name="conf_2025_sponsorship_plan_benefit_banner_at_entrance">Space for a banner (1x2m) at the entrance of the auditorium.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_banner_at_auditorium">Space for banner (1x2m) in the main auditorium of the event.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_company_speaker">20-min speaker slot for your chosen speaker (only if the talk is deeply Android-related)</string>
+    <string name="conf_2025_sponsorship_plan_benefit_company_speaker_disclaimer">* Subject to availability of agenda. Priority will be given to sponsors who confirm first.</string>
+    <string name="conf_2025_sponsorship_plan_benefit_logo_physical_merch">Uso del logo de la empresa en polos (speakers, organizadores y premios).</string>
+    <string name="conf_2025_sponsorship_plan_benefit_attendance_list">Excel con información de las personas registrados al evento, previo consentimiento. (para publicidad y ofertas laborales).</string>
+
+    <string name="conf_2025_sponsor_i_want_to_sponsor">I want to be an sponsor</string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_instructions">Let's continue the conversation in the format that suits you the most: </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_option_1">Option 1: </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_option_2">Option 2: </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_option_3">Option 3: </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_email_us_pt1">Email us at </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_email_us_pt2"> indicating your company and the plan you are interested in.</string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_fill_form_pt1">Complete this form</string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_fill_form_pt2"> and we will get in touch with you.</string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_schedule_meeting_pt1">Schedule a meeting with us </string>
+    <string name="conf_2025_sponsor_i_want_to_sponsor_schedule_meeting_pt2"> and we will clarify any doubts you may have.</string>
+
+    <!--Conference Code of Conduct-->
+    <string name="conf_2025_coc_intro_title">Code of Conduct</string>
+    <string name="conf_2025_coc_intro_p1">Android Dev Peru seeks to provide a harassment-free conference experience for everyone.</string>
+    <string name="conf_2025_coc_intro_p2">Anyone who attends (including speakers, sponsors, and volunteers) must respect our Code of Conduct. The organizing team will not tolerate any form of harassment or discrimination; anyone who commits these actions will be sanctioned. The organizers will enforce this code throughout the event. We expect the cooperation of all participants to help ensure a safe environment for everyone. Help us make Android Dev Peru Conf 24 a pleasant experience for everyone!</string>
+
+    <string name="conf_2025_coc_purpose_title">Purpose of this document</string>
+    <string name="conf_2025_coc_purpose_p1">In this conference, we want to provide a harassment-free experience for all those who attend, regardless of their gender, sexual orientation, disability, physical appearance, body type, race, or religion. We will not tolerate harassment of conference participants in any form. Sexual language and images are not appropriate at any time during the conference; including talks, workshops, parties, Facebook, X (aka Twitter) and any other social network.</string>
+    <string name="conf_2025_coc_purpose_p2">Conference participants who violate these rules may be expelled from the event at the discretion of the event organizers.</string>
+    <string name="conf_2025_coc_purpose_p3">Sponsors are also subject to our anti-harassment policy. These in particular, may not use sexualized images, activities, or material. Booth staff, including volunteers, may not use clothing/uniforms/costumes or anything else that creates a sexualized environment.</string>
+
+    <string name="conf_2025_coc_report_title">Reports</string>
+    <string name="conf_2025_coc_report_p1">If someone makes you or someone else feel unsafe or inappropriate, please report it as soon as possible. If you see or hear someone doing something that violates this code of conduct, please let us know. You can make your report by any of the following means:</string>
+    <string name="conf_2025_coc_report_card_1">Contact a staff member, you can identify us by our shirts with the word "organizer".</string>
+    <string name="conf_2025_coc_report_card_2">Direct messages on Twitter: our direct messages on Twitter are always open.</string>
+    <string name="conf_2025_coc_report_card_3">Email: You can send us an email, we will take approximately one hour to respond.</string>
+
+    <string name="conf_2025_coc_compliance_title">Compliance</string>
+    <string name="conf_2025_coc_compliance_p1">Participants who are asked to stop any harassing behavior are expected to do so immediately.</string>
+    <string name="conf_2025_coc_compliance_p2">Anyone who engages in harassing behavior the event organizers reserve the right to take any necessary measures to maintain the event with a welcoming environment for all participants. This includes warnings or expulsion from the conference.</string>
+    <string name="conf_2025_coc_compliance_p3">We expect all participants to follow these rules during their stay at the conference, workshops, and any social event related to the conference.</string>
+
+    <string name="conf_2025_coc_harassment_title">Harassment</string>
+    <string name="conf_2025_coc_harassment_p1">Verbal or written comments that reinforce social structures of domination related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body type, race, age, or religion.</string>
+    <string name="conf_2025_coc_harassment_p2">Sexual images in public spaces.</string>
+    <string name="conf_2025_coc_harassment_p3">Deliberate intimidation, stalking, or harassment.</string>
+    <string name="conf_2025_coc_harassment_p4">Harassment involving photographs or videos.</string>
+    <string name="conf_2025_coc_harassment_p5">Constant interruptions during conversations or other events.</string>
+    <string name="conf_2025_coc_harassment_p6">Inappropriate physical contact.</string>
+    <string name="conf_2025_coc_harassment_p7">Unwanted sexual attention.</string>
+    <string name="conf_2025_coc_harassment_p8">Advocating for or encouraging any of the aforementioned behaviors.</string>
+
+    <string name="conf_2025_coc_discrimination_title">Disability Discrimination</string>
+    <string name="conf_2025_coc_discrimination_p1">Words like "crazy," "insane," "mongoloid," or "mentally retarded" are examples of ableist language that devalues people with physical or mental disabilities. Often, this does not stem from an intentional desire to offend, but from the normalization of what it means to be "normal." These words can be avoided by using more appropriate and clear descriptions of what you want to communicate. For more information about disability discrimination and replacement terms, please read this guide.</string>
+
+    <string name="conf_2025_coc_need_help_title">Need Help?</string>
+    <string name="conf_2025_coc_need_help_p1">Our staff is happy to help participants feel safe during the conference. Contact us! ↓</string>
+    <string name="conf_2025_coc_need_help_p2">Twitter: </string>
+    <string name="conf_2025_coc_need_help_p3">Email: </string>
+</resources>

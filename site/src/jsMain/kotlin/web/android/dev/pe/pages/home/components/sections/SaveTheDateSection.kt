@@ -15,8 +15,8 @@ import org.jetbrains.compose.web.dom.H3
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
-import web.android.dev.pe.pages.conf.components.widgets.ConferenceCard
-import web.android.dev.pe.pages.conf.components.widgets.ShinyCardStyles
+import web.android.dev.pe.pages.conf.year_2024.components.widgets.ConferenceCard
+import web.android.dev.pe.pages.conf.year_2024.components.widgets.ShinyCardStyles2024
 import web.android.dev.pe.pages.home.components.layouts.AlternateBackground
 import web.android.dev.pe.pages.home.components.layouts.HomeSection
 
@@ -31,9 +31,9 @@ fun SaveTheDateSection() {
                 .onClick { window.open(RoutePrefix.prepend( "/conf"), "_self") }
                 .cursor(Cursor.Pointer)
         ) {
-            H3(ShinyCardStyles.Title.toAttrs()) { Text(ResStrings.conf_title.uppercase()) }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text(ResStrings.home_save_the_date) }
-            P(ShinyCardStyles.Hint.toAttrs()) { Text(ResStrings.home_save_the_date_location) }
+            H3(ShinyCardStyles2024.Title.toAttrs()) { Text(ResStrings.conf_title.uppercase()) }
+            P(ShinyCardStyles2024.Hint.toAttrs()) { Text(ResStrings.home_save_the_date) }
+            P(ShinyCardStyles2024.Hint.toAttrs()) { Text(ResStrings.home_save_the_date_location) }
         }
     }
 }

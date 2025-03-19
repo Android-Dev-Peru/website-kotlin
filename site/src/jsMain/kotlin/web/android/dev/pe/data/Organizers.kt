@@ -142,3 +142,32 @@ val Volunteers_AndroidConf2024 = listOf(
         ),
     ),
 )
+
+val Volunteers_AndroidConf2025 = listOf(
+    Organizer(
+        name = "Alyssa",
+        lastName = "Villarán",
+        photo = "/events/conf2024/volunteers/aly.webp",
+        socials = listOf(
+            Social(Res.Icon.Instagram, "https://www.instagram.com/alevu94/"),
+        ),
+    ),
+    Organizer(
+        name = "Carlos",
+        lastName = "Ugaz",
+        photo = "/events/conf2024/volunteers/carlos-ugaz.webp",
+        socials = listOf(
+            Social(icon = Res.Icon.Twitter, url = "https://x.com/carlosgub", name = "X"),
+            Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/carlosgub/", name = "LinkedIn"),
+        ),
+    ),
+    Organizer(
+        name = "Gianmarco",
+        lastName = "Guerrero",
+        photo = "/events/conf2024/volunteers/gianmarco.webp",
+        socials = listOf(
+            Social(icon = Res.Icon.Instagram, url = "https://www.instagram.com/giansecurai/", name = "Instagram"),
+            Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/gianmarco-guerrero-menacho/", name = "LinkedIn"),
+        ),
+    ),
+)
