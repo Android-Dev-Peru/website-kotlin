@@ -53,14 +53,14 @@ fun ConferenceSite(lang: Language, content: @Composable () -> Unit) {
 }
 
 private fun setupTags(lang: Language) {
-    document.title = ResStrings.conf_meta_title
-    modifyMetaTag(MetaTag.TITLE, ResStrings.conf_meta_title)
-    modifyMetaTag(MetaTag.OG_TITLE, ResStrings.conf_meta_title)
-    modifyMetaTag(MetaTag.TWITTER_TITLE, ResStrings.conf_meta_title)
+    document.title = ResStrings.conf_2025_meta_title
+    modifyMetaTag(MetaTag.TITLE, ResStrings.conf_2025_meta_title)
+    modifyMetaTag(MetaTag.OG_TITLE, ResStrings.conf_2025_meta_title)
+    modifyMetaTag(MetaTag.TWITTER_TITLE, ResStrings.conf_2025_meta_title)
 
-    modifyMetaTag(MetaTag.DESCRIPTION, ResStrings.conf_meta_description)
-    modifyMetaTag(MetaTag.OG_DESCRIPTION, ResStrings.conf_meta_description)
-    modifyMetaTag(MetaTag.TWITTER_DESCRIPTION, ResStrings.conf_meta_description)
+    modifyMetaTag(MetaTag.DESCRIPTION, ResStrings.conf_2025_meta_description)
+    modifyMetaTag(MetaTag.OG_DESCRIPTION, ResStrings.conf_2025_meta_description)
+    modifyMetaTag(MetaTag.TWITTER_DESCRIPTION, ResStrings.conf_2025_meta_description)
 
     modifyMetaTag(MetaTag.OG_LOCALE, lang.locale)
 
@@ -68,7 +68,7 @@ private fun setupTags(lang: Language) {
     modifyMetaTag(MetaTag.OG_URL, url)
     modifyMetaTag(MetaTag.TWITTER_URL, url)
 
-    val thumbnail = "${Res.Links.Index}/events/conf2024/conf_thumbnail_${lang.code}.webp"
+    val thumbnail = "${Res.Links.Index}/events/conf2025/conf_thumbnail_${lang.code}.webp"
     modifyMetaTag(MetaTag.OG_IMAGE, thumbnail)
     modifyMetaTag(MetaTag.TWITTER_IMAGE, thumbnail)
 }
