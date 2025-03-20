@@ -32,7 +32,7 @@ object Res {
 
         object Conf2025 {
             const val Index = "https://androidperu.dev/conf"
-            const val C4P = "https://www.papercall.io/adpday"
+            const val C4P = "https://sessionize.com/android-dev-peru-conf-2025/"
             const val SponsorBrief = "https://docs.google.com/forms/d/e/1FAIpQLSfTA2fmZJyfLi6ssmoGtER-JwWor751g9BDhkrYQ_KjvJaWQw/viewform"
             const val ScheduleMeeting = "https://calendar.google.com/calendar/u/0/appointments/AcZssZ2i6frpcgc1iUvprM_sEyylj2RZqooMBWtA4Gg="
             fun Register(attr: String) = "https://android-dev-peru-conf-2025.eventbrite.com/?aff=$attr"

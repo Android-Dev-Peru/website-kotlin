@@ -12,21 +12,19 @@ import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
 import web.android.dev.pe.Res
-import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.year_2025.components.layouts.ConferenceGridSection
 
 @Composable
 fun CallForPapersSection(sectionModifier: Modifier = Modifier) {
-    val isSmallScreen = mutableIsSmallScreen()
     ConferenceGridSection(
         sectionModifier = sectionModifier,
         header = {
-            if (isSmallScreen) Details() else SpeakersImage()
+            Details()
         },
         content = {
-            if (isSmallScreen) SpeakersImage() else Details()
+            SpeakersImage()
         }
     )
 }
@@ -40,7 +38,7 @@ private fun Details() {
     P { Text(ResStrings.conf_2025_c4p_caption) }
     PrimaryButton(
         text = ResStrings.conf_2025_c4p_cta,
-        href = Res.Links.Conf2024.C4P,
+        href = Res.Links.Conf2025.C4P,
         modifier = Modifier.margin(top = 16.px)
     )
 }

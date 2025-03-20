@@ -23,6 +23,7 @@ import org.jetbrains.compose.web.dom.*
 import strings.ResStrings
 import web.android.dev.pe.Routes
 import web.android.dev.pe.Theme
+import web.android.dev.pe.components.breakpoints.mutableIsSmallScreen
 import web.android.dev.pe.components.utils.appendCurrentLanguage
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.OutlinePrimaryButtonVariant
@@ -42,10 +43,11 @@ class Sponsor(
 
 @Composable
 fun SponsorSection(sponsors: List<Sponsor>, sectionModifier: Modifier = Modifier, modifier: Modifier = Modifier) {
+    val isSmallScreen = mutableIsSmallScreen()
     ConferenceGridSection(
         sectionModifier = sectionModifier,
-        header = { Details() },
-        content = { Sponsors(sponsors) }
+        header = { if(isSmallScreen) Details() else Sponsors(sponsors) },
+        content = { if(isSmallScreen) Sponsors(sponsors) else Details() }
     )
 }
 
