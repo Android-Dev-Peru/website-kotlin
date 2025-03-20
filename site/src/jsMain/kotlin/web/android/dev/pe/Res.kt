@@ -15,9 +15,10 @@ object Res {
         const val YouTube = "https://www.youtube.com/@AndroidDevPeru"
         const val TikTok = "https://www.tiktok.com/@androiddevperu"
         const val WhatsApp = "https://chat.whatsapp.com/Il7yhDYCj8zLVDrK7OpFOm"
-        const val TalkProposal = "https://github.com/Android-Dev-Peru/propuestas-meetup/issues/new?assignees=&labels=&projects=&template=plantilla-de-propuesta.md&title=Charla%3A+T%C3%ADtulo+de+la+charla"
-        const val KotlinConf2024 = "https://www.youtube.com/live/yB5UiuIBZsY?si=8Tltr1OWZCYATVBB"
+        const val TalkProposal = "https://forms.gle/NPKRNKKBP8pryvjT8"
+        const val Meetup65 = "https://www.youtube.com/live/zPX-fB-srWw?si=8pRva3vv1uZ5PJ84"
         const val Salarios2023 = "https://android-dev-peru.notion.site/2023-Salarios-Mobile-Devs-40be984176ce4fd099cef15e1c8e17c7"
+        const val Salarios2024 = "https://android-dev-peru.notion.site/2024-Salarios-Mobile-Devs-1a49dba648b280a8aaacd6d66c8733bd?pvs=73"
         const val GithubWeb = "https://github.com/Android-Dev-Peru/website-kotlin"
 
         // Android Conf

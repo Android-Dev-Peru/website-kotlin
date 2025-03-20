@@ -22,14 +22,14 @@
     <string name="home_quick_links_linkedin">Síguenos en LinkedIn</string>
 
     <string name="home_highlights_card_title">Contenido destacado</string>
-    <string name="home_highlights_card_kotlin_conf_title">Kotlin Conf</string>
-    <string name="home_highlights_card_kotlin_conf_description">El pasado Junio nos reunimos presencialmente para el Kotlin Conf - Lima.&lt;br&gt;&lt;br&gt;🗓 Fecha: miércoles 26 de junio&lt;br&gt;⏰ Hora: 7PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Local: NTT Data&lt;br&gt;</string>
-    <string name="home_highlights_card_kotlin_conf_cta">Ver grabación</string>
-    <string name="home_highlights_card_salary_2023_title">Encuesta salarial 2023</string>
-    <string name="home_highlights_card_salary_2023_description">La transparencia puede ayudar a reducir brechas salariales. El 2023, realizamos encuestas anónimas y recibimos +100 respuestas de mobile devs en LATAM.</string>
-    <string name="home_highlights_card_salary_2023_cta">Mira los resultados</string>
+    <string name="home_highlights_card_event_title">Meetup #65</string>
+    <string name="home_highlights_card_event_description">El pasado Febrero nos reunimos virtualmente para el Meetup #65: "Evita sustos en runtime con Koin".&lt;br&gt;&lt;br&gt;🗓 Fecha: jueves 27 de febrero&lt;br&gt;⏰ Hora: 1PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Local: Youtube&lt;br&gt;</string>
+    <string name="home_highlights_card_event_cta">Ver grabación</string>
+    <string name="home_highlights_card_salary_2024_title">Encuesta salarial 2024</string>
+    <string name="home_highlights_card_salary_2024_description">La transparencia puede ayudar a reducir brechas salariales. El 2024, realizamos encuestas anónimas y recibimos +80 respuestas de mobile devs en LATAM.</string>
+    <string name="home_highlights_card_salary_2024_cta">Mira los resultados</string>
 
-    <string name="home_save_the_date">Sábado 19 de Octubre</string>
+    <string name="home_save_the_date">Octubre 2025</string>
     <string name="home_save_the_date_location">Lima, Peru 🇵🇪</string>
 
     <!-- ABOUT US -->

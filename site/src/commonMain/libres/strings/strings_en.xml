@@ -22,14 +22,14 @@
     <string name="home_quick_links_linkedin">Follow us on LinkedIn</string>
 
     <string name="home_highlights_card_title">Featured Content</string>
-    <string name="home_highlights_card_kotlin_conf_title">Kotlin Conf</string>
-    <string name="home_highlights_card_kotlin_conf_description">Last June we gathered in person for the Kotlin Conf - Lima.&lt;br&gt;&lt;br&gt;🗓 Date: Wednesday, June 26th&lt;br&gt;⏰ Time: 7PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Location: NTT Data&lt;br&gt;</string>
-    <string name="home_highlights_card_kotlin_conf_cta">Watch Recording</string>
-    <string name="home_highlights_card_salary_2023_title">Salary Survey 2023</string>
-    <string name="home_highlights_card_salary_2023_description">Transparency can help reduce salary gaps. Last year, we conducted anonymous surveys and received +100 responses from mobile devs in LATAM.</string>
-    <string name="home_highlights_card_salary_2023_cta">See Results</string>
+    <string name="home_highlights_card_event_title">Meetup #65</string>
+    <string name="home_highlights_card_event_description">Last February we gathered virtually for the Meetup #65: "Evita sustos en runtime con Koin"&lt;br&gt;&lt;br&gt;🗓 Date: Thursday, February 27th&lt;br&gt;⏰ Time: 1PM 🇵🇪 🇨🇴&lt;br&gt;🏢 Location: Youtube&lt;br&gt;</string>
+    <string name="home_highlights_card_event_cta">Watch Recording</string>
+    <string name="home_highlights_card_salary_2024_title">Salary Survey 2024</string>
+    <string name="home_highlights_card_salary_2024_description">Transparency can help reduce salary gaps. Last year, we conducted anonymous surveys and received +80 responses from mobile devs in LATAM.</string>
+    <string name="home_highlights_card_salary_2024_cta">See Results</string>
 
-    <string name="home_save_the_date">Saturday, October 19th</string>
+    <string name="home_save_the_date">October, 2025</string>
     <string name="home_save_the_date_location">Lima, Peru 🇵🇪</string>
 
     <!-- ABOUT US -->
