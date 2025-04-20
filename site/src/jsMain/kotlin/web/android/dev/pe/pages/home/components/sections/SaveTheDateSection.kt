@@ -6,7 +6,7 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.padding
-import com.varabyte.kobweb.navigation.RoutePrefix
+import com.varabyte.kobweb.navigation.BasePath
 import com.varabyte.kobweb.silk.style.toAttrs
 import com.varabyte.kobweb.silk.style.toModifier
 import kotlinx.browser.window
@@ -28,7 +28,7 @@ fun SaveTheDateSection() {
     ) {
         ConferenceCard(
             Modifier
-                .onClick { window.open(RoutePrefix.prepend( "/conf"), "_self") }
+                .onClick { window.open(BasePath.prepend( "/conf"), "_self") }
                 .cursor(Cursor.Pointer)
         ) {
             H3(ShinyCardStyles2024.Title.toAttrs()) { Text(ResStrings.conf_title.uppercase()) }

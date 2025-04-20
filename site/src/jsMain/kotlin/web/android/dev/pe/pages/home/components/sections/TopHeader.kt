@@ -16,7 +16,6 @@ import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.style.breakpoint.Breakpoint
 import com.varabyte.kobweb.silk.style.selectors.hover
 import com.varabyte.kobweb.silk.style.toModifier
-import com.varabyte.kobweb.silk.theme.breakpoint.toMinWidthQuery
 import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.em
 import org.jetbrains.compose.web.css.px
@@ -74,7 +73,7 @@ object HomeHeaderStyles {
         cssRule(" span") {
             Modifier.fillMaxWidth().textAlign(TextAlign.Center)
         }
-        cssRule(mediaQuery = Breakpoint.MD.toMinWidthQuery(), suffix = " span") {
+        cssRule(mediaQuery = Breakpoint.MD.toCSSMediaQuery(), suffix = " span") {
             Modifier.textAlign(TextAlign.Start)
         }
     }

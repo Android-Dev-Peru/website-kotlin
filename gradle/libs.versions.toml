@@ -1,7 +1,7 @@
 [versions]
-jetbrains-compose = "1.6.11"
-kobweb = "0.19.1"
-kotlin = "2.0.20"
+jetbrains-compose = "1.7.3"
+kobweb = "0.20.4"
+kotlin = "2.1.10"
 libres = "1.2.2"
 
 [libraries]
