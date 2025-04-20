@@ -12,5 +12,4 @@ if defined KOBWEB_JAVA_HOME (
     set "java_cmd=java"
 )
 
-:: Run the java command with the common parameters
-%java_cmd% -Dkobweb.server.environment=PROD -Dkobweb.site.layout=FULLSTACK -Dio.ktor.development=false -jar .kobweb/server/server.jar
+"%java_cmd%" -Dkobweb.server.environment=PROD -Dkobweb.site.layout=STATIC -Dio.ktor.development=false -jar .kobweb/server/server.jar
