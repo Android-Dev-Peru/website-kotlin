@@ -4,12 +4,14 @@
 cd "$(dirname "$0")"
 cd ../..
 
-args="-Dkobweb.server.environment=PROD -Dkobweb.site.layout=FULLSTACK -Dio.ktor.development=false -jar .kobweb/server/server.jar"
+args="-Dkobweb.server.environment=PROD -Dkobweb.site.layout=STATIC -Dio.ktor.development=false -jar .kobweb/server/server.jar"
 
 if [ -n "$KOBWEB_JAVA_HOME" ]; then
-    "$KOBWEB_JAVA_HOME/bin/java" $args
+    java_cmd="$KOBWEB_JAVA_HOME/bin/java"
 elif [ -n "$JAVA_HOME" ]; then
-    "$JAVA_HOME/bin/java" $args
+    java_cmd="$JAVA_HOME/bin/java"
 else
-    java $args
+    java_cmd="java"
 fi
+
+"$java_cmd" $args
