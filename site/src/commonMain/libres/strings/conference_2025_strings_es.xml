@@ -2,7 +2,7 @@
 <resources>
     <string name="conf_2025_title">Android Dev Peru Conf</string>
     <string name="conf_2025_meta_title">Android Dev Peru Conf 2025</string>
-    <string name="conf_2025_meta_description">Disfruta de un día lleno de charlas con ponentes internacionales apasionados por Android. Y al igual que todos nuestros eventos - ¡es gratis! 🎉</string>
+    <string name="conf_2025_meta_description">Disfruta de un día lleno de charlas con ponentes apasionados por Android. Y al igual que todos nuestros eventos - ¡es gratis! 🎉</string>
 
     <string name="conf_2025_navlink_c4p">Call for Speakers</string>
     <string name="conf_2025_navlink_sponsor">Sé patrocinador</string>
@@ -11,13 +11,13 @@
     <string name="conf_2025_navlink_register">Regístrate</string>
     <string name="conf_2025_navlink_code_of_conduct">Código de conducta</string>
 
-    <string name="conf_2025_header_time">Octubre 2025</string>
+    <string name="conf_2025_header_time">Noviembre 2025</string>
     <string name="conf_2025_header_location">Lima, Perú 🇵🇪</string>
     <string name="conf_2025_header_caption">Únete a la conferencia de Android más grande del país.</string>
 
     <string name="conf_2025_events_title">Sobre el evento</string>
     <string name="conf_2025_events_celebrate">Celebramos 10 años en comunidad compartiendo nuestro amor por Android.</string>
-    <string name="conf_2025_events_enjoy">Disfruta de un día lleno de charlas con ponentes internacionales apasionados por esta plataforma. Y al igual que todos nuestros eventos - </string>
+    <string name="conf_2025_events_enjoy">Disfruta de un día lleno de charlas con ponentes apasionados por esta plataforma. Y al igual que todos nuestros eventos - </string>
     <string name="conf_2025_events_free">¡es gratis! 🎉</string>
     <string name="conf_2025_events_registration_soon">Aún no habilitamos el registro de asistentes. Pero si deseas que te avisemos cuando este empiece... </string>
     <string name="conf_2025_events_register">Suscríbete al newsletter</string>
