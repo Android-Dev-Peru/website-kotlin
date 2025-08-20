@@ -125,13 +125,13 @@ private fun ContactUsSection() {
 
         }
         ContactUsOption(icon = "wpforms", iconCategory = IconCategory.BRAND) {
-            Link(Res.Links.Conf2024.SponsorBrief) {
+            Link(Res.Links.Conf2025.SponsorBrief) {
                 Text(ResStrings.conf_2025_sponsor_i_want_to_sponsor_fill_form_pt1)
             }
             Text(ResStrings.conf_2025_sponsor_i_want_to_sponsor_fill_form_pt2)
         }
         ContactUsOption(icon = "calendar") {
-            Link(Res.Links.Conf2024.ScheduleMeeting) {
+            Link(Res.Links.Conf2025.ScheduleMeeting) {
                 Text(ResStrings.conf_2025_sponsor_i_want_to_sponsor_schedule_meeting_pt1)
             }
             Text(ResStrings.conf_2025_sponsor_i_want_to_sponsor_schedule_meeting_pt2)
