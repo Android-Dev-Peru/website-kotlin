@@ -72,7 +72,7 @@ private fun Content(presentation: Presentation) {
             }
             PrimaryButton(
                 text = "¿Te interesa? Regístrate",
-                href = Res.Links.Conf2024.Register("webspeaker"),
+                href = Res.Links.Conf2025.Register("webspeaker"),
                 modifier = Modifier.margin(topBottom = 16.px),
                 variant = RectangularPrimaryButtonVariant,
             )

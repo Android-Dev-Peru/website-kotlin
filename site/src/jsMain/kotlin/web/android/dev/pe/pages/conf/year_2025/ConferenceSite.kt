@@ -18,13 +18,11 @@ import web.android.dev.pe.components.widgets.navsite.*
 import web.android.dev.pe.pages.home.components.sections.MainFooter
 
 private val ConferenceNavbar = Navbar(
-//    primaryLink = Navlink(path = Res.Links.Conf2024.Register("webnavbar")) { ResStrings.conf_navlink_register },
-    primaryLink = null,
+    primaryLink = Navlink(path = Res.Links.Conf2025.Register("webnavbar")) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
-        Navlink(path = Res.Links.Conf2025.C4P) { ResStrings.conf_2025_navlink_c4p },
-        Navlink(path = Routes.Conf.Year2025.Sponsorship) { ResStrings.conf_2025_navlink_sponsor },
+        Navlink(path = Routes.Conf.Year2025.Speakers) { ResStrings.conf_2025_navlink_speakers },
         Navlink(path = Routes.Conf.Year2025.Volunteers) { ResStrings.conf_2025_navlink_volunteer },
-//        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
+        Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
     ),
     languageSelector = LanguageSelectorOptions.All,
     logo = NavbarLogo(

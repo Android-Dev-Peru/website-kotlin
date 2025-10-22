@@ -36,6 +36,12 @@ private fun HeaderContent() {
     val styles = ConferenceHeaderStyles
     Column(Modifier.gap(16.px), horizontalAlignment = Alignment.CenterHorizontally) {
         SpanText(ResStrings.conf_2025_title, styles.title.toModifier())
+        PrimaryButton(
+            text = ResStrings.conf_events_register.uppercase(),
+            href = Res.Links.Conf2025.Register("webhero"),
+            modifier = Modifier.margin(topBottom = 16.px).fontWeight(FontWeight.ExtraBold),
+            variant = RectangularPrimaryButtonVariant,
+        )
         SpanText(ResStrings.conf_2025_header_time, styles.details.toModifier())
         SpanText(ResStrings.conf_2025_header_location, styles.details.toModifier())
         SpanText(

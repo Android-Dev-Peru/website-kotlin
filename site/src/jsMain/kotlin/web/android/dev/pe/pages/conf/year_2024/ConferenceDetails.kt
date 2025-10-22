@@ -12,13 +12,13 @@ private val photoBase = "$imageBase/speakers"
 private val sponsorBase = "$imageBase/sponsors"
 
 object ConferenceDetails {
-    val sponsors = listOf(
-        Sponsor(
-            name = "UPC",
-            url = "https://www.upc.edu.pe/",
-            plan = SponsorshipPlan.Gold,
-            logo = "$sponsorBase/upc.png"
-        ),
+val sponsors = listOf(
+    Sponsor(
+        name = "UPC",
+        url = "https://www.upc.edu.pe/",
+        plan = SponsorshipPlan.Gold,
+        logo = "$sponsorBase/upc.png"
+    ),
         Sponsor(
             name = "HaystackNews",
             url = "https://www.haystack.tv/",

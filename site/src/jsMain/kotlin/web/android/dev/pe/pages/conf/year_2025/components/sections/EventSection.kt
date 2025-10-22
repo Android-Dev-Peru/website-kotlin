@@ -20,10 +20,10 @@ import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 import strings.ResStrings
+import web.android.dev.pe.Res
 import web.android.dev.pe.components.widgets.HeadingDecorator
 import web.android.dev.pe.components.widgets.PrimaryButton
 import web.android.dev.pe.pages.conf.year_2025.components.layouts.ConferenceGridSection
-import web.android.dev.pe.Res
 
 @Composable
 fun EventSection(sectionModifier: Modifier = Modifier) {
@@ -46,15 +46,15 @@ private fun Details() {
         Text(ResStrings.conf_2025_events_title)
     }
     P {
+        Text(ResStrings.conf_2025_events_celebrate)
+    }
+    P {
         Text(ResStrings.conf_2025_events_enjoy)
         SpanText(ResStrings.conf_2025_events_free, Modifier.fontWeight(FontWeight.ExtraBold))
     }
-    P {
-        Text(ResStrings.conf_2025_events_registration_soon)
-    }
     PrimaryButton(
         text = ResStrings.conf_2025_events_register,
-        href = "/subscribe",
+        href = Res.Links.Conf2025.Register("webaboutus"),
         modifier = Modifier.margin(top = 16.px, bottom = 2.em)
     )
 }
