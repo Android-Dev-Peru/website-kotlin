@@ -6,21 +6,22 @@
 
     <string name="conf_2025_navlink_c4p">Call for Speakers</string>
     <string name="conf_2025_navlink_sponsor">Sé patrocinador</string>
+    <string name="conf_2025_navlink_speakers">Ponentes</string>
     <string name="conf_2025_navlink_volunteer">Sé voluntario</string>
     <string name="conf_2025_navlink_about_us">Quienes somos</string>
     <string name="conf_2025_navlink_register">Regístrate</string>
     <string name="conf_2025_navlink_code_of_conduct">Código de conducta</string>
 
-    <string name="conf_2025_header_time">Noviembre 2025</string>
-    <string name="conf_2025_header_location">Lima, Perú 🇵🇪</string>
+    <string name="conf_2025_header_time">Sábado 08 de Noviembre, 2025</string>
+    <string name="conf_2025_header_location">UPC Monterrico (Lima 🇵🇪)</string>
     <string name="conf_2025_header_caption">Únete a la conferencia de Android más grande del país.</string>
 
     <string name="conf_2025_events_title">Sobre el evento</string>
-    <string name="conf_2025_events_celebrate">Celebramos 10 años en comunidad compartiendo nuestro amor por Android.</string>
+    <string name="conf_2025_events_celebrate">Celebramos un año más en comunidad, compartiendo nuestro amor por Android.</string>
     <string name="conf_2025_events_enjoy">Disfruta de un día lleno de charlas con ponentes apasionados por esta plataforma. Y al igual que todos nuestros eventos - </string>
     <string name="conf_2025_events_free">¡es gratis! 🎉</string>
     <string name="conf_2025_events_registration_soon">Aún no habilitamos el registro de asistentes. Pero si deseas que te avisemos cuando este empiece... </string>
-    <string name="conf_2025_events_register">Suscríbete al newsletter</string>
+    <string name="conf_2025_events_register">Regístrate gratis</string>
 
     <string name="conf_2025_c4p_title">Call for Speakers</string>
     <string name="conf_2025_c4p_caption">Buscamos charlas sobre desarrollo Android, Kotlin, multiplataforma, Gradle, CI/CD, IA, Firebase y más. ¡No dudes en enviarnos tu propuesta!</string>

@@ -14,15 +14,21 @@ private val sponsorBase = "$imageBase/sponsors"
 object ConferenceDetails {
     val sponsors = listOf(
         Sponsor(
+            name = "UPC",
+            url = "https://www.upc.edu.pe/",
+            plan = SponsorshipPlan.Gold,
+            logo = "${sponsorBase}/upc.png"
+        ),
+        Sponsor(
             name = "Eventbrite",
-            plan = SponsorshipPlan.Bronze,
+            plan = SponsorshipPlan.Gold,
             url = "https://eventbrite.com/",
             logo = "$sponsorBase/eventbrite_light.png",
             darkLogo = "$sponsorBase/eventbrite_dark.png",
         ),
         Sponsor(
             name = "Sessionize",
-            plan = SponsorshipPlan.Bronze,
+            plan = SponsorshipPlan.Gold,
             url = "https://sessionize.com/",
             logo = "$sponsorBase/sessionize_light.png",
             darkLogo = "$sponsorBase/sessionize_dark.png",
@@ -31,90 +37,90 @@ object ConferenceDetails {
 
     val talks = listOf(
         Presentation(
-            title = "Creando tu BD en Kotlin Multiplatform con SQLDelight",
-            description = "En esta charla exploraremos cómo crear y gestionar una base de datos en aplicaciones multiplataforma usando Kotlin Multiplatform y SQLDelight. Veremos cómo integrar SQLDelight en una aplicación cuando este no tenga internet.",
-            speakerName = "Carlos Ugaz",
-            speakerRole = "Android | Kotlin Multiplatform Developer",
+            title = "Protección de credenciales en Android: DataStore, Keystore, TEE y más",
+            description = "La seguridad en Android no puede reducirse a almacenar un token en DataStore o a mostrar un lector biometrico (BiometricPrompt). " +
+                    "Detrás de un inicio de sesión aparentemente simple existen múltiples capas que garantizan la protección de las credenciales a lo largo " +
+                    "de su ciclo de vida. <br><br>En esta charla exploraremos cómo Android provee un ecosistema robusto para salvaguardar la información sensible: " +
+                    "desde el uso de Cipher y Keystore, hasta la integración con Trusted Execution Environment (TEE) y Secure Element (SE). Revisaremos " +
+                    "algoritmos de cifrado y flujos de encriptación/desencriptación aplicados en escenarios reales. Todo ello será mostrado en una demo " +
+                    "técnica que implementa un flujo de autenticación con password y biometría, como los que utilizan aplicaciones bancarias y empresariales. " +
+                    "El objetivo es proveer a ingenieros Android de nivel senior criterios prácticos y técnicos para diseñar mecanismos de seguridad sólidos que " +
+                    "respondan a riesgos reales en sus aplicaciones.",
+            speakerName = "Fahed Hermoza",
+            speakerRole = "Senior Android Engineer",
             speakerCompany = "",
             speakerCountry = "Perú",
-            speakerPhoto = "$photoBase/carlos-ugaz",
+            speakerPhoto = "$photoBase/fahed",
             socials = listOf(
-                Social(icon = Res.Icon.Twitter, url = "https://x.com/carlosgub", name = "X"),
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/carlosgub/", name = "LinkedIn"),
+                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/fahedhermoza/", name = "LinkedIn"),
+                Social(icon = Res.Icon.Twitter, url = "https://x.com/FahedHermoza", name = "X"),
             )
         ),
         Presentation(
-            title = "Desarrollo de Apps Educativas Inclusivas en Android: El Caso de EduKuna",
-            description = "En esta charla, exploraremos cómo EduKuna transformó el aprendizaje en un colegio estatal a través de su app educativa Cool Learning, diseñada exclusivamente para Android." +
-                    "<br><br>" +
-                    "Cool Learning es una app educativa diseñada para mejorar el aprendizaje de matemáticas en estudiantes de primaria. Ofrece tres modos de juego interactivos que permiten a los estudiantes practicar y reforzar sus habilidades matemáticas de manera divertida." +
-                    "<br><br>" +
-                    "Compartiremos el proceso de desarrollo de la app, desde su concepción hasta su implementación en las aulas. Además, profundizaremos en los desafíos técnicos que enfrentamos, como la falta de conectividad a internet en los salones y el uso de tablets con resoluciones diferentes y versiones antiguas de API. También explicaré la metodología aplicada en clase y, lo más importante, mostraré los sorprendentes resultados obtenidos de los estudiantes: una mejora significativa en el rendimiento académico e interés por las matemáticas.",
-            speakerName = "Keneth Lopez",
-            speakerRole = "CEO of EduKuna | Fullstack Developer",
-            speakerCompany = "EduKuna",
-            speakerCountry = "Perú",
-            speakerPhoto = "$photoBase/keneth-lopez",
+            title = "De ticket a PR en Android: cómo uso Cursor para crear features cada día",
+            description = "Cómo uso Cursor para crear features en multimódulo: prompts, scaffold, pruebas y PR. Mejores prácticas de fronteras y Gradle para builds" +
+                    "más rápidos y menos errores. Demo y checklist final.",
+            speakerName = "Sebastian Valero",
+            speakerRole = "Senior Android Developer",
+            speakerCompany = "",
+            speakerCountry = "Colombia",
+            speakerPhoto = "$photoBase/sebastian",
             socials = listOf(
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/keneth-lopez/", name = "LinkedIn"),
-                Social(icon = Res.Icon.Instagram, url = "https://www.instagram.com/kenethlopezzz/", name = "Instagram"),
+                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/sebastian-valero-vanegas/", name = "LinkedIn"),
             )
         ),
         Presentation(
-            title = "Clean Architecture con Kotlin Multiplataform",
-            description = "Se describirá una arquitectura para proyectos multiplataforma basada en clean architecture. Se describirá un proyecto explicando las siguientes partes:" +
-                    "<br><br>" +
-                    "-Capas de presentación, dominio y datos " +
-                    "<br>" +
-                    "-Inyección de dependencia con Koin " +
-                    "<br>" +
-                    "-Compose Multiplatfrom " +
-                    "<br>" +
-                    "-Navigation y ViewModel " +
-                    "<br>" +
-                    "-Kotlin Flow, Serialization, Coroutines " +
-                    "<br>" +
-                    "-Data: Room y Kstore",
-            speakerName = "Andres Escobar",
-            speakerRole = "Software Architect | Kotlin Multiplatform Developer",
+            title = "Tú primer MCP con Firebase y Android",
+            description = "Utilizando una App Demo a la ves de compartir el código se mostrará como crear un MCP con Firebase e información generada por la aplicación" +
+                    "Android y luego como esta puede ser consumida mediante MCP",
+            speakerName = "Ariel Ortuño",
+            speakerRole = "Lead Software Engineer + Mentor",
+            speakerCompany = "",
+            speakerCountry = "Bolivia",
+            speakerPhoto = "$photoBase/ariel",
+            socials = listOf(
+                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/arielgos", name = "LinkedIn"),
+            )
+        ),
+        Presentation(
+            title = "KMP, Swift-First — Make shared code feel native on iOS",
+            description = "Aprende a diseñar un módulo multiplataforma de Kotlin, desde el punto de vista de desarollador iOS. Haz que se sienta como Swift: async/await (sin callbacks), generación de errores de dominio, y Swift-friendly enums.",
+            speakerName = "Jeans Ruiz",
+            speakerRole = "iOS Developer @ SOSAFE",
             speakerCompany = "",
             speakerCountry = "Perú",
-            speakerPhoto = "$photoBase/andres-escobar",
+            speakerPhoto = "$photoBase/jeans",
             socials = listOf(
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/andres-escobar-villa/", name = "LinkedIn"),
+                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/jeans-ruiz/", name = "LinkedIn"),
             )
         ),
         Presentation(
-            title = "Effective Fuzz Testing en Android",
-            description = "Fuzz testing is a critical technique for identifying hidden vulnerabilities that traditional testing often overlooks, especially in mobile development where the diversity of devices and inputs can create unexpected challenges. In this talk, we will explore how fuzz testing can be integrated into your mobile development process to enhance software reliability and security. Attendees will learn about mobile-specific fuzzing tools, best practices for setting up effective fuzz tests in Android environments, and how to analyze the results to improve app performance and resilience. Whether you’re new to fuzz testing or looking to refine your approach, this session will provide valuable insights and practical tips to help you push your mobile applications to its limits and ensure robust performance in production environments.",
-            speakerName = "Milton Condori",
-            speakerRole = "Software Engineer | Android Developer | Researcher in Automated Planning",
-            speakerCompany = "NTT DATA",
-            speakerCountry = "Perú",
-            speakerPhoto = "$photoBase/milton-condori",
-            socials = listOf(
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/milton761/", name = "LinkedIn"),
-            )
-        ),
-        Presentation(
-            title = "Construyendo apps para Android con Media3",
-            description = "Mejorando el Rendimiento y la Eficiencia de tus Aplicaciones Multimedia",
-            speakerName = "Haystack News",
-            speakerRole = "Android Engineer",
+            title = "Editor de texto en KMP",
+            description = "Una implementación nativa de un editor de texto enriquecido usando Kotlin Multiplataforma para Android y iOS desde cero.",
+            speakerName = "Jorge Rodríguez",
+            speakerRole = "Android Software Designer",
             speakerCompany = "",
             speakerCountry = "Perú",
-            speakerPhoto = "$photoBase/gonzalo-cirilo",
+            speakerPhoto = "$photoBase/jorge",
             socials = listOf(
-                Social(icon = Res.Icon.Twitter, url = "https://x.com/haystacktv", name = "X"),
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/company/haystack-tv", name = "LinkedIn"),
+                Social(icon = Res.Icon.LinkedIn, url = "http://linkedin.com/in/jorge-rodríguez-castillo", name = "LinkedIn"),
             )
         ),
         Presentation(
-            title = "Gemini in Android. Let's build smart apps",
-            description = "La IA esta de moda, escuchamos por todo lado IA, y con la llegada de Gemini las integraciones de IA a nuestras apps son mas fáciles dandole capacidades que antes no podíamos tener en nuestros dispositivos móviles, en esta charla haremos que nuestras apps móviles sean inteligentes integrándolas con Gemini.",
+            title = "Android Codes: The Rise of AI",
+            description = "La inteligencia artificial ha llegado para quedarse, y Android Studio se ha convertido en el epicentro de esta transformación.<br><br>" +
+                    "En esta charla exploraremos cómo la IA está cambiando el día a día del desarrollo Android a través de:<br>" +
+                    "Gemini en Android Studio: desde el chat y el autocompletado hasta el poderoso Agent Mode, capaz de generar tests, refactorizar código y " +
+                    "corregir errores con tu aprobación." +
+                    "MCP (Model Context Protocol): el nuevo “USB-C de los agentes”, que conecta el IDE con herramientas como GitHub y Figma para integrar " +
+                    "issues y diseños directamente en tu app.<br>" +
+                    "Plugins como Firebender y Windsurf: aliados que amplían Android Studio con paneles MCP, ejecución de Gradle/tests y experiencias de\n" +
+                    "desarrollo aumentadas por IA." +
+                    "A través de demos prácticas, mostraremos cómo estas herramientas actúan como verdaderos “devs juniors” que escriben, prueban y\n" +
+                    "conectan tu código, acelerando la productividad y elevando la calidad de las apps Android.",
             speakerName = "Yury Camacho",
-            speakerRole = "Staff Software Engineer @ Rappi.<br>Google Developer Expert Android 🇧🇴🇦🇷",
-            speakerCompany = "Rappi",
+            speakerRole = "Google Developer Expert | Android 🇧🇴🇦🇷",
+            speakerCompany = "",
             speakerCountry = "Bolivia",
             speakerPhoto = "$photoBase/yury",
             socials = listOf(
@@ -124,11 +130,11 @@ object ConferenceDetails {
         ),
     )
 
-    val talkCarlos = talks[0]
-    val talkKeneth = talks[1]
-    val talkAndres = talks[2]
-    val talkMilton = talks[3]
-    val talkHaystack = talks[4]
+    val talkFahed = talks[0]
+    val talkSebastian = talks[1]
+    val talkAriel = talks[2]
+    val talkJeans = talks[3]
+    val talkJorge = talks[4]
     val talkYury = talks[5]
 
     val agenda = listOf(
@@ -143,19 +149,19 @@ object ConferenceDetails {
             description = "Bienvenida a cargo de los organizadores.",
         ),
         AgendaEntry.Talk(
-            presentation = talkKeneth,
+            presentation = talkFahed,
             time = "9:15 - 9:55 AM",
         ),
         AgendaEntry.Talk(
-            presentation = talkMilton,
+            presentation = talkSebastian,
             time = "10:00 - 10:30 AM",
         ),
         AgendaEntry.Talk(
-            presentation = talkAndres,
+            presentation = talkYury,
             time = "10:45 - 11:25 AM",
         ),
         AgendaEntry.Talk(
-            presentation = talkHaystack,
+            presentation = talkAriel,
             time = "11:30 - 12:00 PM",
         ),
         AgendaEntry.Other(
@@ -164,11 +170,11 @@ object ConferenceDetails {
             description = "Disfruta de un break para conocer a otros asistentes.",
         ),
         AgendaEntry.Talk(
-            presentation = talkCarlos,
+            presentation = talkJeans,
             time = "12:30 - 1:10 PM",
         ),
         AgendaEntry.Talk(
-            presentation = talkYury,
+            presentation = talkJorge,
             time = "1:10 - 1:50 PM",
         ),
         AgendaEntry.Other(

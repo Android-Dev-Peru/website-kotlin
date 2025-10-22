@@ -10,7 +10,6 @@ import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.graphics.Image
-import com.varabyte.kobweb.silk.components.layout.HorizontalDivider
 import com.varabyte.kobweb.silk.components.layout.SimpleGrid
 import com.varabyte.kobweb.silk.components.layout.numColumns
 import com.varabyte.kobweb.silk.components.navigation.Link
@@ -46,8 +45,8 @@ fun SponsorSection(sponsors: List<Sponsor>, sectionModifier: Modifier = Modifier
     val isSmallScreen = mutableIsSmallScreen()
     ConferenceGridSection(
         sectionModifier = sectionModifier,
-        header = { if(isSmallScreen) Details() else Sponsors(sponsors) },
-        content = { if(isSmallScreen) Sponsors(sponsors) else Details() }
+        header = { Details() },
+        content = { Sponsors(sponsors) }
     )
 }
 
@@ -78,8 +77,8 @@ private fun Sponsors(sponsors: List<Sponsor>) {
 @Composable
 private fun GroupedSponsors(plan: SponsorshipPlan, sponsors: List<Sponsor>) {
     Div(Modifier.margin(bottom = 2.em).toAttrs()) {
-        HorizontalDivider(Modifier.border { color(plan.borderColor) })
-        H3 { Text("→ ${plan.title}") }
+//        HorizontalDivider(Modifier.border { color(plan.borderColor) })
+//        H3 { Text("→ ${plan.title}") }
         SimpleGrid(numColumns(base = 2, md = 3)) {
             sponsors.forEach {
                 Link(path = it.url, Modifier.justifySelf(JustifySelf.Center)) {
