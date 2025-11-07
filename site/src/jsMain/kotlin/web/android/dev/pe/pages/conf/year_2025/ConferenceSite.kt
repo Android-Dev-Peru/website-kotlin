@@ -20,8 +20,8 @@ import web.android.dev.pe.pages.home.components.sections.MainFooter
 private val ConferenceNavbar = Navbar(
     primaryLink = Navlink(path = Res.Links.Conf2025.Register("webnavbar")) { ResStrings.conf_navlink_register },
     secondaryLinks = listOf(
+        Navlink(path = Routes.Conf.Year2025.Agenda) { ResStrings.conf_2025_navlink_agenda },
         Navlink(path = Routes.Conf.Year2025.Speakers) { ResStrings.conf_2025_navlink_speakers },
-        Navlink(path = Routes.Conf.Year2025.Volunteers) { ResStrings.conf_2025_navlink_volunteer },
         Navlink(path = Routes.AboutUs) { ResStrings.site_navlink_about_us },
     ),
     languageSelector = LanguageSelectorOptions.All,

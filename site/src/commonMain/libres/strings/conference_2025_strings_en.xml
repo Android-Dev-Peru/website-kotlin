@@ -7,9 +7,10 @@
     <string name="conf_2025_navlink_c4p">Call for Speakers</string>
     <string name="conf_2025_navlink_sponsor">Become a sponsor</string>
     <string name="conf_2025_navlink_speakers">Speakers</string>
-    <string name="conf_2025_navlink_volunteer">Become a volunteer</string>
+    <string name="conf_2025_navlink_volunteer">Volunteers</string>
     <string name="conf_2025_navlink_about_us">About us</string>
     <string name="conf_2025_navlink_register">Register</string>
+    <string name="conf_2025_navlink_agenda">Agenda</string>
     <string name="conf_2025_navlink_code_of_conduct">Code of Conduct</string>
 
     <string name="conf_2025_header_time">November 8th, 2025</string>
