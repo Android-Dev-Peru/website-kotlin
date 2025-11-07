@@ -70,19 +70,6 @@ object ConferenceDetails {
             )
         ),
         Presentation(
-            title = "Tú primer MCP con Firebase y Android",
-            description = "Utilizando una App Demo a la ves de compartir el código se mostrará como crear un MCP con Firebase e información generada por la aplicación" +
-                    "Android y luego como esta puede ser consumida mediante MCP",
-            speakerName = "Ariel Ortuño",
-            speakerRole = "Lead Software Engineer + Mentor",
-            speakerCompany = "",
-            speakerCountry = "Bolivia",
-            speakerPhoto = "$photoBase/ariel",
-            socials = listOf(
-                Social(icon = Res.Icon.LinkedIn, url = "https://www.linkedin.com/in/arielgos", name = "LinkedIn"),
-            )
-        ),
-        Presentation(
             title = "KMP, Swift-First — Make shared code feel native on iOS",
             description = "Aprende a diseñar un módulo multiplataforma de Kotlin, desde el punto de vista de desarollador iOS. Haz que se sienta como Swift: async/await (sin callbacks), generación de errores de dominio, y Swift-friendly enums.",
             speakerName = "Jeans Ruiz",
@@ -132,10 +119,9 @@ object ConferenceDetails {
 
     val talkFahed = talks[0]
     val talkSebastian = talks[1]
-    val talkAriel = talks[2]
-    val talkJeans = talks[3]
-    val talkJorge = talks[4]
-    val talkYury = talks[5]
+    val talkJeans = talks[2]
+    val talkJorge = talks[3]
+    val talkYury = talks[4]
 
     val agenda = listOf(
         AgendaEntry.Other(
@@ -145,28 +131,29 @@ object ConferenceDetails {
         ),
         AgendaEntry.Other(
             title = "Apertura del evento",
-            time = "9:00 - 9:10 AM",
+            time = "9:15 - 9:25 AM",
             description = "Bienvenida a cargo de los organizadores.",
         ),
         AgendaEntry.Talk(
             presentation = talkFahed,
-            time = "9:15 - 9:55 AM",
+            time = "9:25 - 10:05 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkSebastian,
-            time = "10:00 - 10:30 AM",
+            time = "10:10 - 10:50 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkYury,
-            time = "10:45 - 11:25 AM",
+            time = "10:55 - 11:35 AM",
         ),
-        AgendaEntry.Talk(
-            presentation = talkAriel,
-            time = "11:30 - 12:00 PM",
+        AgendaEntry.Other(
+            title = "Sorteos y Fotos",
+            time = "11:35 - 11:50 AM",
+            description = "Participa en sorteos para ganar swag",
         ),
         AgendaEntry.Other(
             title = "Networking",
-            time = "12:10 - 12:30 PM",
+            time = "11:50 - 12:30 PM",
             description = "Disfruta de un break para conocer a otros asistentes.",
         ),
         AgendaEntry.Talk(
@@ -175,11 +162,11 @@ object ConferenceDetails {
         ),
         AgendaEntry.Talk(
             presentation = talkJorge,
-            time = "1:10 - 1:50 PM",
+            time = "1:15 - 1:55 PM",
         ),
         AgendaEntry.Other(
             title = "Cierre del evento",
-            time = "1:50 - 2:00 PM",
+            time = "1:55 - 2:00 PM",
             description = "Hora de despedirse. ¡No te vayas antes de la foto final!",
         ),
     )
