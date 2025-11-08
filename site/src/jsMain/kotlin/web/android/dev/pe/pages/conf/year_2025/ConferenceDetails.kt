@@ -125,14 +125,9 @@ object ConferenceDetails {
 
     val agenda = listOf(
         AgendaEntry.Other(
-            title = "Registro",
-            time = "8:00 - 9:00 AM",
-            description = "Regístrate y recoge tu kit de bienvenida.",
-        ),
-        AgendaEntry.Other(
-            title = "Apertura del evento",
-            time = "9:15 - 9:25 AM",
-            description = "Bienvenida a cargo de los organizadores.",
+            title = "Registro y presentación de la comunidad",
+            time = "8:30 - 9:25 AM",
+            description = "¡Empieza el evento!",
         ),
         AgendaEntry.Talk(
             presentation = talkFahed,
@@ -140,15 +135,15 @@ object ConferenceDetails {
         ),
         AgendaEntry.Talk(
             presentation = talkSebastian,
-            time = "10:10 - 10:50 AM",
+            time = "10:05 - 10:45 AM",
         ),
         AgendaEntry.Talk(
             presentation = talkYury,
-            time = "10:55 - 11:35 AM",
+            time = "10:45 - 11:25 AM",
         ),
         AgendaEntry.Other(
             title = "Sorteos y Fotos",
-            time = "11:35 - 11:50 AM",
+            time = "11:25 - 11:50 AM",
             description = "Participa en sorteos para ganar swag",
         ),
         AgendaEntry.Other(
@@ -162,11 +157,11 @@ object ConferenceDetails {
         ),
         AgendaEntry.Talk(
             presentation = talkJorge,
-            time = "1:15 - 1:55 PM",
+            time = "1:10 - 1:50 PM",
         ),
         AgendaEntry.Other(
             title = "Cierre del evento",
-            time = "1:55 - 2:00 PM",
+            time = "1:50 - 2:00 PM",
             description = "Hora de despedirse. ¡No te vayas antes de la foto final!",
         ),
     )
